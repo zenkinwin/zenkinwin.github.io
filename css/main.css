@@ -2448,9 +2448,9 @@ pre code {
 }
 .reward-container button {
   background: transparent;
-  border: 2px solid #fc6423;
+  border: 2px solid #b21c37;
   border-radius: 2px;
-  color: #fc6423;
+  color: #b21c37;
   cursor: pointer;
   line-height: 2;
   outline: 0;
@@ -2459,7 +2459,7 @@ pre code {
   vertical-align: text-top;
 }
 .reward-container button:hover {
-  background: #fc6423;
+  background: #b21c37;
   border: 2px solid transparent;
   color: #fff;
 }
@@ -3305,4 +3305,8 @@ body {
 }
 .links-of-blogroll-list li time {
   font-style: italic;
+}
+.passage-end-tag {
+  text-align: center;
+  color: #e09aa7;
 }
