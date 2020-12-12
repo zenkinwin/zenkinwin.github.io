@@ -2052,7 +2052,7 @@ pre code {
   width: 10px;
 }
 .posts-collapse .post-content .collection-year {
-  font-size: 18px;
+  font-size: 23px;
   font-weight: bold;
   margin: 60px 0;
   position: relative;
@@ -2286,7 +2286,7 @@ pre code {
   text-align: center;
 }
 .posts-expand .post-title {
-  font-size: 18px;
+  font-size: 23px;
   font-weight: normal;
   margin: initial;
   overflow-wrap: break-word;
@@ -3278,11 +3278,17 @@ body {
   .header-inner {
     margin: 0px 10px 0 10px !important;
   }
+  .post-gallery {
+    display: none;
+  }
 }
 @media (max-width: 991px) {
   .header-inner {
     border-radius: 10px;
     margin: 0px 10px 0 10px !important;
+  }
+  .post-gallery {
+    display: none;
   }
 }
 .links-of-blogroll {
@@ -3309,4 +3315,20 @@ body {
 .passage-end-tag {
   text-align: center;
   color: #e09aa7;
+}
+/* 图片 */
+.post-gallery {
+  margin: -40px -40px 30px -40px !important;
+  z-index: 9;
+}
+.post-gallery-image {
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  opacity: 1 !important;
+}
+.post-gallery-image img {
+  transition: transform 1s ease-out;
+}
+.post-gallery-image img:hover {
+  transform: scale(1.05);
 }
