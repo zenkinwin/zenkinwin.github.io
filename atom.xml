@@ -203,13 +203,13 @@
     <category term="vue" scheme="https://www.zenwu.site/categories/vue/"/>
     
     
-    <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
-    
     <category term="v-text" scheme="https://www.zenwu.site/tags/v-text/"/>
     
     <category term="v-html" scheme="https://www.zenwu.site/tags/v-html/"/>
     
     <category term="v-model" scheme="https://www.zenwu.site/tags/v-model/"/>
+    
+    <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
     
   </entry>
   
@@ -234,9 +234,9 @@
     <category term="vue" scheme="https://www.zenwu.site/categories/vue/"/>
     
     
-    <category term="v-on" scheme="https://www.zenwu.site/tags/v-on/"/>
-    
     <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
+    
+    <category term="v-on" scheme="https://www.zenwu.site/tags/v-on/"/>
     
   </entry>
   
