@@ -3319,16 +3319,26 @@ body {
 /* 图片 */
 .post-gallery {
   margin: -40px -40px 30px -40px !important;
-  z-index: 9;
 }
 .post-gallery-image {
   overflow: hidden;
   border-radius: 10px 10px 0 0;
-  opacity: 1 !important;
 }
 .post-gallery-image img {
   transition: transform 1s ease-out;
 }
 .post-gallery-image img:hover {
   transform: scale(1.05);
+}
+.archive .post-gallery,
+.tag .post-gallery,
+.category .post-gallery {
+  margin: 15px 0 !important;
+  min-height: 80px;
+}
+.archive .post-gallery-image,
+.tag .post-gallery-image,
+.category .post-gallery-image {
+  overflow: hidden;
+  border-radius: 10px;
 }
