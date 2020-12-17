@@ -3354,13 +3354,13 @@ body {
   padding-left: 0px;
   margin: 0;
   list-style: none;
+  max-height: 350px;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 .links-of-blogroll .archive-list li {
   float: left;
   width: 101px;
   margin: 0px;
   list-style: none;
-}
-.recent_posts .links-of-blogroll-title {
-  display: none;
 }

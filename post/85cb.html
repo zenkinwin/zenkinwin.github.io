@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","width":250,"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="本文摘录2020年1月份学习总结，有修改。从鱼骨项目管理的学习里，翻到一篇关于deadline的文章，有感，转载分享：《死线（Deadline）杀死团队拖延症》，鸡汤成分，占99%，慎思。  Deadline，大家都知道这个词表示“最后期限”的意思，为了强化最后期限的概念，也被翻译为“死线”。这个词源自美国的南北战争时期，用于军队的监狱里，表示监狱周围的死线，不可逾越的界线。到了二十世纪二十年代">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2020年1月份学习总结，死线（Deadline）杀死团队拖延症">
+<meta property="og:url" content="https://www.zenwu.site/post/85cb.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="本文摘录2020年1月份学习总结，有修改。从鱼骨项目管理的学习里，翻到一篇关于deadline的文章，有感，转载分享：《死线（Deadline）杀死团队拖延症》，鸡汤成分，占99%，慎思。  Deadline，大家都知道这个词表示“最后期限”的意思，为了强化最后期限的概念，也被翻译为“死线”。这个词源自美国的南北战争时期，用于军队的监狱里，表示监狱周围的死线，不可逾越的界线。到了二十世纪二十年代">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-05T16:12:27.000Z">
+<meta property="article:modified_time" content="2020-12-16T13:05:05.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="拖延症">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/post/85cb.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>2020年1月份学习总结，死线（Deadline）杀死团队拖延症 | ZenWu.site</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ZenWu.site" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ZenWu.site</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">44</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">230</span></a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">
+
+  <div id="binft"></div>
+  <script>var binft =function (r) {function t() {return b[Math.floor(Math.random() *b.length)]
+  } 
+  function e() {return String.fromCharCode(94 *Math.random() + 33)
+  }
+  function n(r) {for (var n =document.createDocumentFragment(),i =0;r >i;i++) {var l =document.createElement("span");l.textContent =e(),l.style.color =t(),n.appendChild(l)
+  }
+  return n
+  }
+  function i() {var t =o[c.skillI];c.step ?c.step-- :(c.step =g,c.prefixP < l.length ?(c.prefixP >=0 &&(c.text +=l[c.prefixP]),c.prefixP++) :"forward" ===c.direction ?c.skillP < t.length ?(c.text +=t[c.skillP],c.skillP++) :c.delay ?c.delay-- :(c.direction ="backward",c.delay =a) :c.skillP >0 ?(c.text =c.text.slice(0,-1),c.skillP--) :(c.skillI =(c.skillI + 1) % o.length,c.direction ="forward")),r.textContent =c.text,r.appendChild(n(c.prefixP < l.length ?Math.min(s,s + c.prefixP) :Math.min(s,t.length - c.skillP))),setTimeout(i,d)
+  }
+  var l ="",o =["蹉跎错，消磨过，最是光阴化浮沫。"].map(function (r) {return r + ""
+  }),a =2,g =1,s =5,d =75,b =["rgb(110,64,170)","rgb(150,61,179)","rgb(191,60,175)","rgb(228,65,157)","rgb(254,75,131)","rgb(255,94,99)","rgb(255,120,71)","rgb(251,150,51)","rgb(226,183,47)","rgb(198,214,60)","rgb(175,240,91)","rgb(127,246,88)","rgb(82,246,103)","rgb(48,239,130)","rgb(29,223,163)","rgb(26,199,194)","rgb(35,171,216)","rgb(54,140,225)","rgb(76,110,219)","rgb(96,84,200)"],c ={text:"",prefixP:-s,skillI:0,skillP:0,direction:"forward",delay:a,step:g
+  };i()
+  };binft(document.getElementById('binft'));</script>
+
+  </div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">230</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+        <span class="site-state-item-count">279</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+
+
+
+
+
+
+  <div class="archive_side site-overview-wrap sidebar-panel">
+    
+
+
+<div class="links-of-blogroll">
+<div class="links-of-blogroll-title">
+<i class="fa fa-archive" aria-hidden="true"></i>
+归档列表
+</div>
+
+<div class="links-of-blogroll-list">
+<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">十二月 2020</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/11/">十一月 2020</a><span class="archive-list-count">14</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">十月 2020</a><span class="archive-list-count">67</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/09/">九月 2020</a><span class="archive-list-count">42</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/08/">八月 2020</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/06/">六月 2020</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/05/">五月 2020</a><span class="archive-list-count">39</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">四月 2020</a><span class="archive-list-count">18</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">二月 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">四月 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/01/">一月 2018</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/10/">十月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">四月 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">三月 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/08/">八月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">六月 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/10/">十月 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/12/">十二月 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">十月 2013</a><span class="archive-list-count">1</span></li></ul>
+</div>
+
+</div>
+
+
+
+  </div>
+
+        </section>
+      </div>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/85cb.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2020年1月份学习总结，死线（Deadline）杀死团队拖延症
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-02-06 00:12:27" itemprop="dateCreated datePublished" datetime="2020-02-06T00:12:27+08:00">2020-02-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2020-12-16 21:05:05" itemprop="dateModified" datetime="2020-12-16T21:05:05+08:00">2020-12-16</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">学习总结</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <blockquote>
+<p>本文摘录2020年1月份学习总结，有修改。<br>从<a target="_blank" rel="noopener" href="http://www.yugusoft.com/">鱼骨项目管理</a>的学习里，翻到一篇关于deadline的文章，有感，转载分享：《死线（Deadline）杀死团队拖延症》，鸡汤成分，占99%，慎思。</p>
+</blockquote>
+<p>Deadline，大家都知道这个词表示“最后期限”的意思，为了强化最后期限的概念，也被翻译为“死线”。这个词源自美国的南北战争时期，用于军队的监狱里，表示监狱周围的死线，不可逾越的界线。到了二十世纪二十年代左右，deadline被媒体报纸作为行话术语推广开来，才有了如今被广为熟知的含义——最后期限。</p>
+<p>每个团队都有一个长长的工作任务列表，在鱼骨系统创建任务记录待办工作：给每项工作一个负责人和截至日期，提升团队的整体效率和执行力。<a id="more"></a></p>
+<p><strong>1、给自己个deadline，效率会翻倍</strong></p>
+<p>管理学上有一个很有名的定律叫帕金森定律： 在工作中，每项任务都会自动膨胀，不管你给它分配半小时，一下午还是三天，它都会占满所有可用的时间。如果时间比较充裕，你就会放慢工作节奏，或是增添各种细枝末节的东西，最终这些时间也会被消耗掉。</p>
+<p>因此，不管一个任务有多么复杂或者简单，它总会自动填满你给其分配的所有时间。比如他可以在10分钟内看完一份报纸，也可以看个大半天。</p>
+<p>做任何事情，如果设置一个紧迫一点的deadline，效率就会翻倍。</p>
+<p><strong>2、永远要设定deadline，完成比完美更重要。</strong>追求完美，希望任何细节万无一失，结果就是拖延。</p>
+<p><strong>3、想要更从容，就把deadline更提前一点。</strong></p>
+<p>在deadline前设立一个自己的deadline，提前完成工作，效率会更高，而且心态也轻松。</p>
+<p><strong>4、让问题少占用自己脑容量，just do it。</strong></p>
+<p>越是不着手解决一件事情，这件事情越是会困扰你，让你焦虑不安；着手把它解决掉了，脑壳一下就清爽起来，焦虑也被治愈。把最重要的事情，提早完成，不让它占据你的“脑容量”，就是最好的治疗拖延症、缓解焦虑的方法。</p>
+<p><strong>5、不会时间规划，注定一事无成。</strong></p>
+<p>除了设定deadline，还得学会时间规划，否则再多的deadline都会变成无意义的横线。使用时间管理法，在一天中划分出一个时间段，屏蔽所有干扰，全力以赴做一件事情，目标很快就能完成。</p>
+<p><strong>6、焦虑是种流行病，拖延也是每个人都有的缺点，Deadline则是鞭策与督促我们摆脱焦虑和拖延最有效的手段。</strong></p>
+<p><strong>7、设置Deadline的目的，不是让人变成工作机器，而是让人更好地利用时间，清空脑容量，更彻底地放松下来。</strong></p>
+<p>在有限的时间里合理分配资源，减少选择范围能够有效激发创造力。反而在时间充裕的时候，往往人的选择也更丰富，也越容易不知所措。因此，做事设定一个合理的deadline，往往是成功的第一要素，若所做的是在能力承受的范围内，那么deadline就是做这件事的第一生产力</p>
+<p><strong>8、每次做一小步。</strong></p>
+<p>举个例子，如果写策划，先写几个段落，如果你觉得完成几个段落对你来说量太多，那就先写一个段落。如果这样还不能完成，可以先写几个句子。</p>
+<p><strong>9、公众监督</strong></p>
+<p>拖延症患者很介意别人对他们的看法，所以如果别人都知道他们最近在忙什么，他们会因为顾及面子尽快完成。（可以尝试使用鱼骨计划看板，团队内共享工作计划和进展）。</p>
+
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+      
+    
+    
+    
+    
+<div class="passage-end-tag">
+    
+        <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+    
+</div>
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Zen.Wu 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <!--<li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>-->
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/post/85cb.html" title="2020年1月份学习总结，死线（Deadline）杀死团队拖延症">https://www.zenwu.site/post/85cb.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%8B%96%E5%BB%B6%E7%97%87/" rel="tag"><i class="fa fa-tag"></i> 拖延症</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/a9b5.html" rel="prev" title="笔记整理-知识产权与标准化知识-GB/T11457-2006软件工程术语">
+                  <i class="fa fa-chevron-left"></i> 笔记整理-知识产权与标准化知识-GB/T11457-2006软件工程术语
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/c69e.html" rel="next" title="RACI职责分配矩阵模型使用详解及案例分析">
+                  RACI职责分配矩阵模型使用详解及案例分析 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian">
+
+
+  <span class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-book-reader"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zen.Wu {{存一些内容，记一点文字}}</span>
+</span><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+
+
+
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">445k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">6:45</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="/images/upyun-logo.png" style="height:28px"></img>提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="200" alpha="0.5" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+<script src="/js/local-search.js"></script>
+
+
+
+
+<script>
+if (document.querySelectorAll('.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js', () => {
+    mermaid.init({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    }, '.mermaid');
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+
+
+
+
+
+</body>
+</html>
