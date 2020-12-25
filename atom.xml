@@ -6,7 +6,7 @@
   <link href="https://www.zenwu.site/atom.xml" rel="self"/>
   
   <link href="https://www.zenwu.site/"/>
-  <updated>2020-12-14T12:29:07.315Z</updated>
+  <updated>2020-12-25T04:06:39.378Z</updated>
   <id>https://www.zenwu.site/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>2020年12月份学习总结，PMP与信息系统项目管理师的回顾</title>
+    <link href="https://www.zenwu.site/post/901a.html"/>
+    <id>https://www.zenwu.site/post/901a.html</id>
+    <published>2020-12-25T12:30:21.000Z</published>
+    <updated>2020-12-25T04:06:39.378Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本文摘录2020年12月份学习总结，有修改。</p></blockquote><p>2020年下半年的软考高项考试，终于通过了！尽管这并没有什么卵用，一不入户积分、二不评职称、三不涨薪、四不加退休工资，可是：</p><blockquote><p>富家不用买良田，书中自有千钟粟。<br>安居不用架高堂，书中自有黄金屋。<br>出门莫恨无人随，书中车马多如簇。<br>娶妻莫恨无良媒，书中自有颜如玉。<br>男儿欲遂平生志，五经勤向窗前读。</p></blockquote><p>作为一篇总结日志，还是要记录下整一个学习过程，要从2010年开始说起了。</p><h3 id="PMP与信息系统项目管理师，背景和回顾"><a href="#PMP与信息系统项目管理师，背景和回顾" class="headerlink" title="PMP与信息系统项目管理师，背景和回顾"></a>PMP与信息系统项目管理师，背景和回顾</h3><p>要想取得“万事皆项目”的真经，这是一个坎坷的过程。</p><p>（1）2010年4月的学习总结（地址略，文章ID：17573），记录了第一次购买《信息系统项目管理师》学习资料，从此，我开始了转变个人工作、职业的方向，认识并持续学习项目管理的事情。</p><p>（2）2010年开始，公司先后有项目管理部门（根深、奋治时期）、项目管理助理，到直呼设计/开发部门经理（实施部门经理）就是项目经理PM的转变过程，现在想了想，我们该称自己为行业里最能背锅的职位：交付项目经理（项目经理交付方向）。</p><p>（3）2010年~2018年，我都是自学的，而工作中包括了众多模块，需求分析 -&gt; 部门安排 -&gt; 部门内实施/跨部门实施 -&gt; 项目监控 -&gt; 项目验收收尾等，无序且混乱，到2019年成立售前分析部门，卸下需求分析的部分任务，专门负责项目管理（与部门管理等）。</p><p>（4）2010年~2020年的期间，我写了很多篇学习总结都是关于项目管理方面的内容，约超过90%的学习总结，漫长的转化、吸收的过程，也是矛盾、冲突的过程。</p><p>（5）2017年~2018年发生了些事，于是我真的要认真思考一番，在2018年8月份学习总结（地址略，文章ID：53460）记录了，在8月份报班学习PMP，年底通过了。</p><p>（6）2018年的PMP学习是一次洗礼、是一次概念的颠覆，如迈入了一个新的殿堂，除了发出“哇、哇、哇”，或者“卧槽”的惊叹外，更多是踏实学习，PMP学习，我手写笔记记录写满了2本A4开的笔记本。</p><p>（7）2019年不甘于就这？（指PMP）面对更多的项目管理知识缺乏，导火线是我们居然不会写SRS？这对于当年（2010/2011？）巨资通过CMMI3的我们来说，是何等悲哀，我们经常是不重视文档、轻视质量和测试、没规划没章法的管理，所以一些事情上是在混乱无序状态地启动，你说怎样就怎样地执行，糊里糊涂地就结束的过程。于是我怀着“不忘初心、砥砺前行”的艰苦填坑日子，在5月份报班学习软考的《信息系统项目管理师》（简称高项、信管），从第二版学习到第三版，自己约的怎样也要xx?。这可难啊，PMP的通过率是90%，而高项则是20%左右，报考和通过率都很低（如2019年下的考试青海省0人通过、2019年上的考试浙江只有400人通过）。2019年11月第一次考，三科分数：55、41、49，考试不通过，复读，折戟在计算题和项目经理权力解释上。</p><p>（8）2020年疫情影响，使得足足有一年的学习时间，无奈，持续学习，特别在4、5、10、11月，做题啊、写笔记啊，基本都在凌晨2点后睡觉。11月第二次考试，三科分数56、45、52，万幸通过。（没道理啊，案例题以为回答很好结果得45及格分、论文挑了偏门的采购管理居然是高分，有点捉摸不透……）</p><ul><li>PMP费用，报班2788元+考试费3900元，有学习的时间是3个月，写满了2本笔记本，去了很多次图书馆自修，在线题做了4900+客观题，喝了很多奶茶，胖了好多；（每3年续费一次，每次1050元、已续）</li><li>信息系统项目管理师费用（软考高项），报班4950+考试费189元（189*2次），有学习的时间是8个月，写了1本笔记本，200篇blog笔记约40万字，打印了无数资料，几乎凌晨2点后睡觉，在线题做了大概8000+客观题，反复做近7年所有案例真题，论文7篇（3000字/篇），喝了很多咖啡，掉了很多很多头发，头已秃。</li></ul><p><img src="https://cdn.zenwu.site/upload/pic/2020/20201222095236.png" alt="（费用参考，含复读）"></p><p><a href="https://baike.baidu.com/item/PMP/587680?fr=aladdin">PMP，是什么，百度百科的详细介绍</a><br><a href="https://baike.baidu.com/item/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88">信息系统项目管理师，是什么，百度百科的详细介绍</a></p><p><strong>证书毕竟只是证书，考试通过了并不代表完全具备这样的能力，证书只是漫漫学习路途中一个阶段性的里程碑，通过考试来不断提高自己才是最终目的。</strong>休息段时间，未来几年计划学习：</p><ol><li>系统分析师（软考的5%通过率）</li><li>Axure（能出一套产品元件库）</li><li>敏捷管理（ACP也是很费钱）</li><li>网工类的中级软考</li><li>linux运维</li><li>等</li></ol>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本文摘录2020年12月份学习总结，有修改。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;2020年下半年的软考高项考试，终于通过了！尽管这并没有什么卵用，一不入户积分、二不评职称、三不涨薪、四不加退休工资，可是：&lt;/p&gt;
+&lt;blockquote&gt;
+</summary>
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://www.zenwu.site/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="学习总结" scheme="https://www.zenwu.site/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/"/>
+    
+    
+    <category term="PMP" scheme="https://www.zenwu.site/tags/PMP/"/>
+    
+    <category term="信息系统项目管理师" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/"/>
+    
+  </entry>
   
   <entry>
     <title>转-项目管理心得：一个项目经理的个人体会、经验总结</title>
@@ -227,13 +260,13 @@
     <category term="vue" scheme="https://www.zenwu.site/categories/vue/"/>
     
     
+    <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
+    
     <category term="v-text" scheme="https://www.zenwu.site/tags/v-text/"/>
     
     <category term="v-html" scheme="https://www.zenwu.site/tags/v-html/"/>
     
     <category term="v-model" scheme="https://www.zenwu.site/tags/v-model/"/>
-    
-    <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
     
   </entry>
   
@@ -258,9 +291,9 @@
     <category term="vue" scheme="https://www.zenwu.site/categories/vue/"/>
     
     
-    <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
-    
     <category term="v-on" scheme="https://www.zenwu.site/tags/v-on/"/>
+    
+    <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
     
   </entry>
   
@@ -574,29 +607,6 @@
     <category term="安全管理" scheme="https://www.zenwu.site/tags/%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/"/>
     
     <category term="安全审计" scheme="https://www.zenwu.site/tags/%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记-软考高项-错题笔记汇总5</title>
-    <link href="https://www.zenwu.site/post/da86.html"/>
-    <id>https://www.zenwu.site/post/da86.html</id>
-    <published>2020-10-31T15:14:04.000Z</published>
-    <updated>2020-11-04T12:30:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>错题笔记汇总5</p><a id="more"></a><h3 id="物流柔性化"><a href="#物流柔性化" class="headerlink" title="物流柔性化"></a>物流柔性化</h3><p><strong>物流柔性化</strong>战略是指为了实现物流作业适应消费需求的“多品种、小批量、多批次、短周期”趋势,灵活地组织和实施物流作业。</p><p>柔性化本来是为实现”<strong>以顾客为中心</strong>“理念而在生产领域提出的，但要真正做到柔性化，即真正地能根据消费者需求的变化来灵活调节生产工艺，没有配套的柔性化的物流系统是不可能达到目的的。</p><h3 id="业务流程实施效果评估"><a href="#业务流程实施效果评估" class="headerlink" title="业务流程实施效果评估"></a>业务流程实施效果评估</h3><p>企业业务流程实施的成果必然体现在经营管理的绩效上，衡量业务流程实施效果的关键指标主要有：<strong>产品和服务质量、顾客满意度、销售增长率、成本、员工工作效率</strong>等。同时，业务流程实施取得显著效果的一-个标志是带来企业文化，特别是员工价值观的变化。</p><h3 id="项目组合管理过程执行"><a href="#项目组合管理过程执行" class="headerlink" title="项目组合管理过程执行"></a>项目组合管理过程执行</h3><p>项目组合管理过程执行环境中不止一个项目组合，因此，一个得到管理层、主管部门和项目组合经理支持的组织级的实施团队，可能会使用此项目组合管理标准作为指导来实现组织级的项目组合管理过程。关键步骤包括：<br>(1)为项目组合管理过程的实施<strong>定义角色和职责</strong>。<br>(2)沟通<strong>项目组合管理实施计划</strong>。<br>(3)定义和部署详细的项目组合管理过程，并为参与人员和干系人提供培训。  </p><h3 id="问题分析图PAD"><a href="#问题分析图PAD" class="headerlink" title="问题分析图PAD"></a>问题分析图PAD</h3><p>问题分析图PAD（Problem Analysis Diagram）是一种支持结构化程序设计的流程设计工具。它的执行顺序是从最左主干线的上端结点的上编结点开始，自上而下依次执行。</p><h3 id="项目集指导委员会职责"><a href="#项目集指导委员会职责" class="headerlink" title="项目集指导委员会职责"></a>项目集指导委员会职责</h3><p>项目集指导委员会职责；（1）保证项目集与组织愿景和目标的一致性;（2）项目集批准启动</p><h3 id="测试人员绩效考核"><a href="#测试人员绩效考核" class="headerlink" title="测试人员绩效考核"></a>测试人员绩效考核</h3><p>测试人员绩效考核；测试执行工作效率相关指标：执行效率、进度偏离度、缺陷发现率。</p><h3 id="多态下的测试"><a href="#多态下的测试" class="headerlink" title="多态下的测试"></a>多态下的测试</h3><p>B．存在多态的情况下，为了达到较高的测试充分性，应对所有可能的绑定都进行测试。</p><h3 id="工作说明书"><a href="#工作说明书" class="headerlink" title="工作说明书"></a>工作说明书</h3><p>工作说明书(SOW)是对项目所要提供的产品、成果或服务的描述。对内部项目言，项目发起者或投资人基于业务需要、产品或服务的需求提出工作说明书。内部的工作说明书有时也叫任务书。工作说明书包括的主要内容有<strong>前言、服务范围、方法、假定、服务期限和工作量估计、双方角色和责任、交付资料、完成标准、顾问组人员、收费和付款方式、变更管理</strong>等。</p><p>工作说明书与项目范围说明书的区别：工作说明书是对项目所要提供的产品或服务的<strong>叙述性的描述</strong>；项目范围说明书则通过明<strong>确项目应该完成的工作来确定项目的范围</strong>。</p><h3 id="新型基础设施"><a href="#新型基础设施" class="headerlink" title="新型基础设施"></a>新型基础设施</h3><p>2020年4月20日，国家发改委给出说法。新型基础设施主要包括三方面内容：</p><p>一是<strong>信息基础设施</strong>，主要指基于新一代信息技术演化生成的基础设施，比如，以5G、物联网、工业互联网、卫星互联网为代表的通信网络基础设施，以人工智能、云计算、区块链等为代表的新技术基础设施，以数据中心、智能计算中心为代表的算力基础设施等。<br>二是<strong>融合基础设施</strong>，主要指深度应用互联网、大数据、人工智能等技术，支撑传统基础设施转型升级，进而形成的融合基础设施，比如，智能交通基础设施、智慧能源基础设施等。<br>三是<strong>创新基础设施</strong>，主要指支撑科学研究、技术开发、产品研制的具有公益属性的基础设施，比如，重大科技基础设施、科教基础设施、产业技术创新基础设施等。伴随技术革命和产业变革，新型基础设施的内涵、外延也不是一成不变的，将持续跟踪研究。</p><h3 id="各类软件维护活动中，（-）-维护占整个维护工作的比重最大"><a href="#各类软件维护活动中，（-）-维护占整个维护工作的比重最大" class="headerlink" title="各类软件维护活动中，（ ） 维护占整个维护工作的比重最大"></a>各类软件维护活动中，（ ） 维护占整个维护工作的比重最大</h3><p>完善性&gt;适应性&gt;改正性&gt;预防性</p><h3 id="构成软件配置管理项的内容"><a href="#构成软件配置管理项的内容" class="headerlink" title="构成软件配置管理项的内容"></a>构成软件配置管理项的内容</h3><p>管理文档和技术文档、源代码列表和可执行代码，以及运行所需的各种数据、构成软件配置管理项目</p><h3 id="用例和类"><a href="#用例和类" class="headerlink" title="用例和类"></a>用例和类</h3><p>用例图是面向用户，描述的是系统需求，功能需求，属于<strong>外部结构</strong>，类图侧重描述系统的具体结构，属于<strong>内部结构</strong></p><h3 id="移动互联网-工业"><a href="#移动互联网-工业" class="headerlink" title="移动互联网+工业"></a>移动互联网+工业</h3><p>“互联网+工业”即传统制造业企业采用移动互联网、云计算、大数据、物联网等信息通信技术,改造原有产品及研发生产方式，与“工业互联网”、“工业4.0”的内涵一致。</p><p>“移动互联网+工业”。借助移动互联网技术，传统制造厂商可以在汽车、家电、配饰等工业产品上增加网络软硬件模块，实现用户远程操控、数据自动采集分析等功能，极大地改善了工业产品的使用体验。</p><h3 id="DAS-NAS-SAN"><a href="#DAS-NAS-SAN" class="headerlink" title="DAS NAS SAN"></a>DAS NAS SAN</h3><p>DAS（Direct Attached Storage—直接连接存储）是指将存储设备通过SCSI接口或光纤通道直接连接到一台计算机上。<br>NAS（Network Attached Storage）—网络连接存储，即将存储设备通过标准的网络拓扑结构（例如以太网），连接到一群计算机上。<br>SAN（存储区域网络）通过光纤通道连接到一群计算机上。</p><h3 id="期望理论，是通过考察人们的努力行为与其所获得的最终奖酬之间的因果关系来说明激励过程，并以选择合适的行为达到最终的奖酬目标的理论"><a href="#期望理论，是通过考察人们的努力行为与其所获得的最终奖酬之间的因果关系来说明激励过程，并以选择合适的行为达到最终的奖酬目标的理论" class="headerlink" title="期望理论，是通过考察人们的努力行为与其所获得的最终奖酬之间的因果关系来说明激励过程，并以选择合适的行为达到最终的奖酬目标的理论"></a>期望理论，是通过考察人们的努力行为与其所获得的最终奖酬之间的因果关系来说明激励过程，并以选择合适的行为达到最终的奖酬目标的理论</h3><h3 id="沟通管理计划的编制的目的就是能确定干系人信息和沟通需求"><a href="#沟通管理计划的编制的目的就是能确定干系人信息和沟通需求" class="headerlink" title="沟通管理计划的编制的目的就是能确定干系人信息和沟通需求"></a>沟通管理计划的编制的目的就是能确定干系人信息和沟通需求</h3><h3 id="Control-risks"><a href="#Control-risks" class="headerlink" title="Control risks"></a>Control risks</h3><p>is the process of implementing risk response plans，tracking identified risks，monitoring residual risk，identifying new risk，and evaluating risk process effectiveness throughout the project.<br>A、Identity risks<br>B、Control risks<br>C、Plan risk responses<br>D、Plan risk management</p><h3 id="物料清单"><a href="#物料清单" class="headerlink" title="物料清单"></a>物料清单</h3><p>物料清单用于描述了生产一个产品所需的实际部件、组件和构件的分级层次表格。</p><h3 id="项目管理办公室"><a href="#项目管理办公室" class="headerlink" title="项目管理办公室"></a>项目管理办公室</h3><p>项目管理办公室这一概念本身还在发展之中，在实践上也并不存在统一的方法和认识，但总体来说其主要的功能和作用可以分为两大类：<strong>日常性职能和战略性职能</strong>。<br>日常性职能包括：<br>(1)建立组织内项目管理的支撑环境；<br>(2)培养项目管理人员；<br>(3)提供项目管理的指导和咨询；<br>(4)组织内的多项目的管理和监控。<br>战略性职能包括：<br>(1)项目组合管理：<br>(2)<strong>提高组织项目管理能力</strong>。</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;错题笔记汇总5&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="信息系统项目管理师" scheme="https://www.zenwu.site/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/"/>
-    
-    <category term="错题笔记" scheme="https://www.zenwu.site/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="错题笔记" scheme="https://www.zenwu.site/tags/%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
