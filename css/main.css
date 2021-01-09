@@ -331,6 +331,9 @@ th {
 td {
   border-bottom-width: 1px;
 }
+.table-container p {
+  margin: 0;
+}
 .btn {
   background: var(--btn-default-bg);
   border: 2px solid var(--btn-default-border-color);
