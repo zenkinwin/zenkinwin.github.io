@@ -144,9 +144,9 @@
     <category term="hexo" scheme="https://www.zenwu.site/categories/hexo/"/>
     
     
-    <category term="hexo" scheme="https://www.zenwu.site/tags/hexo/"/>
-    
     <category term="git" scheme="https://www.zenwu.site/tags/git/"/>
+    
+    <category term="hexo" scheme="https://www.zenwu.site/tags/hexo/"/>
     
   </entry>
   
@@ -346,9 +346,9 @@
     <category term="Linux" scheme="https://www.zenwu.site/categories/Linux/"/>
     
     
-    <category term="nginx" scheme="https://www.zenwu.site/tags/nginx/"/>
-    
     <category term="linux" scheme="https://www.zenwu.site/tags/linux/"/>
+    
+    <category term="nginx" scheme="https://www.zenwu.site/tags/nginx/"/>
     
   </entry>
   
@@ -373,9 +373,9 @@
     <category term="Linux" scheme="https://www.zenwu.site/categories/Linux/"/>
     
     
-    <category term="nginx" scheme="https://www.zenwu.site/tags/nginx/"/>
-    
     <category term="linux" scheme="https://www.zenwu.site/tags/linux/"/>
+    
+    <category term="nginx" scheme="https://www.zenwu.site/tags/nginx/"/>
     
   </entry>
   
@@ -400,9 +400,9 @@
     <category term="Linux" scheme="https://www.zenwu.site/categories/Linux/"/>
     
     
-    <category term="nginx" scheme="https://www.zenwu.site/tags/nginx/"/>
-    
     <category term="linux" scheme="https://www.zenwu.site/tags/linux/"/>
+    
+    <category term="nginx" scheme="https://www.zenwu.site/tags/nginx/"/>
     
   </entry>
   
@@ -494,9 +494,9 @@
     <category term="案例题" scheme="https://www.zenwu.site/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
     
     
-    <category term="需求管理" scheme="https://www.zenwu.site/tags/%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86/"/>
-    
     <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
+    
+    <category term="需求管理" scheme="https://www.zenwu.site/tags/%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86/"/>
     
     <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
     

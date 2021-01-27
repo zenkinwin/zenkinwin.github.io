@@ -3274,9 +3274,15 @@ body {
 .search-active .header-inner {
   opacity: 1;
 }
+@media (max-width: 567px) {
+  .post-block {
+    padding: 25px 25px !important;
+  }
+}
 @media (max-width: 767px) {
   .post-block {
     margin: 10px 10px 0 10px !important;
+    padding: 25px 25px !important;
   }
   .header-inner {
     margin: 0px 10px 0 10px !important;
