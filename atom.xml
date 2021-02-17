@@ -6,7 +6,7 @@
   <link href="https://www.zenwu.site/atom.xml" rel="self"/>
   
   <link href="https://www.zenwu.site/"/>
-  <updated>2021-01-09T05:33:01.784Z</updated>
+  <updated>2021-02-14T05:22:21.000Z</updated>
   <id>https://www.zenwu.site/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>gitignore 不起作用的解决办法</title>
+    <link href="https://www.zenwu.site/post/81d1.html"/>
+    <id>https://www.zenwu.site/post/81d1.html</id>
+    <published>2021-02-14T05:22:21.000Z</published>
+    <updated>2021-02-14T05:22:21.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>创建了.gitignore文件，在多个仓库中初始化和切换，发现过滤规则不生效，真是醉了。翻查百度，解决核心在于<em>清除本地缓存</em>，方法如下：</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;update .gitignore&#x27;</span>   <span class="regexp">//</span>windows 使用的命令是  </span><br><span class="line">git commit -m <span class="string">&quot;update .gitignore&quot;</span>  <span class="regexp">//</span>需要使用双引号</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;创建了.gitignore文件，在多个仓库中初始化和切换，发现过滤规则不生效，真是醉了。翻查百度，解决核心在于&lt;em&gt;清除本地缓存&lt;/em&gt;，方法如下：&lt;/p&gt;
+&lt;figure class=&quot;highlight awk&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutt</summary>
+      
+    
+    
+    
+    <category term="前端" scheme="https://www.zenwu.site/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+    
+    <category term="git" scheme="https://www.zenwu.site/tags/git/"/>
+    
+    <category term="gitignore" scheme="https://www.zenwu.site/tags/gitignore/"/>
+    
+  </entry>
   
   <entry>
     <title>网络安全问题清单：问题类型-问题描述-解决方案</title>
@@ -144,9 +171,9 @@
     <category term="hexo" scheme="https://www.zenwu.site/categories/hexo/"/>
     
     
-    <category term="git" scheme="https://www.zenwu.site/tags/git/"/>
-    
     <category term="hexo" scheme="https://www.zenwu.site/tags/hexo/"/>
+    
+    <category term="git" scheme="https://www.zenwu.site/tags/git/"/>
     
   </entry>
   
@@ -288,13 +315,13 @@
     <category term="vue" scheme="https://www.zenwu.site/categories/vue/"/>
     
     
-    <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
-    
     <category term="v-text" scheme="https://www.zenwu.site/tags/v-text/"/>
     
     <category term="v-html" scheme="https://www.zenwu.site/tags/v-html/"/>
     
     <category term="v-model" scheme="https://www.zenwu.site/tags/v-model/"/>
+    
+    <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
     
   </entry>
   
@@ -319,9 +346,9 @@
     <category term="vue" scheme="https://www.zenwu.site/categories/vue/"/>
     
     
-    <category term="v-on" scheme="https://www.zenwu.site/tags/v-on/"/>
-    
     <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
+    
+    <category term="v-on" scheme="https://www.zenwu.site/tags/v-on/"/>
     
   </entry>
   
@@ -458,9 +485,9 @@
     <category term="案例题" scheme="https://www.zenwu.site/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
     
     
-    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
-    
     <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
     
     <category term="案例分析" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
     
@@ -494,11 +521,11 @@
     <category term="案例题" scheme="https://www.zenwu.site/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
     
     
-    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
-    
     <category term="需求管理" scheme="https://www.zenwu.site/tags/%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86/"/>
     
     <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
     
     <category term="案例分析" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
     
@@ -533,9 +560,9 @@
     <category term="案例题" scheme="https://www.zenwu.site/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
     
     
-    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
-    
     <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
     
     <category term="案例分析" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
     
@@ -574,36 +601,6 @@
     <category term="项目收尾" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B0%BE/"/>
     
     <category term="项目会议" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E4%BC%9A%E8%AE%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记-项目整体管理-变更管理-变更管理的原则</title>
-    <link href="https://www.zenwu.site/post/dee1.html"/>
-    <id>https://www.zenwu.site/post/dee1.html</id>
-    <published>2020-11-01T03:09:28.000Z</published>
-    <updated>2020-11-01T03:11:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本题考查变更管理相关知识，参考《信息系统项目管理师教程》第三版教程P508.</p><p>变更管理的原则是项目基准化、变更管理过程规范化。包括以下内容。</p><p><strong>(1)基准管理</strong><br>基准是变更的<strong>依据</strong>。在项目实施过程中，基准计划确定并经过评审后(通常用户应参与部分评审工作)，建立初始基准。此后每次变更通过评审后，都应<strong>重新确定基准</strong>。</p><p><strong>(2)变更控制流程化</strong><br>建立或选用符合项目需要的<strong>变更管理流程</strong>，所有变更都必须遵循这个控制流程进行控制。流程化的作用在于将变更的原因、专业能力、资源运用方案、决策权、干系人的共识、信息流转等元素有效综合起来，按科学的顺序进行。</p><p><strong>(3)明确组织分工</strong><br>至少应明确变更相关工作的评估、评审、执行的职能。</p><p><strong>(4)评估变更的可能影响</strong><br>变更的来源是多样的，既需要完成对客户可视的成果、交付期等变更操作，还需要完成对客户不可视的项目内部工作的变更，如实施方的人员分工、管理工作、资源配置等等。</p><p><strong>(5)妥善保存变更产生的相关文档，确保其完整、及时、准确、清晰，适当时可以引入配置管理工具</strong><br>国内使用较多的配置工具有Rational ClearCase、Visual SourceSafe和Concurrent Versions System。</p><pre><code>关于变更管理的描述，不正确的是:（ B ）。A.每次变更通过评审后，都应重新确定基准B.必须采用变更管理工具 (正确应为：适当时可以引入配置管理工具)C.明确变更工作中评估、评审、执行的职责D.评估变更的可能影响</code></pre>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;本题考查变更管理相关知识，参考《信息系统项目管理师教程》第三版教程P508.&lt;/p&gt;
-&lt;p&gt;变更管理的原则是项目基准化、变更管理过程规范化。包括以下内容。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;(1)基准管理&lt;/strong&gt;&lt;br&gt;基准是变更的&lt;strong&gt;依据&lt;/strong</summary>
-      
-    
-    
-    
-    <category term="信息系统项目管理师" scheme="https://www.zenwu.site/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/"/>
-    
-    <category term="项目整体管理" scheme="https://www.zenwu.site/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B8%88/%E9%A1%B9%E7%9B%AE%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="变更管理" scheme="https://www.zenwu.site/tags/%E5%8F%98%E6%9B%B4%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
