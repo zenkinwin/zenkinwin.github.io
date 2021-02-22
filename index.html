@@ -127,8 +127,8 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">45</span></a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">240</span></a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">44</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">242</span></a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">293</span></a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
       <li class="menu-item menu-item-search">
@@ -220,14 +220,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">240</span>
+          <span class="site-state-item-count">242</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">44</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
@@ -285,7 +285,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/81d1.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/896e.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -298,7 +298,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/post/81d1.html" class="post-title-link" itemprop="url">gitignore 不起作用的解决办法</a>
+          <a href="/post/896e.html" class="post-title-link" itemprop="url">笔记-项目进度管理-资源平衡和资源平滑</a>
         </h2>
 
         <div class="post-meta-container">
@@ -309,15 +309,26 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-02-14 13:22:21" itemprop="dateCreated datePublished" datetime="2021-02-14T13:22:21+08:00">2021-02-14</time>
+      <time title="创建时间：2020-10-28 20:15:35" itemprop="dateCreated datePublished" datetime="2020-10-28T20:15:35+08:00">2020-10-28</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 20:15:29" itemprop="dateModified" datetime="2021-02-22T20:15:29+08:00">2021-02-22</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%89%8D%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">前端</span></a>
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E8%BF%9B%E5%BA%A6%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目进度管理</span></a>
         </span>
     </span>
 
@@ -329,7 +340,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>196</span>
+      <span>719</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -347,8 +358,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>创建了.gitignore文件，在多个仓库中初始化和切换，发现过滤规则不生效，真是醉了。翻查百度，解决核心在于<em>清除本地缓存</em>，方法如下：</p>
-<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git rm -r --cached .</span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&#x27;update .gitignore&#x27;</span>   <span class="regexp">//</span>windows 使用的命令是  </span><br><span class="line">git commit -m <span class="string">&quot;update .gitignore&quot;</span>  <span class="regexp">//</span>需要使用双引号</span><br></pre></td></tr></table></figure>
+          <p>本题考查制定进度计划的技术和工具，参考《信息系统项目管理师教程》第三版教程P279。</p>
+<p>1、进度网络图中<strong>可能有多条关键路径</strong>。在项目进展过程中，有的活动会提前完成，有的活动会推迟完成，有的活动会中途取消，新的活动可能会被中途加入，网络图在不断变化，关键路径也在不断变化之中。</p>
+<p>2、正常情况下，<strong>关键活动的总浮动时间和自由浮动时间为零</strong>。</p>
+<p><strong>3、资源平衡</strong>(Resource Leveling)。为了在资源需求与资源供给之间取得<strong>平衡</strong>，根据资源制约对开始日期和结束日期进行调整的一种技术。如果共享资源或关键资源只在特定时间可用，数量有限，或被过度分配，如一个资源在同一时段内被分配至两个或多个活动，就需要进行资源平衡。也可以为保持资源使用量处于均衡水平而进行资源平衡。<strong>资源平衡往往导致关键路径改变</strong>，通常是<strong>延长</strong>。</p>
+<blockquote>
+<p><em>注意资源平衡问题，20210222</em></p>
+<ul>
+<li>资源平衡是一种进度网络分析技术，用于已经利用关键路线法分析过的进度模型之中。</li>
+<li>资源平衡这种均匀使作资源的办法<em>可能会改变原来的关键路线</em>。</li>
+<li>资源平衡的结果通常是使项目的预计持续时间比项目初步进度表长。将资源从非关键活动重新分配到关键活动的做法，是使项目自始至终尽可能接近原来为其设定的整体持续时间而经常采用的方式。</li>
+<li>某些项目可能拥有数量有限但关键的项目资源，遇到时这种情况，资源可以从项目的结束日期开始反向安排，这种做法做<em>按资源分配倒排进度法</em>，但<em>不一定能制定出最优</em>项目进度表。</li>
+</ul>
+</blockquote>
+<p><strong>4、资源平滑</strong>(Resource Smoothing)。 对进度模型中的活动进行调整，从而使项目资源需求不超过预定的资源限制的一种技术。相对于资源平衡而言，资源平滑不会改变项目关键路径，完工日期也不会延迟。也就是说，活动<strong>只在其自由浮动时间和总浮动时间内延迟</strong>。</p>
 
       
     </div>
@@ -382,7 +405,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/bb1f.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/f72d.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -395,7 +418,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/post/bb1f.html" class="post-title-link" itemprop="url">历史：2007年总结与2008年展望</a>
+          <a href="/post/f72d.html" class="post-title-link" itemprop="url">笔记-项目采购管理-规划采购管理</a>
         </h2>
 
         <div class="post-meta-container">
@@ -406,14 +429,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2008-01-01 00:11:24" itemprop="dateCreated datePublished" datetime="2008-01-01T00:11:24+08:00">2008-01-01</time>
+      <time title="创建时间：2020-09-12 16:36:24" itemprop="dateCreated datePublished" datetime="2020-09-12T16:36:24+08:00">2020-09-12</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-26 20:10:30" itemprop="dateModified" datetime="2021-01-26T20:10:30+08:00">2021-01-26</time>
+        <time title="修改时间：2021-02-22 15:39:20" itemprop="dateModified" datetime="2021-02-22T15:39:20+08:00">2021-02-22</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -421,7 +444,11 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%85%B6%E4%BB%96/" itemprop="url" rel="index"><span itemprop="name">其他</span></a>
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%87%87%E8%B4%AD%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目采购管理</span></a>
         </span>
     </span>
 
@@ -433,7 +460,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
+      <span>884</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -451,19 +478,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<ul>
-<li>这是一篇 <code>13年前</code> 的博文，当时记录时间是在 <code>2008-01-01 00:11:24</code> 写下的，年轻真是可以无所畏惧的、任意妄为的，有删减。</li>
-<li>仅仅做个纪念，括号为在 <code>2021-01-26 20:10:30</code> 加入的备注，***是人工过滤。</li>
-</ul>
-</blockquote>
-<p>在2008年新一天，本着继续以自我为中心的理念<span class="gray">（注：当时还是有点自知之明）</span>，刁着（YY）半支烟，翘着二郎腿，为过去的2007年做点忘却的纪念，为到来的2008年写下点宏伟目标。<span class="gray">（注：假酒喝多有点上头~）</span></p>
-<p>2007年，***就这样去了，不留一丝香味，追忆也只在一瞬，下一秒又是一个危险与机遇。<span class="gray">（注：高端大气上档次的感觉）</span></p>
-<p>流水式回顾下2007年：</p>
-<p>上半年还是在南海桂城打滚着，NND有点陷入了井底，想跳也跳不出那井口，套住了差不多2年了，于是下半年回来顺德老家，为振兴顺德伟大web事业托起一陀飞翔，回来第二天找工作，极速互联，多猛的公司名字，让我一辈子都记得，特别是那叫孙小辉，让我第一次感到“老板”是这样，4个月光阴流失了，年末又跳到让我觉得稍微有点希望的技术型“ERP+出国留学+海归博士”的公司上，此乃后话……<span class="gray">（注：后话是该公司还是个坑）</span></p>
+          <p><strong>规划采购管理</strong><br>记录项目采购决策、明确采购方法、识别潜在卖方的过程。</p>
           <!--noindex 去掉了#more-->
             <div class="post-button">
-              <a class="btn" href="/post/bb1f.html" rel="contents">
+              <a class="btn" href="/post/f72d.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -501,7 +519,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/8338.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/7dbd.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -514,7 +532,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/post/8338.html" class="post-title-link" itemprop="url">2015年12月份学习总结，前端开发工程师的知识库指引</a>
+          <a href="/post/7dbd.html" class="post-title-link" itemprop="url">笔记-知识产权与标准化知识-中华人民共和国招标投标法实施条例</a>
         </h2>
 
         <div class="post-meta-container">
@@ -525,14 +543,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2016-01-03 14:01:01" itemprop="dateCreated datePublished" datetime="2016-01-03T14:01:01+08:00">2016-01-03</time>
+      <time title="创建时间：2021-02-21 15:26:21" itemprop="dateCreated datePublished" datetime="2021-02-21T15:26:21+08:00">2021-02-21</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-22 19:41:20" itemprop="dateModified" datetime="2021-01-22T19:41:20+08:00">2021-01-22</time>
+        <time title="修改时间：2021-02-22 11:43:49" itemprop="dateModified" datetime="2021-02-22T11:43:49+08:00">2021-02-22</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -540,11 +558,11 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">学习总结</span></a>
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E4%B8%8E%E6%A0%87%E5%87%86%E5%8C%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">知识产权与标准化知识</span></a>
         </span>
     </span>
 
@@ -556,14 +574,14 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.9k</span>
+      <span>17k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
+      <span>16 分钟</span>
     </span>
 </div>
 
@@ -575,22 +593,11 @@
     
     <div class="post-body" itemprop="articleBody">
           <blockquote>
-<p>本文摘录2015年12月份学习总结，创建日期：2016-01-03 14:01:01，有修改。<br>以下正文：</p>
+<p>另有《中华人民共和国招标投标法(2017修正)》<br>全文转载，<a target="_blank" rel="noopener" href="http://www.gov.cn/zwgk/2011-12/29/content_2033184.htm">http://www.gov.cn/zwgk/2011-12/29/content_2033184.htm</a></p>
 </blockquote>
-<p>在9月份领到了一项任务是关于《前端开发工程师的知识库指引》，想了又想，而在我们现在的设计团队，前端输出人员虽然技术水平是各有千秋，或者说术业有专攻的，但是在我看来，总是欠缺点什么。在网上搜索一堆文章和例子，特别喜欢这篇，《如何成为一个卓越的前端工程师》 <a target="_blank" rel="noopener" href="http://jiongks.name/blog/how-to-become-a-great-front-end-engineer/">http://jiongks.name/blog/how-to-become-a-great-front-end-engineer/</a> 这篇译文，翻译者是同行业的大牛。在《如何成为一个卓越的前端工程师》文章所说几点，值得我们深思学习。</p>
-<ul>
-<li>别光解决问题，想想究竟发生是什么</li>
-<li>学会预见未来的浏览器发展趋势</li>
-<li>阅读规范文档</li>
-<li>阅读别人的代码</li>
-<li>与比你聪明的人一起工作</li>
-<li>“造轮子”</li>
-<li>把你学到的东西都记录下来</li>
-</ul>
-<p><strong><em>而技能是可以学习的，但区分人才和顶尖人才的并不是他们的知识——而是他们思考问题的方式</em></strong>，我想这是我们最缺乏的。</p>
           <!--noindex 去掉了#more-->
             <div class="post-button">
-              <a class="btn" href="/post/8338.html" rel="contents">
+              <a class="btn" href="/post/7dbd.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -628,7 +635,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/59ce.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/da86.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -641,7 +648,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/post/59ce.html" class="post-title-link" itemprop="url">2018年12月份学习总结，PMP学习总结</a>
+          <a href="/post/da86.html" class="post-title-link" itemprop="url">笔记-软考高项-错题笔记汇总5</a>
         </h2>
 
         <div class="post-meta-container">
@@ -652,14 +659,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2018-12-26 15:35:24" itemprop="dateCreated datePublished" datetime="2018-12-26T15:35:24+08:00">2018-12-26</time>
+      <time title="创建时间：2020-10-31 23:14:04" itemprop="dateCreated datePublished" datetime="2020-10-31T23:14:04+08:00">2020-10-31</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-21 22:11:20" itemprop="dateModified" datetime="2021-01-21T22:11:20+08:00">2021-01-21</time>
+        <time title="修改时间：2021-02-22 11:43:46" itemprop="dateModified" datetime="2021-02-22T11:43:46+08:00">2021-02-22</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -667,11 +674,11 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">学习总结</span></a>
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%94%99%E9%A2%98%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">错题笔记</span></a>
         </span>
     </span>
 
@@ -683,243 +690,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.7k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>本文摘录2018年12月份学习总结，创建日期：2019-04-15 17:09:30，有修改。<br>这是一个在2018年报考、学习PMP的总结，小小的在内网的分享。2021-01-21 22:11:20<br>以下正文：</p>
-</blockquote>
-<p>12月也过去了，3个月PMBOK的项目管理学习也结束了，迎来一次持续4小时的考试，碰上考试期间不断咳嗽的老年病状，结果感觉是凉凉的，生无可恋了的。结果不美，虽然考试可以再来一次，但是过程还是没白费的，能完整地、系统地学习了一次项目管理知识体系的内容。</p>
-<p>先介绍下学习和考试，有兴趣的同事看后可联系混个推荐PDU。</p>
-          <!--noindex 去掉了#more-->
-            <div class="post-button">
-              <a class="btn" href="/post/59ce.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/5d98.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/5d98.html" class="post-title-link" itemprop="url">2017年6月份学习总结，读书《5个高效工作习惯，让你跟「瞎忙」划清界限》</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-07-03 20:46:25" itemprop="dateCreated datePublished" datetime="2017-07-03T20:46:25+08:00">2017-07-03</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 22:11:12" itemprop="dateModified" datetime="2021-01-19T22:11:12+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">学习总结</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>2017年6份学习总结，创建日期：2017-07-03 20:46:25，有删减；<br>文章是这文：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/wzxNbPiy0-JCTBShlKwoaQ">https://mp.weixin.qq.com/s/wzxNbPiy0-JCTBShlKwoaQ</a>，以下正文：</p>
-</blockquote>
-<p>提高效率，提高效率，提高效率，终归事情太多，怎样做到高效的工作习惯，转载下文五个习惯，此文在我的微信收藏夹里，个别地方对照了自己的做法，学而时习之。</p>
-<h2 id="习惯一：异步沟通"><a href="#习惯一：异步沟通" class="headerlink" title="习惯一：异步沟通"></a>习惯一：异步沟通</h2><p>沟通分两种，一种是<strong>同步沟通</strong>，另一种是<strong>异步沟通</strong>。</p>
-<ul>
-<li><strong>同步沟通</strong>，也叫即时沟通，我们平时在微信、QQ 上的对话，就属于即时沟通。<em>即时沟通的优点是能够随时联系对方，即刻获取想要的结果，但缺点也很明显：沟通成本大，双方需要反复多次确认，才能继续。即时沟通对创作者来讲是大敌：硬生生将大块时间切成碎片，间歇性插入对话，转移注意力，打断心流。</em></li>
-<li><strong>异步沟通</strong>：简单地来讲就是尽量集中处理回复，争取将沟通效率最大化，给自己留下大块时间，专注于做更难更需要创意想象的事情。</li>
-</ul>
-          <!--noindex 去掉了#more-->
-            <div class="post-button">
-              <a class="btn" href="/post/5d98.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/vue/e71c.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/vue/e71c.html" class="post-title-link" itemprop="url">vue学习：v-on</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-22 02:16:41" itemprop="dateCreated datePublished" datetime="2020-11-22T02:16:41+08:00">2020-11-22</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 15:13:32" itemprop="dateModified" datetime="2021-01-19T15:13:32+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>3k</span>
+      <span>2.8k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -937,1355 +708,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p><code>v-on</code>就是用于**<em>绑定事件**</em>的，例如：有个按钮，当点击的时候执行一些操作。</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">    &lt;button v-<span class="keyword">on</span>:click=<span class="string">&quot;myclick&quot;</span>&gt;click <span class="keyword">me</span>&lt;/button&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;  </span><br></pre></td></tr></table></figure>
-
-<p>上述代码中，<code>v-on:</code>后面的值是一个方法，可以写成<code>myclick()</code>，没有参数可以写成<code>myclick</code>。<br>另外这种事件对应的方法不是定义在<code>data</code>选项中，而是定义在<code>vue</code>实例的<code>methods</code>选项中，里面都是一个一个的<code>function</code>。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    el:<span class="string">&#x27;.app&#x27;</span>,</span><br><span class="line">    data:&#123;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">        myclick:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">            <span class="built_in">console</span>.log(<span class="number">111111</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+          <p>错题笔记汇总5，中项+高项</p>
           <!--noindex 去掉了#more-->
             <div class="post-button">
-              <a class="btn" href="/post/vue/e71c.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/446f.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/446f.html" class="post-title-link" itemprop="url">Redirecting to /bin/systemctl restart sshd.service</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-12 00:00:53" itemprop="dateCreated datePublished" datetime="2020-11-12T00:00:53+08:00">2020-11-12</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 15:09:35" itemprop="dateModified" datetime="2021-01-19T15:09:35+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>174</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>云服务器 ECS Linux CentOS 7 下重启服务不再通过<code>service</code>操作，而是通过<code>systemctl</code>操作。</p>
-<p>查看：<code>systemctl status sshd.service</code></p>
-<p>启动：<code>systemctl start sshd.service</code></p>
-<p>重启：<code>systemctl restart sshd.service</code></p>
-<p>自启：<code>systemctl enable sshd.service</code></p>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/7144.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/7144.html" class="post-title-link" itemprop="url">Linux nginx 启动关闭重启教程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-09 23:57:30" itemprop="dateCreated datePublished" datetime="2020-11-09T23:57:30+08:00">2020-11-09</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 15:06:49" itemprop="dateModified" datetime="2021-01-19T15:06:49+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>184</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>centos环境，nginx目录<code>/usr/local/nginx/sbin/</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#进入sbin目录文件</span></span><br><span class="line">`<span class="built_in">cd</span> /usr/<span class="built_in">local</span>/nginx/sbin/`</span><br><span class="line"></span><br><span class="line"><span class="comment">#启动</span></span><br><span class="line">./nginx</span><br><span class="line"></span><br><span class="line"><span class="comment">#关闭</span></span><br><span class="line">./nginx -s stop</span><br><span class="line"></span><br><span class="line"><span class="comment">#更改配置后重启  </span></span><br><span class="line">./nginx -s reload</span><br><span class="line"></span><br><span class="line"><span class="comment">#查看进程</span></span><br><span class="line">ps -ef | grep nginx</span><br><span class="line"></span><br><span class="line"><span class="comment">#杀死进程</span></span><br><span class="line">pkill nginx</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/vue/224e.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/vue/224e.html" class="post-title-link" itemprop="url">vue学习：v-text，v-html, v-model, {{}}之间的异同</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-22 23:16:41" itemprop="dateCreated datePublished" datetime="2020-11-22T23:16:41+08:00">2020-11-22</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 14:22:04" itemprop="dateModified" datetime="2021-01-19T14:22:04+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.1k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h3 id="1-v-text"><a href="#1-v-text" class="headerlink" title="1. v-text"></a>1. v-text</h3><p><code>v-text</code>是用于操作纯文本，它会替代显示对应的数据对象上的值。当绑定的数据对象上的值发生改变，<strong>插值处</strong>的内容也会随之更新。注意：此处为<strong>单向绑定</strong>，数据对象上的值改变，插值会发生变化；但是当插值发生变化并不会影响数据对象的值。</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">其中：v-<span class="built_in">text</span>可以简写为&#123;&#123;&#125;&#125;，并且支持逻辑运算。</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">  </span><span class="template-variable">&#123;&#123; <span class="name">msg</span> &#125;&#125;</span></span><br><span class="line"><span class="xml"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">    <span class="attr">el :</span> <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">    <span class="attr">data :</span> &#123;</span><br><span class="line">        <span class="attr">msg :</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>注：<code>vue</code>中有个指令叫做 <code>v-once</code> 可以通过<code>v-once</code>与<code>v-text</code>结合，实现仅执行一次性的插值。</p>
-<figure class="highlight handlebars"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">v-once</span>&gt;</span>这个将不会随msg属性的改变而改变: </span><span class="template-variable">&#123;&#123; <span class="name">msg</span> &#125;&#125;</span><span class="xml"><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-v-html"><a href="#2-v-html" class="headerlink" title="2. v-html"></a>2. v-html</h3><p><code>v-html</code>用于输出<code>html</code>，它与<code>v-text</code>区别在于<code>v-text</code>输出的是<strong>纯文本</strong>，浏览器不会对其再进行html解析，但<code>v-html</code>会将其当<strong>html标签解析后输出</strong>。</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">v-html</span>=<span class="string">&quot;html&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let app = new Vue(&#123;</span><br><span class="line"><span class="symbol">        el:</span> <span class="string">&quot;#app&quot;</span>,</span><br><span class="line"><span class="symbol">        data:</span> &#123;</span><br><span class="line"><span class="symbol">            html:</span> <span class="string">&quot;&lt;b style=&#x27;color:red&#x27;&gt;v-html&lt;/b&gt;&quot;</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
-
-<h3 id="3-v-model"><a href="#3-v-model" class="headerlink" title="3. v-model"></a>3. v-model</h3><p><code>v-model</code>通常用于<strong>表单组件</strong>的绑定，例如<code>input，select</code>等。它与<code>v-text</code>的区别在于它<strong>实现的表单组件的双向绑定</strong>，如果用于表单控件以外标签是没有用的。</p>
-<figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">  &lt;input v-model=<span class="string">&quot;message &quot;</span> /&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var app = <span class="keyword">new</span> Vue(&#123;</span><br><span class="line">   <span class="attr">el :</span> <span class="string">&#x27;#app&#x27;</span>,</span><br><span class="line">   <span class="attr">data :</span> &#123;</span><br><span class="line">    <span class="attr">message :</span> <span class="string">&#x27;hello world&#x27;</span></span><br><span class="line"> &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>本文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u014541501/article/details/78181729">https://blog.csdn.net/u014541501/article/details/78181729</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/vue/7e25.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/vue/7e25.html" class="post-title-link" itemprop="url">vue学习：vue中data和return data的区别</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-23 23:14:12" itemprop="dateCreated datePublished" datetime="2020-11-23T23:14:12+08:00">2020-11-23</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 14:21:57" itemprop="dateModified" datetime="2021-01-19T14:21:57+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/vue/" itemprop="url" rel="index"><span itemprop="name">vue</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>333</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>在简单的vue实例中看到的Vue实例中data属性是如下方式展示的：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> app= newVue(&#123;</span><br><span class="line">    <span class="keyword">e</span><span class="variable">l:</span><span class="string">&quot;#app&quot;</span>,</span><br><span class="line">    dat<span class="variable">a:</span>&#123;</span><br><span class="line">        ms<span class="variable">g:</span><span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    method<span class="variable">s:</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>在使用组件化的项目中使用的是如下形式：</p>
-<figure class="highlight haskell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="title">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">data</span>()&#123;</span></span><br><span class="line"><span class="class">        <span class="title">return</span> &#123;</span></span><br><span class="line"><span class="class">        &#125;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="为什么要写return返回"><a href="#为什么要写return返回" class="headerlink" title="为什么要写return返回"></a>为什么要写return返回</h3><p>因为不使用return包裹的数据会在项目的<strong>全局可见</strong>，会造成变量污染<br>使用<strong>return包裹后数据中变量只在当前组件中生效</strong>，不会影响其他组件。</p>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/dc89.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/dc89.html" class="post-title-link" itemprop="url">nginx配置ssl（配置文件）</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-20 14:09:25" itemprop="dateCreated datePublished" datetime="2020-11-20T14:09:25+08:00">2020-11-20</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 14:21:36" itemprop="dateModified" datetime="2021-01-19T14:21:36+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>565</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>nginx配置ssl（配置文件），只列出部分内容。</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># http server</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">listen</span>       <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span>  www.zenwu.site zenwu.site;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将Http请求转化成Https请求</span></span><br><span class="line">    <span class="attribute">return</span> <span class="number">301</span> https://$server_name$request_uri;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># HTTPS server</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">listen</span>       <span class="number">443</span> ssl;</span><br><span class="line">    <span class="attribute">server_name</span>  www.zenwu.site zenwu.site;</span><br><span class="line">    <span class="attribute">ssl_certificate</span>      /home/ssl/www.zenwu.site_chain.crt;  <span class="comment"># 证书</span></span><br><span class="line">    <span class="attribute">ssl_certificate_key</span>  /home/ssl/www.zenwu.site_key.key;  <span class="comment"># 证书</span></span><br><span class="line">    <span class="attribute">ssl_session_cache</span>    shared:SSL:<span class="number">1m</span>;</span><br><span class="line">    <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</span><br><span class="line">    <span class="attribute">ssl_ciphers</span>  HIGH:!aNULL:!MD5;</span><br><span class="line">    <span class="attribute">ssl_prefer_server_ciphers</span>  <span class="literal">on</span>;</span><br><span class="line">    <span class="attribute">location</span> / &#123;</span><br><span class="line">        <span class="attribute">root</span>   /home/www/zenwuhexo/;</span><br><span class="line">        <span class="attribute">index</span>  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/efd0.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/efd0.html" class="post-title-link" itemprop="url">Mac下使用docker下载nginx并挂载文件</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-09-16 00:12:22" itemprop="dateCreated datePublished" datetime="2020-09-16T00:12:22+08:00">2020-09-16</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 14:21:30" itemprop="dateModified" datetime="2021-01-19T14:21:30+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>2.4k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>2 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Mac下使用docker下载nginx并挂载文件。<br>也发到另外csdn：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zenkin/article/details/108612594">https://blog.csdn.net/zenkin/article/details/108612594</a></p>
-          <!--noindex 去掉了#more-->
-            <div class="post-button">
-              <a class="btn" href="/post/efd0.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/47c0.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/47c0.html" class="post-title-link" itemprop="url">Linux下如何查看版本信息</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-10-27 08:56:09" itemprop="dateCreated datePublished" datetime="2020-10-27T08:56:09+08:00">2020-10-27</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 14:21:23" itemprop="dateModified" datetime="2021-01-19T14:21:23+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>796</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>Linux下如何查看版本信息， 包括位数、版本信息以及CPU内核信息、CPU具体型号等等，整个CPU信息一目了然。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> uname -a   <span class="comment">#（Linux查看版本当前操作系统内核信息）</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> cat /proc/version <span class="comment">#（Linux查看当前操作系统版本信息）</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> cat /etc/issue  或cat /etc/redhat-release  <span class="comment">#（Linux查看版本当前操作系统发行版信息）</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> cat /proc/cpuinfo <span class="comment">#（Linux查看cpu相关信息，包括型号、主频、内核信息等）</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> getconf LONG_BIT  <span class="comment">#（Linux查看版本说明当前CPU运行在32bit模式下， 但不代表CPU不支持64bit）</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> lsb_release -a x  <span class="comment">#(查看linux系统内核信息)</span></span></span><br></pre></td></tr></table></figure>
-
-<p>查看linux系统内核信息，输入命令 <code>lsb_release -a</code>，如果提示不存在，可以安装一下<code>lsb_release</code></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install redhat-lsb</span><br></pre></td></tr></table></figure>
-
-<p>安装过程yes，完成安装，输入<code>lsb_release -a</code>，即输出系统版本信息</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# lsb_release -a x</span><br><span class="line">LSB Version::core-4.1-amd64:core-4.1-noarch:cxx-4.1-amd64:cxx-4.1-noarch:desktop-4.1-amd64:desktop-4.1-noarch:languages-4.1-amd64:languages-4.1-noarch:printing-4.1-amd64:printing-4.1-noarch</span><br><span class="line">Distributor ID:RedHatEnterpriseServer</span><br><span class="line">Description:Red Hat Enterprise Linux Server release 7.6 (Maipo)</span><br><span class="line">Release:7.6</span><br><span class="line">Codename:Maipo</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/47c0.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/47c0.html" class="post-title-link" itemprop="url">Centos维护Nginx</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-11 23:47:13" itemprop="dateCreated datePublished" datetime="2020-11-11T23:47:13+08:00">2020-11-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 14:21:01" itemprop="dateModified" datetime="2021-01-19T14:21:01+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>140</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>进入维护目录：<code>cd /usr/local/nginx/sbin</code></p>
-<figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">./nginx</span> -v 查看当前nginx版本号</span><br><span class="line"><span class="string">./nginx</span> -s stop 关闭</span><br><span class="line"><span class="string">./nginx</span> 开启</span><br><span class="line"><span class="string">./nginx</span> -s <span class="keyword">reload</span> 重新加载配置文件（修改配置文件后进行）</span><br></pre></td></tr></table></figure>
-
-<p>安装目录：<code>/usr/local/nginx/sbinx</code></p>
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/javascript/5abf.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/javascript/5abf.html" class="post-title-link" itemprop="url">js中const,var,let区别与用法</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2020-11-24 22:16:41" itemprop="dateCreated datePublished" datetime="2020-11-24T22:16:41+08:00">2020-11-24</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-19 14:20:54" itemprop="dateModified" datetime="2021-01-19T14:20:54+08:00">2021-01-19</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/javascript/" itemprop="url" rel="index"><span itemprop="name">javascript</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>786</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_36784628/article/details/80966826">https://blog.csdn.net/qq_36784628/article/details/80966826</a></p>
-</blockquote>
-<p>js中三种定义变量的方式const， var， let的区别。</p>
-<h3 id="1-const定义的变量不可以修改，而且必须初始化"><a href="#1-const定义的变量不可以修改，而且必须初始化" class="headerlink" title="1. const定义的变量不可以修改，而且必须初始化"></a>1. const定义的变量不可以修改，而且必须初始化</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> b = <span class="number">2</span>; <span class="comment">//正确</span></span><br><span class="line"><span class="comment">// const b; //错误，必须初始化</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;函数外const定义b：&#x27;</span> + b); <span class="comment">//有输出值</span></span><br><span class="line"><span class="comment">// b = 5; //修改变量值</span></span><br><span class="line"><span class="comment">// console.log(&#x27;函数外修改const定义b：&#x27; + b); //无法输出，因为const定义的变量不可以修改</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="2-var定义的变量可以修改，如果不初始化会输出undefined，不会报错"><a href="#2-var定义的变量可以修改，如果不初始化会输出undefined，不会报错" class="headerlink" title="2. var定义的变量可以修改，如果不初始化会输出undefined，不会报错"></a>2. var定义的变量可以修改，如果不初始化会输出undefined，不会报错</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="number">1</span>;</span><br><span class="line"><span class="comment">// var a; //不会报错</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;函数外var定义a：&#x27;</span> + a); <span class="comment">//可以输出a=1</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    a = <span class="number">4</span>; <span class="comment">//改变变量值</span></span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;函数内var定义a：&#x27;</span> + a); <span class="comment">//可以输出a=4</span></span><br><span class="line">&#125;</span><br><span class="line">change();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;函数调用后var定义a为函数内部修改值：&#x27;</span> + a); <span class="comment">//可以输出a=4</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="3-let是块级作用域，函数内部使用let定义后，对函数外部无影响"><a href="#3-let是块级作用域，函数内部使用let定义后，对函数外部无影响" class="headerlink" title="3. let是块级作用域，函数内部使用let定义后，对函数外部无影响"></a>3. let是块级作用域，函数内部使用let定义后，对函数外部无影响</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> c = <span class="number">3</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;函数外let定义c：&#x27;</span> + c); <span class="comment">//输出c=3</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">change</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">let</span> c = <span class="number">6</span>;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">&#x27;函数内let定义c：&#x27;</span> + c);<span class="comment">//输出c=6</span></span><br><span class="line">&#125;</span><br><span class="line">change();</span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&#x27;函数调用后let定义c不受函数内部定义影响：&#x27;</span> + c); <span class="comment">//输出c=3</span></span><br></pre></td></tr></table></figure>
-
-
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/a561.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/a561.html" class="post-title-link" itemprop="url">2016年6月份学习总结，读书《向着光亮那方》</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2016-07-03 19:46:16" itemprop="dateCreated datePublished" datetime="2016-07-03T19:46:16+08:00">2016-07-03</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-18 23:18:52" itemprop="dateModified" datetime="2021-01-18T23:18:52+08:00">2021-01-18</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">学习总结</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>877</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>2016年6月份学习总结，创建日期：2016-07-03 19:46:16，有删减；<br>以下正文：</p>
-</blockquote>
-<p>这月陆陆续续看了刘同的<a target="_blank" rel="noopener" href="http://baike.baidu.com/item/%E5%90%91%E7%9D%80%E5%85%89%E4%BA%AE%E9%82%A3%E6%96%B9/19467106">《向着光亮那方》</a>，<em>“谁的青春不迷茫，迷茫背后是光亮”</em>。记得当时看刘同的第一本书的时候，有一句话让我产生共鸣：谁的青春不迷茫，其实我们都一样，到第三本书，已经变成了谁的青春不迷茫、迷茫背后是光亮，伴随着书籍成长，从迷茫，到孤独，到有光亮，是不是能也找到点自己的影子，走向了光亮那方。</p>
-<p>《向着光亮那方》是谁的青春不迷茫系列之三，青年作家刘同2016年的全新作品。关于人生中的转弯，告别，妥协，原则，裂痕……是青春的敌人，也是成长的代价。我们的青春都一样，孤独，迷茫，有光亮。愿你在自己存在的地方，成为一束光，照亮世界的一角。（百度百科介绍）</p>
-<p><img src="https://cdn.zenwu.site/upload/pic/2021/20210119112823.png" alt="《向着光亮那方》封面"></p>
-          <!--noindex 去掉了#more-->
-            <div class="post-button">
-              <a class="btn" href="/post/a561.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/736c.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/736c.html" class="post-title-link" itemprop="url">转载-如何做好项目的需求与业务调研▲▲▲</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2017-03-03 22:59:04" itemprop="dateCreated datePublished" datetime="2017-03-03T22:59:04+08:00">2017-03-03</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-18 22:56:38" itemprop="dateModified" datetime="2021-01-18T22:56:38+08:00">2021-01-18</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目管理</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>22k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>20 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>原文地址：<a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_6a656bb40102vhzf.html">http://blog.sina.com.cn/s/blog_6a656bb40102vhzf.html</a><br>作者：郭致星，百科介绍：<a target="_blank" rel="noopener" href="http://baike.baidu.com/item/%E9%83%AD%E8%87%B4%E6%98%9F">http://baike.baidu.com/item/%E9%83%AD%E8%87%B4%E6%98%9F</a></p>
-<ul>
-<li>在某市政政府集群调研，忙到天昏地暗，但还是抽空找了一个资深项目经理的一篇《如何做好项目的需求与业务调研》的文章，很有帮助，全文转载，供大家阅读，红字是划线内容，划线是附上我的读后感。(2017-03-03 22:59:04)</li>
-<li>本文也是2017年3月内网学习总结；（2021-01-18 23:57:25）</li>
-<li>这篇文章读了好几次，每次都获益良多，持续推荐。（2021-01-18 23:57:25）</li>
-</ul>
-</blockquote>
-          <!--noindex 去掉了#more-->
-            <div class="post-button">
-              <a class="btn" href="/post/736c.html" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      
-
-
-    
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/c38.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Zen.Wu">
-      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="ZenWu.site">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/post/c38.html" class="post-title-link" itemprop="url">2016年5月份学习总结，读书《你的孤独，虽败犹荣》</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2016-06-03 23:46:17" itemprop="dateCreated datePublished" datetime="2016-06-03T23:46:17+08:00">2016-06-03</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-18 20:18:52" itemprop="dateModified" datetime="2021-01-18T20:18:52+08:00">2021-01-18</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-          ，
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">学习总结</span></a>
-        </span>
-    </span>
-
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <blockquote>
-<p>2016年5月份学习总结，创建日期：2016-06-03 23:46:17，有删减；<br>回想当时，还真喜欢阅读刘同的作品，2021-01-18 20:58:55<br>以下正文：</p>
-</blockquote>
-<p>这月一直在学习，现在只谈工作外的。大神名言，心情不好，多看书，看最想看的。偶尔翻到APP微信读书，第一本书《世界历史百科》读了几个晚上，没错我爱读历史书，一直不变的是读书的味道。</p>
-<p>第二本书也就是今天推荐的，名字叫《你的孤独，虽败犹荣》，<a target="_blank" rel="noopener" href="https://book.douban.com/subject/25895442/">豆瓣链接</a>，作者是刘同，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%88%98%E5%90%8C/3842987?fr=aladdin">百科链接</a>，当初这书是很热，炒得厉害。我推荐这书，因被导读吸引了，作者在33岁的角度回顾33个篇章解读孤独，小清新加点小文艺还略带着点矫情的笔调。按作者的说话是这样的导读：</p>
-<p><img src="https://cdn.zenwu.site/upload/pic/2021/20210119110222.png" alt="《你的孤独，虽败犹荣》封面"></p>
-          <!--noindex 去掉了#more-->
-            <div class="post-button">
-              <a class="btn" href="/post/c38.html" rel="contents">
+              <a class="btn" href="/post/da86.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2346,10 +772,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-01-09 13:02:39 / 修改时间：13:33:01" itemprop="dateCreated datePublished" datetime="2021-01-09T13:02:39+08:00">2021-01-09</time>
+      <time title="创建时间：2021-01-09 13:02:39" itemprop="dateCreated datePublished" datetime="2021-01-09T13:02:39+08:00">2021-01-09</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 11:43:33" itemprop="dateModified" datetime="2021-02-22T11:43:33+08:00">2021-02-22</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -2395,7 +827,7 @@
 <th style="width:20%;"><strong>问题类型</strong></th>
 <th style="width:40%;"><strong>问题描述</strong></th>
 <th style="width:20%;"><strong>解决方案</strong></th></tr></thead><tbody>
-<tr><td>1</td><td >Druid未授权访问漏洞</td><td > <p>Druid未授权访问漏洞</p> <p>Druid是阿里巴巴数据库出品的，为监控而生的数据库连接池，并且Druid提供的监控功能，监控SQL的执行时间、监控Web URI的请求、Session监控，首先Druid是不存在什么漏洞的。但当开发者配置不当时就可能造成未授权访问。</p> </td><td > <p>隐藏Druid页面无法进行访问，无法获取信息。</p> <p>——</p> <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/scivous/p/14003794.html">https://www.cnblogs.com/scivous/p/14003794.html</a>&nbsp;</p> </td></tr><tr><td>2..</td><td >敏感信息泄露</td><td >在应用程序测试过程中，检测到所测试的应用系统存在敏感信息泄漏。攻击者可以通过暴露出来的敏感信息寻找利用方法进行进一步的侵入。</td><td > <p>删除受影响文件，避免信息泄漏。</p> <p>——</p> <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/be2cac664eb5">https://www.jianshu.com/p/be2cac664eb5</a>&nbsp;（作者）</p> <p>补充PE项目常见：后台地址mana***、初始帐密admi***、不安全构建压缩包、不安全挂载点……</p> </td></tr><tr><td>3</td><td >使用了不安全的http方法</td><td > <p>过OPTIONS方法提交特定的请求，在响应中查看allow头信息，在allow头中发现delete、put等选项，delete方法是用来调试web服务器连接的http方式，支持该方式的服务器文件可能被非法删除；put方法用来向服务器提交文件，测试显示部分请求中这些方法是允许的。详细：</p> 
+<tr><td>1</td><td >Druid未授权访问漏洞</td><td > <p>Druid未授权访问漏洞</p> <p>Druid是阿里巴巴数据库出品的，为监控而生的数据库连接池，并且Druid提供的监控功能，监控SQL的执行时间、监控Web URI的请求、Session监控，首先Druid是不存在什么漏洞的。但当开发者配置不当时就可能造成未授权访问。</p> </td><td > <p>隐藏Druid页面无法进行访问，无法获取信息。</p> <p>——</p> <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/scivous/p/14003794.html">https://www.cnblogs.com/scivous/p/14003794.html</a>&nbsp;</p> </td></tr><tr><td>2..</td><td >敏感信息泄露</td><td >在应用程序测试过程中，检测到所测试的应用系统存在敏感信息泄漏。攻击者可以通过暴露出来的敏感信息寻找利用方法进行进一步的侵入。</td><td > <p>删除受影响文件，避免信息泄漏。</p> <p>——</p> <p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/be2cac664eb5">https://www.jianshu.com/p/be2cac664eb5</a>&nbsp;（作者）</p> <p>补充PE项目常见：后台地址mana***、初始帐密admi***、不安全构建压缩包、不安全挂载点……</p> </td></tr><tr><td>3</td><td >使用了不安全的http方法</td><td > <p>过OPTIONS方法提交特定的请求，在响应中查看allow头信息，在allow头中发现delete、put等选项，delete方法是用来调试web服务器连接的http方式，支持该方式的服务器文件可能被非法删除；put方法用来向服务器提交文件，测试显示部分请求中这些方法是允许的。详细：</p>
 <div class="table-box"><table border="1" cellpadding="1" cellspacing="1"><tbody><tr><td>&nbsp;&nbsp;PUT&nbsp;</td><td>向指定的目录上载文件</td></tr><tr><td>&nbsp;&nbsp;DELETE</td><td>删除指定的资源</td></tr><tr><td>&nbsp;&nbsp;COPY</td><td>将指定的资源复制到Destination消息头指定的位置</td></tr><tr><td>&nbsp;&nbsp;MOVE</td><td>将指定的资源移动到Destination消息头指定的位置</td></tr><tr><td>&nbsp;&nbsp;SEARCH</td><td>在一个目录路径中搜索资源</td></tr><tr><td>&nbsp;&nbsp;PROPFIND</td><td>获取与指定资源有关的信息，如作者、大小与内容类型</td></tr><tr><td>&nbsp;&nbsp;TRACE</td><td>在响应中返回服务器收到的原始请求</td></tr></tbody></table></div></td><td > <p>说明1：修改系统web服务器配置，禁止使用delete、put等方法。限制了请求类型。</p> <p>说明2：除标准的GET和POST方法外，HTTP请求还使用其他各种方法。许多这类方法主要用于完成不常见与特殊的任务。如果低权限用户可以访问这些方法，他们就能够以此向应用程序实施有效攻击。</p> <p>——</p> <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/qmfsun/p/6169641.html">https://www.cnblogs.com/qmfsun/p/6169641.html</a></p> </td></tr><tr><td>4</td><td >Web漏洞_敏感数据明文传输</td><td >&nbsp;</td><td > <p>以HTTPS代替HTTP协议，启用WEB服务器的HTTPS功能，在原有HTTP登陆界面上设置自动转向以HTTPS协议访问系统登录页面。</p> <p>——</p> <p>在涉及账户信息、交易信息应用启用HTTPS协议。</p> <p>部署参考，可软可硬：</p> <p><a target="_blank" rel="noopener" href="https://freessl.cn/">https://freessl.cn/</a></p> <p><a target="_blank" rel="noopener" href="https://www.aliyun.com/product/security/markets/aliyun/product/cas">阿里云</a></p> <p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/product/ssl">腾讯云</a></p> </td></tr><tr><td>5</td><td >错误消息凭证枚举</td><td > <p>用户登录时，如果输入错误的用户信息，最好提示同一个错误消息提醒，比如：你的用户名或密码输入错误。提供枚举提示，容易被暴力破解。</p> </td><td > <p>不应该提供枚举提示，提醒信息修改为模糊提示。</p> <p>——</p> <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/happymm/p/10862909.html">https://www.cnblogs.com/happymm/p/10862909.html</a></p> </td></tr><tr><td>6</td><td >系统无图形验证码功能</td><td >系统没有图形验证码，无法防止暴力猜解攻击，容易造成恶意撞库、恶意提交。</td><td > <p>为应用系统加上验证码功能。</p> <p>——</p> <p>常规验证、运算验证、拼图验证、选字验证、滑动验证</p> <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_37141008/article/details/88696123">https://blog.csdn.net/qq_37141008/article/details/88696123</a></p> </td></tr><tr><td>7</td><td >ApacheTomcat管理后台地址泄露</td><td >在应用程序测试过程中，检测到所测试的应用系统存在ApacheTomcat管理后台地址泄漏风险。</td><td >删除/隐藏ApacheTomcat管理后台地址，控制后台地址访问权。</td></tr><tr><td>8</td><td >安装文件未删除</td><td >应用系统的生产环境中存在软件默认的安装说明文件。</td><td >删除无用的安装文件。</td></tr><tr><td>9</td><td >用户名枚举</td><td >程序存在用户名枚举，攻击者可以通过注册来进行用户名枚举。</td><td >增加随机token防止攻击者通过fuzz方式进行枚举。</td></tr><tr><td>10</td><td >ApacheTomcat样例目录session操纵漏洞</td><td >ApacheTomcat默认安装包含”/examples”目录，里面存着众多的样例，其中session样例(/examples/servlets/servlet/SessionExample)允许用户对session进行操纵,因为session是全局通用的，所以用户可以通过操纵session获取管理员权限。</td><td >删除此文件。</td></tr><tr><td>11</td><td >SQL注入漏洞</td><td >程序过滤不严，存在SQL注入漏洞。</td><td >前后端使用过滤方式限制，去除相关敏感字符。</td></tr><tr><td>12</td><td >应用程序弱口令</td><td >在应用程序测试过程中，检测到所测试的应用系统存在可被猜解的弱口令。</td><td > <p>修改账户弱口令为账户强口令，并做密码复杂度限制。</p> <p>——</p> <p>强制强密码功能，很受欢迎，必须同时含有大写、数字、英文三者。</p> </td></tr><tr><td>13</td><td >Web漏洞_目录遍历漏洞</td><td >&nbsp;</td><td >使用IIS管理器关闭目录浏览。</td></tr><tr><td>14</td><td >TomcatServletS示例页面信息泄露漏洞</td><td >&nbsp;</td><td >&nbsp;</td></tr><tr><td>15</td><td >反射型XSS漏洞</td><td >程序过滤不严，存在XSS跨站漏洞。</td><td >在客户端和服务端对程序接收到的数据进行全面过滤</td></tr><tr><td>16</td><td >应用程序错误回显</td><td >通过构造特殊的请求以制造服务器逻辑错误并回显，可能会泄露系统相关的敏感信息以及包含产生未处理异常的文件的位置。攻击者可根据获取的信息进行相关的恶意行为。</td><td >1.编码时增加异常处理模块，对错误页面做统一的自定义返回界面，隐藏服务器版本信息；</td></tr><tr><td>17</td><td >响应头信息泄露</td><td >web应用程序返回的HTTP响应包括一个名为X-AspNet-Version的响应头。这个响应头的值被VisualStudio用来确定ASP的版本。攻击者可根据获取的信息进行特定的攻击，业务系统内并不需要，应禁用。</td><td >这个响应头的值业务系统内并不需要，应禁用。</td></tr><tr><td>18</td><td >IIS短文件名枚举漏洞</td><td >此漏洞实际上是由HTTP请求中带有旧DOS8.3名称约定（SFN）的波浪号字符（~）引起的。它允许远程攻击者在Web根目录下公开文件和文件夹名称（不应被访问）。</td><td >升级补丁以修复这个安全问题</td></tr><tr><td>19</td><td >用户信息未做模糊化处理</td><td >应用系统在查询用户信息时，没有对信息进行模糊化处理。</td><td >返回数据增加信息进行模糊化处理</td></tr><tr><td>20</td><td >文件上传漏洞-可绕过的可选文件类型限制</td><td >系统的文件上传模块只在本地限制了可选文件的类型限制，导致攻击者可轻易绕过此限制，上传可被解析的webshell脚本木马。</td><td >在客户端和服务端同时限制可上传的文件类型，确保上传数据的安全性。</td></tr><tr><td>21</td><td >Web漏洞_存储型XSS漏洞</td><td >&nbsp;</td><td >按照要求前端和后端添加了xss过滤机制，对接收的数据进行全面的过滤。</td></tr><tr><td>22</td><td >ApacheTomcat样例目录暴露</td><td >ApacheTomcat默认安装包含”/examples”目录，里面存着众多的样例。</td><td >删除此文件。</td></tr><tr><td>23</td><td >样例目录Session、Cookie操纵漏洞</td><td >&nbsp;</td><td >&nbsp;</td></tr><tr><td>24</td><td >用户敏感信息未模糊化</td><td >应用系统在查询用户信息时，没有对信息进行模糊化处理。</td><td >在查询用户信息时，对敏感信息进行模糊化处理。</td></tr><tr><td>25</td><td >任意密码重置</td><td >可利用获得的用户id号任意重置密码为888888</td><td >用户操作个人信息（读取、修改）时，服务端要对当前用户身份进行验证，防止越权操作；用来标识用户身份的名称或ID可以使用自定义加密，也可以隐藏这些参数，直接从cookie中获取用户信息等。</td></tr><tr><td>26</td><td >未授权访问ArcGISREST服务目录/后台管理页面对外开放</td><td >未对访问用户做限制，大量地质水文信息泄露，可下载敏感文件。</td><td >在系统中，加入用户身份认证机制或者tonken验证，防止可被直接通过连接就可访问到用户的功能进行操作，简而言之，一定对系统重要功能点增加权限控制，对用户操作进行合法性验证。</td></tr><tr><td>27</td><td >Git存储库信息泄露漏洞</td><td >攻击者可以通过请求版本控制工具Git创建的隐藏元数据目录来提取敏感信息。元数据目录用于开发目的，以便在将一组源代码提交回中央存储库之前跟踪它们的开发以进行更改。当代码从存储库创建到服务器时，它应该作为导出完成，而不是作为本地工作副本。攻击者可以通过泄露的.git文件夹还原重建工程源代码。</td><td > <p>及时删除.git文件夹；发布页面时不要上传.git文件夹。</p> <p>——</p> <p>建立.giignore文件，<br/><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014361280/article/details/106698832">https://blog.csdn.net/u014361280/article/details/106698832</a></p> </td></tr><tr><td>28</td><td >LiveGBS流媒体服务应用存在弱口令漏洞</td><td >通过验证，LiveGBS流媒体服务应用存在弱口令。</td><td >为用户配置一个强壮的密码。</td></tr><tr><td>29</td><td >GeoServer地理信息系统弱口令漏洞</td><td >通过验证，GeoServer地理信息系统弱口令漏洞，利用弱口令进入管理后台，获取敏感信息，恶意增删改查信息数据。</td><td >为用户配置一个强壮的密码。</td></tr><tr><td>30</td><td >跨域策略配置文件泄露</td><td >浏览器安全模型通常阻止来自一个域的web内容访问另一个域的数据。这通常被称为“同源政策”。URL策略文件授予读取数据的跨域权限。它们允许默认情况下不允许的操作。默认情况下，URL策略文件位于目标服务器的根目录中，名称为crossdomain.xml站点声明允许该域中任何服务器的操作者获取策略文件所在服务器上的任何文档。</td><td > <p>限定crossdomain.xml中domain的域名范围。</p> <p>——</p> <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/houbin0912/article/details/81944471">https://blog.csdn.net/houbin0912/article/details/81944471</a></p> <p>项目经常漏掉了。</p> </td></tr><tr><td>31</td><td >会话Cookie中缺少Secure属性</td><td >Cookie中有一个secure标记，如果设置了，那么这个cookie只会在https下被发送出去，HTTPS的传输是加密的，减少敏感cookie在http明文传输时泄露的可能性。</td><td >修改程序源代码，为用户会话cookie设置secure属性。</td></tr><tr><td>32</td><td >FTP账户密码爆破</td><td >服务器开启了21端口，运行ftp服务，且可被外部访问，恶意攻击者可利用账号密码字典进行暴力破解。</td><td > <p>禁止使用FTP传输文件，若必须开放应限定管理IP地址并加强口令安全审计（口令长度不低于8位，由数字、大小写字母、特殊字符等至少两种以上组合构成）。 更改服务器FTP默认端口。 部署入侵检测设备，增强安全防护。</p> <p>——</p> <p><span style="color:#f33b45;">怎么防护都是假的，不开FTP才是真。</span></p> </td></tr><tr><td>33</td><td >SSH账号密码爆破</td><td >服务器开启了22端口，运行ssh服务，且可被外部访问，恶意攻击者可利用账号密码字典进行暴力破解。</td><td > <p>修改/etc/ssh/sshd_config默认端口为其它端口。 在/etc/hosts.allow中设置允许的IP访问。</p> <p>——</p> <p>sshd_config、ssh_config的修改，还有很多需要注意的。</p> <p>端口修改：<br/><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41772936/article/details/79441136">https://blog.csdn.net/qq_41772936/article/details/79441136</a></p> <p>sshd_config介绍：<br/><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014721096/article/details/78559506">https://blog.csdn.net/u014721096/article/details/78559506</a></p> </td></tr></tbody></table>
 
       
@@ -2430,7 +862,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/3151.html">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/b1b8.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -2443,7 +875,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/post/3151.html" class="post-title-link" itemprop="url">2011年12月份学习总结，在PE的前端标准思考和萌芽</a>
+          <a href="/post/b1b8.html" class="post-title-link" itemprop="url">笔记-项目配置管理-创建基线或发行基线的主要步骤</a>
         </h2>
 
         <div class="post-meta-container">
@@ -2454,14 +886,14 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2012-01-03 22:21:31" itemprop="dateCreated datePublished" datetime="2012-01-03T22:21:31+08:00">2012-01-03</time>
+      <time title="创建时间：2020-09-26 16:55:56" itemprop="dateCreated datePublished" datetime="2020-09-26T16:55:56+08:00">2020-09-26</time>
     </span>
       <span class="post-meta-item">
         <span class="post-meta-item-icon">
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2020-12-27 23:02:25" itemprop="dateModified" datetime="2020-12-27T23:02:25+08:00">2020-12-27</time>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -2469,11 +901,251 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
         </span>
           ，
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">学习总结</span></a>
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目配置管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>380</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>2015年上半年信息系统项目管理师真题（上午综合知识）<br>错了好多次了！</p>
+</blockquote>
+<p>创建基线是项目配置管理的一项重要内容，创建基线或发现基线的主要步骤是（）<br><strong><em>A、获取CCB的授权、创建构造基线或发现基线、形成文件、使基线可用</em></strong><br>B、形成文件、获取CCB的授权、创建构造基线或发行基线、使基线可用<br>C、使基线可用、获取CCB的授权、形成文件、创建构造基线或发行基线<br>D、获取CCB的授权、创建构造基线或发行基线、使基线可用、形成文件</p>
+<p>创建基线或发现基线的主要步骤：<strong>获取CCB的授权、创建构造基线或发现基线、形成文件、使基线可用</strong></p>
+<h4 id="创建基线或发行基线的主要步骤"><a href="#创建基线或发行基线的主要步骤" class="headerlink" title="创建基线或发行基线的主要步骤"></a>创建基线或发行基线的主要步骤</h4><p>① 配置管理员<strong>识别配置项</strong>；<br>② 为配置项<strong>分配标识</strong>；<br>⑨ 为项目<strong>创建配置库</strong>，并给每个项目成员<strong>分配权限</strong>；<br>④ 各项目团队成员根据自己的权限操作配置库；<br>⑤ <em>创建基线</em>或发行基线，并获得变更管理委员会*<strong>（ccb）的授权***；<br>*</strong>⑥ 形成文件；***<br><strong><em>⑦ 使基线可用等。</em></strong></p>
+
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/6cba.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/6cba.html" class="post-title-link" itemprop="url">笔记-项目配置管理-配置标识-配置识别与建立基线</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-09-11 23:55:56" itemprop="dateCreated datePublished" datetime="2020-09-11T23:55:56+08:00">2020-09-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目配置管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>495</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="配置标识"><a href="#配置标识" class="headerlink" title="配置标识"></a>配置标识</h3><p><strong>配置标识</strong>( Configuration ldentifcation)也称<strong>配置识别</strong>，包括为系统选择配置项并在技术文档中记录配置项的功能和物理特征。<br>配置识别是配置管理的基础性工作，是配置管理的前提。  </p>
+<p>配置标识是配置管理员的职能，基本步骤如下：</p>
+<ol>
+<li><strong>识别</strong>需要<strong>受控的配置项</strong></li>
+<li>为每个配置项指定唯一性的<strong>标识号</strong></li>
+<li><strong>定义</strong>每个配置项的<strong>重要特征</strong></li>
+<li>确定每个配置项的<strong>所有者及其责任</strong></li>
+<li>确定配置项进入配置管理的<strong>时间和条件</strong></li>
+<li><strong>建立和控制基线</strong></li>
+<li><strong>维护</strong>文档和组件的修订与产品版本之间的关系</li>
+</ol>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/6cba.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/7014.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/7014.html" class="post-title-link" itemprop="url">笔记-案例题-2013年下-计算题</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-26 23:03:44" itemprop="dateCreated datePublished" datetime="2020-08-26T23:03:44+08:00">2020-08-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/" itemprop="url" rel="index"><span itemprop="name">案例分析</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E8%AE%A1%E7%AE%97%E9%A2%98/" itemprop="url" rel="index"><span itemprop="name">计算题</span></a>
         </span>
     </span>
 
@@ -2504,18 +1176,1472 @@
     
     <div class="post-body" itemprop="articleBody">
           <blockquote>
-<p>2011年12月份学习总结，创建日期：2012-01-03 22:21:31，有删减。</p>
-<ul>
-<li>早年的一篇总结，记录对于前端标准的一些思考和萌芽工作；</li>
-<li>对于当时的前端标准，始于2011年，在<code>2013~2014</code>进一步提升，编写和制定了一些硬性条件，但在2015年沉寂和消亡，在<code>2016~2017</code>年有SiteAzure产品后，重新做了点工作……</li>
-<li>可由始至终还没做到位，原因很多，或者是项目性工作千化万变，在共性与个性中，难找平衡点，或者是核心人员不断流失，使得标准化过于空谈，或者是并没有重视质量保证和质量控制，使得初有成效的标准流于表面，没在项目中贯彻落实……</li>
-</ul>
-<p>总之，那是10年前对前端标准的一些考量，个人记录。以下正文。</p>
+<p><strong>2013年下半年信息系统项目管理师考试下午真题</strong></p>
 </blockquote>
-<h3 id="前言说的"><a href="#前言说的" class="headerlink" title="前言说的"></a>前言说的</h3><p>设计中心标准化，为什么要做标准化？<a target="_blank" rel="noopener" href="http://dtop.powereasy.net/pel/">http://dtop.powereasy.net/pel/</a><span style="color:gray">（注：已失效）</span>，这篇也算是标准化建设的2011总结和2012计划。</p>
+<p>阅读下列说明，回答问题1至问题3，将解答填入答题纸的对应栏内。<br><strong>【说明】</strong><br>一个信息系统集成项目有A、B、C、D、E、F共6个活动，目前是第12周末，活动信息如下：<br>活动A：持续时间5周，预算30万元，没有前置活动，实际成本35.5万元，已完成100%。<br>活动B：持续时间5周，预算70万元，前置活动为A，实际成本83万元，已完成100%。<br>活动C：持续时间8周，预算60万元，前置活动为B，实际成本17.5万元，已完成20%。<br>活动D：持续时间7周，预算135万元，前置活动为A，实际成本159万元，已完成100%。<br>活动E：持续时间3周，预算30万元，前置活动为D，实际成本0万元，已完成0%。<br>活动F：持续时间7周，预算70万元，前置活动为C和E，实际成本0万元，已完成0%。<br>项目在开始投入资金为220万元，第10周获得投入资金75万元，第15周获得投入资金105万元，第20周获得投入资金35万元。</p>
+<p><strong>【问题1】（12分）</strong><br>请计算当前的成本偏差（CV）和进度偏差（SV），以及进度绩效指数（SPI）和成本绩效指数（CPI），并分析项目的进展情况<br><strong>【问题2】（10分）</strong><br>分别按照非典型偏差和典型偏差的计算方式，计算项目在第13周末的完工尚需成本（ETC）和完工估算成本（EAC）<br><strong>【问题3】（3分）</strong><br>在不影响项目完工时间的前提下，同时考虑资金平衡的要求，在第13周开始应该如何调整项目进度计划？</p>
           <!--noindex 去掉了#more-->
             <div class="post-button">
-              <a class="btn" href="/post/3151.html" rel="contents">
+              <a class="btn" href="/post/7014.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/d327.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/d327.html" class="post-title-link" itemprop="url">笔记-项目风险管理-复习要点</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-05 23:31:06" itemprop="dateCreated datePublished" datetime="2020-10-05T23:31:06+08:00">2020-10-05</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目风险管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>1、项目风险管理过程</strong><br>①规划风险管理<br>②识别项目风险<br>③实施定性风险分析<br>④实施定量风险分析<br>⑤制订风险应对计划<br>⑥监控项目风险</p>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/d327.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/44f9.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/44f9.html" class="post-title-link" itemprop="url">笔记-项目风险管理-转-从木桶效应谈对于安全管理的认识</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-15 11:49:57" itemprop="dateCreated datePublished" datetime="2020-10-15T11:49:57+08:00">2020-10-15</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目风险管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>木桶理论</strong>是<strong>指用一个木桶来装水，如果组成木桶的木板参差不齐，那么它能盛下的水的容量不是取决于这个木桶中最长的木板，也不是取决于全部木板长度的平均值，而是取决于木桶中最短的木板。要提高木桶容量的整体效应，不是增加最长的那块木板的长度，而是要下功夫补齐最短的那块木板的长度。</strong></p>
+<p>安全工作亦是如此，前面的叹息中“犯了一个低级错误”，<strong>说明我们只注意了重点工程、关键环节的安全管理，忽视了细小环节安全管理，没有及时发现和排除小的安全隐患；“又犯了一个低级错误”，则说明我们已经知道存在薄若环节或者是隐患，已经有了教训，甚至是血的教训，但没有引起足够的重视，在“同一个地方又摔倒了”，付出了惨重的代价。</strong></p>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/44f9.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/7376.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/7376.html" class="post-title-link" itemprop="url">笔记-项目风险管理-风险应对</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-06 22:31:26" itemprop="dateCreated datePublished" datetime="2020-10-06T22:31:26+08:00">2020-10-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目风险管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>消极风险（威胁）的应对策略</strong><br><em>避免（回避）；转移（转嫁）；减轻；接受（被动记录、主动应急）</em></p>
+<p><strong>积极风险（机会）的应对策略：</strong><br><em>开拓；分享；提高；接受</em></p>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/7376.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/5472.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/5472.html" class="post-title-link" itemprop="url">笔记-项目风险管理-风险的分类</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-10-06 21:31:06" itemprop="dateCreated datePublished" datetime="2020-10-06T21:31:06+08:00">2020-10-06</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目风险管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>《信息系统项目管理师教程》第三版教程P389~P390内容。</p>
+<p>①风险按后果分为<strong>纯粹风险</strong>和<strong>投机风险</strong>；<br>②按风险来源或损失产生的原因划分为<strong>自然风险</strong>和<strong>人为风险</strong>；<br>③按影响范围分为<strong>局部风险</strong>和<strong>整体风险</strong>；<br>④按可预测性分为<strong>已知风险</strong>、<strong>可预测风险</strong>和<strong>不可预测风险</strong>。</p>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/5472.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/2418.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/2418.html" class="post-title-link" itemprop="url">笔记-项目风险管理-风险管理计划</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-09-16 23:31:06" itemprop="dateCreated datePublished" datetime="2020-09-16T23:31:06+08:00">2020-09-16</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目风险管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>155</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><em>风险管理计划</em>是项目管理计划的组成部分，描述将如何安排与实施风险管理活动。风险管理计划包括以下内容：</p>
+<p><em>（1）方法论</em><br>（2）角色和职责<br>（3）预算<br>（4）时间安排<br><strong><em>（5）风险类别</em></strong><br><strong><em>（6）风险概率和影响力的定义</em></strong><br><strong><em>（7）概率及影响矩阵</em></strong><br>（8）已修订的项目干系人对风险的容忍度<br>（9）报告的格式<br><em>（10）跟踪</em><br>（11）应急计划<br>（12）应急储备</p>
+
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/7d38.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/7d38.html" class="post-title-link" itemprop="url">笔记-项目风险管理</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-30 23:31:06" itemprop="dateCreated datePublished" datetime="2020-05-30T23:31:06+08:00">2020-05-30</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目风险管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>895</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>规划风险管理</strong><br>定义如何实施项目风险管理活动的过程。</p>
+<p><strong>风险识别</strong><br>判断哪些风险可能影响项目并记录其特征的过程。</p>
+<p><strong>风险定性分析</strong><br>评估并综合分析风险的发生概率和影响，对风险进行优先排序，从而为后续分析或行动提供基础的过程。</p>
+<p><strong>风险定量分析</strong><br>就已识别风险对项目整体目标的影响进行定量分析的过程。</p>
+<p><strong>规划风险应对</strong><br>针对项目目标，制定提高机会、降低威胁的方案和措施的过程。</p>
+<p><strong>控制风险</strong><br>在整个项目中实施风险应对计划、跟踪已识别风险、监督残余风险、识别新风险，以及评估风险过程有效性的过程。</p>
+<h2 id="项目风险管理的ITTO"><a href="#项目风险管理的ITTO" class="headerlink" title="项目风险管理的ITTO"></a>项目风险管理的ITTO</h2><table border="1" cellspacing="0"><tbody><tr><td style="text-align:center;vertical-align:middle;width:130px;"><span style="color:#000000;"><strong>分类</strong></span></td>
+<td style="text-align:center;vertical-align:middle;width:173px;"><span style="color:#000000;"><strong>项目管理过程</strong></span></td>
+<td style="text-align:center;vertical-align:middle;width:173px;"><span style="color:#000000;"><strong>输入</strong></span></td>
+<td style="text-align:center;vertical-align:middle;width:168px;"><span style="color:#000000;"><strong>工具与技术</strong></span></td>
+<td style="text-align:center;vertical-align:middle;width:169px;"><span style="color:#000000;"><strong>输出（可交付成果）</strong></span></td>
+</tr>
+
+
+<tr><td rowspan="6" style="text-align:center;vertical-align:middle;width:130px;"><span style="color:#000000;"><strong>项目风险管理</strong></span></td>
+<td style="vertical-align:middle;width:173px;"><span style="color:#000000;"><strong>规划风险管理</strong></span></td>
+<td style="vertical-align:middle;width:173px;"><span style="color:#000000;">1.<span style="color:#3236c9;">项目管理计划</span><br><span style="color:#000000;">2.项目章程<br>
+3.干系人登记册<br>
+4.</span><span style="color:#880f8b;">事业环境因素</span><br><span style="color:#000000;">5.</span><span style="color:#198a2f;">组织过程资产</span></span></td>
+<td style="vertical-align:middle;width:168px;"><span style="color:#000000;">1.分析技术<br>
+2.<span style="color:#ff0000;">专家判断</span><br><span style="color:#000000;">3.</span><span style="color:#26da2a;">会议</span></span></td>
+<td style="vertical-align:middle;width:169px;"><span style="color:#000000;">风险管理计划</span></td>
+</tr><tr><td style="vertical-align:middle;width:173px;"><span style="color:#000000;"><strong>识别风险</strong></span></td>
+<td style="vertical-align:middle;width:173px;"><span style="color:#000000;">1.风险管理计划<br>
+2.成本管理计划<br>
+3.进度管理计划<br>
+4.质量管理计划<br>
+5.人力资源管理计划<br>
+6.范围基准<br>
+7.活动成本估算<br>
+8.活动持续时间估算<br>
+9.干系人登记册<br>
+10.项目文件<br>
+11.采购文件<br>
+12.<span style="color:#880f8b;">事业环境因素</span><br><span style="color:#000000;">13.</span><span style="color:#198a2f;">组织过程资产</span></span></td>
+<td style="vertical-align:middle;width:168px;"><span style="color:#000000;">1.文档审查<br>
+2.信息收集技术<br>
+3.核对单分析<br>
+4.假设分析<br>
+5.图解技术<br>
+6.SWOT分析<br>
+7.<span style="color:#ff0000;">专家判断</span></span></td>
+<td style="vertical-align:middle;width:169px;"><span style="color:#000000;">#风险登记册#</span></td>
+</tr><tr><td style="vertical-align:middle;width:173px;"><span style="color:#000000;"><strong>实施定性风险分析</strong></span></td>
+<td style="vertical-align:middle;width:173px;"><span style="color:#000000;">1.风险管理计划<br>
+2.范围基准<br>
+3.#风险登记册#<br>
+4.<span style="color:#880f8b;">事业环境因素</span><br><span style="color:#000000;">5.</span><span style="color:#198a2f;">组织过程资产</span></span></td>
+<td style="vertical-align:middle;width:168px;"><span style="color:#000000;">1.风险概率和影响评估<br>
+2.概率和影响矩阵<br>
+3.风险数据质量评估<br>
+4.风险分类<br>
+5.风险紧迫性评估<br>
+6.<span style="color:#ff0000;">专家判断</span></span></td>
+<td style="vertical-align:middle;width:169px;"><span style="color:#f7860c;">项目文件更新</span></td>
+</tr><tr><td style="vertical-align:middle;width:173px;"><span style="color:#000000;"><strong>实施定量风险分析</strong></span></td>
+<td style="vertical-align:middle;width:173px;"><span style="color:#000000;">1.风险管理计划<br>
+2.成本管理计划<br>
+3.进度管理计划<br>
+4.#风险登记册#<br>
+5.<span style="color:#880f8b;">事业环境因素</span><br><span style="color:#000000;">6.</span><span style="color:#198a2f;">组织过程资产</span></span></td>
+<td style="vertical-align:middle;width:168px;"><span style="color:#000000;">1.数据收集和展示技术<br>
+2.定量风险分析和建模技术<br>
+3.<span style="color:#ff0000;">专家判断</span></span></td>
+<td style="vertical-align:middle;width:169px;"><span style="color:#f7860c;">项目文件更新</span></td>
+</tr><tr><td style="vertical-align:middle;width:173px;"><span style="color:#000000;"><strong>规划风险应对</strong></span></td>
+<td style="vertical-align:middle;width:173px;"><span style="color:#000000;">1.风险管理计划<br>
+2.#风险登记册#</span></td>
+<td style="vertical-align:middle;width:168px;"><span style="color:#000000;">1.消极风险或威胁的应对策略<br>
+2.积极风险或机会的应对策略<br>
+3.应急应对策略<br>
+4.<span style="color:#ff0000;">专家判断</span></span></td>
+<td style="vertical-align:middle;width:169px;"><span style="color:#000000;">1.<span style="color:#3236c9;">项目管理计划</span><span style="color:#000000;">更新<br>
+2.</span><span style="color:#f7860c;">项目文件更新</span></span></td>
+</tr><tr><td style="vertical-align:middle;width:173px;"><span style="color:#000000;"><strong>控制风险</strong></span></td>
+<td style="vertical-align:middle;width:173px;"><span style="color:#000000;">1.<span style="color:#3236c9;">项目管理计划</span><br><span style="color:#000000;">2.#风险登记册#<br>
+3.$工作绩效数据$<br>
+4.工作绩效报告</span></span></td>
+<td style="vertical-align:middle;width:168px;"><span style="color:#000000;">1.风险再评估<br>
+2.风险审计<br>
+3.偏差和趋势分析<br>
+4.技术绩效测量<br>
+5.储备分析<br>
+6.<span style="color:#26da2a;">会议</span></span></td>
+<td style="vertical-align:middle;width:169px;"><span style="color:#000000;">1.工作绩效信息<br>
+2.<span style="color:#fa3cef;">变更请求</span><br><span style="color:#000000;">3.</span><span style="color:#3236c9;">项目管理计划</span><span style="color:#000000;">更新<br>
+4.</span><span style="color:#f7860c;">项目文件更新</span><br><span style="color:#000000;">5.</span><span style="color:#198a2f;">组织过程资产</span><span style="color:#000000;">更新</span></span></td>
+</tr>
+
+</tbody></table>
+
+
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/5fad.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/5fad.html" class="post-title-link" itemprop="url">笔记-项目配置管理-配置管理主要工作</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-09-11 23:55:56" itemprop="dateCreated datePublished" datetime="2020-09-11T23:55:56+08:00">2020-09-11</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目配置管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>340</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h3 id="配置管理主要工作"><a href="#配置管理主要工作" class="headerlink" title="配置管理主要工作"></a>配置管理主要工作</h3><p>(1) 制定配置管理计划。确定方针，分配资源，明确责任，计划培训，确定干系人，制定配置识别准则，制定基线计划，制定配置库备份计划，制定变更控制流程，制定审批计划。<br>(2) 配置项识别。识别配置项，分配唯一标识，确定配置项特征，记录配置项进入时间，确定配置项拥有者职责，进行配置项登记管理。<br>(3) 建立配置管理信息系统。建立分级配置管理机制，存储和检索配置项，共享和转换配置项，进行归档、记录、保护和权限设置。<br>(4) 基线化。获得授权，建立或发布基线，形成文件，使基线可用。<br>(5) 建立配置库。建立动态库，受控库和静态库。<br>(6) 变更控制。包括变更记录、分析、批准、实施、验证、沟通和存档。<br>(7) 配置状态统计。统计配置项的各种状态。<br>(8) 配置审计。包括功能配置审计和物理配置审计。</p>
+
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/a9b5.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/a9b5.html" class="post-title-link" itemprop="url">笔记整理-知识产权与标准化知识-GB/T11457-2006软件工程术语</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2019-10-26 14:32:51" itemprop="dateCreated datePublished" datetime="2019-10-26T14:32:51+08:00">2019-10-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E4%B8%8E%E6%A0%87%E5%87%86%E5%8C%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">知识产权与标准化知识</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <img src="https://i.loli.net/2020/05/11/RlADQwpWk5SgKvd.png" style="max-width:80%">
+
+<hr>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/a9b5.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/74c8.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/74c8.html" class="post-title-link" itemprop="url">笔记-知识产权与标准化知识-GB/T16260-2006软件工程产品质量-质量模型</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-08 22:18:18" itemprop="dateCreated datePublished" datetime="2020-05-08T22:18:18+08:00">2020-05-08</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E4%B8%8E%E6%A0%87%E5%87%86%E5%8C%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">知识产权与标准化知识</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <img src="https://i.loli.net/2020/05/08/NK3xyu8slSvt6ZF.png" style="max-width:80%">
+
+<center style="font-size:1.5em">GB/T 16260-2006软件工程产品质量-第I部分:质量模型质量模型</center>
+
+<center style="font-size:1em">Software engineering- Product quality- Part 1 :Quality model</center>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/74c8.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/2d79.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/2d79.html" class="post-title-link" itemprop="url">笔记-知识产权与标准化知识-GB/T9385-2006计算机软件文档编制规范</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-10 23:01:01" itemprop="dateCreated datePublished" datetime="2020-05-10T23:01:01+08:00">2020-05-10</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E4%B8%8E%E6%A0%87%E5%87%86%E5%8C%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">知识产权与标准化知识</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <img src="https://i.loli.net/2020/05/10/wmSKQYqHIFarzuR.png" style="max-width:80%">
+
+<center style="font-size:2em">计算机软件文档编制规范</center>
+
+<center style="font-size:1.2em">Specification for computer software documentation</center>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/2d79.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/b1ae.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/b1ae.html" class="post-title-link" itemprop="url">笔记-知识产权与标准化知识-开发文档-产品文档-管理文档</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-29 11:46:44" itemprop="dateCreated datePublished" datetime="2020-08-29T11:46:44+08:00">2020-08-29</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E4%B8%8E%E6%A0%87%E5%87%86%E5%8C%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">知识产权与标准化知识</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <blockquote>
+<p>信管网：<a target="_blank" rel="noopener" href="http://www.cnitpm.com/pm1/45576.html">http://www.cnitpm.com/pm1/45576.html</a><br>GB/T16680—1996查到已经作废了，最新貌似GB/T16680—2015 ，这个里面没以下的定义了【———删除了第7章制定文档编制标准和指南;】<br><a target="_blank" rel="noopener" href="http://www.csres.com/detail/56485.html">http://www.csres.com/detail/56485.html</a><br>GB/T16680—2015 <a target="_blank" rel="noopener" href="http://www.cnitpm.com/pm1/45577.html">http://www.cnitpm.com/pm1/45577.html</a><br>GB/T16680—1996 <a target="_blank" rel="noopener" href="https://max.book118.com/html/2018/1109/8123101067001132.shtm">https://max.book118.com/html/2018/1109/8123101067001132.shtm</a></p>
+</blockquote>
+<p>软件文档归入如下三种类别：</p>
+<ul>
+<li><strong>开发文档</strong>，描述开发过程本身</li>
+<li><strong>产品文档</strong>，描述开发过程的产物</li>
+<li><strong>管理文档</strong>，记录项目管理的信息</li>
+</ul>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/b1ae.html" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+      
+
+
+    
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/ce9.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/post/ce9.html" class="post-title-link" itemprop="url">笔记-知识产权与标准化知识-计算机软件可靠性和可维护性管理的评审要求</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-08-07 22:28:08" itemprop="dateCreated datePublished" datetime="2020-08-07T22:28:08+08:00">2020-08-07</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-02-22 09:46:19" itemprop="dateModified" datetime="2021-02-22T09:46:19+08:00">2021-02-22</time>
+      </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E4%B8%8E%E6%A0%87%E5%87%86%E5%8C%96%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">知识产权与标准化知识</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>根据《软件可靠性和可维护性管理GB/T14394-2008》可知：软件可靠性和可维护性有关的具体评审包括：<strong>概念评审、需求评审、设计评审、测试评审、安装和验收评审、软件用户手册评审</strong>。</p>
+          <!--noindex 去掉了#more-->
+            <div class="post-button">
+              <a class="btn" href="/post/ce9.html" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -2546,7 +2672,7 @@
 
 
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -2598,14 +2724,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">464k</span>
+    <span title="站点总字数">482k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:02</span>
+    <span title="站点阅读时长">7:18</span>
   </span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
@@ -2670,5 +2796,15 @@ if (document.querySelectorAll('.mermaid').length) {
       });
   </script>
 
+
+<script>
+
+  $("ul.category-all .category-list-count").on('click', function () {
+      $(this).parent().siblings().removeClass('selected').find('ul').hide();
+      $(this).parent().addClass('selected');
+      $(this).next().slideDown(500);
+  });
+
+</script>
 </body>
 </html>
