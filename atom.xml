@@ -77,6 +77,34 @@
   </entry>
   
   <entry>
+    <title>笔记-信息系统安全管理-信息系统安全技术体系</title>
+    <link href="https://www.zenwu.site/post/f9f8.html"/>
+    <id>https://www.zenwu.site/post/f9f8.html</id>
+    <published>2021-02-24T13:12:00.000Z</published>
+    <updated>2021-02-24T13:12:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>根据《系统集成项目管理工程师教程》中“17．2．3信息系统安全管理体系”一节的所述内容，在GB／T20271-2006《信息安全技术信息系统通用安全技术要求》中将信息系统安全技术体系具体描述如下：</p><p>物理安全、运行安全、数据安全</p><h4 id="物理安全"><a href="#物理安全" class="headerlink" title="物理安全"></a>物理安全</h4><p>①环境安全<br>主要指中心机房的安全保护，包括：</p><ul><li>机房场地选择</li><li>机房内部安全防护</li><li>机房防火</li><li>机房供、配电</li><li>机房空调、降温</li><li>机房防水与防潮</li><li>机房防静</li><li>机房接地与防雷击</li><li>机房电磁防护</li></ul><p>②设备安全</p><ul><li>设备的防盗和防毁</li><li>设备的安全可用</li></ul><p>③记录介质安全</p><h4 id="运行安全"><a href="#运行安全" class="headerlink" title="运行安全"></a>运行安全</h4><p>①风险分析<br>②信息系统安全性检测分析<br>③信息系统安全监控<br>④安全审计<br>⑤信息系统边界安全防护<br>⑥备份与故障恢复<br>⑦恶意代码防护<br>⑧信息系统的应急处理<br>⑨可信计算和可信连接技术</p><p>####数据安全</p><p>①身份鉴别<br>②用户标识与鉴别<br>③用于主体绑定</p><ul><li>隐秘</li><li>设备标识和鉴别</li></ul><p>④抗抵赖</p><ul><li>抗原发抵赖</li><li>抗接收抵赖</li></ul><p>⑤自主访问控制</p><ul><li>访问控制策略</li><li>访问控制功能</li><li>访问控制范围</li><li>访问控制粒度</li></ul><p>⑥标记</p><ul><li>主体标记</li><li>客体标记</li><li>标记的输出</li><li>标记的输入</li></ul><p>⑦强制访问控制</p><ul><li>访问控制策略</li><li>访问控制功能</li><li>访问控制范围</li><li>访问控制粒度</li><li>访问控制环境</li></ul><p>⑧数据完整性保护</p><ul><li>存储数据的完整性</li><li>传输数据的完整性</li><li>处理数据的完整性</li></ul><p>⑨用户数据保密性保护</p><ul><li>存储数据保密性保护</li><li>传输数据保密性保护</li><li>客体安全重用</li></ul><p>⑩数据流控制</p><p>⑾可信路径</p><p>⑿密码支持</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;根据《系统集成项目管理工程师教程》中“17．2．3信息系统安全管理体系”一节的所述内容，在GB／T20271-2006《信息安全技术信息系统通用安全技术要求》中将信息系统安全技术体系具体描述如下：&lt;/p&gt;
+&lt;p&gt;物理安全、运行安全、数据安全&lt;/p&gt;
+&lt;h4 id=&quot;物理安全</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="信息系统安全管理" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="信息系统安全技术体系" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF%E4%BD%93%E7%B3%BB/"/>
+    
+  </entry>
+  
+  <entry>
     <title>笔记整理-信息系统开发基础-软件测试-灰度测试</title>
     <link href="https://www.zenwu.site/post/d3c3.html"/>
     <id>https://www.zenwu.site/post/d3c3.html</id>
@@ -556,35 +584,6 @@
       
     <summary type="html">&lt;p&gt;nginx配置ssl（配置文件），只列出部分内容。&lt;/p&gt;
 &lt;figure class=&quot;highlight nginx&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cla</summary>
-      
-    
-    
-    
-    <category term="前端技术的知识章节" scheme="https://www.zenwu.site/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E7%9F%A5%E8%AF%86%E7%AB%A0%E8%8A%82/"/>
-    
-    <category term="Linux" scheme="https://www.zenwu.site/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E7%9F%A5%E8%AF%86%E7%AB%A0%E8%8A%82/Linux/"/>
-    
-    
-    <category term="nginx" scheme="https://www.zenwu.site/tags/nginx/"/>
-    
-    <category term="linux" scheme="https://www.zenwu.site/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Redirecting to /bin/systemctl restart sshd.service</title>
-    <link href="https://www.zenwu.site/post/446f.html"/>
-    <id>https://www.zenwu.site/post/446f.html</id>
-    <published>2020-11-11T16:00:53.000Z</published>
-    <updated>2020-11-11T16:00:53.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>云服务器 ECS Linux CentOS 7 下重启服务不再通过<code>service</code>操作，而是通过<code>systemctl</code>操作。</p><p>查看：<code>systemctl status sshd.service</code></p><p>启动：<code>systemctl start sshd.service</code></p><p>重启：<code>systemctl restart sshd.service</code></p><p>自启：<code>systemctl enable sshd.service</code></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;云服务器 ECS Linux CentOS 7 下重启服务不再通过&lt;code&gt;service&lt;/code&gt;操作，而是通过&lt;code&gt;systemctl&lt;/code&gt;操作。&lt;/p&gt;
-&lt;p&gt;查看：&lt;code&gt;systemctl status sshd.service&lt;/code</summary>
       
     
     
