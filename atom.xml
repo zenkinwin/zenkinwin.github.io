@@ -6,7 +6,7 @@
   <link href="https://www.zenwu.site/atom.xml" rel="self"/>
   
   <link href="https://www.zenwu.site/"/>
-  <updated>2021-02-24T15:50:53.000Z</updated>
+  <updated>2021-02-28T13:21:28.000Z</updated>
   <id>https://www.zenwu.site/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记-计算机网络基础-网络存储技术</title>
+    <link href="https://www.zenwu.site/post/6d8.html"/>
+    <id>https://www.zenwu.site/post/6d8.html</id>
+    <published>2021-02-28T12:41:28.000Z</published>
+    <updated>2021-02-28T13:21:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>主流的网络存储技术主要有三种，分别是直接附加存储（Direct Attached Storage，DAS）、网络附加存储（Network Attached Storage，NAS）和存储区域网络（Storage Area Network，SAN）。</p><a id="more"></a><h3 id="直接附加存储"><a href="#直接附加存储" class="headerlink" title="直接附加存储"></a>直接附加存储</h3><p>DAS 是将存储设备通过 SCSI（Small Computer System Interface，小型计算机系统接口）电缆直接连到服务器，其本身是硬件的堆叠，存储操作依赖于服务器，不带有任何存储操作系统。因此，有些文献也把 DAS 称为 SAS（Server Attached Storage，服务器附加存储）。</p><p><strong>适用环境</strong><br>（1）服务器在地理分布上很分散，通过 SAN 或 NAS 在它们之间进行互连非常困难时；<br>（2）存储系统必须被直接连接到应用服务器（例如，Microsoft Cluster Server 或某些数据库使用的“原始分区”）上时；<br>（3）包括许多数据库应用和应用服务器在内的应用，它们需要直接连接到存储器上时。</p><p>由于 DAS 直接<strong>将存储设备连接到服务器</strong>上，这导致它在传递距离、连接数量、传输速率等方面都受到限制。因此，当存储容量增加时，DAS 方式很难扩展，这对存储容量的升级是一个巨大的瓶颈；另一方面，由于数据的读取都要通过服务器来处理，必然导致服务器的处理压力增加，数据处理和传输能力将大大降低；此外，当服务器出现宕机等异常状况时，也会波及存储数据，使其无法使用。目前 DAS 基本被 NAS 所代替。</p><h3 id="网络附加存储"><a href="#网络附加存储" class="headerlink" title="网络附加存储"></a>网络附加存储</h3><p>采用 NAS 技术的存储设备不再通过 I/O 总线附属于某个特定的服务器，而是通过网络接口与网络直接相连，由用户通过网络访问。</p><p>NAS 存储设备类似于一个专用的文件服务器，它去掉了通用服务器的大多数计算功能，而仅仅提供文件系统功能，从而降低了设备的成本。并且为方便存储设备到网络之间能以最有效的方式发送数据，它专门优化了系统硬件与软件架构。NAS 以数据为中心，将存储设备与服务器分离，其存储设备在功能上完全独立于网络中的主服务器，客户机与存储设备之间的数据访问不再需要文件服务器的干预，同时它允许客户机与存储设备之间进行直接的数据访问，所以不仅响应速度快，而且数据传输速率也很高。</p><p>NAS 技术支持多种 TCP/IP网络协议，主要是 NFS（Net File System，网络文件系统）和CIFS（Common Internet File System，通用 Internet 文件系统）来进行文件访问，所以 NAS 的性能特点是进行小文件级的共享存取。在具体使用时，NAS 设备通常配置为文件服务器，通过使用基于Web 的管理界面来实现系统资源的配置、用户配置管理和用户访问登录等。</p><p>NAS 存储支持即插即用，可以在网络的任一位置建立存储。基于 Web 管理，从而使设备的安装、使用和管理更加容易。NAS 可以很经济地解决存储容量不足的问题，但难以获得满意的性能。</p><h3 id="存储区域网络"><a href="#存储区域网络" class="headerlink" title="存储区域网络"></a>存储区域网络</h3><p>SAN 是通过专用交换机将磁盘阵列与服务器连接起来的高速专用子网。它没有采用<strong>文件共享存取方式</strong>，而是采用块（block）级别存储。SAN 是通过专用高速网将一个或多个网络存储设备和服务器连接起来的专用存储系统，其最大特点是将存储设备从传统的以太网中分离出来，成为独立的存储区域网络。</p><p><img src="https://cdn.zenwu.site/upload/pic/2021/20210228200429.png" alt="网络存储技术"></p>]]></content>
+    
+    
+    <summary type="html">&lt;p&gt;主流的网络存储技术主要有三种，分别是直接附加存储（Direct Attached Storage，DAS）、网络附加存储（Network Attached Storage，NAS）和存储区域网络（Storage Area Network，SAN）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="计算机网络基础" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="网络存储技术" scheme="https://www.zenwu.site/tags/%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="DAS" scheme="https://www.zenwu.site/tags/DAS/"/>
+    
+    <category term="NAS" scheme="https://www.zenwu.site/tags/NAS/"/>
+    
+    <category term="SAN" scheme="https://www.zenwu.site/tags/SAN/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记-信息系统开发基础-面向对象基本概念-汇总</title>
@@ -83,15 +112,11 @@
     <published>2021-02-24T13:12:00.000Z</published>
     <updated>2021-02-24T13:12:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>根据《系统集成项目管理工程师教程》中“17．2．3信息系统安全管理体系”一节的所述内容，在GB／T20271-2006《信息安全技术信息系统通用安全技术要求》中将信息系统安全技术体系具体描述如下：</p><p>物理安全、运行安全、数据安全</p><h4 id="物理安全"><a href="#物理安全" class="headerlink" title="物理安全"></a>物理安全</h4><p>①环境安全<br>主要指中心机房的安全保护，包括：</p><ul><li>机房场地选择</li><li>机房内部安全防护</li><li>机房防火</li><li>机房供、配电</li><li>机房空调、降温</li><li>机房防水与防潮</li><li>机房防静</li><li>机房接地与防雷击</li><li>机房电磁防护</li></ul><p>②设备安全</p><ul><li>设备的防盗和防毁</li><li>设备的安全可用</li></ul><p>③记录介质安全</p><h4 id="运行安全"><a href="#运行安全" class="headerlink" title="运行安全"></a>运行安全</h4><p>①风险分析<br>②信息系统安全性检测分析<br>③信息系统安全监控<br>④安全审计<br>⑤信息系统边界安全防护<br>⑥备份与故障恢复<br>⑦恶意代码防护<br>⑧信息系统的应急处理<br>⑨可信计算和可信连接技术</p><p>####数据安全</p><p>①身份鉴别<br>②用户标识与鉴别<br>③用于主体绑定</p><ul><li>隐秘</li><li>设备标识和鉴别</li></ul><p>④抗抵赖</p><ul><li>抗原发抵赖</li><li>抗接收抵赖</li></ul><p>⑤自主访问控制</p><ul><li>访问控制策略</li><li>访问控制功能</li><li>访问控制范围</li><li>访问控制粒度</li></ul><p>⑥标记</p><ul><li>主体标记</li><li>客体标记</li><li>标记的输出</li><li>标记的输入</li></ul><p>⑦强制访问控制</p><ul><li>访问控制策略</li><li>访问控制功能</li><li>访问控制范围</li><li>访问控制粒度</li><li>访问控制环境</li></ul><p>⑧数据完整性保护</p><ul><li>存储数据的完整性</li><li>传输数据的完整性</li><li>处理数据的完整性</li></ul><p>⑨用户数据保密性保护</p><ul><li>存储数据保密性保护</li><li>传输数据保密性保护</li><li>客体安全重用</li></ul><p>⑩数据流控制</p><p>⑾可信路径</p><p>⑿密码支持</p>]]></content>
+    <content type="html"><![CDATA[<p>根据《系统集成项目管理工程师教程》中“17．2．3信息系统安全管理体系”一节的所述内容，在GB／T20271-2006《信息安全技术信息系统通用安全技术要求》中将信息系统安全技术体系具体描述如下：</p><p>物理安全、运行安全、数据安全</p><a id="more"></a><h4 id="物理安全"><a href="#物理安全" class="headerlink" title="物理安全"></a>物理安全</h4><p>①环境安全<br>主要指中心机房的安全保护，包括：</p><ul><li>机房场地选择</li><li>机房内部安全防护</li><li>机房防火</li><li>机房供、配电</li><li>机房空调、降温</li><li>机房防水与防潮</li><li>机房防静</li><li>机房接地与防雷击</li><li>机房电磁防护</li></ul><p>②设备安全</p><ul><li>设备的防盗和防毁</li><li>设备的安全可用</li></ul><p>③记录介质安全</p><h4 id="运行安全"><a href="#运行安全" class="headerlink" title="运行安全"></a>运行安全</h4><p>①风险分析<br>②信息系统安全性检测分析<br>③信息系统安全监控<br>④安全审计<br>⑤信息系统边界安全防护<br>⑥备份与故障恢复<br>⑦恶意代码防护<br>⑧信息系统的应急处理<br>⑨可信计算和可信连接技术</p><h4 id="数据安全"><a href="#数据安全" class="headerlink" title="数据安全"></a>数据安全</h4><p>①身份鉴别<br>②用户标识与鉴别<br>③用于主体绑定</p><ul><li>隐秘</li><li>设备标识和鉴别</li></ul><p>④抗抵赖</p><ul><li>抗原发抵赖</li><li>抗接收抵赖</li></ul><p>⑤自主访问控制</p><ul><li>访问控制策略</li><li>访问控制功能</li><li>访问控制范围</li><li>访问控制粒度</li></ul><p>⑥标记</p><ul><li>主体标记</li><li>客体标记</li><li>标记的输出</li><li>标记的输入</li></ul><p>⑦强制访问控制</p><ul><li>访问控制策略</li><li>访问控制功能</li><li>访问控制范围</li><li>访问控制粒度</li><li>访问控制环境</li></ul><p>⑧数据完整性保护</p><ul><li>存储数据的完整性</li><li>传输数据的完整性</li><li>处理数据的完整性</li></ul><p>⑨用户数据保密性保护</p><ul><li>存储数据保密性保护</li><li>传输数据保密性保护</li><li>客体安全重用</li></ul><p>⑩数据流控制</p><p>⑾可信路径</p><p>⑿密码支持</p>]]></content>
     
     
-      
-      
     <summary type="html">&lt;p&gt;根据《系统集成项目管理工程师教程》中“17．2．3信息系统安全管理体系”一节的所述内容，在GB／T20271-2006《信息安全技术信息系统通用安全技术要求》中将信息系统安全技术体系具体描述如下：&lt;/p&gt;
-&lt;p&gt;物理安全、运行安全、数据安全&lt;/p&gt;
-&lt;h4 id=&quot;物理安全</summary>
-      
+&lt;p&gt;物理安全、运行安全、数据安全&lt;/p&gt;</summary>
     
     
     
@@ -567,35 +592,6 @@
     <category term="v-on" scheme="https://www.zenwu.site/tags/v-on/"/>
     
     <category term="vue" scheme="https://www.zenwu.site/tags/vue/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>nginx配置ssl（配置文件）</title>
-    <link href="https://www.zenwu.site/post/dc89.html"/>
-    <id>https://www.zenwu.site/post/dc89.html</id>
-    <published>2020-11-20T06:09:25.000Z</published>
-    <updated>2020-11-20T06:09:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>nginx配置ssl（配置文件），只列出部分内容。</p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># http server</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">listen</span>       <span class="number">80</span>;</span><br><span class="line">    <span class="attribute">server_name</span>  www.zenwu.site zenwu.site;</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 将Http请求转化成Https请求</span></span><br><span class="line">    <span class="attribute">return</span> <span class="number">301</span> https://$server_name$request_uri;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># HTTPS server</span></span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">    <span class="attribute">listen</span>       <span class="number">443</span> ssl;</span><br><span class="line">    <span class="attribute">server_name</span>  www.zenwu.site zenwu.site;</span><br><span class="line">    <span class="attribute">ssl_certificate</span>      /home/ssl/www.zenwu.site_chain.crt;  <span class="comment"># 证书</span></span><br><span class="line">    <span class="attribute">ssl_certificate_key</span>  /home/ssl/www.zenwu.site_key.key;  <span class="comment"># 证书</span></span><br><span class="line">    <span class="attribute">ssl_session_cache</span>    shared:SSL:<span class="number">1m</span>;</span><br><span class="line">    <span class="attribute">ssl_session_timeout</span>  <span class="number">5m</span>;</span><br><span class="line">    <span class="attribute">ssl_ciphers</span>  HIGH:!aNULL:!MD5;</span><br><span class="line">    <span class="attribute">ssl_prefer_server_ciphers</span>  <span class="literal">on</span>;</span><br><span class="line">    <span class="attribute">location</span> / &#123;</span><br><span class="line">        <span class="attribute">root</span>   /home/www/zenwuhexo/;</span><br><span class="line">        <span class="attribute">index</span>  index.html index.htm;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;nginx配置ssl（配置文件），只列出部分内容。&lt;/p&gt;
-&lt;figure class=&quot;highlight nginx&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span cla</summary>
-      
-    
-    
-    
-    <category term="前端技术的知识章节" scheme="https://www.zenwu.site/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E7%9F%A5%E8%AF%86%E7%AB%A0%E8%8A%82/"/>
-    
-    <category term="Linux" scheme="https://www.zenwu.site/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF%E7%9A%84%E7%9F%A5%E8%AF%86%E7%AB%A0%E8%8A%82/Linux/"/>
-    
-    
-    <category term="nginx" scheme="https://www.zenwu.site/tags/nginx/"/>
-    
-    <category term="linux" scheme="https://www.zenwu.site/tags/linux/"/>
     
   </entry>
   
