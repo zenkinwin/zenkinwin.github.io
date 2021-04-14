@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="">
+<meta name="generator" content="Hexo 5.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Serif+SC:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+<script class="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","width":250,"display":"always","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+  </script>
+<meta name="description" content="制定项目质量计划是识别和确定必要的作业过程、配置所需的人力和物力资源，以确保达到预期质量目标所进行的周密考虑和统筹安排的过程。 项目经理在编制项目质量计划时，希望通过相应的方法来明确质量标准及达到标准的一种最佳方法，可以运用编制质量计划的工具与技术中来进行选取合适的方法。制定项目质量计划一般采用效益&#x2F;成本分析、基准比较、流程图、实验设计、质量成本分析等方法和技术。 （1）效益／成本分析：项目质量计">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-项目质量管理-编制质量管理计划的工具与技术">
+<meta property="og:url" content="https://www.zenwu.site/post/45b5.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="制定项目质量计划是识别和确定必要的作业过程、配置所需的人力和物力资源，以确保达到预期质量目标所进行的周密考虑和统筹安排的过程。 项目经理在编制项目质量计划时，希望通过相应的方法来明确质量标准及达到标准的一种最佳方法，可以运用编制质量计划的工具与技术中来进行选取合适的方法。制定项目质量计划一般采用效益&#x2F;成本分析、基准比较、流程图、实验设计、质量成本分析等方法和技术。 （1）效益／成本分析：项目质量计">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-11T15:23:34.000Z">
+<meta property="article:modified_time" content="2021-04-11T15:23:34.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="编制质量管理计划">
+<meta property="article:tag" content="效益／成本分析">
+<meta property="article:tag" content="基准比较">
+<meta property="article:tag" content="流程图">
+<meta property="article:tag" content="实验设计">
+<meta property="article:tag" content="质量成本分析">
+<meta property="article:tag" content="质量功能展开">
+<meta property="article:tag" content="过程决策程序图法">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/post/45b5.html">
+
+
+<script class="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+<title>笔记-项目质量管理-编制质量管理计划的工具与技术 | ZenWu.site</title>
+  
+
+
+
+  <noscript>
+  <style>
+  body { margin-top: 2rem; }
+
+  .use-motion .menu-item,
+  .use-motion .sidebar,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header {
+    visibility: visible;
+  }
+
+  .use-motion .header,
+  .use-motion .site-brand-container .toggle,
+  .use-motion .footer { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle,
+  .use-motion .custom-logo-image {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line {
+    transform: scaleX(1);
+  }
+
+  .search-pop-overlay, .sidebar-nav { display: none; }
+  .sidebar-panel { display: block; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="ZenWu.site" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">ZenWu.site</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">43</span></a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">264</span></a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">323</span></a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <section class="post-toc-wrap sidebar-panel">
+        </section>
+        <!--/noindex-->
+
+        <section class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">
+
+  <div id="binft"></div>
+  <script>var binft =function (r) {function t() {return b[Math.floor(Math.random() *b.length)]
+  } 
+  function e() {return String.fromCharCode(94 *Math.random() + 33)
+  }
+  function n(r) {for (var n =document.createDocumentFragment(),i =0;r >i;i++) {var l =document.createElement("span");l.textContent =e(),l.style.color =t(),n.appendChild(l)
+  }
+  return n
+  }
+  function i() {var t =o[c.skillI];c.step ?c.step-- :(c.step =g,c.prefixP < l.length ?(c.prefixP >=0 &&(c.text +=l[c.prefixP]),c.prefixP++) :"forward" ===c.direction ?c.skillP < t.length ?(c.text +=t[c.skillP],c.skillP++) :c.delay ?c.delay-- :(c.direction ="backward",c.delay =a) :c.skillP >0 ?(c.text =c.text.slice(0,-1),c.skillP--) :(c.skillI =(c.skillI + 1) % o.length,c.direction ="forward")),r.textContent =c.text,r.appendChild(n(c.prefixP < l.length ?Math.min(s,s + c.prefixP) :Math.min(s,t.length - c.skillP))),setTimeout(i,d)
+  }
+  var l ="",o =["蹉跎错，消磨过，最是光阴化浮沫。"].map(function (r) {return r + ""
+  }),a =2,g =1,s =5,d =75,b =["rgb(110,64,170)","rgb(150,61,179)","rgb(191,60,175)","rgb(228,65,157)","rgb(254,75,131)","rgb(255,94,99)","rgb(255,120,71)","rgb(251,150,51)","rgb(226,183,47)","rgb(198,214,60)","rgb(175,240,91)","rgb(127,246,88)","rgb(82,246,103)","rgb(48,239,130)","rgb(29,223,163)","rgb(26,199,194)","rgb(35,171,216)","rgb(54,140,225)","rgb(76,110,219)","rgb(96,84,200)"],c ={text:"",prefixP:-s,skillI:0,skillP:0,direction:"forward",delay:a,step:g
+  };i()
+  };binft(document.getElementById('binft'));</script>
+
+  </div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">264</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">43</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">323</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+        </section>
+      </div>
+        <div class="back-to-top animated">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/post/45b5.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-项目质量管理-编制质量管理计划的工具与技术
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-04-11 23:23:34" itemprop="dateCreated datePublished" datetime="2021-04-11T23:23:34+08:00">2021-04-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">项目质量管理</span></a>
+        </span>
+    </span>
+
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><strong>制定项目质量计划</strong>是识别和确定必要的作业过程、配置所需的人力和物力资源，以确保达到预期质量目标所进行的周密考虑和统筹安排的过程。</p>
+<p>项目经理在编制项目质量计划时，希望通过相应的方法来明确质量标准及达到标准的一种最佳方法，可以运用编制质量计划的工具与技术中来进行选取合适的方法。制定项目质量计划一般采用<strong>效益/成本分析、基准比较、流程图、实验设计、质量成本分析</strong>等方法和技术。</p>
+<p><strong>（1）效益／成本分析</strong>：项目质量计划过程必须权衡考虑效益／成本的利弊。满足质量要求最主要的好处就是减少返工，这意味着提高生产率、降低成本和增加项目干系人的满意度。为满足质量要求所付出的主要成本是指用于开展项目质量管理活动的开支。质量管理原则的就是收益胜过成本。</p>
+<p><strong>（2）基准比较</strong>：基准比较是指将项目的实际做法或计划做法与其他项目的实践相比较，从而产生改进的思路并提出度量绩效的标准。其他项目既可以是实施组织内部的也可以是外部的，既可以来自同一应用领域也可以来自其他领域。</p>
+<p><strong>（3）流程图</strong>：流程图是指任何显示与某系统相关的各要素之间相互关系的示意图。流程图是流经一个系统的信息流、观点流或部件流的图形代表。在企业中，流程图主要用来说明某一过程。这种过程既可以是生产线上的工艺流程，也可以是完成一项任务必需的管理过程。流程图是揭示和掌握封闭系统远动状况的有效方式。作为诊断工具，它能够辅助决策制定，让管理者清楚地知道，问题可能出在什么地方，从而确定出可供选择的行动方案。</p>
+<p><strong>（4）实验设计</strong>：实验设计是一种统计方法，它帮助确定影响特定变量的因素。实验设计也能用于诸如成本与进度权衡的项目管理问题。例如，高级程序员的成本要比初级程序员高得多，但可以预期他们在较短时间内完成指派的工作。恰当地设计“实验”（高级程序员与初级程序员的不同组合计算项目成本与历时）往往可以从为数有限的方案中确定最优的解决方案。</p>
+<p><strong>（5）质量成本</strong>：指为了达到产品服务的质量要求所付出的全部努力的总成本，既包括为确保符合质量要求所做的全部工作（如质量培训、研究和调查等），也包括因不符合质量要求所引起的全部工作（如返工、废物、过度库存、担保费用等）。</p>
+<p><strong>（6）质量功能展开（Quality Function Deployment．QFD）</strong>：就是将项目的质量要求、客户意见转化成项目技术要求的专业方法。这种方法在工程领域得到广泛地应用，它从客户对项目交付结果的质量要求出发，先识别出客户在功能方面的要求，然后把功能要求与产品或服务的特性对应起来，根据功能要求与产品特性的关系矩阵，以及产品特性之间的相关关系矩阵，进一步确定出项目产品或服务的技术参数。</p>
+<p><strong>（7）过程决策程序图法</strong>(Process Decision Program Chart，PDPC)：主要思想是，在制定计划时对实现既定目标的过程加以全面分析，估计到种种可能出现的障碍及结果，设想并制定相应的应变措施和应变计划，保持计划的灵活性；在计划执行过程中，当出现不利情况时，就立即采取原先设计的措施，随时修正方案，从而使计划仍能有条不紊地进行，以达到预定的目标；当出现了没有预计到的情况时随机应变，采取灵活的对策予以解决。</p>
+
+    </div>
+
+    
+    
+    
+      
+  <div class="popular-posts-header">相关文章</div>
+  <ul class="popular-posts">
+    <li class="popular-posts-item">
+      <div class="popular-posts-title"><a href="/post/7a94.html" rel="bookmark">笔记-项目质量管理-过程决策程序图法</a></div>
+    </li>
+  </ul>
+
+
+    
+    
+    
+    
+      
+    
+    
+    
+    
+<div class="passage-end-tag">
+    
+        <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+    
+</div>
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.jpg" alt="Zen.Wu 微信">
+        <span>微信</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <!--<li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>-->
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/post/45b5.html" title="笔记-项目质量管理-编制质量管理计划的工具与技术">https://www.zenwu.site/post/45b5.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%BC%96%E5%88%B6%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/" rel="tag"><i class="fa fa-tag"></i> 编制质量管理计划</a>
+              <a href="/tags/%E6%95%88%E7%9B%8A%EF%BC%8F%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 效益／成本分析</a>
+              <a href="/tags/%E5%9F%BA%E5%87%86%E6%AF%94%E8%BE%83/" rel="tag"><i class="fa fa-tag"></i> 基准比较</a>
+              <a href="/tags/%E6%B5%81%E7%A8%8B%E5%9B%BE/" rel="tag"><i class="fa fa-tag"></i> 流程图</a>
+              <a href="/tags/%E5%AE%9E%E9%AA%8C%E8%AE%BE%E8%AE%A1/" rel="tag"><i class="fa fa-tag"></i> 实验设计</a>
+              <a href="/tags/%E8%B4%A8%E9%87%8F%E6%88%90%E6%9C%AC%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 质量成本分析</a>
+              <a href="/tags/%E8%B4%A8%E9%87%8F%E5%8A%9F%E8%83%BD%E5%B1%95%E5%BC%80/" rel="tag"><i class="fa fa-tag"></i> 质量功能展开</a>
+              <a href="/tags/%E8%BF%87%E7%A8%8B%E5%86%B3%E7%AD%96%E7%A8%8B%E5%BA%8F%E5%9B%BE%E6%B3%95/" rel="tag"><i class="fa fa-tag"></i> 过程决策程序图法</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/post/7a94.html" rel="prev" title="笔记-项目质量管理-过程决策程序图法">
+                  <i class="fa fa-chevron-left"></i> 笔记-项目质量管理-过程决策程序图法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/post/e391.html" rel="next" title="笔记-信息化与系统集成技术-物联网">
+                  笔记-信息化与系统集成技术-物联网 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      const activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      const commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian">
+
+
+  <span class="copyright">
+  &copy; 2002 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-book-reader"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Zen.Wu {{存一些内容，记一点文字}}</span>
+</span><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+
+
+
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">504k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:38</span>
+  </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral"><img src="/images/upyun-logo.png" style="height:28px"></img>提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script size="200" alpha="0.5" zIndex="-1" src="//cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+<script src="/js/local-search.js"></script>
+
+
+
+
+<script>
+if (document.querySelectorAll('.mermaid').length) {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/mermaid@8.8.3/dist/mermaid.min.js', () => {
+    mermaid.init({
+      theme    : 'forest',
+      logLevel : 3,
+      flowchart: { curve     : 'linear' },
+      gantt    : { axisFormat: '%m/%d/%Y' },
+      sequence : { actorMargin: 50 }
+    }, '.mermaid');
+  }, window.mermaid);
+}
+</script>
+
+
+  
+
+
+
+
+
+
+
+
+
+<script>
+$(function() {
+
+        $(".category-list-item").each(function() {
+            if ($(this).children("ul").length > 0){
+                console.log($(this).children("ul").length)
+                //如果有ul，添加样式
+                $(this).children(".category-list-count").addClass("plus");
+            }
+        });
+
+        $(".category-list-item .plus").click(function(){
+            if( $(this).next("ul").is(":hidden")){
+                $(this).next("ul").show(0);
+                $(this).addClass("minus");
+            }else{
+                $(this).next("ul").hide(0);
+                $(this).removeClass("minus");
+            }
+        });
+    })
+
+</script>
+</body>
+</html>
