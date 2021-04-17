@@ -6,7 +6,7 @@
   <link href="https://www.zenwu.site/atom.xml" rel="self"/>
   
   <link href="https://www.zenwu.site/"/>
-  <updated>2021-04-13T13:49:55.000Z</updated>
+  <updated>2021-04-17T15:38:44.000Z</updated>
   <id>https://www.zenwu.site/</id>
   
   <author>
@@ -15,6 +15,72 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记-计算机网络基础-计算机网络分类</title>
+    <link href="https://www.zenwu.site/post/43af.html"/>
+    <id>https://www.zenwu.site/post/43af.html</id>
+    <published>2021-04-17T15:38:44.000Z</published>
+    <updated>2021-04-17T15:38:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>本题考查网络拓扑分类，参考《系统集成项目管理工程师教程（第2版）》P153</p><p>网络拓扑结构分为物理拓扑和逻辑拓扑。</p><p>网络按照<strong>拓扑结构</strong>划分有：总线型结构、环型结构、星型结构、树型结构和网状结构。</p><p>根据覆盖的<strong>地理范围</strong>分为：局域网，城域网和广域网。</p><p>根据<strong>链路传输控制技术</strong>分为：总线争用技术、令牌技术、FDDI技术、ATM技术、帧中继技术和ISDN技术。对应上述技术的网络分别是以太网、令牌网、FDDI网、ATM网、帧中继网和ISDN网。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;本题考查网络拓扑分类，参考《系统集成项目管理工程师教程（第2版）》P153&lt;/p&gt;
+&lt;p&gt;网络拓扑结构分为物理拓扑和逻辑拓扑。&lt;/p&gt;
+&lt;p&gt;网络按照&lt;strong&gt;拓扑结构&lt;/strong&gt;划分有：总线型结构、环型结构、星型结构、树型结构和网状结构。&lt;/p&gt;
+&lt;p&gt;根据覆</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="计算机网络基础" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="网络拓扑结构" scheme="https://www.zenwu.site/tags/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="计算机网络分类" scheme="https://www.zenwu.site/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%88%86%E7%B1%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记-信息系统安全管理-网络安全工具</title>
+    <link href="https://www.zenwu.site/post/666f.html"/>
+    <id>https://www.zenwu.site/post/666f.html</id>
+    <published>2021-04-17T13:52:00.000Z</published>
+    <updated>2021-04-17T13:52:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本题考查防火墙基础知识，参考《系统集成项目管理工程师教程（第2版）》第三章 信息系统集成专业技术知识 3.7.12 网络安全，全书第158页。</p></blockquote><p>国家在信息系统安全方面也出台了相应的安全标准。2001年1月1日起由公安部主持制定、国家技术标准局发布的中华人民共和国国家标准 GB17895-1999《计算机信息系统安全保护等级划分准则》开始实施。该准则将信息系统安全分为5个等级，分别是：<strong>自主保护级、系统审计保护级、安全标记保护级、结构化保护级、访问验证保护级</strong>。</p><p>除了标准之外，还需要相应的<strong>网络安全工具</strong>，包括<strong>安全操作系统、应用系统、防火墙、网络监控、安全扫描、信息审计、通信加密、灾难恢复、网络反病毒</strong>等多个安全组件共同组成的，每一个单独的组件只能完成其中部分功能，而不能完成全部功能。下面对主要的网络和信息安全产品加以说明：</p><h3 id="1．防火墙"><a href="#1．防火墙" class="headerlink" title="1．防火墙"></a>1．防火墙</h3><p>防火墙通常被比喻为网络安全的大门，用来鉴别什么样的数据包可以进出企业内部网。在应对黑客入侵方面，可以阻止基于IP包头的攻击和非信任地址的访问。但传统防火墙无法阻止和检测基于数据内容的黑客攻击和病毒入侵，同时也<strong>无法控制内部网络</strong>之间的违规行为。</p><h3 id="2．扫描器"><a href="#2．扫描器" class="headerlink" title="2．扫描器"></a>2．扫描器</h3><p>扫描器可以说是入侵检测的一种，主要用来发现网络服务、网络设备和主机的漏洞，通过定期的检测与比较，发现入侵或违规行为留下的痕迹。当然，扫描器无法发现正在进行的入侵行为，而且它还有可能<strong>成为攻击者的工具</strong>。</p><h3 id="3．防毒软件"><a href="#3．防毒软件" class="headerlink" title="3．防毒软件"></a>3．防毒软件</h3><p>防毒软件是最为人熟悉的安全工具，可以检测、清除各种文件型病毒、宏病毒和邮件病毒等。在应对黑客入侵方面，它可以查杀特洛伊木马和蠕虫等病毒程序，但对于基于网络的攻击行为（如扫描、针对漏洞的攻击）却无能为力。</p><h3 id="4．安全审计系统"><a href="#4．安全审计系统" class="headerlink" title="4．安全审计系统"></a>4．安全审计系统</h3><p>安全审计系统通过独立的、对网络行为和主机操作提供全面与忠实的记录，方便用户分析与审查事故原因，很像飞机上的黑匣子。由于数据量和分析量比较大，目前市场上鲜见特别成熟的产品，即使存在冠以审计名义的产品，也更多的是从事入侵检测的工作。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;本题考查防火墙基础知识，参考《系统集成项目管理工程师教程（第2版）》第三章 信息系统集成专业技术知识 3.7.12 网络安全，全书第158页。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;国家在信息系统安全方面也出台了相应的安全标准。2001年1月1</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="信息系统安全管理" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/"/>
+    
+    
+    <category term="安全管理" scheme="https://www.zenwu.site/tags/%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="网络安全工具" scheme="https://www.zenwu.site/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="防火墙" scheme="https://www.zenwu.site/tags/%E9%98%B2%E7%81%AB%E5%A2%99/"/>
+    
+    <category term="扫描器" scheme="https://www.zenwu.site/tags/%E6%89%AB%E6%8F%8F%E5%99%A8/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记-信息化与系统集成技术-信息系统的特点</title>
@@ -205,36 +271,6 @@
   </entry>
   
   <entry>
-    <title>笔记整理-信息技术服务标准-ITSS组成要素</title>
-    <link href="https://www.zenwu.site/post/4062.html"/>
-    <id>https://www.zenwu.site/post/4062.html</id>
-    <published>2021-04-10T16:30:31.000Z</published>
-    <updated>2021-04-10T16:30:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="ITSS组成要素"><a href="#ITSS组成要素" class="headerlink" title="ITSS组成要素"></a>ITSS组成要素</h3><p>IT服务由**人员(People)、流程(Process)、技术(Technology)和资源( Resource)**组成，简称PPTR。其中；</p><p><strong>人员</strong>：指提供IT服务所需的人员及其知识、经验和技能要求；</p><p><strong>流程</strong>：指提供IT服务时，合理利用必要的资源，将输入转化为输出的一组相互关联和结构化的活动：</p><p><strong>技术</strong>：指交付满足质量要求的IT服务应使用的技术或应具备的技术能力；</p><p><strong>资源</strong>：指提供IT服务所依存和产生的有形及无形资产。</p><p>通常情况下是由具备匹配的知识、技能和经验的人员，合理运用资源，并通过规定流程向客户提供IT服务。</p><p><img src="https://cdn.zenwu.site/upload/pic/2021/20210413142538.png"></p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;ITSS组成要素&quot;&gt;&lt;a href=&quot;#ITSS组成要素&quot; class=&quot;headerlink&quot; title=&quot;ITSS组成要素&quot;&gt;&lt;/a&gt;ITSS组成要素&lt;/h3&gt;&lt;p&gt;IT服务由**人员(People)、流程(Process)、技术(Technology)和资</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="信息技术服务标准" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%8D%E5%8A%A1%E6%A0%87%E5%87%86/"/>
-    
-    
-    <category term="ITSS" scheme="https://www.zenwu.site/tags/ITSS/"/>
-    
-    <category term="ITSS组成要素" scheme="https://www.zenwu.site/tags/ITSS%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0/"/>
-    
-    <category term="信息技术服务标准" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%8D%E5%8A%A1%E6%A0%87%E5%87%86/"/>
-    
-  </entry>
-  
-  <entry>
     <title>笔记整理-信息技术服务标准-ITSS生命周期</title>
     <link href="https://www.zenwu.site/post/2552.html"/>
     <id>https://www.zenwu.site/post/2552.html</id>
@@ -258,9 +294,39 @@
     
     <category term="ITSS" scheme="https://www.zenwu.site/tags/ITSS/"/>
     
+    <category term="ITSS生命周期" scheme="https://www.zenwu.site/tags/ITSS%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    
     <category term="信息技术服务标准" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%8D%E5%8A%A1%E6%A0%87%E5%87%86/"/>
     
-    <category term="ITSS生命周期" scheme="https://www.zenwu.site/tags/ITSS%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+  </entry>
+  
+  <entry>
+    <title>笔记整理-信息技术服务标准-ITSS组成要素</title>
+    <link href="https://www.zenwu.site/post/4062.html"/>
+    <id>https://www.zenwu.site/post/4062.html</id>
+    <published>2021-04-10T16:30:31.000Z</published>
+    <updated>2021-04-10T16:30:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="ITSS组成要素"><a href="#ITSS组成要素" class="headerlink" title="ITSS组成要素"></a>ITSS组成要素</h3><p>IT服务由**人员(People)、流程(Process)、技术(Technology)和资源( Resource)**组成，简称PPTR。其中；</p><p><strong>人员</strong>：指提供IT服务所需的人员及其知识、经验和技能要求；</p><p><strong>流程</strong>：指提供IT服务时，合理利用必要的资源，将输入转化为输出的一组相互关联和结构化的活动：</p><p><strong>技术</strong>：指交付满足质量要求的IT服务应使用的技术或应具备的技术能力；</p><p><strong>资源</strong>：指提供IT服务所依存和产生的有形及无形资产。</p><p>通常情况下是由具备匹配的知识、技能和经验的人员，合理运用资源，并通过规定流程向客户提供IT服务。</p><p><img src="https://cdn.zenwu.site/upload/pic/2021/20210413142538.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;ITSS组成要素&quot;&gt;&lt;a href=&quot;#ITSS组成要素&quot; class=&quot;headerlink&quot; title=&quot;ITSS组成要素&quot;&gt;&lt;/a&gt;ITSS组成要素&lt;/h3&gt;&lt;p&gt;IT服务由**人员(People)、流程(Process)、技术(Technology)和资</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="信息技术服务标准" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%8D%E5%8A%A1%E6%A0%87%E5%87%86/"/>
+    
+    
+    <category term="ITSS" scheme="https://www.zenwu.site/tags/ITSS/"/>
+    
+    <category term="信息技术服务标准" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%8D%E5%8A%A1%E6%A0%87%E5%87%86/"/>
+    
+    <category term="ITSS组成要素" scheme="https://www.zenwu.site/tags/ITSS%E7%BB%84%E6%88%90%E8%A6%81%E7%B4%A0/"/>
     
   </entry>
   
@@ -417,15 +483,17 @@
     <link href="https://www.zenwu.site/post/6105.html"/>
     <id>https://www.zenwu.site/post/6105.html</id>
     <published>2021-03-26T13:52:00.000Z</published>
-    <updated>2021-03-26T13:52:00.000Z</updated>
+    <updated>2021-04-17T13:52:00.000Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>又错了……<br>信息系统的安全属性包括：保密性、完整性、可用性、不可依赖性。</p></blockquote><p>▲▲▲ 信息系统的安全属性包括：<strong>保密性、完整性、可用性、不可依赖性</strong>。</p><a id="more"></a><h3 id="1-保密性"><a href="#1-保密性" class="headerlink" title="1. 保密性"></a>1. 保密性</h3><p>保密性是应用系统的信息不被泄露给非授权的用户、实体或过程，或供其利用的特性。即防止信息泄漏给非授权个人或实体，信息只为授权用户使用的特性。保密性是在可用性基础之上，是保障应用系统信息安全的重要手段。</p><p>应用系统常用的保密技术如下：</p><p>(1)最小授权原则：对信息的访问权限仅授权给需要从事业务的用户使用。<br>(2)防暴露：防止有用信息以各种途径暴露或传播出去。<br>(3)信息加密：用加密算法对信息进行加密处理，非法用户无法对信息进行解密从而无法读懂有效信息。<br>(4)物理保密：利用各种物理方法，如限制、隔离、掩蔽和控制等措施，保护信息不被泄露。</p><h3 id="2-完整性"><a href="#2-完整性" class="headerlink" title="2. 完整性"></a>2. 完整性</h3><p>完整性是信息未经授权不能进行改变的特性。即应用系统的信息在存储或传输过程中保持不被偶然或蓄意地删除、修改、伪造、乱序、重放和插入等破坏和丢失的特性。完整性是一种面向信息的安全性，它要求保持信息的原样，即信息的正确生成及正确存储和传输。完整性与保密性不同，保密性要求信息不被泄露给未授权的人，而完整性则要求信息不致受到各种原因的破坏。影响信息完整性的主要因素有设备故障、误码(传输、处理和存储过程中产生的误码，定时的稳定度和精度降低造成的误码，各种干扰源造成的误码)、人为攻击和计算机病毒等。</p><p>保障应用系统完整性的主要方法如下：</p><p>(1)协议：通过各种安全协议可以有效地检测出被复制的信息、被删除的字段、失效的字段和被修改的字段。<br>(2)纠错编码方法：由此完成检错和纠错功能。最简单和常用的纠错编码方法是奇偶校验法。<br>(3)密码校验和方法：它是抗篡改和传输失败的重要手段。<br>(4)数字签名：保障信息的真实性。<br>(5)公证：请求系统管理或中介机构证明信息的真实性。</p><h3 id="3-可用性"><a href="#3-可用性" class="headerlink" title="3. 可用性"></a>3. 可用性</h3><p>可用性是应用系统信息可被授权实体访问并按需求使用的特性。即信息服务在需要时，允许授权用户或实体使用的特性，或者是网络部分受损或需要降级使用时，仍能为授权用户提供有效服务的特性。可用性是应用系统面向用户的安全性能。应用系统最基本的功能是向用户提供服务，而用户的需求是随机的、多方面的、有时还有时间要求。可用性一般用系统正常使用时间和整个工作时间之比来度量。</p><p>可用性还应该满足以下要求：</p><ul><li>身份识别与确认</li><li>访问控制(对用户的权限进行控制，只能访问相应权限的资源，防止或限制经隐蔽通道的非法访问。包括自主访问控制和强制访问控制)</li><li>业务流控制(利用均分负荷方法，防止业务流量过度集中而引起网络阻塞)</li><li>路由选择控制(选择那些稳定可靠的子网、中继线或链路等)</li><li>审计跟踪(把应用系统中发生的所有安全事件情况存储在安全审计跟踪之中，以便分析原因，分清责任，及时采取相应的措施。</li></ul><p>审计跟踪的信息主要包括事件类型、被管信息等级、事件时间、事件信息、事件回答以及事件统计等方面的信息)。</p><h3 id="4-不可抵赖性"><a href="#4-不可抵赖性" class="headerlink" title="4. 不可抵赖性"></a>4. 不可抵赖性</h3><p>不可抵赖性也称作不可否认性，在应用系统的信息交互过程中，确信参与者的真实同一性。即所有参与者都不可能否认或抵赖曾经完成的操作和承诺。利用信息源证据可以防止发信方不真实地否认已发送信息，利用递交接收证据可以防止收信方事后否认已经接收的信息。</p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>又错了……<br>又又错了……<br>信息系统的安全属性包括：保密性、完整性、可用性、不可依赖性。</p></blockquote><p>▲▲▲ 信息系统的安全属性包括：<strong>保密性、完整性、可用性、不可依赖性</strong>。</p><p>信息安全的基本要素有：（中项，第二版教程P159网络安全）</p><p>(1)机密性：确保信息不暴露给未授权的实体或进程。<br>(2)完整性：只有得到允许的人才能修改数据，并且能够判别出数据是否已被篡改。<br>(3)可用性：得到授权的实体在需要时可访问数据，即攻击者不能占用所有的资源而阻碍授权者的工作。<br>(4)可控性：可以控制授权范围内的信息流向及行为方式。<br>(5)可审查性：对出现的网络安全问题提供调查的依据和手段。</p><a id="more"></a><h3 id="1-保密性"><a href="#1-保密性" class="headerlink" title="1. 保密性"></a>1. 保密性</h3><p>保密性是应用系统的信息不被泄露给非授权的用户、实体或过程，或供其利用的特性。即防止信息泄漏给非授权个人或实体，信息只为授权用户使用的特性。保密性是在可用性基础之上，是保障应用系统信息安全的重要手段。</p><p>应用系统常用的保密技术如下：</p><p>(1)最小授权原则：对信息的访问权限仅授权给需要从事业务的用户使用。<br>(2)防暴露：防止有用信息以各种途径暴露或传播出去。<br>(3)信息加密：用加密算法对信息进行加密处理，非法用户无法对信息进行解密从而无法读懂有效信息。<br>(4)物理保密：利用各种物理方法，如限制、隔离、掩蔽和控制等措施，保护信息不被泄露。</p><h3 id="2-完整性"><a href="#2-完整性" class="headerlink" title="2. 完整性"></a>2. 完整性</h3><p>完整性是信息未经授权不能进行改变的特性。即应用系统的信息在存储或传输过程中保持不被偶然或蓄意地删除、修改、伪造、乱序、重放和插入等破坏和丢失的特性。完整性是一种面向信息的安全性，它要求保持信息的原样，即信息的正确生成及正确存储和传输。完整性与保密性不同，保密性要求信息不被泄露给未授权的人，而完整性则要求信息不致受到各种原因的破坏。影响信息完整性的主要因素有设备故障、误码(传输、处理和存储过程中产生的误码，定时的稳定度和精度降低造成的误码，各种干扰源造成的误码)、人为攻击和计算机病毒等。</p><p>保障应用系统完整性的主要方法如下：</p><p>(1)协议：通过各种安全协议可以有效地检测出被复制的信息、被删除的字段、失效的字段和被修改的字段。<br>(2)纠错编码方法：由此完成检错和纠错功能。最简单和常用的纠错编码方法是奇偶校验法。<br>(3)密码校验和方法：它是抗篡改和传输失败的重要手段。<br>(4)数字签名：保障信息的真实性。<br>(5)公证：请求系统管理或中介机构证明信息的真实性。</p><h3 id="3-可用性"><a href="#3-可用性" class="headerlink" title="3. 可用性"></a>3. 可用性</h3><p>可用性是应用系统信息可被授权实体访问并按需求使用的特性。即信息服务在需要时，允许授权用户或实体使用的特性，或者是网络部分受损或需要降级使用时，仍能为授权用户提供有效服务的特性。可用性是应用系统面向用户的安全性能。应用系统最基本的功能是向用户提供服务，而用户的需求是随机的、多方面的、有时还有时间要求。可用性一般用系统正常使用时间和整个工作时间之比来度量。</p><p>可用性还应该满足以下要求：</p><ul><li>身份识别与确认</li><li>访问控制(对用户的权限进行控制，只能访问相应权限的资源，防止或限制经隐蔽通道的非法访问。包括自主访问控制和强制访问控制)</li><li>业务流控制(利用均分负荷方法，防止业务流量过度集中而引起网络阻塞)</li><li>路由选择控制(选择那些稳定可靠的子网、中继线或链路等)</li><li>审计跟踪(把应用系统中发生的所有安全事件情况存储在安全审计跟踪之中，以便分析原因，分清责任，及时采取相应的措施。</li></ul><p>审计跟踪的信息主要包括事件类型、被管信息等级、事件时间、事件信息、事件回答以及事件统计等方面的信息)。</p><h3 id="4-不可抵赖性"><a href="#4-不可抵赖性" class="headerlink" title="4. 不可抵赖性"></a>4. 不可抵赖性</h3><p>不可抵赖性也称作不可否认性，在应用系统的信息交互过程中，确信参与者的真实同一性。即所有参与者都不可能否认或抵赖曾经完成的操作和承诺。利用信息源证据可以防止发信方不真实地否认已发送信息，利用递交接收证据可以防止收信方事后否认已经接收的信息。</p>]]></content>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;又错了……&lt;br&gt;信息系统的安全属性包括：保密性、完整性、可用性、不可依赖性。&lt;/p&gt;
+&lt;p&gt;又错了……&lt;br&gt;又又错了……&lt;br&gt;信息系统的安全属性包括：保密性、完整性、可用性、不可依赖性。&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;▲▲▲ 信息系统的安全属性包括：&lt;strong&gt;保密性、完整性、可用性、不可依赖性&lt;/strong&gt;。&lt;/p&gt;</summary>
+&lt;p&gt;▲▲▲ 信息系统的安全属性包括：&lt;strong&gt;保密性、完整性、可用性、不可依赖性&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;信息安全的基本要素有：（中项，第二版教程P159网络安全）&lt;/p&gt;
+&lt;p&gt;(1)机密性：确保信息不暴露给未授权的实体或进程。&lt;br&gt;(2)完整性：只有得到允许的人才能修改数据，并且能够判别出数据是否已被篡改。&lt;br&gt;(3)可用性：得到授权的实体在需要时可访问数据，即攻击者不能占用所有的资源而阻碍授权者的工作。&lt;br&gt;(4)可控性：可以控制授权范围内的信息流向及行为方式。&lt;br&gt;(5)可审查性：对出现的网络安全问题提供调查的依据和手段。&lt;/p&gt;</summary>
     
     
     
@@ -560,59 +628,6 @@
     <category term="对象" scheme="https://www.zenwu.site/tags/%E5%AF%B9%E8%B1%A1/"/>
     
     <category term="类" scheme="https://www.zenwu.site/tags/%E7%B1%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记-项目进度管理-控制进度</title>
-    <link href="https://www.zenwu.site/post/d46b.html"/>
-    <id>https://www.zenwu.site/post/d46b.html</id>
-    <published>2021-02-24T13:29:12.000Z</published>
-    <updated>2021-02-24T13:29:12.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>当项目的实际进度滞后于计划进度时，首先<strong>发现问题</strong>、<strong>分析问题</strong>根源并<strong>找到妥善的解决方法</strong>。</p><p><img src="https://cdn.zenwu.site/upload/pic/2021/20210224161220.png" alt="控制进度时候的流程，这图是希赛备考讲义上的"></p><p>某大型项目原计划于6个月后交付，目前由于设备故障、人员流失和客户审核缓慢导致项目实际进展比计划延迟了 1个月。作为项目经理首先应该做的是（ ）。</p><p>A.对关键路径活动进行分析，评估是否可以进行赶工<br>B.重新设立进度基线，并对新的进度基线进行评审<br>C.记录进展缓慢的相关问题，并报告管理层<br>D.与客户沟通项目延期的可能性</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;当项目的实际进度滞后于计划进度时，首先&lt;strong&gt;发现问题&lt;/strong&gt;、&lt;strong&gt;分析问题&lt;/strong&gt;根源并&lt;strong&gt;找到妥善的解决方法&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://cdn.zenwu.site/uplo</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="项目进度管理" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E9%A1%B9%E7%9B%AE%E8%BF%9B%E5%BA%A6%E7%AE%A1%E7%90%86/"/>
-    
-    
-    <category term="进度管理" scheme="https://www.zenwu.site/tags/%E8%BF%9B%E5%BA%A6%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="控制进度" scheme="https://www.zenwu.site/tags/%E6%8E%A7%E5%88%B6%E8%BF%9B%E5%BA%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>笔记-信息系统安全管理-信息系统安全技术体系</title>
-    <link href="https://www.zenwu.site/post/f9f8.html"/>
-    <id>https://www.zenwu.site/post/f9f8.html</id>
-    <published>2021-02-24T13:12:00.000Z</published>
-    <updated>2021-02-24T13:12:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>根据《系统集成项目管理工程师教程》中“17.2.3信息系统安全管理体系”一节的所述内容，在GB／T20271-2006《信息安全技术信息系统通用安全技术要求》中将信息系统安全技术体系具体描述如下：</p><p>物理安全、运行安全、数据安全</p><a id="more"></a><h4 id="物理安全"><a href="#物理安全" class="headerlink" title="物理安全"></a>物理安全</h4><p>①环境安全<br>主要指中心机房的安全保护，包括：</p><ul><li>机房场地选择</li><li>机房内部安全防护</li><li>机房防火</li><li>机房供、配电</li><li>机房空调、降温</li><li>机房防水与防潮</li><li>机房防静</li><li>机房接地与防雷击</li><li>机房电磁防护</li></ul><p>②设备安全</p><ul><li>设备的防盗和防毁</li><li>设备的安全可用</li></ul><p>③记录介质安全</p><h4 id="运行安全"><a href="#运行安全" class="headerlink" title="运行安全"></a>运行安全</h4><p>①风险分析<br>②信息系统安全性检测分析<br>③信息系统安全监控<br>④安全审计<br>⑤信息系统边界安全防护<br>⑥备份与故障恢复<br>⑦恶意代码防护<br>⑧信息系统的应急处理<br>⑨可信计算和可信连接技术</p><h4 id="数据安全"><a href="#数据安全" class="headerlink" title="数据安全"></a>数据安全</h4><p>①身份鉴别<br>②用户标识与鉴别<br>③用于主体绑定</p><ul><li>隐秘</li><li>设备标识和鉴别</li></ul><p>④抗抵赖</p><ul><li>抗原发抵赖</li><li>抗接收抵赖</li></ul><p>⑤自主访问控制</p><ul><li>访问控制策略</li><li>访问控制功能</li><li>访问控制范围</li><li>访问控制粒度</li></ul><p>⑥标记</p><ul><li>主体标记</li><li>客体标记</li><li>标记的输出</li><li>标记的输入</li></ul><p>⑦强制访问控制</p><ul><li>访问控制策略</li><li>访问控制功能</li><li>访问控制范围</li><li>访问控制粒度</li><li>访问控制环境</li></ul><p>⑧数据完整性保护</p><ul><li>存储数据的完整性</li><li>传输数据的完整性</li><li>处理数据的完整性</li></ul><p>⑨用户数据保密性保护</p><ul><li>存储数据保密性保护</li><li>传输数据保密性保护</li><li>客体安全重用</li></ul><p>⑩数据流控制</p><p>⑾可信路径</p><p>⑿密码支持</p>]]></content>
-    
-    
-    <summary type="html">&lt;p&gt;根据《系统集成项目管理工程师教程》中“17.2.3信息系统安全管理体系”一节的所述内容，在GB／T20271-2006《信息安全技术信息系统通用安全技术要求》中将信息系统安全技术体系具体描述如下：&lt;/p&gt;
-&lt;p&gt;物理安全、运行安全、数据安全&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="信息系统安全管理" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/"/>
-    
-    
-    <category term="信息系统安全技术体系" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF%E4%BD%93%E7%B3%BB/"/>
     
   </entry>
   
