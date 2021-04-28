@@ -6,7 +6,7 @@
   <link href="https://www.zenwu.site/atom.xml" rel="self"/>
   
   <link href="https://www.zenwu.site/"/>
-  <updated>2021-04-25T15:29:18.000Z</updated>
+  <updated>2021-04-28T05:29:15.000Z</updated>
   <id>https://www.zenwu.site/</id>
   
   <author>
@@ -17,49 +17,19 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-30工作分解结构(WBS)分解形式</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/a4c6.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/a4c6.html</id>
-    <published>2021-04-25T15:29:18.000Z</published>
-    <updated>2021-04-25T15:29:18.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-100信息技术服务标准</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/100.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/100.html</id>
+    <published>2021-04-28T05:29:15.000Z</published>
+    <updated>2021-04-28T05:29:15.000Z</updated>
     
-    <content type="html"><![CDATA[<p>工作分解结构(WBS)可采用哪些形式分解？</p><p>(1)把项目生命周期的各阶段作为分解的第一层，把产品和项目可交付成果放在第二层<br>(2)把主要可交付成果作为分解的第一层<br>(3)按子项目进行第一层分解。子项目(如外包工作)可能由项目团队之外的组织实施。然后，作为外包工作的一部分，卖方需编制相应的合同工作分解结构。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;工作分解结构(WBS)可采用哪些形式分解？&lt;/p&gt;
-&lt;p&gt;(1)把项目生命周期的各阶段作为分解的第一层，把产品和项目可交付成果放在第二层&lt;br&gt;(2)把主要可交付成果作为分解的第一层&lt;br&gt;(3)按子项目进行第一层分解。子项目(如外包工作)可能由项目团队之外的组织实施。然后</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="范围管理" scheme="https://www.zenwu.site/tags/%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="工作分解结构" scheme="https://www.zenwu.site/tags/%E5%B7%A5%E4%BD%9C%E5%88%86%E8%A7%A3%E7%BB%93%E6%9E%84/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-29范围说明书的内容</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/df93.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/df93.html</id>
-    <published>2021-04-25T14:39:18.000Z</published>
-    <updated>2021-04-25T14:39:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>范围说明书包括哪些内容？</p><p>范围说明书是对项目范围、主要可交付成果、假设条件和制约因素的描述。项目范围说明书记录了整个范围，包括项目和产品范围。项目范围说明书详细描述项目可交付成果，及为创建这些可交付成果而必须开展的工作。</p><p>(1)项目目标<br>(2)产品范围描述<br>(3)项目需求<br>(4)项目边界<br>(5)可交付成果<br>(6)制约因素<br>(7)假设条件</p>]]></content>
+    <content type="html"><![CDATA[<p>信息技术服务标准（ITSS）中，IT服务的核心要素指的是？生命周期是？▲▲▲</p><p>组成要素：<strong>人员、流程、技术和资源</strong><br>生命周期：<strong>规划设计、部署实施、服务运营、持续改进和监督管理</strong>5个阶段组成。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;范围说明书包括哪些内容？&lt;/p&gt;
-&lt;p&gt;范围说明书是对项目范围、主要可交付成果、假设条件和制约因素的描述。项目范围说明书记录了整个范围，包括项目和产品范围。项目范围说明书详细描述项目可交付成果，及为创建这些可交付成果而必须开展的工作。&lt;/p&gt;
-&lt;p&gt;(1)项目目标&lt;br&gt;(</summary>
+    <summary type="html">&lt;p&gt;信息技术服务标准（ITSS）中，IT服务的核心要素指的是？生命周期是？▲▲▲&lt;/p&gt;
+&lt;p&gt;组成要素：&lt;strong&gt;人员、流程、技术和资源&lt;/strong&gt;&lt;br&gt;生命周期：&lt;strong&gt;规划设计、部署实施、服务运营、持续改进和监督管理&lt;/strong&gt;5个阶段组成。&lt;</summary>
       
     
     
@@ -69,173 +39,26 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="范围管理" scheme="https://www.zenwu.site/tags/%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86/"/>
+    <category term="信息技术服务标准" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E6%8A%80%E6%9C%AF%E6%9C%8D%E5%8A%A1%E6%A0%87%E5%87%86/"/>
     
-    <category term="范围说明书" scheme="https://www.zenwu.site/tags/%E8%8C%83%E5%9B%B4%E8%AF%B4%E6%98%8E%E4%B9%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-28范围管理计划和需求管理计划</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/d792.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/d792.html</id>
-    <published>2021-04-24T15:59:18.000Z</published>
-    <updated>2021-04-24T15:59:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>范围管理计划和需求管理计划的内容是？</p><p>(1)范围管理计划是项目或项目集管理计划的组成部分，描述了如何定义、制定、监督、控制和确认项目范围。<br>(2)需求管理计划是项目管理计划的组成部分，描述了如何分析、记录和管理需求，以及阶段与阶段间的关系对管理需求的影响。项目经理为项目选择最有效的阶段间关系，并将它记录在需求管理计划中。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;范围管理计划和需求管理计划的内容是？&lt;/p&gt;
-&lt;p&gt;(1)范围管理计划是项目或项目集管理计划的组成部分，描述了如何定义、制定、监督、控制和确认项目范围。&lt;br&gt;(2)需求管理计划是项目管理计划的组成部分，描述了如何分析、记录和管理需求，以及阶段与阶段间的关系对管理需求的影响</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="范围管理" scheme="https://www.zenwu.site/tags/%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="范围管理计划" scheme="https://www.zenwu.site/tags/%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/"/>
-    
-    <category term="需求管理计划" scheme="https://www.zenwu.site/tags/%E9%9C%80%E6%B1%82%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/"/>
+    <category term="ITSS" scheme="https://www.zenwu.site/tags/ITSS/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-27产品范围和项目范围</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/516e.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/516e.html</id>
-    <published>2021-04-24T13:39:28.000Z</published>
-    <updated>2021-04-24T13:39:28.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-99云计算</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/99.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/99.html</id>
+    <published>2021-04-28T05:26:19.000Z</published>
+    <updated>2021-04-28T05:26:19.000Z</updated>
     
-    <content type="html"><![CDATA[<p>什么是产品范围？什么是项目范围？</p><p><strong>产品范围：</strong>表示产品或服务的特性和功能。如何确定信息系统的范围在软件工程中称为需求分析。<br><strong>项目范围：</strong>为了完成具有所规定特征和功能的产品和服务必须完成的全部工作。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;什么是产品范围？什么是项目范围？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;产品范围：&lt;/strong&gt;表示产品或服务的特性和功能。如何确定信息系统的范围在软件工程中称为需求分析。&lt;br&gt;&lt;strong&gt;项目范围：&lt;/strong&gt;为了完成具有所规定特征和功能的产品和服务必须完成的全部</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="范围管理" scheme="https://www.zenwu.site/tags/%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="产品范围" scheme="https://www.zenwu.site/tags/%E4%BA%A7%E5%93%81%E8%8C%83%E5%9B%B4/"/>
-    
-    <category term="项目范围" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E8%8C%83%E5%9B%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-26项目范围管理</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/fc99.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/fc99.html</id>
-    <published>2021-04-24T13:35:18.000Z</published>
-    <updated>2021-04-24T13:35:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>项目范围管理的主要过程有？</p><p>(1)编制范围管理计划<br>(2)收集需求：明确并记录项目干系人的相关需求。<br>(3)定义范围：详细描述产品和项目范围，编制项目范围说明书。<br>(4)创建WBS：把整个项目工作分解为较小的、易于管理的组成部分。<br>(5)确认范围：正式验收已完成的可交付成果。<br>(6)范围控制：监督项目和产品的范围状态、管理范围基准变更。</p>]]></content>
+    <content type="html"><![CDATA[<p>云计算的服务类型有哪些？</p><p>基础设施即服务（laaS）、平台即服务（PaaS）、软件即服务（SaaS）</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;项目范围管理的主要过程有？&lt;/p&gt;
-&lt;p&gt;(1)编制范围管理计划&lt;br&gt;(2)收集需求：明确并记录项目干系人的相关需求。&lt;br&gt;(3)定义范围：详细描述产品和项目范围，编制项目范围说明书。&lt;br&gt;(4)创建WBS：把整个项目工作分解为较小的、易于管理的组成部分。&lt;br&gt;(5</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="范围管理" scheme="https://www.zenwu.site/tags/%E8%8C%83%E5%9B%B4%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-25变更请求</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/6e6d.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/6e6d.html</id>
-    <published>2021-04-24T13:33:18.000Z</published>
-    <updated>2021-04-24T13:33:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>变更请求包括哪些？</p><p><strong>纠正措施：</strong>针对实际已经出现的偏差。<br><strong>预防措施：</strong>预防措施是针对将来可能出现的偏差。<br><strong>缺陷补救：</strong>为了修正不一致的产品或产品组件而进行的有目的的活动。缺陷补救措施只针对项目质量问题。<br><strong>更新：</strong>对正式受控的项目文件或计划等进行的变更，以反映修改或增加的意见或内容。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;变更请求包括哪些？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;纠正措施：&lt;/strong&gt;针对实际已经出现的偏差。&lt;br&gt;&lt;strong&gt;预防措施：&lt;/strong&gt;预防措施是针对将来可能出现的偏差。&lt;br&gt;&lt;strong&gt;缺陷补救：&lt;/strong&gt;为了修正不一致的产品或产品组件而进</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="变更请求" scheme="https://www.zenwu.site/tags/%E5%8F%98%E6%9B%B4%E8%AF%B7%E6%B1%82/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-24变更的常见原因</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/ab3f.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/ab3f.html</id>
-    <published>2021-04-24T13:32:18.000Z</published>
-    <updated>2021-04-24T13:32:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>变更的常见原因有哪些？</p><p>（1）产品范围（成果）定义的过失或者疏忽<br>（2）项目范围（工作）定义的过失或者疏忽<br>（3）客户提出新需求<br>（4）应对风险的紧急计划或回避计划<br>（5）项目执行过程与基准要求不一致带来的被动调整<br>（6）项目团队人员调整<br>（7）技术革新的要求<br>（8）外部事件</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;变更的常见原因有哪些？&lt;/p&gt;
-&lt;p&gt;（1）产品范围（成果）定义的过失或者疏忽&lt;br&gt;（2）项目范围（工作）定义的过失或者疏忽&lt;br&gt;（3）客户提出新需求&lt;br&gt;（4）应对风险的紧急计划或回避计划&lt;br&gt;（5）项目执行过程与基准要求不一致带来的被动调整&lt;br&gt;（6）项目团队</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="变更" scheme="https://www.zenwu.site/tags/%E5%8F%98%E6%9B%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-23整体变更控制流程</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/25d1.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/25d1.html</id>
-    <published>2021-04-24T13:31:18.000Z</published>
-    <updated>2021-04-24T13:31:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>整体变更控制流程是？</p><p>提出变更请求—＞评估变更影响—＞将评估结果通知项目干系人—＞CCB审批—＞执行变更—＞记录变更实施情况—＞ 分发新文档</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;整体变更控制流程是？&lt;/p&gt;
-&lt;p&gt;提出变更请求—＞评估变更影响—＞将评估结果通知项目干系人—＞CCB审批—＞执行变更—＞记录变更实施情况—＞ 分发新文档&lt;/p&gt;
+    <summary type="html">&lt;p&gt;云计算的服务类型有哪些？&lt;/p&gt;
+&lt;p&gt;基础设施即服务（laaS）、平台即服务（PaaS）、软件即服务（SaaS）&lt;/p&gt;
 </summary>
       
     
@@ -246,28 +69,25 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="变更" scheme="https://www.zenwu.site/tags/%E5%8F%98%E6%9B%B4/"/>
-    
-    <category term="整体变更控制流程" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E5%8F%98%E6%9B%B4%E6%8E%A7%E5%88%B6%E6%B5%81%E7%A8%8B/"/>
+    <category term="云计算" scheme="https://www.zenwu.site/tags/%E4%BA%91%E8%AE%A1%E7%AE%97/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-22实施整体变更ITTO</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/7a28.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/7a28.html</id>
-    <published>2021-04-24T13:30:18.000Z</published>
-    <updated>2021-04-24T13:30:18.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-98大数据的特点</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/98.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/98.html</id>
+    <published>2021-04-28T05:26:17.000Z</published>
+    <updated>2021-04-28T05:26:17.000Z</updated>
     
-    <content type="html"><![CDATA[<p>实施整体变更的输入、输出、工具与技术是？</p><p>（1）输入：项目管理计划、变更请求、工作绩效报告、事业环境因素、组织过程资产<br>（2）输出：批准的变更请求、变更日志、项目管理计划更新、项目文件更新<br>（3）工具与技术：会议、变更控制工具</p>]]></content>
+    <content type="html"><![CDATA[<p>大数据具有的特点有哪些？</p><p>大数据（Big Data）具有 5V 特点：</p><p>Volume （大量）、Velocity （高速）、Variety （多样）、Value （价值）、Veracity （真实性）</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;实施整体变更的输入、输出、工具与技术是？&lt;/p&gt;
-&lt;p&gt;（1）输入：项目管理计划、变更请求、工作绩效报告、事业环境因素、组织过程资产&lt;br&gt;（2）输出：批准的变更请求、变更日志、项目管理计划更新、项目文件更新&lt;br&gt;（3）工具与技术：会议、变更控制工具&lt;/p&gt;
+    <summary type="html">&lt;p&gt;大数据具有的特点有哪些？&lt;/p&gt;
+&lt;p&gt;大数据（Big Data）具有 5V 特点：&lt;/p&gt;
+&lt;p&gt;Volume （大量）、Velocity （高速）、Variety （多样）、Value （价值）、Veracity （真实性）&lt;/p&gt;
 </summary>
       
     
@@ -278,116 +98,24 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="实施整体变更" scheme="https://www.zenwu.site/tags/%E5%AE%9E%E6%96%BD%E6%95%B4%E4%BD%93%E5%8F%98%E6%9B%B4/"/>
-    
-    <category term="变更" scheme="https://www.zenwu.site/tags/%E5%8F%98%E6%9B%B4/"/>
+    <category term="大数据" scheme="https://www.zenwu.site/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-21监控项目工作ITTO</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/480b.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/480b.html</id>
-    <published>2021-04-24T13:29:18.000Z</published>
-    <updated>2021-04-24T13:29:18.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-97信息系统生命周期</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/97.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/97.html</id>
+    <published>2021-04-28T05:26:15.000Z</published>
+    <updated>2021-04-28T05:26:15.000Z</updated>
     
-    <content type="html"><![CDATA[<p>监控项目工作的输入、输出、工具与技术是？</p><p>（1）输入：项目管理计划、进度预测、成本预测、确认的变更、工作绩效信息、事业环境因素和组、织过程资产<br>（2）输出：变更请求、工作绩效报告、项目管理计划更新、项目文件更新<br>（3）工具与技术：分析技术、项目管理信息系统和会议</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;监控项目工作的输入、输出、工具与技术是？&lt;/p&gt;
-&lt;p&gt;（1）输入：项目管理计划、进度预测、成本预测、确认的变更、工作绩效信息、事业环境因素和组、织过程资产&lt;br&gt;（2）输出：变更请求、工作绩效报告、项目管理计划更新、项目文件更新&lt;br&gt;（3）工具与技术：分析技术、项目管理</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="监控项目工作" scheme="https://www.zenwu.site/tags/%E7%9B%91%E6%8E%A7%E9%A1%B9%E7%9B%AE%E5%B7%A5%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-20项目管理计划的主要用途</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/b112.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/b112.html</id>
-    <published>2021-04-24T13:28:18.000Z</published>
-    <updated>2021-04-24T13:28:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>项目管理计划的主要用途有哪些？</p><p>（1）指导项目执行、监控和收尾；<br>（2）为项目绩效考核和项目控制提供基准；<br>（3）记录制订项目计划所依据的假设条件；<br>（4）记录制订项目计划过程中的有关方案选择；<br>（5）促进项目干系人之间的沟通；<br>（6）规定管理层审查项目的时间、内容和方式。</p>]]></content>
+    <content type="html"><![CDATA[<p>信息系统生命周期可以分为哪些阶段?</p><p>立项、开发、运维、消亡</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;项目管理计划的主要用途有哪些？&lt;/p&gt;
-&lt;p&gt;（1）指导项目执行、监控和收尾；&lt;br&gt;（2）为项目绩效考核和项目控制提供基准；&lt;br&gt;（3）记录制订项目计划所依据的假设条件；&lt;br&gt;（4）记录制订项目计划过程中的有关方案选择；&lt;br&gt;（5）促进项目干系人之间的沟通；&lt;br&gt;</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="项目管理计划" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-19项目管理计划的内容</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/b112.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/b112.html</id>
-    <published>2021-04-24T12:28:18.000Z</published>
-    <updated>2021-04-24T12:28:18.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>项目管理计划的内容包括哪些？</p><p><strong>管理子计划（9）：</strong><br>范围、进度、成本、质量、人力资源、干系人、沟通、风险、采购管理计划</p><p><strong>其他管理计划（4）：</strong><br>质量改进计划；配置、变更、需求管理计划</p><p><strong>重要基准（3）：</strong><br>范围基准、进度基准、成本基准</p><p><strong>为项目选用生命周期和过程（2）：</strong><br>项目所选用的生命周期及各阶段将釆用的过程、生命周期模型</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;项目管理计划的内容包括哪些？&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;管理子计划（9）：&lt;/strong&gt;&lt;br&gt;范围、进度、成本、质量、人力资源、干系人、沟通、风险、采购管理计划&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;其他管理计划（4）：&lt;/strong&gt;&lt;br&gt;质量改进计划；配置、变更、</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="项目管理计划" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-18项目管理计划的ITTO</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/b5b7.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/b5b7.html</id>
-    <published>2021-04-24T12:28:15.000Z</published>
-    <updated>2021-04-24T12:28:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>制定项目管理计划的输入、输出和工具技术是？</p><p>输入：项目章程、其他规划过程的成果、事业环境因素、组织过程资产<br>输出：项目管理计划<br>工具与技术：专家判断、引导技术</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;制定项目管理计划的输入、输出和工具技术是？&lt;/p&gt;
-&lt;p&gt;输入：项目章程、其他规划过程的成果、事业环境因素、组织过程资产&lt;br&gt;输出：项目管理计划&lt;br&gt;工具与技术：专家判断、引导技术&lt;/p&gt;
+    <summary type="html">&lt;p&gt;信息系统生命周期可以分为哪些阶段?&lt;/p&gt;
+&lt;p&gt;立项、开发、运维、消亡&lt;/p&gt;
 </summary>
       
     
@@ -398,26 +126,29 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="项目管理计划" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/"/>
+    <category term="信息系统生命周期" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-17项目管理计划制订的步骤</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/b5b7.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/b5b7.html</id>
-    <published>2021-04-24T12:27:15.000Z</published>
-    <updated>2021-04-24T12:27:15.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-96我国企业信息化发展的战略要点</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/96.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/96.html</id>
+    <published>2021-04-28T05:26:14.000Z</published>
+    <updated>2021-04-28T05:26:14.000Z</updated>
     
-    <content type="html"><![CDATA[<p>简述项目管理计划制订的步骤？</p><p>(1)各具体知识领域制订各自的分项计划；<br>(2)整体管理知识领域收集各分项计划，整合成项目管理计划；<br>(3)用项目管理计划指导项目的执行和监控工作，并在执行过程中监控；<br>(4)对提出的必要的变更请求，报实施整体变更控制过程审批；<br>(5)根据经批准的变更请求，更新项目管理计划。</p>]]></content>
+    <content type="html"><![CDATA[<p>我国<strong>企业信息化</strong>发展的战略要点</p><ol><li>以信息化带动工业化</li><li>信息化与企业业务全过程的融合、渗透</li><li>信息产业发展与企业信息化良性互动</li><li>充分发挥政府的引导作用</li><li>高度重视信息安全</li><li>企业信息化与企业的改组改造和形成现代企业制度有机结合</li><li>“因地制宜”推进企业信息化</li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;简述项目管理计划制订的步骤？&lt;/p&gt;
-&lt;p&gt;(1)各具体知识领域制订各自的分项计划；&lt;br&gt;(2)整体管理知识领域收集各分项计划，整合成项目管理计划；&lt;br&gt;(3)用项目管理计划指导项目的执行和监控工作，并在执行过程中监控；&lt;br&gt;(4)对提出的必要的变更请求，报实施整体变</summary>
+    <summary type="html">&lt;p&gt;我国&lt;strong&gt;企业信息化&lt;/strong&gt;发展的战略要点&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;以信息化带动工业化&lt;/li&gt;
+&lt;li&gt;信息化与企业业务全过程的融合、渗透&lt;/li&gt;
+&lt;li&gt;信息产业发展与企业信息化良性互动&lt;/li&gt;
+&lt;li&gt;充分发挥政府的引导作用&lt;/li&gt;
+&lt;li</summary>
       
     
     
@@ -427,55 +158,24 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="项目管理计划" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E8%AE%A1%E5%88%92/"/>
+    <category term="企业信息化" scheme="https://www.zenwu.site/tags/%E4%BC%81%E4%B8%9A%E4%BF%A1%E6%81%AF%E5%8C%96/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-16项目章程的作用</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/47ec.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/47ec.html</id>
-    <published>2021-04-24T12:25:15.000Z</published>
-    <updated>2021-04-24T12:25:15.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-95我国信息化基本原则</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/95.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/95.html</id>
+    <published>2021-04-28T05:26:13.000Z</published>
+    <updated>2021-04-28T05:26:13.000Z</updated>
     
-    <content type="html"><![CDATA[<p>项目章程的作用：</p><p>(1)确定项目经理，规定项目经理的权利。<br>(2)正式确认项目的存在，给项目一个合法的地位。<br>(3)规定项目的总体目标，包括范围、时间、成本和质量等。<br>(4)通过叙述启动项目的理由，把项目与执行组织的日常经营运作及战略计划等联系起来。</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;项目章程的作用：&lt;/p&gt;
-&lt;p&gt;(1)确定项目经理，规定项目经理的权利。&lt;br&gt;(2)正式确认项目的存在，给项目一个合法的地位。&lt;br&gt;(3)规定项目的总体目标，包括范围、时间、成本和质量等。&lt;br&gt;(4)通过叙述启动项目的理由，把项目与执行组织的日常经营运作及战略计划等联</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="项目章程" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-15项目章程ITTO</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/badf.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/badf.html</id>
-    <published>2021-04-24T12:24:15.000Z</published>
-    <updated>2021-04-24T12:24:15.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>制定项目章程的输入、输出和工具技术？</p><p>输入：项目工作说明书、商业论证、协议(合同)、事业环境因素、组织过程资产<br>输出：项目章程<br>工具与技术：专家判断、引导技术</p>]]></content>
+    <content type="html"><![CDATA[<p>我国信息化基本原则</p><p>(1)统筹发展，有序推进<br>(2)需求牵引，市场导向<br>(3)完善机制，创新驱动<br>(4)加强管理，保障安全</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;制定项目章程的输入、输出和工具技术？&lt;/p&gt;
-&lt;p&gt;输入：项目工作说明书、商业论证、协议(合同)、事业环境因素、组织过程资产&lt;br&gt;输出：项目章程&lt;br&gt;工具与技术：专家判断、引导技术&lt;/p&gt;
+    <summary type="html">&lt;p&gt;我国信息化基本原则&lt;/p&gt;
+&lt;p&gt;(1)统筹发展，有序推进&lt;br&gt;(2)需求牵引，市场导向&lt;br&gt;(3)完善机制，创新驱动&lt;br&gt;(4)加强管理，保障安全&lt;/p&gt;
 </summary>
       
     
@@ -486,26 +186,28 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="项目章程" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B/"/>
+    <category term="信息化基本原则" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E5%8C%96%E5%9F%BA%E6%9C%AC%E5%8E%9F%E5%88%99/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-14项目章程的内容</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/badf.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/badf.html</id>
-    <published>2021-04-23T12:24:15.000Z</published>
-    <updated>2021-04-23T12:24:15.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-94我国信息化战略目标</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/94.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/94.html</id>
+    <published>2021-04-28T05:25:53.000Z</published>
+    <updated>2021-04-28T05:25:53.000Z</updated>
     
-    <content type="html"><![CDATA[<p>项目章程的内容包括哪些？</p><p>(1)概括性的项目描述和项目产品描述<br>(2)项目目的或批准项目的理由<br>(3)项目的总体要求<br>(4)可测量的项目目标和相关的成功标准<br>(5)项目的主要风险<br>(6)总体里程碑进度计划<br>(7)总体预算<br>(8)项目的审批要求<br>(9)委派的项目经理及其职责和职权<br>(10)发起人或其他批准项目章程的人员的姓名和职权</p>]]></content>
+    <content type="html"><![CDATA[<p>我国信息化战略目标</p><ol><li>促进经济增长方式的根本改变；</li><li>实现信息技术自主创新、信息产业发展的跨越；</li><li>提升网络普及水平、信息资源开发利用水平和信息安全保障水平；</li><li>增强政府公共服务能力，社会主义先进文化传播能力、中国特色的军事变革能力和国民信息技术应用能力。</li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;项目章程的内容包括哪些？&lt;/p&gt;
-&lt;p&gt;(1)概括性的项目描述和项目产品描述&lt;br&gt;(2)项目目的或批准项目的理由&lt;br&gt;(3)项目的总体要求&lt;br&gt;(4)可测量的项目目标和相关的成功标准&lt;br&gt;(5)项目的主要风险&lt;br&gt;(6)总体里程碑进度计划&lt;br&gt;(7)总体预算&lt;b</summary>
+    <summary type="html">&lt;p&gt;我国信息化战略目标&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;促进经济增长方式的根本改变；&lt;/li&gt;
+&lt;li&gt;实现信息技术自主创新、信息产业发展的跨越；&lt;/li&gt;
+&lt;li&gt;提升网络普及水平、信息资源开发利用水平和信息安全保障水平；&lt;/li&gt;
+&lt;li&gt;增强政府公共服务能力，社会主义先进文化传</summary>
       
     
     
@@ -515,26 +217,24 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="项目章程" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E7%AB%A0%E7%A8%8B/"/>
+    <category term="信息化战略目标" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E5%8C%96%E6%88%98%E7%95%A5%E7%9B%AE%E6%A0%87/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-13项目经理是整合者</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/3553.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/3553.html</id>
-    <published>2021-04-23T12:24:14.000Z</published>
-    <updated>2021-04-23T12:24:14.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-93国家信息化体系六要素</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/93.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/93.html</id>
+    <published>2021-04-28T05:25:52.000Z</published>
+    <updated>2021-04-28T05:25:52.000Z</updated>
     
-    <content type="html"><![CDATA[<p>项目经理作为项目的<strong>整合者</strong>，需要做的工作有哪些？作为整合者，项目经理必须：</p><p>(1)通过与项目干系人主动、全面的沟通，来了解他们对项目的需求。<br>(2)在相互竞争的众多干系人之间寻找平衡点。<br>(3)通过认真、细致的协调工作，来达到各种需求间的平衡，实现整合。</p>]]></content>
+    <content type="html"><![CDATA[<p>国家信息化体系六要素</p><p>信息技术应用：信息化体系的龙头、国家信息化建设的主阵地<br>信息资源：国家信息化的核心任务、薄弱环节<br>信息网络：信息资源开发利用和信息技术应用的基础<br>信息技术和产业：我国进行信息化建设的基础<br>信息化人才：国家信息化成功之本，信息化建设的关键<br>信息化政策法规和标准：国家信息化发展的根本保障</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;项目经理作为项目的&lt;strong&gt;整合者&lt;/strong&gt;，需要做的工作有哪些？作为整合者，项目经理必须：&lt;/p&gt;
-&lt;p&gt;(1)通过与项目干系人主动、全面的沟通，来了解他们对项目的需求。&lt;br&gt;(2)在相互竞争的众多干系人之间寻找平衡点。&lt;br&gt;(3)通过认真、细致的协调工</summary>
+    <summary type="html">&lt;p&gt;国家信息化体系六要素&lt;/p&gt;
+&lt;p&gt;信息技术应用：信息化体系的龙头、国家信息化建设的主阵地&lt;br&gt;信息资源：国家信息化的核心任务、薄弱环节&lt;br&gt;信息网络：信息资源开发利用和信息技术应用的基础&lt;br&gt;信息技术和产业：我国进行信息化建设的基础&lt;br&gt;信息化人才：国家信息化成功</summary>
       
     
     
@@ -544,26 +244,24 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="项目经理" scheme="https://www.zenwu.site/tags/%E9%A1%B9%E7%9B%AE%E7%BB%8F%E7%90%86/"/>
-    
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
+    <category term="国家信息化体系六要素" scheme="https://www.zenwu.site/tags/%E5%9B%BD%E5%AE%B6%E4%BF%A1%E6%81%AF%E5%8C%96%E4%BD%93%E7%B3%BB%E5%85%AD%E8%A6%81%E7%B4%A0/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-12项目整体管理的过程</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/3553.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/3553.html</id>
-    <published>2021-04-23T12:24:13.000Z</published>
-    <updated>2021-04-23T12:24:13.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-92信息系统的特点</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/92.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/92.html</id>
+    <published>2021-04-28T05:25:43.000Z</published>
+    <updated>2021-04-28T05:25:43.000Z</updated>
     
-    <content type="html"><![CDATA[<p>项目整体管理包括哪几个过程?</p><p>(1)制定项目章程；<br>(2)制定项目管理计划；<br>(3)指导与管理项目工作。按管理计划办事，实施已批准变更；<br>(4)监控项目工作。跟踪、审查和报告项目进展，以实现绩效目标；<br>(5)实施整体变更控制。走变更流程及管理相关的变更，并对变更处理结果进行沟通；<br>(6)结束项目或阶段。</p>]]></content>
+    <content type="html"><![CDATA[<p>信息系统的特点有哪些?</p><p>目的性<br>可嵌套性<br>稳定性：稳定性强的系统使系统在受外部作用的同时，内部结构和秩序仍能保持。<br>开放性：系统可被外部环境识别。<br>脆弱性：系统可能存在着丧失结构、功能、秩序的特性。<br>健壮性：系统具有的能够抵御出现非预期状态的特性，也叫鲁棒性(robustness)</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;项目整体管理包括哪几个过程?&lt;/p&gt;
-&lt;p&gt;(1)制定项目章程；&lt;br&gt;(2)制定项目管理计划；&lt;br&gt;(3)指导与管理项目工作。按管理计划办事，实施已批准变更；&lt;br&gt;(4)监控项目工作。跟踪、审查和报告项目进展，以实现绩效目标；&lt;br&gt;(5)实施整体变更控制。走变更流程</summary>
+    <summary type="html">&lt;p&gt;信息系统的特点有哪些?&lt;/p&gt;
+&lt;p&gt;目的性&lt;br&gt;可嵌套性&lt;br&gt;稳定性：稳定性强的系统使系统在受外部作用的同时，内部结构和秩序仍能保持。&lt;br&gt;开放性：系统可被外部环境识别。&lt;br&gt;脆弱性：系统可能存在着丧失结构、功能、秩序的特性。&lt;br&gt;健壮性：系统具有的能够抵御出现</summary>
       
     
     
@@ -573,24 +271,32 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
+    <category term="信息系统" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
   <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-11系统集成供应商在进行项目内部立项</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/41bc.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/41bc.html</id>
-    <published>2021-04-23T12:24:12.000Z</published>
-    <updated>2021-04-23T12:24:12.000Z</updated>
+    <title>《系统集成项目管理工程师》必背100个知识点-91机房防静电的方式</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/91.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/91.html</id>
+    <published>2021-04-28T05:25:42.000Z</published>
+    <updated>2021-04-28T05:25:42.000Z</updated>
     
-    <content type="html"><![CDATA[<p>系统集成供应商在进行项目内部立项时一般包括哪些内容？</p><p>(1)项目资源估算<br>(2)项目资源分配<br>(3)准备项目任务书<br>(4)任命项目经理</p>]]></content>
+    <content type="html"><![CDATA[<p>机房防静电的方式</p><ol><li>接地与屏蔽</li><li>服装防静电</li><li>温、湿度防静电</li><li>地板防静电</li><li>材料防静电</li><li>维修MOS电路保护</li><li>静电消除要求</li></ol>]]></content>
     
     
       
       
-    <summary type="html">&lt;p&gt;系统集成供应商在进行项目内部立项时一般包括哪些内容？&lt;/p&gt;
-&lt;p&gt;(1)项目资源估算&lt;br&gt;(2)项目资源分配&lt;br&gt;(3)准备项目任务书&lt;br&gt;(4)任命项目经理&lt;/p&gt;
+    <summary type="html">&lt;p&gt;机房防静电的方式&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;接地与屏蔽&lt;/li&gt;
+&lt;li&gt;服装防静电&lt;/li&gt;
+&lt;li&gt;温、湿度防静电&lt;/li&gt;
+&lt;li&gt;地板防静电&lt;/li&gt;
+&lt;li&gt;材料防静电&lt;/li&gt;
+&lt;li&gt;维修MOS电路保护&lt;/li&gt;
+&lt;li&gt;静电消除要求&lt;/li&gt;
+&lt;/ol&gt;
 </summary>
       
     
@@ -601,7 +307,302 @@
     <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
     
     
-    <category term="立项管理" scheme="https://www.zenwu.site/tags/%E7%AB%8B%E9%A1%B9%E7%AE%A1%E7%90%86/"/>
+    <category term="信息系统安全属性" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%B1%9E%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-90信息系统安全属性</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/90.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/90.html</id>
+    <published>2021-04-28T05:25:41.000Z</published>
+    <updated>2021-04-28T05:25:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>信息系统安全的属性包括保密性、完整性、可用性和不可抵赖性。▲▲▲</p><p>(1)<strong>保密性</strong>是应用系统的信息不被泄露给非授权的用户、实体或过程，或供其利用的特性。<br>(2)<strong>完整性</strong>是信息未经授权不能进行改变的特性。<br>(3)<strong>可用性</strong>是应用系统信息可被授权实体访问并按需求使用的特性。<br>(4)<strong>不可抵赖性</strong>也称作不可否认性，在应用系统的信息交互过程中，确信参与者的真实同一性。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;信息系统安全的属性包括保密性、完整性、可用性和不可抵赖性。▲▲▲&lt;/p&gt;
+&lt;p&gt;(1)&lt;strong&gt;保密性&lt;/strong&gt;是应用系统的信息不被泄露给非授权的用户、实体或过程，或供其利用的特性。&lt;br&gt;(2)&lt;strong&gt;完整性&lt;/strong&gt;是信息未经授权不能进行改</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="信息系统安全属性" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%B1%9E%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-89行政收尾和合同收尾的区别</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/89.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/89.html</id>
+    <published>2021-04-28T05:25:31.000Z</published>
+    <updated>2021-04-28T05:25:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>行政收尾和合同收尾的区别？</p><p>(1)每个项目阶段结束时都要进行行政收尾；每一个合同需要且只需进行一次合同收尾。<br>(2)合同收尾发生在行政收尾之前。<br>(3)行政收尾由项目发起人或高级管理层签发项目阶段结束或项目整体结束的书面确认，合同收尾要由负责采购管理成员向卖方签发合同结束的书面确认。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;行政收尾和合同收尾的区别？&lt;/p&gt;
+&lt;p&gt;(1)每个项目阶段结束时都要进行行政收尾；每一个合同需要且只需进行一次合同收尾。&lt;br&gt;(2)合同收尾发生在行政收尾之前。&lt;br&gt;(3)行政收尾由项目发起人或高级管理层签发项目阶段结束或项目整体结束的书面确认，合同收尾要由负责采购管</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="收尾管理" scheme="https://www.zenwu.site/tags/%E6%94%B6%E5%B0%BE%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="行政收尾" scheme="https://www.zenwu.site/tags/%E8%A1%8C%E6%94%BF%E6%94%B6%E5%B0%BE/"/>
+    
+    <category term="合同收尾" scheme="https://www.zenwu.site/tags/%E5%90%88%E5%90%8C%E6%94%B6%E5%B0%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-88系统集成项目收尾管理工作</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/88.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/88.html</id>
+    <published>2021-04-27T15:25:31.000Z</published>
+    <updated>2021-04-27T15:25:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>系统集成项目收尾管理工作通常包含哪些工作？</p><p>项目验收、项目工作总结、系统维护、项目后评价工作</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;系统集成项目收尾管理工作通常包含哪些工作？&lt;/p&gt;
+&lt;p&gt;项目验收、项目工作总结、系统维护、项目后评价工作&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="收尾管理" scheme="https://www.zenwu.site/tags/%E6%94%B6%E5%B0%BE%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="系统集成项目收尾管理工作" scheme="https://www.zenwu.site/tags/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B0%BE%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-87系统文档验收</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/87.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/87.html</id>
+    <published>2021-04-27T15:15:29.000Z</published>
+    <updated>2021-04-27T15:15:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>请简述系统文档验收所涉及的文档都有哪些？</p><p>(1)系统集成项目介绍<br>(2)系统集成项目最终报告<br>(3)信息系统说明手册<br>(4)信息系统维护手册<br>(5)软硬件产品说明书、质量保证书等</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;请简述系统文档验收所涉及的文档都有哪些？&lt;/p&gt;
+&lt;p&gt;(1)系统集成项目介绍&lt;br&gt;(2)系统集成项目最终报告&lt;br&gt;(3)信息系统说明手册&lt;br&gt;(4)信息系统维护手册&lt;br&gt;(5)软硬件产品说明书、质量保证书等&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="系统文档验收" scheme="https://www.zenwu.site/tags/%E7%B3%BB%E7%BB%9F%E6%96%87%E6%A1%A3%E9%AA%8C%E6%94%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-86项目总结会议讨论的内容</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/86.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/86.html</id>
+    <published>2021-04-27T15:15:28.000Z</published>
+    <updated>2021-04-27T15:15:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>请简述项目总结会议一般讨论的内容？</p><p>(1)项目绩效<br>(2)技术绩效<br>(3)成本绩效<br>(4)项目进度绩效<br>(5)项目的沟通<br>(6)识别问题和解决问题<br>(7)意见和建议</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;请简述项目总结会议一般讨论的内容？&lt;/p&gt;
+&lt;p&gt;(1)项目绩效&lt;br&gt;(2)技术绩效&lt;br&gt;(3)成本绩效&lt;br&gt;(4)项目进度绩效&lt;br&gt;(5)项目的沟通&lt;br&gt;(6)识别问题和解决问题&lt;br&gt;(7)意见和建议&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="识别风险" scheme="https://www.zenwu.site/tags/%E8%AF%86%E5%88%AB%E9%A3%8E%E9%99%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-85简述风险识别的原则</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/85.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/85.html</id>
+    <published>2021-04-27T15:15:25.000Z</published>
+    <updated>2021-04-27T15:15:25.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>简述风险识别的原则？</p><p>(1)由粗及细、由细及粗<br>(2)严格界定风险内涵并考虑风险因素之间的相关性<br>(3)先怀疑、后排除<br>(4)排除与确认并重<br>(5)必要时可以做实验论证</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;简述风险识别的原则？&lt;/p&gt;
+&lt;p&gt;(1)由粗及细、由细及粗&lt;br&gt;(2)严格界定风险内涵并考虑风险因素之间的相关性&lt;br&gt;(3)先怀疑、后排除&lt;br&gt;(4)排除与确认并重&lt;br&gt;(5)必要时可以做实验论证&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="识别风险" scheme="https://www.zenwu.site/tags/%E8%AF%86%E5%88%AB%E9%A3%8E%E9%99%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-84积极影响的风险的应对策略</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/84.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/84.html</id>
+    <published>2021-04-27T15:15:15.000Z</published>
+    <updated>2021-04-27T15:15:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>积极风险应对策略有哪些？</p><p>开拓、提高、分享、接受</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;积极风险应对策略有哪些？&lt;/p&gt;
+&lt;p&gt;开拓、提高、分享、接受&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="识别风险" scheme="https://www.zenwu.site/tags/%E8%AF%86%E5%88%AB%E9%A3%8E%E9%99%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-83消极影响的风险的应对策略</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/83.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/83.html</id>
+    <published>2021-04-27T15:15:13.000Z</published>
+    <updated>2021-04-27T15:15:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>应对威胁或可能给项目目标带来消极影响的风险，可采用哪些策略？</p><p>规避、转移、减轻、接受</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;应对威胁或可能给项目目标带来消极影响的风险，可采用哪些策略？&lt;/p&gt;
+&lt;p&gt;规避、转移、减轻、接受&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="识别风险" scheme="https://www.zenwu.site/tags/%E8%AF%86%E5%88%AB%E9%A3%8E%E9%99%A9/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-82风险的特性</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/82.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/82.html</id>
+    <published>2021-04-27T15:15:11.000Z</published>
+    <updated>2021-04-27T15:15:11.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>风险的特性有哪些？</p><p>客观性、偶然性、相对性、社会性、不确定性</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;风险的特性有哪些？&lt;/p&gt;
+&lt;p&gt;客观性、偶然性、相对性、社会性、不确定性&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="风险特性" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%89%B9%E6%80%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《系统集成项目管理工程师》必背100个知识点-81风险管理</title>
+    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/81.html"/>
+    <id>https://www.zenwu.site/post/System-Integration-Project-Management/81.html</id>
+    <published>2021-04-27T15:15:10.000Z</published>
+    <updated>2021-04-27T15:15:10.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>简述风险管理过程？</p><p>(1)规划风险管理<br>(2)识别风险<br>(3)实施定性风险分析：评估并分析风险发生概率和影响，对风险进行优先排序。<br>(4)实施定量风险分析：就已识别风险对项目整体目标的影响进行定量分析。<br>(5)规划风险应对<br>(6)控制风险：在项目中实施风险应对计划、跟踪已识别风险、监测残余风险、识别新风险以及评 估风险过程有效性。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;简述风险管理过程？&lt;/p&gt;
+&lt;p&gt;(1)规划风险管理&lt;br&gt;(2)识别风险&lt;br&gt;(3)实施定性风险分析：评估并分析风险发生概率和影响，对风险进行优先排序。&lt;br&gt;(4)实施定量风险分析：就已识别风险对项目整体目标的影响进行定量分析。&lt;br&gt;(5)规划风险应对&lt;br&gt;(6)</summary>
+      
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
+    
+    
+    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
