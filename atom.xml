@@ -6,7 +6,7 @@
   <link href="https://www.zenwu.site/atom.xml" rel="self"/>
   
   <link href="https://www.zenwu.site/"/>
-  <updated>2021-05-10T14:14:02.000Z</updated>
+  <updated>2021-05-12T14:15:02.000Z</updated>
   <id>https://www.zenwu.site/</id>
   
   <author>
@@ -15,6 +15,106 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>笔记-中项案例题-2020年下-质量管理</title>
+    <link href="https://www.zenwu.site/post/b970.html"/>
+    <id>https://www.zenwu.site/post/b970.html</id>
+    <published>2021-05-12T14:15:02.000Z</published>
+    <updated>2021-05-12T14:15:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>2020年下半年系统集成项目管理工程师考试下午真题</strong></p></blockquote><p>某公司刚承接了某市政府的办公系统集成项目，急需-名质量管理人员。因公司有类似项目经验，资料比较齐全。项目经理考虑到配置管理员小张工作积极负责，安排他来负责本项目的质量管理工作。</p><p>小张自学了质量管理的相关知识,并选取了公司之前做过的省级办公系统项目作为参照物制定了本项目的质量管理计划。项目执行过程中，小张按照质量管理计划，通过质量核对单进行检查，把全部精力投入到项目交付成果的质量控制中。</p><p>在试运行阶段，客户提出需求变更，此时小张发现之前未与客户签订需求确认文件。随后，项目组只好按照新需求对系统进行了修改并通过了内部测试，小张认为测试没问题就算达到了验收标准，因此出具了质量报告，并向客户提交了验收申请。客户依据合同，认为项目尚未达到验收标准，拒绝验收。</p><p><strong>[问题1] (10分)</strong><br>结合案例，请指出本项目质量管理过程中存在的问题。</p><p><strong>[问题2] (5分)</strong><br>请阐述规划质量管理过程的输入。</p><p><strong>[问题3] (3分)</strong><br>请将下面①-③处的答案填写在答题纸的对应栏内。<br>(1) ① 用于描述项目或产品的质量属性，用于实施质量保证和控制质量过程。<br>(2)小张使用的质量核对单属于 ② 的输出。<br>(3)实际技术性能，实际进度绩效，实际成本绩效，这些都被称为 ③ 。</p><a id="more"></a><hr><h4 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h4><ol><li>公司任命没有质量管理经验的小张负责质量管理工作存在问题；</li><li>小张经验不足，没有掌握质量管理相关知识；</li><li>质量管理计划制定存在问题，不能完全参照之前项目；</li><li>没有做质量保证工作；</li><li>质量控制做得不到位；</li><li>没有对已批准的变更请求进行审查。</li></ol><h4 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h4><p>（1）项目管理计划<br>（2）干系人登记册<br>（3）风险登记册<br>（4）需求文件<br>（5）事业环境因素<br>（6）组织过程资产</p><h4 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h4><p>(1) <em>质量测量指标</em> 用于描述项目或产品的质量属性，用于实施质量保证和控制质量过程。<br>(2)小张使用的质量核对单属于 <em>规划质量管理</em> 的输出。<br>(3)实际技术性能，实际进度绩效，实际成本绩效，这些都被称为 <em>工作绩效数据</em> 。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;2020年下半年系统集成项目管理工程师考试下午真题&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;某公司刚承接了某市政府的办公系统集成项目，急需-名质量管理人员。因公司有类似项目经验，资料比较齐全。项目经理考虑到配置管理员小张工作积极负责，安排他来负责本项目的质量管理工作。&lt;/p&gt;
+&lt;p&gt;小张自学了质量管理的相关知识,并选取了公司之前做过的省级办公系统项目作为参照物制定了本项目的质量管理计划。项目执行过程中，小张按照质量管理计划，通过质量核对单进行检查，把全部精力投入到项目交付成果的质量控制中。&lt;/p&gt;
+&lt;p&gt;在试运行阶段，客户提出需求变更，此时小张发现之前未与客户签订需求确认文件。随后，项目组只好按照新需求对系统进行了修改并通过了内部测试，小张认为测试没问题就算达到了验收标准，因此出具了质量报告，并向客户提交了验收申请。客户依据合同，认为项目尚未达到验收标准，拒绝验收。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[问题1] (10分)&lt;/strong&gt;&lt;br&gt;结合案例，请指出本项目质量管理过程中存在的问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[问题2] (5分)&lt;/strong&gt;&lt;br&gt;请阐述规划质量管理过程的输入。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;[问题3] (3分)&lt;/strong&gt;&lt;br&gt;请将下面①-③处的答案填写在答题纸的对应栏内。&lt;br&gt;(1) ① 用于描述项目或产品的质量属性，用于实施质量保证和控制质量过程。&lt;br&gt;(2)小张使用的质量核对单属于 ② 的输出。&lt;br&gt;(3)实际技术性能，实际进度绩效，实际成本绩效，这些都被称为 ③ 。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="案例分析" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
+    
+    <category term="案例题" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
+    
+    
+    <category term="质量管理" scheme="https://www.zenwu.site/tags/%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记-中项案例题-2019年下-整体管理</title>
+    <link href="https://www.zenwu.site/post/691e.html"/>
+    <id>https://www.zenwu.site/post/691e.html</id>
+    <published>2021-05-11T14:15:02.000Z</published>
+    <updated>2021-05-11T14:15:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>2019年下半年系统集成项目管理工程师考试下午真题</strong></p></blockquote><p>系统集成A公司中标某市智能交通系统建设项目。李总负责此项目的启动工作，任命小王为项目经理。小王制定并发布了项目章程，其中明确建设周期为1年，于2018年6月开始。<br>项目启动后，小王将团队分为了开发实施组与质量控制组，分工制定了范围管理计划、进度管理计划与质量管理计划。</p><p>为了与客户保持良好沟通，并保证项目按要求尽快完成，小王带领开发团队进驻甲方现场开发。小王与客户经过几次会议沟通后，根据自己的经验形成一份需求文件。然后安排开发人员先按照这份文档来展开工作，具体需求细节后续再完善。</p><p>开发过程中，客户不断提出新的需求，小王一边修改需求文件一边安排开发人员进行修改，导致开发工作多次反复。2019年2月，开发工作只完成了计划的50%，此时小王安排项目质量工程师进驻现场，发现很多质量问题。小王随即组织开发人员加班修改。由于项目组几个同事还承担其他项目的工作，工作时间没法得到保障，项目实施进度严重滞后。</p><p>小王将项目进展情况向李总进行了汇报，李总对项目现状不满意，抽调公司两名有多年项目实施经验的员工到现场支援。经过努力，项目最终还是延期四个月才完成。小王认为项目延期与客户有一定关系，与客户发生了争执，导致项目至今无法验收。</p><p><strong>【问题1】(7分)</strong><br>结合案例，从项目管理角度，简要分析项目所存在的问题。<br><strong>【问题2】 (6分)</strong><br>结合案例，判断下列选项的正误(填写在答题纸对应栏内，正确的选项填写“V”，错误的选项填写“X”)<br>(1)制定项目管理计划采用从上到下的方法，先制定总体项目管理计划，再分解形成其他质量、进度等分项计划。（ ）<br>(2)项目启动阶段不需要进行风险识别。（）<br>(3)整体变更控制的依据有项目管理计划、工作绩效报告、变更请求和组织过程资产。（ ）<br>(4)项目收尾的成果包括最终产品、服务或成果移交。（ ）<br>(5)项目管理计划随着项目进展而逐渐明细。（ ）<br>(6)项目执行过程中，先执行范围、进度、成本等其他过程管理，然后项目整体管理汇总其他知识领域的执行情况再进行整体协调管理。（ ）<br><strong>【问题3】 (4分)</strong><br>请简要叙述项目整体管理中监控项目工作的输出。</p><a id="more"></a><hr><h4 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h4><ol><li>不能是由项目经理发布项目章程；</li><li>没有整合成项目管理计划，没有包括风险计划、沟通管理计划等其他子计划；没有通过批准形成基准。</li><li>需求收集不全面，没有得到用户确认就开始开发；</li><li>没有变更管理流程，例如，边开发边修改，反复修改；</li><li>质量控制贯穿项目始终，例如直到2019年2月才开始安排质量工程师进场做法不妥；</li><li>监控项目工作不及时，应该贯穿项目全过程，例如 直到2019年2月，才发现开发工作只完成了计划的50%；</li><li>项目进度管理失控，没有预留项目缓冲时间；</li><li>项目经理沟通协调存在问题，例如，与客户发生了争执。(每条1分，满分7分)</li></ol><h4 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h4><p>(1)制定项目管理计划采用从上到下的方法，先制定总体项目管理计划，再分解形成其他质量、进度等分项计划。（ x ）<br>(2)项目启动阶段不需要进行风险识别。（ x ）<br>(3)整体变更控制的依据有项目管理计划、工作绩效报告、变更请求和组织过程资产。（ v ）<br>(4)项目收尾的成果包括最终产品、服务或成果移交。（ v ）<br>(5)项目管理计划随着项目进展而逐渐明细。（ v ）<br>(6)项目执行过程中，先执行范围、进度、成本等其他过程管理，然后项目整体管理汇总其他知识领域的执行情况再进行整体协调管理。（ x ）</p><h4 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h4><ol><li>变更请求</li><li>工作绩效报告</li><li>项目管理计划更新</li><li>项目文件更新</li></ol>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;2019年下半年系统集成项目管理工程师考试下午真题&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;系统集成A公司中标某市智能交通系统建设项目。李总负责此项目的启动工作，任命小王为项目经理。小王制定并发布了项目章程，其中明确建设周期为1年，于2018年6月开始。&lt;br&gt;项目启动后，小王将团队分为了开发实施组与质量控制组，分工制定了范围管理计划、进度管理计划与质量管理计划。&lt;/p&gt;
+&lt;p&gt;为了与客户保持良好沟通，并保证项目按要求尽快完成，小王带领开发团队进驻甲方现场开发。小王与客户经过几次会议沟通后，根据自己的经验形成一份需求文件。然后安排开发人员先按照这份文档来展开工作，具体需求细节后续再完善。&lt;/p&gt;
+&lt;p&gt;开发过程中，客户不断提出新的需求，小王一边修改需求文件一边安排开发人员进行修改，导致开发工作多次反复。2019年2月，开发工作只完成了计划的50%，此时小王安排项目质量工程师进驻现场，发现很多质量问题。小王随即组织开发人员加班修改。由于项目组几个同事还承担其他项目的工作，工作时间没法得到保障，项目实施进度严重滞后。&lt;/p&gt;
+&lt;p&gt;小王将项目进展情况向李总进行了汇报，李总对项目现状不满意，抽调公司两名有多年项目实施经验的员工到现场支援。经过努力，项目最终还是延期四个月才完成。小王认为项目延期与客户有一定关系，与客户发生了争执，导致项目至今无法验收。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【问题1】(7分)&lt;/strong&gt;&lt;br&gt;结合案例，从项目管理角度，简要分析项目所存在的问题。&lt;br&gt;&lt;strong&gt;【问题2】 (6分)&lt;/strong&gt;&lt;br&gt;结合案例，判断下列选项的正误(填写在答题纸对应栏内，正确的选项填写“V”，错误的选项填写“X”)&lt;br&gt;(1)制定项目管理计划采用从上到下的方法，先制定总体项目管理计划，再分解形成其他质量、进度等分项计划。（ ）&lt;br&gt;(2)项目启动阶段不需要进行风险识别。（）&lt;br&gt;(3)整体变更控制的依据有项目管理计划、工作绩效报告、变更请求和组织过程资产。（ ）&lt;br&gt;(4)项目收尾的成果包括最终产品、服务或成果移交。（ ）&lt;br&gt;(5)项目管理计划随着项目进展而逐渐明细。（ ）&lt;br&gt;(6)项目执行过程中，先执行范围、进度、成本等其他过程管理，然后项目整体管理汇总其他知识领域的执行情况再进行整体协调管理。（ ）&lt;br&gt;&lt;strong&gt;【问题3】 (4分)&lt;/strong&gt;&lt;br&gt;请简要叙述项目整体管理中监控项目工作的输出。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="案例分析" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
+    
+    <category term="案例题" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
+    
+    
+    <category term="整体管理" scheme="https://www.zenwu.site/tags/%E6%95%B4%E4%BD%93%E7%AE%A1%E7%90%86/"/>
+    
+    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>笔记-中项案例题-2019年下-信息系统安全管理</title>
+    <link href="https://www.zenwu.site/post/5269.html"/>
+    <id>https://www.zenwu.site/post/5269.html</id>
+    <published>2021-05-11T14:12:02.000Z</published>
+    <updated>2021-05-11T14:12:02.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>2019年下半年系统集成项目管理工程师考试下午真题</strong></p></blockquote><p>系统集成A公司承接了某市政府电子政务系统机房升级改造项目，任命小张为项目经理。升级改造工作实施前，小张安排工程师对机房进行了检查，形成如下14条记录：<br>(1)机房有机架30组；<br>(2)机房内中各个区域温度保持在25度左右；<br>(3)机房铺设普通地板，配备普通办公家具；<br>(4)机房照明系统与机房设备统一供电，配备了应急照明装置；<br>(5)机房配备了UPS，无稳压器；<br>(6)机房设置了避雷装置；<br>(7)机房安装了防盗报警装置；<br>(8)机房内配备了灭火器，但没有烟感报警装置；<br>(9)机房门口设立门禁系统，无人值守；<br>(10) 进入机房人员需要佩戴相应证件；<br>(11)工作人员可以使用个人手机与外界联系；<br>(12)所有来访人员需经过正式批准，批准通过后可随意进入机房；<br>(13)来访人员可以携带笔记本电脑进入机房；<br>(14)机房内明确标示禁止吸烟和携带火种。</p><p><strong>【问题1】(8分)</strong><br>根据以上检查记录，请指出该机房在信息安全管理方面存在的问题，并说明原因（将错误编号及原因填写在答题纸对应表格）。<br><strong>【问题2】 (4分)</strong><br>信息系统安全的属性包括保密性、完整性、可用性和不可抵赖性。请说明各属性的含义。<br><strong>【问题3】(6分)</strong><br>请列举机房防静电的方式。</p><a id="more"></a><hr><h4 id="问题1"><a href="#问题1" class="headerlink" title="问题1"></a>问题1</h4><p>（2）应该设置在23±1度<br>（3）应铺设防静电地板<br>（4）应将计算机供电系统与机房照明设备供电系统分开<br>（5）需要稳压器<br>（8）需要烟感报警装置<br>（9）需要有人值守<br>（11）工作人员不可携带手机进机房<br>（12）批准通过后也不可随意进入机房，需要有人陪同<br>（13）禁止携带个人计算机等电子设备进入机房</p><h4 id="问题2"><a href="#问题2" class="headerlink" title="问题2"></a>问题2</h4><p>保密性：信息不被泄漏给未授权的个人、实体和过程或不被其使用的特性。<br>完整性：未经授权不能进行改变的特性，保护资产的正确和完整的特性。<br>可用性：需要时，授权实体可以访问和使用的特性。<br>不可抵赖性：是指建立有效的责任机制，防止用户否认其行为。</p><h4 id="问题3"><a href="#问题3" class="headerlink" title="问题3"></a>问题3</h4><p><strong>答案1</strong><br>1、设备接地<br>2、使用防静电地板<br>3、将机房内的温度和湿度控制在合理范围内<br>4、工作人员穿着不易产生静电的工作服<br>5、使用静电消除器<br>6、机房工作台面材料采用静电耗散材料</p><p><strong>答案2</strong><br>静电的产生和静电带电：静电主要是物体网相互摩擦。接触和分离产生的，但也有其他原因产生。<br>机房防静电措施如下：<br>(1)接地与屏蔽：采用必要的措施，使计算机系统有一套合理的防静电接地与屏蔽系统。<br>(2)服装防静电：人员服装采用不易产生静电的衣料，工作鞋采用低阻值材料制作。<br>(3)温、湿度防静电：控制机房温、湿度，使其保持在不易产生静电的范围内。<br>(4)地板防静电：机房地板从表面到接地系统的阻值，应控制在不易产生静电的范围内。<br>(5)材料防静电：机房中使用的各种家具，如工作台、柜等，应选择产生静电小的材料。<br>(6)维修MOS电路保护：在硬件维修时，应采用金属板台面的专用维修台，以保护MOS电路。<br>(7)静电消除要求：在机房中使用静电消除剂等，以进一步减少静电的产生。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;2019年下半年系统集成项目管理工程师考试下午真题&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;系统集成A公司承接了某市政府电子政务系统机房升级改造项目，任命小张为项目经理。升级改造工作实施前，小张安排工程师对机房进行了检查，形成如下14条记录：&lt;br&gt;(1)机房有机架30组；&lt;br&gt;(2)机房内中各个区域温度保持在25度左右；&lt;br&gt;(3)机房铺设普通地板，配备普通办公家具；&lt;br&gt;(4)机房照明系统与机房设备统一供电，配备了应急照明装置；&lt;br&gt;(5)机房配备了UPS，无稳压器；&lt;br&gt;(6)机房设置了避雷装置；&lt;br&gt;(7)机房安装了防盗报警装置；&lt;br&gt;(8)机房内配备了灭火器，但没有烟感报警装置；&lt;br&gt;(9)机房门口设立门禁系统，无人值守；&lt;br&gt;(10) 进入机房人员需要佩戴相应证件；&lt;br&gt;(11)工作人员可以使用个人手机与外界联系；&lt;br&gt;(12)所有来访人员需经过正式批准，批准通过后可随意进入机房；&lt;br&gt;(13)来访人员可以携带笔记本电脑进入机房；&lt;br&gt;(14)机房内明确标示禁止吸烟和携带火种。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;【问题1】(8分)&lt;/strong&gt;&lt;br&gt;根据以上检查记录，请指出该机房在信息安全管理方面存在的问题，并说明原因（将错误编号及原因填写在答题纸对应表格）。&lt;br&gt;&lt;strong&gt;【问题2】 (4分)&lt;/strong&gt;&lt;br&gt;信息系统安全的属性包括保密性、完整性、可用性和不可抵赖性。请说明各属性的含义。&lt;br&gt;&lt;strong&gt;【问题3】(6分)&lt;/strong&gt;&lt;br&gt;请列举机房防静电的方式。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="案例分析" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/"/>
+    
+    <category term="案例题" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E6%A1%88%E4%BE%8B%E5%88%86%E6%9E%90/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
+    
+    
+    <category term="案例题" scheme="https://www.zenwu.site/tags/%E6%A1%88%E4%BE%8B%E9%A2%98/"/>
+    
+    <category term="信息系统安全管理" scheme="https://www.zenwu.site/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>笔记-中项案例题-2017年下-变更管理和配置管理</title>
@@ -542,96 +642,6 @@
     <category term="收尾管理" scheme="https://www.zenwu.site/tags/%E6%94%B6%E5%B0%BE%E7%AE%A1%E7%90%86/"/>
     
     <category term="系统集成项目收尾管理工作" scheme="https://www.zenwu.site/tags/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E6%94%B6%E5%B0%BE%E7%AE%A1%E7%90%86%E5%B7%A5%E4%BD%9C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-87系统文档验收</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/87.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/87.html</id>
-    <published>2021-04-27T15:15:29.000Z</published>
-    <updated>2021-04-27T15:15:29.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>请简述系统文档验收所涉及的文档都有哪些？</p><p>(1)系统集成项目介绍<br>(2)系统集成项目最终报告<br>(3)信息系统说明手册<br>(4)信息系统维护手册<br>(5)软硬件产品说明书、质量保证书等</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;请简述系统文档验收所涉及的文档都有哪些？&lt;/p&gt;
-&lt;p&gt;(1)系统集成项目介绍&lt;br&gt;(2)系统集成项目最终报告&lt;br&gt;(3)信息系统说明手册&lt;br&gt;(4)信息系统维护手册&lt;br&gt;(5)软硬件产品说明书、质量保证书等&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="系统文档验收" scheme="https://www.zenwu.site/tags/%E7%B3%BB%E7%BB%9F%E6%96%87%E6%A1%A3%E9%AA%8C%E6%94%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-86项目总结会议讨论的内容</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/86.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/86.html</id>
-    <published>2021-04-27T15:15:28.000Z</published>
-    <updated>2021-04-27T15:15:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>请简述项目总结会议一般讨论的内容？</p><p>(1)项目绩效<br>(2)技术绩效<br>(3)成本绩效<br>(4)项目进度绩效<br>(5)项目的沟通<br>(6)识别问题和解决问题<br>(7)意见和建议</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;请简述项目总结会议一般讨论的内容？&lt;/p&gt;
-&lt;p&gt;(1)项目绩效&lt;br&gt;(2)技术绩效&lt;br&gt;(3)成本绩效&lt;br&gt;(4)项目进度绩效&lt;br&gt;(5)项目的沟通&lt;br&gt;(6)识别问题和解决问题&lt;br&gt;(7)意见和建议&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="识别风险" scheme="https://www.zenwu.site/tags/%E8%AF%86%E5%88%AB%E9%A3%8E%E9%99%A9/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《系统集成项目管理工程师》必背100个知识点-85简述风险识别的原则</title>
-    <link href="https://www.zenwu.site/post/System-Integration-Project-Management/85.html"/>
-    <id>https://www.zenwu.site/post/System-Integration-Project-Management/85.html</id>
-    <published>2021-04-27T15:15:25.000Z</published>
-    <updated>2021-04-27T15:15:25.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>简述风险识别的原则？</p><p>(1)由粗及细、由细及粗<br>(2)严格界定风险内涵并考虑风险因素之间的相关性<br>(3)先怀疑、后排除<br>(4)排除与确认并重<br>(5)必要时可以做实验论证</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;简述风险识别的原则？&lt;/p&gt;
-&lt;p&gt;(1)由粗及细、由细及粗&lt;br&gt;(2)严格界定风险内涵并考虑风险因素之间的相关性&lt;br&gt;(3)先怀疑、后排除&lt;br&gt;(4)排除与确认并重&lt;br&gt;(5)必要时可以做实验论证&lt;/p&gt;
-</summary>
-      
-    
-    
-    
-    <category term="项目管理的培训笔记" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="系统集成项目管理工程师" scheme="https://www.zenwu.site/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E7%B3%BB%E7%BB%9F%E9%9B%86%E6%88%90%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E7%A8%8B%E5%B8%88/"/>
-    
-    
-    <category term="风险管理" scheme="https://www.zenwu.site/tags/%E9%A3%8E%E9%99%A9%E7%AE%A1%E7%90%86/"/>
-    
-    <category term="识别风险" scheme="https://www.zenwu.site/tags/%E8%AF%86%E5%88%AB%E9%A3%8E%E9%99%A9/"/>
     
   </entry>
   
