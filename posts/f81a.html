@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="本文摘录2023年8月份学习总结，有修改。  在Mac里安装动易网站系统 WebFuture ，由于 WebFuture 系统已支持多平台部署，奈何电脑内存不多，那就简简单单 mac+mysql+nginx mysql不装在本地，连上用服务器吧。 1、安装dotnet对macOS安装 dotnet ，要看清楚自己电脑型号，是否intel（选择x64）、还是m1&#x2F;m2（选择arm），下载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac里安装动易系统WebFuture">
+<meta property="og:url" content="https://www.zenwu.site/posts/f81a.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="本文摘录2023年8月份学习总结，有修改。  在Mac里安装动易网站系统 WebFuture ，由于 WebFuture 系统已支持多平台部署，奈何电脑内存不多，那就简简单单 mac+mysql+nginx mysql不装在本地，连上用服务器吧。 1、安装dotnet对macOS安装 dotnet ，要看清楚自己电脑型号，是否intel（选择x64）、还是m1&#x2F;m2（选择arm），下载">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901115458.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901115842.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901134814.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901140249.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901141823.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901142153.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901143231.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901143932.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901144203.png">
+<meta property="article:published_time" content="2023-09-03T13:14:08.000Z">
+<meta property="article:modified_time" content="2023-09-03T13:14:08.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="WebFuture">
+<meta property="article:tag" content=".net core">
+<meta property="article:tag" content="动易系统">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230901115458.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/f81a.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/f81a.html","path":"posts/f81a.html","title":"Mac里安装动易系统WebFuture"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Mac里安装动易系统WebFuture | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81%E5%AE%89%E8%A3%85dotnet"><span class="nav-text">1、安装dotnet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E9%AA%8C%E8%AF%81-dotnet"><span class="nav-text">2、验证 dotnet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%B5%8B%E8%AF%95%E8%BF%90%E8%A1%8C%E6%83%85%E5%86%B5-Hello-world"><span class="nav-text">3、测试运行情况 Hello world</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E5%AE%89%E8%A3%85Webfuture"><span class="nav-text">4、安装Webfuture</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81nginx%E4%BB%A3%E7%90%86"><span class="nav-text">5、nginx代理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81mac%E6%94%B9hosts"><span class="nav-text">6、mac改hosts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E8%87%AA%E7%AD%BE%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98"><span class="nav-text">7、自签证书问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8%E3%80%81%E5%AE%8C%E6%88%90"><span class="nav-text">8、完成</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/f81a.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Mac里安装动易系统WebFuture | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Mac里安装动易系统WebFuture
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-09-03 21:14:08" itemprop="dateCreated datePublished" datetime="2023-09-03T21:14:08+08:00">2023-09-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<p>本文摘录2023年8月份学习总结，有修改。</p>
+</blockquote>
+<p>在Mac里安装动易网站系统 <code>WebFuture</code> ，由于 <code>WebFuture</code> 系统已支持多平台部署，奈何电脑内存不多，那就简简单单 <code>mac+mysql+nginx</code> mysql不装在本地，连上用服务器吧。</p>
+<h3 id="1、安装dotnet"><a href="#1、安装dotnet" class="headerlink" title="1、安装dotnet"></a>1、安装dotnet</h3><p>对macOS安装 <code>dotnet</code> ，要看清楚自己电脑型号，是否intel（选择x64）、还是m1&#x2F;m2（选择arm），下载地址：<br><a target="_blank" rel="noopener" href="https://dotnet.microsoft.com/zh-cn/download/dotnet/6.0">https://dotnet.microsoft.com/zh-cn/download/dotnet/6.0</a></p>
+<p>下载后就直接安装了。</p>
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901115458.png" width="600" />
+<span id="more"></span>
+
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901115842.png" width="600" />
+
+<h3 id="2、验证-dotnet"><a href="#2、验证-dotnet" class="headerlink" title="2、验证 dotnet"></a>2、验证 dotnet</h3><p><code>dotnet</code> 下载完成后，在终端查看。验证如下图。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">dotnet</span> <span class="literal">info</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901134814.png" width="600" />
+
+<h3 id="3、测试运行情况-Hello-world"><a href="#3、测试运行情况-Hello-world" class="headerlink" title="3、测试运行情况 Hello world"></a>3、测试运行情况 Hello world</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> hellowebapp <span class="comment">#建立文件夹</span></span><br><span class="line"><span class="built_in">cd</span> hellowebapp </span><br><span class="line">dotnet new web <span class="comment"># 创建hello world </span></span><br><span class="line">dotnet run  <span class="comment"># 运行</span></span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901140249.png" width="600" />
+
+<p>妥妥的 Hello World ，成功了。</p>
+<h3 id="4、安装Webfuture"><a href="#4、安装Webfuture" class="headerlink" title="4、安装Webfuture"></a>4、安装Webfuture</h3><p>① 安装包下载。</p>
+<p>② 终端运行 dll 文件，基本上就可以跑通了。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dotnet PowerEasy<span class="selector-class">.WebSite</span><span class="selector-class">.Government</span>.dll</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901141823.png" width="600" />
+
+<p>③本机内存不够，连的是别的服务器的mysql；另外还有一些比如 <code>ulimit</code> 参数设置、字体设置的，我这就没处理了，访问<br><a target="_blank" rel="noopener" href="https://localhost:5001/">https://localhost:5001/</a> 看网站（能访问就行，还要什么面包呢？）：</p>
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901142153.png" width="600" />
+
+<h3 id="5、nginx代理"><a href="#5、nginx代理" class="headerlink" title="5、nginx代理"></a>5、nginx代理</h3><p>强迫症的这个地址太丑了，还有不安全的 <code>https</code> 提示（本地就这样），所以用 <code>nginx</code> 去代理下吧，监听 <code>443</code> 到 <code>5001</code> 吧，在网站后台也是如此设置。</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">  <span class="attribute">listen</span>        <span class="number">443</span> ssl;</span><br><span class="line">  <span class="attribute">ssl_certificate</span>      /etc/ssl/certs/smartgovportal.cn.crt;</span><br><span class="line">  <span class="attribute">ssl_certificate_key</span>  /etc/ssl/certs/smartgovportal.cn.key;</span><br><span class="line">  <span class="attribute">server_name</span> smartgovportal.cn <span class="regexp">*.smartgovportal.cn</span>;</span><br><span class="line">  <span class="attribute">proxy_buffer_size</span> <span class="number">8k</span>;</span><br><span class="line">  <span class="attribute">proxy_buffers</span> <span class="number">64</span> <span class="number">4k</span>;</span><br><span class="line">  <span class="attribute">proxy_busy_buffers_size</span> <span class="number">16k</span>;</span><br><span class="line">  <span class="section">location</span> / &#123;</span><br><span class="line">    <span class="attribute">proxy_pass</span>         https://localhost:5001;</span><br><span class="line">    <span class="attribute">proxy_http_version</span> <span class="number">1</span>.<span class="number">1</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span>   Upgrade <span class="variable">$http_upgrade</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span>   Connection <span class="variable">$connection_upgrade</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span>   Host <span class="variable">$host</span>;</span><br><span class="line">    <span class="attribute">proxy_ignore_client_abort</span> <span class="literal">on</span>;</span><br><span class="line">    <span class="attribute">proxy_connect_timeout</span> <span class="number">120s</span>;</span><br><span class="line">    <span class="attribute">proxy_read_timeout</span> <span class="number">120s</span>;</span><br><span class="line">    <span class="attribute">proxy_send_timeout</span> <span class="number">120s</span>;</span><br><span class="line">    <span class="attribute">proxy_cache_bypass</span> <span class="variable">$http_upgrade</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span>   X-Forwarded-For <span class="variable">$proxy_add_x_forwarded_for</span>;</span><br><span class="line">    <span class="attribute">proxy_set_header</span>   X-Forwarded-Proto <span class="variable">$scheme</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6、mac改hosts"><a href="#6、mac改hosts" class="headerlink" title="6、mac改hosts"></a>6、mac改hosts</h3><p>改 <code>hosts</code> 这个就很简单了（设置略，用 <code>utool</code> 更改是挺方便的），但是也扰攘了很久，为什么我的会不生效呢？用 <code>ping</code> 可以通，但是浏览器就不生效。思来想去，抬头一看，我开了 <code>ClashX</code> 这个代理（呃呃~~翻墙必备），得去掉代理。</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ping www.smartgovportal.cn -c <span class="number">10</span></span><br><span class="line">PING www.smartgovportal.cn (<span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>): <span class="number">56</span> data <span class="keyword">bytes</span></span><br><span class="line"><span class="number">64</span> <span class="keyword">bytes</span> <span class="built_in">from</span> <span class="number">127.0</span><span class="number">.0</span><span class="number">.1</span>: icmp_seq=<span class="number">0</span> ttl=<span class="number">64</span> <span class="built_in">time</span>=<span class="number">0.052</span> ms</span><br><span class="line"></span><br><span class="line"><span class="comment">--- www.smartgovportal.cn ping statistics ---</span></span><br><span class="line"><span class="number">10</span> packets transmitted, <span class="number">10</span> packets received, <span class="number">0.0</span>% packet loss</span><br><span class="line"><span class="built_in">round</span>-trip <span class="built_in">min</span>/<span class="built_in">avg</span>/<span class="built_in">max</span>/stddev = <span class="number">0.052</span>/<span class="number">0.097</span>/<span class="number">0.182</span>/<span class="number">0.039</span> ms</span><br></pre></td></tr></table></figure>
+
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901143231.png" width="400" />
+
+<h3 id="7、自签证书问题"><a href="#7、自签证书问题" class="headerlink" title="7、自签证书问题"></a>7、自签证书问题</h3><p>我用的安装包里的自签证书，在mac里需要手动加入信任。双击 <code>.crt</code> 文件 ，进入<strong>钥匙串访问</strong> ，找到域名证书，信任-&gt;始终信任。</p>
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901143932.png" width="600" />
+
+<h3 id="8、完成"><a href="#8、完成" class="headerlink" title="8、完成"></a>8、完成</h3><p>至此完成了，再注意 <code>nginx</code> 服务的开启即可。由于使用了域名的，尽管说本地访问，也只能使用免费版。只是，看起来顺眼了许多。</p>
+<img src="https://cdn.zenwu.site/upload/pic/2023/20230901144203.png" width="600" />
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/f81a.html" title="Mac里安装动易系统WebFuture">https://www.zenwu.site/posts/f81a.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/WebFuture/" rel="tag"><i class="fa fa-tag"></i> WebFuture</a>
+              <a href="/tags/net-core/" rel="tag"><i class="fa fa-tag"></i> .net core</a>
+              <a href="/tags/%E5%8A%A8%E6%98%93%E7%B3%BB%E7%BB%9F/" rel="tag"><i class="fa fa-tag"></i> 动易系统</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/css21-border-color-gradient.html" rel="prev" title="css21-边框渐变卡片（线性渐变、模糊、过渡）">
+                  <i class="fa fa-angle-left"></i> css21-边框渐变卡片（线性渐变、模糊、过渡）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/8f65.html" rel="next" title="笔记-线程之间的共享资源以及独占资源">
+                  笔记-线程之间的共享资源以及独占资源 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="11.1 信息系统安全概论11.1.1 信息系统安全定义与认识1. 定义在信息系统工程中，信息安全涵盖了人工和自动信息处理的安全。网络化和非网络化的信息系统安全，泛指一切以声、光、电信号、磁信号、语音以及约定形式为载体的信息的安全。 1）信息系统安全定义是确保以电磁信息为主要形式的、在信息网络系统进行通信、处理和使用的信息内容，在各个物理位置、逻辑区域、存储和传输介质中，处于动态和静态过程中的保密">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-信息安全管理-11.1 信息系统安全概论">
+<meta property="og:url" content="https://www.zenwu.site/posts/3.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="11.1 信息系统安全概论11.1.1 信息系统安全定义与认识1. 定义在信息系统工程中，信息安全涵盖了人工和自动信息处理的安全。网络化和非网络化的信息系统安全，泛指一切以声、光、电信号、磁信号、语音以及约定形式为载体的信息的安全。 1）信息系统安全定义是确保以电磁信息为主要形式的、在信息网络系统进行通信、处理和使用的信息内容，在各个物理位置、逻辑区域、存储和传输介质中，处于动态和静态过程中的保密">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230413135349.png">
+<meta property="article:published_time" content="2023-04-05T13:17:21.000Z">
+<meta property="article:modified_time" content="2023-04-06T15:37:12.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="信息安全管理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230413135349.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/3.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/3.html","path":"posts/3.html","title":"笔记-信息安全管理-11.1 信息系统安全概论"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-信息安全管理-11.1 信息系统安全概论 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#11-1-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E6%A6%82%E8%AE%BA"><span class="nav-text">11.1 信息系统安全概论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-1-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E5%AE%9A%E4%B9%89%E4%B8%8E%E8%AE%A4%E8%AF%86"><span class="nav-text">11.1.1 信息系统安全定义与认识</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%AE%9A%E4%B9%89"><span class="nav-text">1. 定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BB%8E%E4%B8%8D%E5%90%8C%E8%A7%92%E5%BA%A6%E7%9C%8B%E5%BE%85%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8"><span class="nav-text">2. 从不同角度看待信息系统安全</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-2-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-text">11.1.2 信息系统安全的属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%8F%AF%E7%94%A8%E6%80%A7"><span class="nav-text">1. 可用性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E4%BF%9D%E5%AF%86%E6%80%A7"><span class="nav-text">2. 保密性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%AE%8C%E6%95%B4%E6%80%A7"><span class="nav-text">3. 完整性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-3-%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"><span class="nav-text">11.1.3 信息安全管理的重要性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E4%BB%8E%E7%B3%BB%E7%BB%9F%E6%9C%AC%E8%BA%AB%E5%AD%98%E5%9C%A8%E7%9A%84%E9%97%AE%E9%A2%98%E8%AE%A4%E8%AF%86"><span class="nav-text">1. 从系统本身存在的问题认识</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BD%93%E5%89%8D%E6%94%BF%E5%BA%9C%E5%92%8C%E4%BC%81%E4%B8%9A%E5%AF%B9%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%9A%84%E9%87%8D%E8%A7%86"><span class="nav-text">2. 当前政府和企业对信息系统安全的重视</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-4-%E6%9E%B6%E6%9E%84%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB"><span class="nav-text">11.1.4 架构安全管理体系</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%8A%80%E6%9C%AF%E4%BD%93%E7%B3%BB"><span class="nav-text">1. 技术体系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%BB%84%E7%BB%87%E6%9C%BA%E6%9E%84%E4%BD%93%E7%B3%BB"><span class="nav-text">2. 组织机构体系</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB"><span class="nav-text">3. 管理体系</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/3.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-信息安全管理-11.1 信息系统安全概论 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-信息安全管理-11.1 信息系统安全概论
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-04-05 21:17:21" itemprop="dateCreated datePublished" datetime="2023-04-05T21:17:21+08:00">2023-04-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-06 23:37:12" itemprop="dateModified" datetime="2023-04-06T23:37:12+08:00">2023-04-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h2 id="11-1-信息系统安全概论"><a href="#11-1-信息系统安全概论" class="headerlink" title="11.1 信息系统安全概论"></a>11.1 信息系统安全概论</h2><h3 id="11-1-1-信息系统安全定义与认识"><a href="#11-1-1-信息系统安全定义与认识" class="headerlink" title="11.1.1 信息系统安全定义与认识"></a>11.1.1 信息系统安全定义与认识</h3><h4 id="1-定义"><a href="#1-定义" class="headerlink" title="1. 定义"></a>1. 定义</h4><p>在信息系统工程中，信息安全涵盖了人工和自动信息处理的安全。网络化和非网络化的信息系统安全，泛指一切以声、光、电信号、磁信号、语音以及约定形式为载体的信息的安全。</p>
+<h5 id="1）信息系统安全"><a href="#1）信息系统安全" class="headerlink" title="1）信息系统安全"></a>1）信息系统安全</h5><p>定义是确保以<strong>电磁信息</strong>为主要形式的、在信息网络系统进行通信、处理和使用的信息内容，在各个物理位置、逻辑区域、存储和传输介质中，处于<strong>动态和静态</strong>过程中的<strong>保密性、完整性和可用性</strong>，以及与人、网络、环境有关的技术安全、结构安全和管理安全的总和。</p>
+<span id="more"></span>
+<p>在信息系统安全定义中，人是指信息系统应用的主休，包括：</p>
+<ul>
+<li>各类用户</li>
+<li>支持人员</li>
+<li>技术管理人员</li>
+<li>行政管理人员等</li>
+</ul>
+<h5 id="2）网络"><a href="#2）网络" class="headerlink" title="2）网络"></a>2）网络</h5><p>指以计算机、网络互连设备、传输介质以及操作系统、通信协议和应用程序所构成的物理的和逻辑的完整体系。</p>
+<h5 id="3）环境"><a href="#3）环境" class="headerlink" title="3）环境"></a>3）环境</h5><p>是系统稳定和可靠运行所需要的保障体系，包括：</p>
+<ul>
+<li>建筑物</li>
+<li>机房</li>
+<li>电力</li>
+<li>保障与备份</li>
+<li>应急与恢复体系等</li>
+</ul>
+<p>总的来说，<strong>信息系统安全</strong>就是<strong>要保证信息系统的用户在允许的时间内</strong>，从<strong>允许的地点</strong>、<strong>通过允许的方法</strong>，对<strong>允许范围内的信息</strong>进行<strong>所允许的处理</strong>。</p>
+<h4 id="2-从不同角度看待信息系统安全"><a href="#2-从不同角度看待信息系统安全" class="headerlink" title="2. 从不同角度看待信息系统安全"></a>2. 从不同角度看待信息系统安全</h4><p>信息系统安全的具体含义和侧重点会随着观察者的角度而不断变化。个人用户的角度来说，最为关心的信息系统安全问题是<strong>如何保证涉及个人隐私的问题</strong>。从企业用户的角度来说，是如何<strong>保证涉及商业利益的数据的安全</strong>。这些个人数据或企业的信息在传输过程中要保证其受到<strong>保密性、完整性和可用性</strong>的保护，如何避免其他人，特别是其竞争对手利用<strong>窃听、冒充、窜改、抵赖</strong>等手段，对其利益和隐私造成损害和侵犯，同时用户也希望其保存在某个网络信息系统中的数据，不会受其他非授权用户的访问和破坏。</p>
+<p>从网络运行和管理者角度说，最为关心的信息系统安全问题是如何保护和控制其他人对本地网络信息的访问、读写等操作。比如，避免出现漏洞陷阱、病毒、非法存取、拒绝服务和网络资源非法占用和非法控制等现象，制止和防御网络“黑客”的攻击。</p>
+<p>对安全保密部门和国家行政部门来说，最为关心的信息系统安全问题是如何对非法的、有害的或涉及国家机密的信息进行有效过滤和防堵，避免非法泄露。机密敏感的信息被泄密后将会对社会的安定产生危害，对国家造成巨大的经济损失和政治损失。</p>
+<p>从社会教育和意识形态角度来说，最为关心的信息系统安全问题则是如何杜绝和控制网络上不健康的内容。有害的黄色内容会对社会的稳定和人类的发展造成不良影响。</p>
+<p>目前，信息系统工程在企业和政府组织中得到了真正的广泛应用。许多组织对其信息系统不断增长的依赖性，加上在信息系统上运作业务的风险、收益和机会，使得信息和信息安全成为企业和政府组织管理中越来越关键的部分。我们同时也要注意到，对于信息化的不同应用，安全的策略和安全管理的目的也有所不同。</p>
+<h3 id="11-1-2-信息系统安全的属性"><a href="#11-1-2-信息系统安全的属性" class="headerlink" title="11.1.2 信息系统安全的属性"></a>11.1.2 信息系统安全的属性</h3><p>信息系统安全属性分为三个方面：<strong>可用性、保密性和完整性</strong>。任何对于信息可用性、保密性、完整性的破坏与攻击事件，都有可能会引起信息安全事故或者事件。</p>
+<h4 id="1-可用性"><a href="#1-可用性" class="headerlink" title="1. 可用性"></a>1. 可用性</h4><h5 id="1）可性性定义"><a href="#1）可性性定义" class="headerlink" title="1）可性性定义"></a>1）可性性定义</h5><p><strong>可用性</strong>是信息系统工程能够<strong>在规定条件下和规定的时间内完成规定的功能的特性</strong>。可用性是信息系统安全的最基本要求之一，是所有信息网络系统的建设和运行目标。可用性是指信息及相关的信息资产在授权人需要的时候，可以立即获得。例如通信线路中断故障会造成信息的在一段时间内不可用，影响正常的商业动作，这是信息可用性的破坏。</p>
+<h5 id="2）可用性表现"><a href="#2）可用性表现" class="headerlink" title="2）可用性表现"></a>2）可用性表现</h5><p>可用性主要<strong>表现在硬件可用性、软件可用性、人员可用性、环境可用性</strong>等方面。</p>
+<p>硬件可用性最为直观和常见。软件可用性是指在规定的时间内，程序成功运行的概率。人员可用性是指工作人员成功地完成工作或任务的概率。人员可用性在整个系统可用性中扮演着重要角色，因为系统失效的大部分原因是人为差错造成的。人的行为要受到生理和心理的影响，受到其技米熟练程度、责任心和品德等素质方面的影响。因此，对工作人员的教育、培养、训练和管理以及合理的人机界面是提高可用性的重要手段。环境可用性是指在规定的环境内，保证网络成功运行的概率。这里的环境主要是指自然环境和电磁环境。</p>
+<p>以信息网络系统为例，可用性还体现在：</p>
+<p><strong>（1）抗毁性</strong><br>是指系统在人为破坏下的可用性。比如，部分线路或节点失效后，系统是否仍然能够提供一定程度的服务。增强抗毁性可以有效地避免因各种灾害（战争、地震等）造成的大面积瘫痪事件。</p>
+<p><strong>（2）生存性</strong><br>是在随机破坏下系统的可用性。生存性主要反映随机性破坏和网络拓扑结构对系统可用性的影响。这里，随机性破坏是指系统部件因为自然老化等造成的自然失效。</p>
+<p><strong>（3）有效性</strong><br>是一种基于业务性能的可用性。有效性主要反映在信息系统的部件失效情况下，满足业务性能要求的程度。比如，信息系统部件失效虽然没有引起连接性故障，但是却造成质量指标下降、平均延时增加、线路阻塞等现象。</p>
+<p>不同类型的信息及相应资产的信息安全在保密性、完整性及可用性方面关注点不同，如组织的专有技术、市场营销计划等商业秘密对组织来讲保守机密尤其重要；而对于工业自动控制系统，控制信息的完整性相对其保密性重要得多。</p>
+<h4 id="2-保密性"><a href="#2-保密性" class="headerlink" title="2. 保密性"></a>2. 保密性</h4><h5 id="1）保密性的定义"><a href="#1）保密性的定义" class="headerlink" title="1）保密性的定义"></a>1）保密性的定义</h5><p><strong>保密性</strong>是信息<strong>不被泄露给非授权的用户、实体或过程</strong>，信息只为授权用户使用的特性。信息的保密性是针对信息被允许访问对象的多少而不同，所有人员都可以访问的信息为公开信息，需要限制访问的信息一般为敏感信息或秘密，秘密可以根据信息的重要性及保密要求分为不同的密级，例如国家根据秘密泄露对国家经济、安全利益产生的影响（后果）不同，将国家秘密分为秘密、机密和绝密三个等级，组织可根据其信息安全的实际，在符合《国家保密法》的前提下将其信息划分为不同的密级；对于具体的信息的保密性有时效性，如秘密到期解密等。</p>
+<p><strong>保密性是在可用性基础之上</strong>，保障网络信息安全的重要手段。</p>
+<h5 id="2）常用的保密技术"><a href="#2）常用的保密技术" class="headerlink" title="2）常用的保密技术"></a>2）常用的保密技术</h5><p>包括：</p>
+<p>（1）<strong>防侦测</strong>，使对手侦测不到有用的信息。<br>（2）<strong>防辐射</strong>，防止有用信息以各种途径辐射出去。<br>（3）<strong>信息加密</strong>，在密钥的控制下，用加密算法对信息进行加密处理。即使对手得到了加密后的信息也会因为没有密钥而无法读懂有效信息。<br>（4）<strong>物理保密</strong>，利用各种物理方法，如限制、隔离、掩蔽、控制等措施，保护信息不被泄露。</p>
+<h4 id="3-完整性"><a href="#3-完整性" class="headerlink" title="3. 完整性"></a>3. 完整性</h4><h5 id="1）完整性的定义"><a href="#1）完整性的定义" class="headerlink" title="1）完整性的定义"></a>1）完整性的定义</h5><p><strong>完整性</strong>定义为<strong>保护信息及其处理方法的准确性和完整性</strong>。信息完整性一方面是指信息在利用、传输、存储等过程中<strong>不被删除、修改、伪造、乱序、重放、插入</strong>等，另一方面是指信息处理的方法的正确性。不适当的操作，如误删除文件，有可能造成重要文件的丢失。</p>
+<p>完整性与保密性不同，<strong>保密性</strong>要求<strong>信息不被泄露给未授权的人</strong>，而<strong>完整性</strong>则要求<strong>信息不致受到各种原因的破坏</strong>。</p>
+<h5 id="2）保障信息网络系统完整性的主要方法"><a href="#2）保障信息网络系统完整性的主要方法" class="headerlink" title="2）保障信息网络系统完整性的主要方法"></a>2）保障信息网络系统完整性的主要方法</h5><p>有以下几种：</p>
+<p>（1）<strong>协议</strong>，通过各种安全协议可以有效地检测出被复制的信息、被删除的字段、失效的字段和被修改的字段。<br>（2）<strong>纠错编码方法</strong>，由此完成检错和纠错功能。最简单和常用的纠错编码方法是奇偶校验法。<br>（3）<strong>密码校验和方法</strong>，抗窜改和传输失败的重要手段。<br>（4）<strong>数字签名</strong>，保障信息的真实性。<em>▲▲▲ 经常考</em><br>（5）<strong>公证</strong>，请求网络管理或中介机构证明信息的真实性。</p>
+<h3 id="11-1-3-信息安全管理的重要性"><a href="#11-1-3-信息安全管理的重要性" class="headerlink" title="11.1.3 信息安全管理的重要性"></a>11.1.3 信息安全管理的重要性</h3><h4 id="1-从系统本身存在的问题认识"><a href="#1-从系统本身存在的问题认识" class="headerlink" title="1. 从系统本身存在的问题认识"></a>1. 从系统本身存在的问题认识</h4><p>任何一个信息系统工程都是一套非常复杂的多环节架构，它的安全措施不完整性隐患或安全漏洞可能渗透到该系统的所有地方，其中的一些隐患可能连系统的设计者、实现者和使用者都不一定非常清楚地知道它的存在。因此，系统的不安全因素总是存在的，所以我们说没有绝对的安全，只有相对的安全。</p>
+<p>既然信息系统的不安全总是存在的，我们所关注的是如何做到防范。针对于此，首先，信息安全不是要做到滴水不漏的完美，而是要根据系统的特性订出系统所需的安全度，如果一味强调安全本身而加上诸多不合现实的限制，只会导致工作人员更多的反感。其次，针对某一种情况制定真正合适的规范，是必须先评估自己所能承担的风险，将攻击的系统的成本提高到让想破解的人都认为不合乎成本，从而不愿意花功夫去攻击你的系统，俗话说“赔钱的生意没人做”。</p>
+<p>同时，从另外一个层面来说，要加强对信息安全的管理。信息安全管理是一项<strong>包含技术层面、管理层面、法律层面</strong>的社会系统工程：它不是产品，是一个完整的过程，是由<strong>人、技术、流程</strong>三个部分组成。这些组成部分匹配得越好，过程进展的就越顺利，对信息系统安全的保障作用的发挥就越重要。</p>
+<h4 id="2-当前政府和企业对信息系统安全的重视"><a href="#2-当前政府和企业对信息系统安全的重视" class="headerlink" title="2. 当前政府和企业对信息系统安全的重视"></a>2. 当前政府和企业对信息系统安全的重视</h4><p>鉴于信息系统安全在当前信息系统工程的重要性，不论是政府、企业的应用者，还是信息系统安全的承建单位，包括设计单位、实施单位和监理，对信息系统安全重视程度正在日益提高。</p>
+<p>中国工程院院长徐匡迪曾指出：“没有安全的工程就是豆腐渣工程”。这几年来我国接连不断地出现程度不同的信息系统安全事故，这些事故不仅仅是简单的信息系统瘫痪的问题，其直接后果是导致巨大的经济损失，还造成了不良的社会影响。如果说经济损失还能弥补，那么由于信息网络系统在安全防范和管理方面体现出的脆弱性而引起的公众对信息系统工程的诚信危机则不是短时期内可以恢复的。</p>
+<p>业界普遍认为，信息安全是政府和企业必须携手面对的问题。政府和企业管理执行层（董事会）有责任确保为所有使用者提供一个安全的信息系统环境。</p>
+<p>我国政府主管部门以及各行各业已经认识到了信息安全的重要性。政府部门开始出台一系列相关策略，直接牵引、推进信息安全的应用和发展。由政府主导的各大信息系统工程和信息化程度要求非常高的相关行业，也开始出台对信息安全技术产品的应用标准和规范。国务院信息化领导小组颁布的《关于我国电子政务建指导意见》强调指出了电子政务建设中信息系统安全的重要性；中国人民银行在加紧制定网上银行系统安全性评估指引，并明确提出对信息安全的投资要达到总投资的10%以上，而在其他一些关键行业，信息安全的投资甚至已经超过了总预算的30%～50%。</p>
+<p>目前，政府和各行各业对信息安全的重要性有了认识，相关的规定标准在形成，投资力度在加大，安全技术、产品、市场在发展，多数企业机构正在制定符合不同业务信息系统和网络安全等级需要的综合性安全策略和计划。那么，到底需要什么样的方法或机制来管理或治理信息安全呢？从长远的角度看，关键是要建立一套能够涵盖组织信息安全的制度，包括管理措施和制度，即如何能将信息系统安全从机制和结构上提升到一个新的层面；如何通过建立和维护一个和相关法律和规范一致的框架来保证信息安全战略和组织的业务目标。</p>
+<h3 id="11-1-4-架构安全管理体系"><a href="#11-1-4-架构安全管理体系" class="headerlink" title="11.1.4 架构安全管理体系"></a>11.1.4 架构安全管理体系</h3><p><strong>信息系统安全</strong>的总体目标是<strong>物理安全、信息基础设备安全、网络安全、数据安全、信息内容安全与公共信息安全的总和</strong>，最终目标是确保信息的可用性、保密性和完整性，确保信息系统工程的主体，不仅是用户，还包括组织、社会和国家对于信息资源的控制。</p>
+<p>从信息安全管理目标来看，其中的网络安全、数据安全、信息内容安全等可通过开放系统互连安全体系的安全服务、安全机制及其管理实现，但所获得的这些安全特性只解决了与通信和互连有关的安全问题（如物理安全、系统安全等）还须从技术措施和管理措施两方面结合起来。为了系统地、完整地构建信息系统的<strong>安全体系框架</strong>，<strong>信息系统安全体系应当由技术体系、组织机构体系和管理体系共同构建</strong>。</p>
+<h4 id="1-技术体系"><a href="#1-技术体系" class="headerlink" title="1. 技术体系"></a>1. 技术体系</h4><p>技术体系是全面提供信息系统安全保护的技术保障系统。该体系由两在类构成。</p>
+<h5 id="1）物理安全技术"><a href="#1）物理安全技术" class="headerlink" title="1）物理安全技术"></a>1）物理安全技术</h5><p>一类是物理安全技术，通过<strong>物理机械强度标准的控制</strong>使信息系统的建筑物、机房条件及硬件设备等条件，满足信息系统的机械防护安全；通过对电力供应设备以及信息系统组件的抗电磁干扰和电磁泄露性能的选择性措施达到两个安全目的，其一是信息系统组件具有抗击外界电磁辐射或噪声干扰能力而保持正常运行，其二是控制信息系统组件电磁辐射造成的信息泄露，必要时还应从建筑物和机房条件的设计开始就采取必要措施，以使电磁辐射指标符合国家相应的安全等级要求。物理安全技术运用于物理保障环境（含系统组件的物理环境）。</p>
+<p><strong>物理安全技术</strong>包括<strong>机房安全</strong>和<strong>设施安全</strong>。</p>
+<p><strong>（1）机房安全</strong></p>
+<p>是信息系统主要设备的物理存放的位置，主要是保证机房场地的安全，主要包括<strong>机房环境、温度、湿度的控制，电磁、噪声、静电、震动和灰尘的防护</strong>，同时要有<strong>防火灾、防雷电以及门禁</strong>等安全措施。</p>
+<p><strong>（2）设施安全</strong></p>
+<p>主要是考虑各种硬件设备的可靠性问题，所有的设备应当更具不同安全级别的信息系统工程，同时要保证通信线路物理上的安全性。</p>
+<h5 id="2）系统安全技术"><a href="#2）系统安全技术" class="headerlink" title="2）系统安全技术"></a>2）系统安全技术</h5><p>另一类是系统安全技术，通过对信息系统安全组件的选择，使信息系统安全组件的软件工作平台达到相应的安全等级，一方面避免操作平台自身的脆弱性和漏洞引发的风险，另一方面阻塞任何形式的非授权行为对信息系统安全组件的入侵或接管系统管理权。</p>
+<p><strong>系统安全技术</strong>包括<strong>平台安全、数据安全、通信安全、应用安全和运行安全</strong>。</p>
+<p><strong>（1）平台安全</strong></p>
+<p>泛指<strong>操作系统和通用基础服务安全</strong>，主要用于防范黑客攻击手段，目前市场上大多数安全产品均限于解决平台安全，包括以下内容：</p>
+<ul>
+<li><strong>操作系统漏洞检测与修复</strong>，包括UNIX系统、Windows系统、网络协议。</li>
+<li>网络<strong>基础设施漏洞检测与修复</strong>，包括路由器、交换机、防火墙等。</li>
+<li>通用基础<strong>应用程序漏洞检测与修复</strong>，包括数据库、Web&#x2F;ftp&#x2F;maim&#x2F;DNS&#x2F;其他各种系统守护进程。</li>
+<li><strong>网络安全产品部署</strong>、平台安全实施需要用到市场上常见的<strong>网络安全产品</strong>，主要 包括防火墙、入侵检测、脆弱性扫描和防病毒产品。</li>
+<li>整体网络系统<strong>平台安全综合测试&#x2F;模拟入侵与安全优化</strong>。</li>
+</ul>
+<p><strong>（2）数据安全</strong></p>
+<p>目标是<strong>防止数据丢失、崩溃和被非法访问</strong>，为保障数据安全提供如下实施内容：介质与载体安全保护、数据访问控制、系统数据访问控制检查、标识与鉴别、数据完整性、数据可用性、数据监控和审计、数据存储与备份安全。</p>
+<p><strong>（3）通信安全</strong></p>
+<p>目标是<strong>防止系统之间通信的安全脆弱性威胁</strong>，为保障系统之间通信的安全采取的措施有：通信线路和网络基础设施安全性测试与优化、安装网络加密设施、设置通信加密软件、设置身份鉴别机制、设置并测试安全通道、测试各项网络协议运行漏洞。</p>
+<p><strong>（4）应用安全</strong></p>
+<p>是保障相关业务在计算机网络系统上安全运行，应用安全脆弱性有可能给信息化系统带来最大损失的致命威胁。以业务运行实际面临的威胁为依据，为应用女全提供的保证措施有：业务软件的程序<strong>安全性测试</strong>、业务交往的防抵赖测试、业务资源的<strong>访问控制验证测试</strong>、业务实体的身份鉴别检测、业务现场的备份与恢复机制检查、业务数据的惟一性&#x2F;一致性&#x2F;防冲突检测·业务数据的保密性测试、业务系统的可靠性测试、业务系统的可用性测试。</p>
+<p><strong>（5）运行安全</strong></p>
+<p>是保障系统的安全稳定。为运行安全提供的实施措施有：<strong>应急处置机制和配套服务</strong>、网络系统安全性监测、网络安全产品运行监测、<strong>定期检查和评估</strong>、系统升级和补丁提供、跟踪最新安全漏洞及通报、灾难恢复机制与预防、系统改造管理、网络安全专业技术咨询服务。<strong>运行安全是一项长期的服务</strong>，包含在网络安全系统工程的售后服务包内。</p>
+<h4 id="2-组织机构体系"><a href="#2-组织机构体系" class="headerlink" title="2. 组织机构体系"></a>2. 组织机构体系</h4><p><strong>组织机构体系</strong>是信息系统的组织保障系统，由<strong>机构、岗位和人事</strong>三个模块构成。</p>
+<h5 id="1）机构"><a href="#1）机构" class="headerlink" title="1）机构"></a>1）机构</h5><p>一个机构设置分<strong>为决策层、管理层和执行层</strong>。决策层是信息系统用户单位中决定信息系统安全<strong>重大事宜</strong>的领导机构，由有保密职能的部门负责人及信息系统主要负责人参与组成。<strong>管理层</strong>是决策层的日常管理机关，根据决策机构的决定，全面规划并协调各方面力量，实施信息系统的安全方案，制定、修改安全策略，处理安全事故，设置安全相关的岗位。<strong>执行层</strong>是在管理层协调下，具体负责某一个或某几个特定安全事务的一个逻辑群体，这个群体分布在信息系统的各个操作层或岗位上。</p>
+<h5 id="2）岗位"><a href="#2）岗位" class="headerlink" title="2）岗位"></a>2）岗位</h5><p>岗位是信息系统安全管理机关根据系统安全需要设定的负责某一个或某几个安全事务的职位，岗位在系统内部可以是具有垂直领导关系的若干层次的一个序列，一个人可以负责一个或几个安全岗位，但一个人不能同时兼任安全岗位所对应的系统管理或具体业务岗位。因此，岗位不是一个机构，它由管理机构决定，由人事机构管理。</p>
+<h5 id="3）人事"><a href="#3）人事" class="headerlink" title="3）人事"></a>3）人事</h5><p>人事机构是根据管理机构设定的岗位，对岗位上在职、待职和离职的员工进行素质教育、业绩考核和安全监管的机构。人事机构的全部管理活动在国家有关安全的法律、法规、政策规定范围内依法进行。</p>
+<h4 id="3-管理体系"><a href="#3-管理体系" class="headerlink" title="3. 管理体系"></a>3. 管理体系</h4><p>管理是信息系统安全的灵魂。信息系统安全的管理由<strong>法律管理、制度管理和培训管理</strong>三部分组成。管理安全设置的机制有：<strong>人员管理、培训管理、应用系统管理、软件管理、设备管理、文档管理、数据管理、操作管理、运行管理和机房管理</strong></p>
+<h5 id="1）法律管理"><a href="#1）法律管理" class="headerlink" title="1）法律管理"></a>1）法律管理</h5><p>法律管理是根据相关的国家法律、法规对信息系统主体及其与外界关联行为的规范与约束。法律管理具有对信息系统主体行为的强制性约束力，并且具有明确的管理层次性。与安全有关的法律法规是信息系统安全的最高行为准则。</p>
+<h5 id="2）制度管理"><a href="#2）制度管理" class="headerlink" title="2）制度管理"></a>2）制度管理</h5><p>制度管理是信息系统内部依据必要的安全需求制定的一系列<strong>内部规章制度</strong>，主要包括：</p>
+<p>（1）安全管理和执行机构的行为规范。<br>（2）岗位设定及其操作规范。<br>（3）岗位人员的素质要求及行为规范。<br>（4）内部关系与外部关系的行为规范等。</p>
+<p>制度管理是法律管理的形式化、具体化，是法律、法规与管理对象的接口。</p>
+<h5 id="3）培训管理"><a href="#3）培训管理" class="headerlink" title="3）培训管理"></a>3）培训管理</h5><p>培训管理是确保系统安全的前提。培训管理的内容包括：</p>
+<p>（1）<strong>法律法规培训</strong>。<br>（2）<strong>内部制度培训</strong>&#x2F;位操作培训。<br>（3）普遍安全意识和岗位相关的重点安全意识相结合的培训。<br>（4）业务素质与技能技巧培训等。</p>
+<p>在信息监理中可以根据信息系统有关的所有人员进行分层次培训。图11.1是某个基层计算机信息网络应用单位的网络安全管理组织机构设置。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230413135349.png" alt="网络安全管理组织机构设置"></p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/3.html" title="笔记-信息安全管理-11.1 信息系统安全概论">https://www.zenwu.site/posts/3.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 信息安全管理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/669f.html" rel="prev" title="笔记-合同管理-10.4 合同争议的调解">
+                  <i class="fa fa-angle-left"></i> 笔记-合同管理-10.4 合同争议的调解
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/e6b8.html" rel="next" title="笔记-信息安全管理-11.2 监理在信息安全管理中的作用">
+                  笔记-信息安全管理-11.2 监理在信息安全管理中的作用 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

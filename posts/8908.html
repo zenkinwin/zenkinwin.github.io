@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="11.3 信息系统安全管理分析与对策在信息系统工程建设中，监理工程师对信息系统的安全体系评估主要从逻辑访问的风险分析与安全管理、协助建设单位架构安全的信息网络系统、对应用环境的风险分析与安全管理、对物理访问的风险分析与安全管理等方面进行，并协助建设单位建立、健全、完善各项管理制度和措施。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-信息安全管理-11.3 信息系统安全管理分析与对策">
+<meta property="og:url" content="https://www.zenwu.site/posts/8908.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="11.3 信息系统安全管理分析与对策在信息系统工程建设中，监理工程师对信息系统的安全体系评估主要从逻辑访问的风险分析与安全管理、协助建设单位架构安全的信息网络系统、对应用环境的风险分析与安全管理、对物理访问的风险分析与安全管理等方面进行，并协助建设单位建立、健全、完善各项管理制度和措施。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-04-07T12:27:21.000Z">
+<meta property="article:modified_time" content="2023-04-08T12:37:12.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="信息安全管理">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/8908.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/8908.html","path":"posts/8908.html","title":"笔记-信息安全管理-11.3 信息系统安全管理分析与对策"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-信息安全管理-11.3 信息系统安全管理分析与对策 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#11-3-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E5%88%86%E6%9E%90%E4%B8%8E%E5%AF%B9%E7%AD%96"><span class="nav-text">11.3 信息系统安全管理分析与对策</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-1-%E7%89%A9%E7%90%86%E8%AE%BF%E9%97%AE%E7%9A%84%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86"><span class="nav-text">11.3.1 物理访问的安全管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%89%A9%E7%90%86%E8%AE%BF%E9%97%AE%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">1. 物理访问的定义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%89%A9%E7%90%86%E8%AE%BF%E9%97%AE%E7%9A%84%E9%A3%8E%E9%99%A9%E6%9D%A5%E6%BA%90"><span class="nav-text">2. 物理访问的风险来源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%8F%AF%E8%83%BD%E7%9A%84%E9%94%99%E8%AF%AF%E6%88%96%E7%8A%AF%E7%BD%AA"><span class="nav-text">3. 可能的错误或犯罪</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%9B%91%E7%90%86%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9"><span class="nav-text">4. 监理安全管理注意事项</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-2-%E5%BA%94%E7%94%A8%E7%8E%AF%E5%A2%83%E7%9A%84%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86"><span class="nav-text">11.3.2 应用环境的安全管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%BA%94%E7%94%A8%E7%8E%AF%E5%A2%83%E7%9A%84%E9%A3%8E%E9%99%A9%E6%9D%A5%E6%BA%90"><span class="nav-text">1. 应用环境的风险来源</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%9B%91%E7%90%86%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E7%AD%96%E7%95%A5%E6%A6%82%E8%A6%81"><span class="nav-text">2. 监理安全管理策略概要</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-3-%E9%80%BB%E8%BE%91%E8%AE%BF%E9%97%AE%E7%9A%84%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86"><span class="nav-text">11.3.3 逻辑访问的安全管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%80%BB%E8%BE%91%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98%E4%B8%8E%E9%A3%8E%E9%99%A9%E5%88%86%E6%9E%90"><span class="nav-text">1. 逻辑访问问题与风险分析</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%8D%8F%E5%8A%A9%E5%BB%BA%E8%AE%BE%E5%8D%95%E4%BD%8D%E5%88%B6%E5%AE%9A%E5%AE%8C%E5%96%84%E7%9A%84%E5%AE%89%E5%85%A8%E7%AD%96%E7%95%A5"><span class="nav-text">2. 协助建设单位制定完善的安全策略</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%BB%BA%E8%AE%AE%E5%BB%BA%E8%AE%BE%E5%8D%95%E4%BD%8D%E8%AE%BE%E7%AB%8B%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E5%91%98%E5%B9%B6%E6%98%8E%E7%A1%AE%E5%85%B6%E8%81%8C%E8%B4%A3"><span class="nav-text">3. 建议建设单位设立安全管理员并明确其职责</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E8%BD%AF%E4%BB%B6"><span class="nav-text">4. 访问控制软件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E9%80%BB%E8%BE%91%E5%AE%89%E5%85%A8%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95"><span class="nav-text">5. 逻辑安全的处理方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-4-%E6%9E%B6%E6%9E%84%E5%AE%89%E5%85%A8%E7%9A%84%E4%BF%A1%E6%81%AF%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F"><span class="nav-text">11.3.4 架构安全的信息网络系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%B1%80%E5%9F%9F%E7%BD%91%E7%9A%84%E5%AE%89%E5%85%A8VLAN"><span class="nav-text">1. 局域网的安全VLAN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-C-S%E6%9E%B6%E6%9E%84%E5%AE%89%E5%85%A8"><span class="nav-text">2. C&#x2F;S架构安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E5%A8%81%E8%83%81%E5%92%8C%E5%AE%89%E5%85%A8"><span class="nav-text">3. 互联网的威胁和安全</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E9%87%87%E7%94%A8%E5%8A%A0%E5%AF%86%E6%8A%80%E6%9C%AF"><span class="nav-text">4. 采用加密技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%BD%91%E9%97%B8"><span class="nav-text">5. 网闸</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E9%98%B2%E7%81%AB%E5%A2%99"><span class="nav-text">6. 防火墙</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B%E7%B3%BB%E7%BB%9F"><span class="nav-text">7. 入侵检测系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F"><span class="nav-text">8. 漏洞扫描</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-%E7%97%85%E6%AF%92%E9%98%B2%E8%8C%83"><span class="nav-text">9. 病毒防范</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-5-%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E4%B8%8E%E7%81%BE%E9%9A%BE%E6%81%A2%E5%A4%8D%E7%9A%84%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86"><span class="nav-text">11.3.5 数据备份与灾难恢复的安全管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E4%B8%8E%E7%81%BE%E9%9A%BE%E6%81%A2%E5%A4%8D%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-text">1. 数据备份与灾难恢复的意义</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E5%A4%87%E4%BB%BD%E7%9A%84%E7%AD%96%E7%95%A5%E4%B8%8E%E6%96%B9%E5%BC%8F"><span class="nav-text">2.数据备份的策略与方式</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/8908.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-信息安全管理-11.3 信息系统安全管理分析与对策 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-信息安全管理-11.3 信息系统安全管理分析与对策
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-04-07 20:27:21" itemprop="dateCreated datePublished" datetime="2023-04-07T20:27:21+08:00">2023-04-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-08 20:37:12" itemprop="dateModified" datetime="2023-04-08T20:37:12+08:00">2023-04-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h2 id="11-3-信息系统安全管理分析与对策"><a href="#11-3-信息系统安全管理分析与对策" class="headerlink" title="11.3 信息系统安全管理分析与对策"></a>11.3 信息系统安全管理分析与对策</h2><p>在信息系统工程建设中，监理工程师对信息系统的安全体系评估主要从逻辑访问的风险分析与安全管理、协助建设单位架构安全的信息网络系统、对应用环境的风险分析与安全管理、对物理访问的风险分析与安全管理等方面进行，并协助建设单位建立、健全、完善各项管理制度和措施。</p>
+<span id="more"></span>
+<h3 id="11-3-1-物理访问的安全管理"><a href="#11-3-1-物理访问的安全管理" class="headerlink" title="11.3.1 物理访问的安全管理"></a>11.3.1 物理访问的安全管理</h3><h4 id="1-物理访问的定义"><a href="#1-物理访问的定义" class="headerlink" title="1. 物理访问的定义"></a>1. 物理访问的定义</h4><p><strong>物理访问控制</strong>是<strong>设计用于保护组织防止未授权的访问</strong>，并限制只有经过管理阶层授权的人员才能进入。有些授权可能是明显易见的，例如管理阶层授权你拥有锁门的钥匙；有些可能是隐含性的授权，例如你在工作内容中说明你必须访问敏感性的报表及文件。</p>
+<h4 id="2-物理访问的风险来源"><a href="#2-物理访问的风险来源" class="headerlink" title="2. 物理访问的风险来源"></a>2. 物理访问的风险来源</h4><p>物理访问的风险原因可能会来自有意或无意的违犯，这些<strong>风险</strong>包括：</p>
+<p>（1）<strong>未经授权进入</strong>；<br>（2）毁损、破坏或窃取设备、财产或文件；<br>（3）复制或偷看敏感或有著作权的信息；<br>（4）变更敏感性设备及信息；<br>（5）公开敏感的信息；<br>（6）滥用数据处理资源：<br>（7）勒索；<br>（8）盗用。</p>
+<h4 id="3-可能的错误或犯罪"><a href="#3-可能的错误或犯罪" class="headerlink" title="3. 可能的错误或犯罪"></a>3. 可能的错误或犯罪</h4><p>监理工程师要使建设单位认识到<strong>可能的错误或犯罪的情形</strong>包括有：</p>
+<p>（1）员工经授权或未经授权的访问；<br>（2）离职员工；<br>（3）有利害关系的外来者，如竞争者、盗窃者、犯罪集团、黑客等；<br>（4）无知造成的意外，某些人可能在无知情况下犯下错误（可能是员工或外来者）。</p>
+<h4 id="4-监理安全管理注意事项"><a href="#4-监理安全管理注意事项" class="headerlink" title="4. 监理安全管理注意事项"></a>4. 监理安全管理注意事项</h4><p><strong>物理访问控制</strong>的风险大多可能来自那些恶意或犯罪倾向的行为。在安全监理中值得注意的问题如下：</p>
+<p>（1）硬件设施在合理范围内是否能防止强制入侵；<br>（2）计算机设备的钥匙是否有良好的控制以降低未授权者进入的危险；<br>（3）智能终端是否上锁或有安全保护，以防止电路板、芯片或计算机被搬移；<br>（4）计算机设备在搬动时是否需要设备授权通行的证明。</p>
+<p>物理访问的风险基本是可以<strong>事先得到控制</strong>的，关键就是怎样落实和实施，也就是制度的管理与落实。这不是监理一方的责任心到位就可以了的，还要建设单位和承建单位在认识上非常重视，<strong>齐抓共管</strong>才能达到目的。如果其他方没有认识到，监理工程师一定要提出建议和要求。</p>
+<h3 id="11-3-2-应用环境的安全管理"><a href="#11-3-2-应用环境的安全管理" class="headerlink" title="11.3.2 应用环境的安全管理"></a>11.3.2 应用环境的安全管理</h3><p>应用环境控制可降低业务中断的风险。监控的项目包括<strong>电源、地面及空间</strong>状态。</p>
+<h4 id="1-应用环境的风险来源"><a href="#1-应用环境的风险来源" class="headerlink" title="1. 应用环境的风险来源"></a>1. 应用环境的风险来源</h4><p><strong>环境风险</strong>主要来源是<strong>自然发生的意外灾害</strong>，然而适当的控制可以降低这些风险。一般情况下，应用环境的安全风险来源可能有：</p>
+<ul>
+<li>天灾，地震、火山爆发、台风、龙卷风、雷电、洪水等；</li>
+<li>停电、电压突变；空调故障、设备故障；</li>
+<li>水害，甚至在有高架地板的建筑物中，水害仍是一项危机，因为可能发生水管爆裂的情况；</li>
+<li>炸弹威胁与攻击，恐怖活动或战争；</li>
+<li>计算机设备电源供应是否能适当控制在制造商的规格范围内；</li>
+<li>计算机设备的空调、湿度、通风控制系统是否能维持适当温度和湿度，以符合在制造商规格范围内；</li>
+<li>计算机设备是否提供静电保护，如防静电地毯、抗静电喷雾器；</li>
+<li>计算机设备是否保持防尘、防烟及其他特殊物品如食品；</li>
+<li>是否明文规定禁止在计算机设备旁就餐及吸烟；</li>
+<li>是否提供避免一些因素危害备份磁盘及磁带的措施，如极端温度的损害、磁场的影响、水的侵害等。</li>
+</ul>
+<h4 id="2-监理安全管理策略概要"><a href="#2-监理安全管理策略概要" class="headerlink" title="2. 监理安全管理策略概要"></a>2. 监理安全管理策略概要</h4><p>对于应用环境的监理，可以从以下几个方面。</p>
+<h5 id="1）火灾的控制"><a href="#1）火灾的控制" class="headerlink" title="1）火灾的控制"></a>1）火灾的控制</h5><p><strong>火灾</strong>可能从信息处理设施的内部或外部引起，因此防火控制系统必须设置在机构中的所有地方，以提供适当的防护。监理应监督建设单位采取的安全管理措施有手提式灭火器、触动式火灾警报器、烟雾探测器、灭火系统（二氧化碳、水、干管）等。</p>
+<h5 id="2）水灾探测器"><a href="#2）水灾探测器" class="headerlink" title="2）水灾探测器"></a>2）水灾探测器</h5><p>监理应提醒建设单位注意，计算机室即使己经有高架地板设备，<strong>水灾</strong>探测器仍必须设置在高架地板下与排水孔附近。设备储存设施必须装置水灾探测器，这些警报器不仅可保护设备，同时也可保护人员免遭电击。当警报启动时，声响必须足以让安全及控制人员听到，水灾探测器在高架地板下的位置，必须做记号以便识别及维护。听到警报声后，必须有专人负责调查其原因并采取适当行动，其他工作人员必须知道触电的危险。</p>
+<h5 id="3）计算机机房"><a href="#3）计算机机房" class="headerlink" title="3）计算机机房"></a>3）计算机机房</h5><p>监理工程师在信息系统工程建设过程中，对各种建造过程中的计算机机房，应该提醒、建议建设单位关注的要点有： （经常考的地方 ▲▲▲）</p>
+<p>（1）机房所在楼层，<strong>不可在地下室</strong>，<strong>3, 4, 5, 6层为最佳</strong>：<br>（2）门禁系统及出入<strong>日志管理，单一出入口</strong>；<br>（3）<strong>摄影</strong>监控；<br>（4）<strong>警报系</strong>统；<br>（5）机房建设使用具有<strong>防火的建材</strong>，如防火墙、地板、天花板等；<br>（6）<strong>电流脉冲保护装置</strong>；<br>（7）<strong>备份</strong>电力系统；<br>（8）<strong>紧急断电</strong>装置；<br>（9）<strong>不间断电源</strong>&#x2F;发电机；<br>（10）设施中的电线是否配置在防火板槽里；<br>（11）<strong>湿度&#x2F;温度</strong>控制设备；<br>（12）<strong>防静电</strong>、防尘设施；<br>（13）<strong>防雷</strong>措施；<br>（14）禁止在信息处理场所<strong>就餐</strong>和<strong>吸烟</strong>规定；<br>（15）<strong>疏散</strong>计划的书面文件及测试；<br>（16）计算机<strong>终端设备锁定</strong>；<br>（17）不公开敏感性设施的位置；<br>（18）<strong>文件公用柜</strong>的保护：<br>（19）访客的<strong>出入控制与陪同制度</strong>等。</p>
+<h3 id="11-3-3-逻辑访问的安全管理"><a href="#11-3-3-逻辑访问的安全管理" class="headerlink" title="11.3.3 逻辑访问的安全管理"></a>11.3.3 逻辑访问的安全管理</h3><p>在逻辑访问控制方面，监理工程师应着重分析并评估项目建设过程中的<strong>信息系统策略、组织结构、业务流程及访问控制</strong>，以保护信息系统及数据，避免非法访问泄漏或损坏的发生。</p>
+<p>监理在<strong>逻辑访问风险分析与安全管理</strong>上，主要的原则有：</p>
+<p>（1）了解信息处理的整体环境并评估其安全需求，可通过审查相关数据，询问有关人员，个人观察及风险评估等；<br>（2）通过对一些可能进入系统访问路径进行记录及复核，评价这些控制点的正确性、有效性。这种记录及复核包括审核系统软、硬件的安全管理，以确认其控制弱点或重要点；<br>（3）通过<strong>相关测试数据</strong>访问<strong>控制点</strong>，评价安全系统的功能和有效性；<br>（4）分析测试结果和其他审核结论，评价访问控制的环境并判断是否达到控制目标；<br>（5）审核书面策略，观察实际操作和流程，与一般公认的信息安全标准相比较，评价组织环境的安全性及其适当性等。</p>
+<h4 id="1-逻辑访问问题与风险分析"><a href="#1-逻辑访问问题与风险分析" class="headerlink" title="1. 逻辑访问问题与风险分析"></a>1. 逻辑访问问题与风险分析</h4><p>不适当的系统访问控制会使技术及运营风险方面造成的损失增加。这种损失可能只是对用户访问造成不便，也有可能使主机宕机或系统瘫痪，并造成某些业务运营中断。</p>
+<h5 id="1）技术性风险分析"><a href="#1）技术性风险分析" class="headerlink" title="1）技术性风险分析"></a>1）技术性风险分析</h5><p><strong>技术性产生的风险</strong>包括利用“暗藏程序”直接或间接修改计算机内数据及执行程序。在技术上有多种现象，现举例如下：</p>
+<p><strong>（1）数据篡改</strong><br>在原始数据输入计算机之前被篡改。由于这种方法容易实现并在安全技术管理范围之外，故被广泛采用。</p>
+<p><strong>（2）特洛伊木马</strong><br>特洛伊木马是指将一些带有恶意的、欺诈性的代码置于己授权的计算机程序中，当程序启动时这些代码也会启动。典型的例子是在对方的系统中放置木马，自动监控或获取对方的个人信息。特洛伊木马攻击的表现形式对被攻击者来说并不直观，甚至被攻击者根本不知道己经被入侵，因而它是一种危害性很大的网络攻击手段。</p>
+<p><strong>（3）去尾法</strong><br>将交易发生后计算出的金额（如利息）中小数点后的余额（如分）删除并转入某个未经授权的账户，因为金额微小而往往不被注意。</p>
+<p><strong>（4）色粒米技术</strong><br>这是一种类似去尾法的舞弊行为，不同的是将余额切分成更小金额，再转入未授权账户。这种方法与去尾法的差异是：去尾法是去除掉分，例如若交易金额为$1235954.39。则去尾法的金额为$1235954.35，而色粒米技术是将尾数去除或进位；如上述问题，则色米粒技术金额为$1235954.30或$1235954.40，其计算方法是由程序设计来决定的。</p>
+<p><strong>（5）计算机病毒</strong></p>
+<p>计算机病毒是指人为的且故意置入计算机的程序，它可自行复制并感染其他计算机中的程序，通过计算机磁盘的共用，通信线路数据的传输（如电子邮件）或对软、硬件的直接操作，都有可能感染病毒。</p>
+<p>计算机病毒有良性病毒和恶性病毒。良性病毒并不直接破坏计算机的软硬件，对源程序不做修改，一般只是进入内存，侵占一部分内存空间，消耗CPU资源等，对系统的危害较小。而恶性病毒则会对计算机的软硬件进行恶意的攻击，使系统遭到不同程度的破坏。恶性病毒又分为两类，一类是依赖于主程序的病毒，另一类是可独立存在的病毒。</p>
+<p><strong>（6）计算机蠕虫</strong><br>蠕虫是一种破坏性程序，可以破坏计算机内数据或是使用大量计算机及通信资源，但不像计算机病毒那样能自行复制。比如近几年危害很大的“尼姆达”病毒就是蠕虫病毒的一种。这一病毒利用了微软视窗操作系统的漏洞，计算机感染这一病毒后，会不断自动拨号上网，并利用文件中的地址信息或者网络共享进行传播，最终破坏用户的大部分重要数据。蠕虫病毒的一般防治方法是使用具有实时监控功能的杀毒软件，并且注意不要轻易打开不熟悉的邮件附件。</p>
+<p><strong>（7）逻辑炸弹</strong><br>逻辑炸弹是在满足特定的逻辑条件时按某种不同的方式运行，对目标系统实施破坏的计算机程序。在正常条件下检测不到这种炸弹，但如果特定的逻辑条件出现，则破坏计算机功能或数据。与计算机病毒不同，逻辑炸弹体现为对目标系统的破坏作用，而非传播其具有破坏作用的程序。但不像病毒或计算机蠕虫，逻辑炸弹一般不容易在其发作之前被发现；比较类似于计算机舞弊，可能会造成各种直接或间接的损失。</p>
+<p><strong>（8）后门</strong><br>将<strong>未经授权的非法出口置入程序中</strong>，以执行恶意的指令。比如数据处理时，可以检查某些数据，这种特殊逻辑也允许未经授权的非法入侵。</p>
+<p><strong>（9）异步攻击</strong><br>在计算机多进程处理过程中，数据在线路上以异步方式传输，因此数据往往在排队等候传输，在等待过程中受到未授权的入侵称为“异步攻击”。这种攻击也通过硬件入侵计算机中，其中有多种异步攻击方法，由于技术复杂，通常很难察觉，必须由网络管理员或网络工程师协助进行检查。</p>
+<p><strong>（10）数据失窃</strong><br>计算机数据被非法盗用，如将计算机文件拷贝出来以窃取数据或偷窃计算机磁盘、磁带等。</p>
+<p><strong>（11）口令入侵</strong><br>任何可以完成口令破解或者屏蔽口令保护的程序都称为口令入侵。网络攻击者往往把用户口令的破解作为对目标系统攻击的开始。几乎所有的用户系统都利用口令来防止非法登录，但却很少有人严格地执行口令安全策略。网络黑客经常利用有问题的且缺乏保护的口令进行攻击。一个口令黑客并不一定能够解开任何口令，实际上，只要用户制定口令时满足口令的复杂性要求，绝大多数口令破解程序就不可能正确破解。</p>
+<p><strong>（12）网络窃听</strong><br>不进行直接的网络攻击，但借助网络窃听器的软件或硬件，掌握对方的重要信息，如账号、密码等，它意味着高级别的泄密，对网络安全造成极大的威胁。</p>
+<p><strong>（13）拒绝服务攻击（DOS）</strong><br>DOS攻击行为表现在使服务器充斥大量要求响应的信息，消耗网络带宽或系统资源，导致网络或系统不胜负荷，以至于瘫痪而停止提供正常的网络服务，是目前最为常见的网络攻击方法。</p>
+<h5 id="2）病毒控制"><a href="#2）病毒控制" class="headerlink" title="2）病毒控制"></a>2）病毒控制</h5><p>计算机病毒是当前计算机面临的最严重威胁现象之一。目前预防、侦测病毒感染的方法主要有两种：一种是建立规范严谨的管理策略与管理程序；另外一种是采用技术方法，如防病毒软件。</p>
+<p><strong>（1）管理控制的策略</strong></p>
+<ul>
+<li>安装<strong>正版</strong>软件：</li>
+<li>计算机开机时，切记使用磁盘的写保护功能；</li>
+<li>凡是未在单机中做病毒扫描的磁盘<strong>不允许在网络环境中使用</strong>；</li>
+<li>随时<strong>更新病毒代码库</strong>；</li>
+<li>对可能感染病毒的文件做<strong>写保护</strong>；</li>
+<li>安装新软件前先进行<strong>杀毒处理</strong>；</li>
+<li>新磁盘使用时做病毒检测；</li>
+<li>确保在网络环境中安装、使用已更新的防病毒软件；</li>
+<li>文件加密和使用前解密；</li>
+<li>授权方可更换必要的设备，如路由器、交换机等；</li>
+<li>在网络中不使用外单位的设备，如做商务演示时；</li>
+<li>备份数据的杀度处理；</li>
+<li>定期教育、检查制度的执行情况等。</li>
+</ul>
+<p><strong>（2）技术控制方法</strong><br>对病毒的控制，在硬件架构处理上可以采用使用无软驱的工作站、远端执行开机程序、利用硬件方式的密码、使用磁盘的写保护功能等。</p>
+<p>防病毒软件是目前最好的软件工具。防病毒软件的主要功能有扫描、动态监控、完整性检查、行为阻断等。</p>
+<h5 id="3）计算机及网络犯罪"><a href="#3）计算机及网络犯罪" class="headerlink" title="3）计算机及网络犯罪"></a>3）计算机及网络犯罪</h5><p>这是针对利用计算机和网络系统，通过非法操作或其他手段，对计算机和网络系统的完整性或正常运行造成危害后果的行为，它的对象是计算机系统或网络内部的数据，如计算机程序、文本资料、运算数据、图形表格等存在于计算机内部的信息。所谓非法操作，就是指一切没有按照操作规程或是超越授权范围而对计算机系统进行的操作。非法操作是对计算机系统造成损害的直接原因。<br>一般而言，计算机及网络犯罪对政府或企业造成的威胁有以下几方面。</p>
+<p><strong>（1）财务损失</strong><br>表现为直接损失如电子资金被盗用，间接损失如改善措施的花费。</p>
+<p><strong>（2）法律责任</strong><br>在制定安全策略及规范时必须考虑其他相关法律及规定。因为法律保护受害者，但也会保护犯罪。在没有适当安全策略及规范的情况下，若有重大违反安全事件发生时，也可能导致建设单位受到投资方的控告。</p>
+<p><strong>（3）信誉损失或竞争力丧失</strong><br>许多建设单位特别是政府、银行或投资公司为保持其竞争力或在行业中的地位，必须维持良好的信誉及公信力。不良访问安全问题会对这种信誉造成重要伤害，并导致企业形象受损并失去客户，重大的安全事故还有可能动摇公众信心。</p>
+<p><strong>（4）勒索</strong><br>机密数据一旦被入侵，可能会被勒索付款以换回此数据。</p>
+<p><strong>（5）恶意破坏</strong><br>有些罪犯作案并不是为了财务利益，他们只是想单纯造成破坏、报复或出于自我满足心理。<br>因此，对于各种形式的计算机及网络犯罪必须运用法律手段进行打击和惩处。而对子政府部门和企事业单位，应该认真研究和学习如何对出现的入侵事件采取相应的法律程序来维护自己的合法权益，减少由此带来的损失。</p>
+<h4 id="2-协助建设单位制定完善的安全策略"><a href="#2-协助建设单位制定完善的安全策略" class="headerlink" title="2. 协助建设单位制定完善的安全策略"></a>2. 协助建设单位制定完善的安全策略</h4><p>为使得安全管理落到实处并持续改进，关于信息安全管理策略的设计及目标包含以下各点。</p>
+<h5 id="1）来自领导的重视"><a href="#1）来自领导的重视" class="headerlink" title="1）来自领导的重视"></a>1）来自领导的重视</h5><p>通过对安全观念的宣传与贯彻，管理层必须表现出对安全策略支持到底的决心，尤其针对不了解其重要性的某些部门主管，更要加强培训，确保<strong>安全策略的全面整体落实</strong>。</p>
+<h5 id="2）控制原则"><a href="#2）控制原则" class="headerlink" title="2）控制原则"></a>2）控制原则</h5><p>系统数据的访问应该建立在“<strong>业务需要</strong>”的基础上，也就是<strong>有业务上需要者才能访问信息系统</strong>，并且只能访问应该使用的数据。</p>
+<h5 id="3）访问控制的授权与核准"><a href="#3）访问控制的授权与核准" class="headerlink" title="3）访问控制的授权与核准"></a>3）访问控制的授权与核准</h5><p>为方便用户访问信息系统，负责系统信息正确使用及报告的主管应提供给用户<strong>书面授权</strong>及使用方法。主管人员应该将此授权直接交给系统安全管理员，以避免此项授权被误用或篡改。</p>
+<h5 id="4）访问授权的核准与审查"><a href="#4）访问授权的核准与审查" class="headerlink" title="4）访问授权的核准与审查"></a>4）访问授权的核准与审查</h5><p>同其他<strong>控制点</strong>一样，访问控制应该<strong>定期审查以确定其有效性</strong>。组织结构或人员的改变，恶意破坏，甚至单纯人为疏忽均足以对访问控制的功能造成负面的影响。因此，安全管理员通过相关人员的协助应该定期（至少每年一次）检查评估访问控制规则，任何系统或数据访问超越“业务需要”的原则，均应禁止。</p>
+<h5 id="5）安全认知及宣传"><a href="#5）安全认知及宣传" class="headerlink" title="5）安全认知及宣传"></a>5）安全认知及宣传</h5><p>应通过<strong>培训、签订保密协议、安全规定明示、定期检查</strong>等对建设单位或承建单位的员工包括管理人员，持续宣传安全的重要性，牢固树立“安全第一”的意识。</p>
+<h5 id="6）要让每一位涉及信息系统安全的员工切实认识到以下内容"><a href="#6）要让每一位涉及信息系统安全的员工切实认识到以下内容" class="headerlink" title="6）要让每一位涉及信息系统安全的员工切实认识到以下内容"></a>6）要让每一位涉及信息系统安全的员工切实认识到以下内容</h5><ul>
+<li>熟知<strong>安全管理规定</strong>；</li>
+<li>建立<strong>安全意识</strong>，提高安全警觉，发现违反规定的可疑事件，主动报请安全管理员处理；</li>
+<li>将登录账号及密码放置在安全的地方，不得转借给他人使用；</li>
+<li>维持良好的安全管理习惯，如出门上锁、不随意泄露门锁号码、妥善保管钥匙、主动询问可疑的陌生人等。</li>
+</ul>
+<h5 id="7）监理工程师还要提醒建设单位"><a href="#7）监理工程师还要提醒建设单位" class="headerlink" title="7）监理工程师还要提醒建设单位"></a>7）监理工程师还要提醒建设单位</h5><p>非本单位员工接触有关的信息系统时也必须遵守安全管理规定，包括承建单位的服务人员、程序员、系统分析员、软硬件维修人员和服务厂商的人员等。同时还要注意不应泄露安全数据，提供给员工的安全策略手册不应刊登敏感度高的安全数据，如计算机密码文档名、技术安全架构、基础设施安全措施或系统软件上的盲点等内容。</p>
+<h4 id="3-建议建设单位设立安全管理员并明确其职责"><a href="#3-建议建设单位设立安全管理员并明确其职责" class="headerlink" title="3. 建议建设单位设立安全管理员并明确其职责"></a>3. 建议建设单位设立安全管理员并明确其职责</h4><p>设立专职或兼职的<strong>安全管理员</strong>，是为了确保系统日常的系统安全，管理员的任务就是负责建立、监控并执行安全管理规定。安全管理员的主要职责和权利有：</p>
+<p>（1）必须充分了解系统配置、系统组件本质的安全弱点与安全政策，针对潜在的威胁，安全管理员必须发现可能对系统造成影响的脆弱点。<br>（2）<strong>口令管理</strong>，包括其保护、分发、存储、字符长度与有效期。<br>（3）必须分配有足够的系统资源，以便能监控到包括操作系统更新及任何可能违反安全的行为。<br>（4）在<strong>安全策略</strong>的指导下，通过口令、用户<strong>无法改变的安全标记、会话控制、屏幕锁、软件与操作系统补丁更新</strong>，以及安全管理等机制建立或运行一个安全系统。<br>（5）必须通过<strong>监控</strong>正确的文档与站点及时掌握系统的潜在弱点，接受己发布的操作系统补丁与计算机应急响应组的建议。<br>（6）鉴于<strong>职责划分</strong>的原则，安全管理员不应负责或介入应用系统的开发与维护，也不应是系统用户、程序员、系统分析员或计算机操作员。</p>
+<h4 id="4-访问控制软件"><a href="#4-访问控制软件" class="headerlink" title="4. 访问控制软件"></a>4. 访问控制软件</h4><p>计算机技术的发展己使信息系统能够储存和管理大量重要数据，增加资源共享的能力，允许单一计算机模拟数台计算机形成虚拟系统的运转，允许很多用户通过终端设备和通信设备访问系统。</p>
+<p>目前许多因失误或未经授权的数据访问而遭受损失，原因可能在于即使采用了高度复杂的安全防护软件，但其系统安全管理员依然不能掌握系统安全潜在的漏洞；虽然系统安全软件可与操作系统、应用软件及系统软件相互配合，然而这些配合并不会自动生效；即使这些配合经启动生效后，也不能保证系统的安全控制机制能被不间断地实施。</p>
+<p><strong>访问控制软件</strong>可以解决上述问题。系统安全软件的功能在于禁止未经授权的数据访问，系统功能的调用及程序的使用、修改或变更，察觉或防范未经授权使用系统资源的企图。系统安全软件与操作系统互相配合，扮演所有系统安全的中心控制角色，在操作系统之上运作，提供管理数据访问的功能。</p>
+<h5 id="1）系统安全软件通常执行的工作"><a href="#1）系统安全软件通常执行的工作" class="headerlink" title="1）系统安全软件通常执行的工作"></a>1）系统安全软件通常执行的工作</h5><p>（1）对<strong>用户身份的验证</strong>；<br>（2）授权使用预先定义的资源；<br>（3）限制用户从特定终端设备访问数据；<br>（4）报告未经授权访问数据及程序的企图。</p>
+<h5 id="2）访问控制软件可以提供的功能"><a href="#2）访问控制软件可以提供的功能" class="headerlink" title="2）访问控制软件可以提供的功能"></a>2）访问控制软件可以提供的功能</h5><p>（1）用户在网络和子系统层面的<strong>登录验证</strong>；<br>（2）用户在应用程序和交易类别的验证；<br>（3）用户在<strong>数据库中的验证</strong>；<br>（4）用户在子系统数据层面的验证。</p>
+<h5 id="3）授权项目的分类"><a href="#3）授权项目的分类" class="headerlink" title="3）授权项目的分类"></a>3）授权项目的分类</h5><p><strong>授权</strong>是访问控制软件的最重要部分，有关授权的项目可以分为下列几类：</p>
+<p>（1）建立<strong>登录账户和用户授权</strong>使用的机制；<br>（2）<strong>限制</strong>某些特殊账号只能从某些特定的终端设备登录；<br>（3）在预定时间内的访问；<br>（4）从预先定义授权程序库中调用程序执行特定任务：<br>（5）建立访问的<strong>规则</strong>；<br>（6）建立<strong>个人账户管理和日志审计机制</strong>；<br>（7）数据文档和数据库变更的<strong>记录</strong>；<br>（8）登录事件的记录；<br>（9）<strong>记录用户的活动</strong>；<br>（10）记录数据库异常访问活动，监控违规事件；<br>（11）报告生成及事件通知的功能。</p>
+<p><strong>系统安全软件针对访问的处理方法</strong>有：</p>
+<ol>
+<li>用户必须向访问控制软件提供身份验证，如名字或账号。</li>
+<li>用户同时必须向系统安全软件验证是其本人。</li>
+<li>身份证明首先由系统安全软件确定用户是否合法，然后通过相关信息的验证来确定是其本人。</li>
+<li>认证的信息有记忆性信息，如名字、账号和密码；可识别的如识别卡和钥匙；个人特征如指纹、声音和签名。</li>
+</ol>
+<p>逻辑访问控制应该保护的计算机文件和场所有：数据、应用程序（包括测试版本和正式发布版本）、远程通信线路、程序库、密码库、临时的介质上存储的文件（U盘、磁盘、光盘、磁带等）、系统软件、访问控制软件、交易日志文件、旁路标签、操作员系统出口、拨号链路、数据字典或数据目录等。</p>
+<h4 id="5-逻辑安全的处理方法"><a href="#5-逻辑安全的处理方法" class="headerlink" title="5. 逻辑安全的处理方法"></a>5. 逻辑安全的处理方法</h4><p>监理工程师在对建设单位提出<strong>逻辑安全</strong>的处理方法建议时，主要考虑有以下因素：</p>
+<p>（1）<strong>验证技术</strong>，即身份认证的方法，设定的基本原则是：只有你知道的事情，如账号和密码；只有你拥有的东西，如身份证、工作证；只有你具有的特征，如指纹、声音、虹膜等；<br>（2）<strong>账号和密码</strong>，双层控制；<br>（3）<strong>访问日志</strong>；<br>（4）在线日志记录；<br>（5）生物特征安全访问控制；<br>（6）<strong>终端设备使用限制</strong>；<br>（7）控制拨号访问的回拨技术；<br>（8）限制并监控系统的安全旁路；<br>（9）<strong>数据保密分级</strong>；<br>（10）保密数据的防护，通过逻辑或物理访问控制来避免未授权人阅读或修改；<br>（11）设定访问控制的命名规则；<br>（12）<strong>安全测试</strong>等。</p>
+<h3 id="11-3-4-架构安全的信息网络系统"><a href="#11-3-4-架构安全的信息网络系统" class="headerlink" title="11.3.4 架构安全的信息网络系统"></a>11.3.4 架构安全的信息网络系统</h3><p>监理工程师在审议承建单位的信息系统工程安全架构设计方案时，依据建设单位的建设需求，根据有关信息系统安全的规范或标准对其评估和审计，并向建设单位提出具体的技术分析意见。在实施方案中，架构完整的安全支撑平台主要的关键性技术解决方案由以下几种安全方案或选型的组合而成。</p>
+<h4 id="1-局域网的安全VLAN"><a href="#1-局域网的安全VLAN" class="headerlink" title="1. 局域网的安全VLAN"></a>1. 局域网的安全VLAN</h4><p>局域网提供特定群体共同使用程序和数据的存储及获取。局域网的软件和操作必须提供这些程序及数据的安全。不幸的是，多数网络软件过于强调系统功能而忽视提供安全功能。</p>
+<h5 id="1）需要关注的风险要点"><a href="#1）需要关注的风险要点" class="headerlink" title="1）需要关注的风险要点"></a>1）需要关注的风险要点</h5><p>在监理工程师审议承建单位的<strong>局域网技术方案</strong>时需要关注的风险要点有：</p>
+<p>（1）由于未授权的<strong>变更</strong>导致数据和程序的完整性受损；<br>（2）由于<strong>无法维护版本控制</strong>而缺乏对现有数据的保护；<br>（3）由于缺少对用户有效的访问验证及潜在的威胁（如通过拨号连接非法访问局域网等）：<br>（4）<strong>病毒感染</strong>；<br>（5）由于没有遵守“需要知道”的授权原则，而导致数据存在不适当的暴露风险；<br>（6）侵犯软件版权（如使用盗版或使用超过许可用户数的软件）；<br>（7）非法进入（如模仿或伪装成一个合法的局域网用户）：<br>（8）内部用户的非法窃取（sniffing ） ；<br>（9）内部用户的电子欺骗（spoofing）；<br>（10）登录的资料被破坏。</p>
+<h5 id="2）有效的网络管理"><a href="#2）有效的网络管理" class="headerlink" title="2）有效的网络管理"></a>2）有效的网络管理</h5><p>对于局域网安全，较多依赖于软件产品、残品的版本及软件的安全实施。有效的<strong>网络安全管理</strong>有：</p>
+<p>（1）声明程序、文件及储存介质的所有权；<br>（2）限制访问时只能执行写保护；<br>（3）监理记录及文件锁定以防同时更新；<br>（4）强制用户执行账号与密码登录程序，包括密码长度、格式和定期更换的规则等。<br>因此，监理必须对局域网的构架有通盘的了解和掌握，具体的要点有：<br>（1）局域网的拓扑结构及网络设计；<br>（2）确认网络管理员的职责；<br>（3）了解网络用户的业务功能与网络安全有无冲突；<br>（4）协助建设单位建立网络的用户群；<br>（5）协助建设单位建立网络所使用的各种应用系统的整合设计与实施，确认与网络设计、技术支持、命名原则、数据安全等方面有关的工作程序及标准等。</p>
+<h4 id="2-C-S架构安全"><a href="#2-C-S架构安全" class="headerlink" title="2. C&#x2F;S架构安全"></a>2. C&#x2F;S架构安全</h4><p><strong>C&#x2F;S（客户&#x2F;服务器）架构系统</strong>在数据访问和处理上有很大风险。要有效保护C&#x2F;S架构环境，所有的访问点均需确认。在主机的应用程序中，集中式的处理技巧要求用户采取特定的路径利用所有的资源；而在分布式的环境中，存在多个访问路径，因为应用数据可能在服务器上，也可能在客户端，因此，必须个别检验这些路径以及相互的关系，以确保任何路径都被检查过。</p>
+<h5 id="1）监理工程师审核架构安全的有关方面"><a href="#1）监理工程师审核架构安全的有关方面" class="headerlink" title="1）监理工程师审核架构安全的有关方面"></a>1）监理工程师审核架构安全的有关方面</h5><p>为加强C&#x2F;S架构环境的安全，监理工程师应从以下几个方面审核架构的安全：</p>
+<p>（1）<strong>禁止使用软驱</strong>，以保护C&#x2F;S架构的数据或应用程序的安全。这种方式可以防止访问控制软件被突破，即无法做未经授权的访问。自动开机的批处理文件可以防止未经授权的用户突破登录访问安全管理。<br>（2）网络监控装置<strong>可用以侦查己知或未知用户的活动</strong>，这些装置可以辨别客户端的地址，做出相应的选择，如主动结束会话或找出未经授权的访问活动以供调查。然而，保障C&#x2F;S架构环境安全的方法是否有效主要取决于负责监控的管理者，由于这是一种检测性控制，如果网络管理员并没有负责任地对这些装置进行监控或维护，则完全无法对付未经授权的黑客。<br>（3）数据加密技术可帮助保护敏感性或重要数据不会被未经授权访问。<br>（4）<strong>通过认证系统</strong>可以在整个环境及逻辑设施中进行用户鉴别。其他方式如系统智能卡，使用智能型手持设备和解密技术去解开由C&#x2F;S架构系统所产生的加密。智能卡显示一个由系统产生的临时识别码，用户在登录后若要在C&#x2F;S架构系统中访问，则必须重新输入该临时识别码。<br>（5）使用应用<strong>系统访问控制程序</strong>，并将最终用户分为各个功能群组，限制用户只能执行其职责所需的功能，这将有利于访问控制管理。</p>
+<h5 id="2）-C-S的风险及相关问题"><a href="#2）-C-S的风险及相关问题" class="headerlink" title="2） C&#x2F;S的风险及相关问题"></a>2） C&#x2F;S的风险及相关问题</h5><p>传统的信息系统大多采用大型的中央主机系统，最近十多年C&#x2F;S架构技术逐渐成为中小型甚至大型组织的首选，C&#x2F;S架构技术的优势表现在可以让企业以更快的速度开发并制造产品和服务，但随之而来的问题是比传统的大型主机系统差得多的安全控制。因此，若不能有效预防或控制在安全控制上的缺陷，则企业有可能将面临更大的风险。</p>
+<p>监理工程师还应该提醒建设单位C&#x2F;S架构环境的风险及问题要从如下的方面予以考虑：</p>
+<p>（1）如果网络管理员未设定密码定期更新规则，则C&#x2F;S架构环境<strong>本身存在访问控制弱点</strong>。<br>（2）无论是自动或手动的变更控制和变更管理程序都可能会是<strong>弱点</strong>，主要原因是C&#x2F;S架构环境的变更控制工具复杂，而经验不足的人员不愿意使用这些工具以免<strong>自曝短处</strong>。<br>（3）<strong>网络服务中断</strong>可能会对企业有严重的影响。<br>（4）网络组件（硬件、软件、通信设备）过时。<br>（5）未经授权地使用调制解调器（同步或非同步）连接到其他网络。<br>（6）网络连接到<strong>公共电话交换网</strong>。<br>（7）不正确、未经授权或未经核准的改变系统或数据。<br>（8）<strong>未经授权</strong>访问机密数据、未经授权修改数据、业务中断及数据不完整或不正确的风险。<br>（9）在开发C&#x2F;S架构系统时往往<strong>不考虑应急计划</strong>。对于十分重要的系统，缺乏详尽的灾难备份和恢复计划。<br>（10）应急计划可能会对企业造成重大冲击。应用程序代码及数据不像主机系统那样会锁在安全的主机室中的一台机器上，信息系统工程监理工程师必须评估C&#x2F;S架构系统中所有部件的安全性。</p>
+<p>在将一个重要的应用程序由主机移到C&#x2F;S架构平台时，管理层必须清楚以上这些问题所预示的风险。</p>
+<h4 id="3-互联网的威胁和安全"><a href="#3-互联网的威胁和安全" class="headerlink" title="3. 互联网的威胁和安全"></a>3. 互联网的威胁和安全</h4><p>互联网的本质特征导致它极容易受到攻击。互联网可以使公共的或私人的各种不同网络与其他网络进行连接。互联网最初的设计目的是提供自由快速交换信息、数据文档的途径。然而，这种自由的代价就是黑客和病毒制造者企图可以攻击互联网及和互联网相连接的计算机，破坏者想侵犯他人的隐私，企图窃取含有敏感信息数据等等。因此对于信息系统监理来说，了解必要的风险及安全因素并进行相关控制就变得尤为重要。信息系统工程监理工程师必须评估以下几项以决定是否存在足够互联网安全控制：</p>
+<ul>
+<li>组织的互联网安全策略和程序；</li>
+<li>防火墙的安全控制；</li>
+<li>入侵检测系统的安全控制。</li>
+</ul>
+<h5 id="1）数据安全控制"><a href="#1）数据安全控制" class="headerlink" title="1）数据安全控制"></a>1）数据安全控制</h5><p>将<strong>数据加密</strong>可以减少数据在储存和传输时的风险。加密后，公司数据在互联网或其他网络上传输时是安全的。即使黑客窃取数据或数据落入未经授权者手中，但因为无法解密，没有任何意义。</p>
+<h5 id="2）攻击类型"><a href="#2）攻击类型" class="headerlink" title="2）攻击类型"></a>2）攻击类型</h5><p>来自互联网上的安全问题主要分成两大类：<strong>主动式攻击（active attacks ）和被动式攻击（passive attacks ）</strong>。</p>
+<p><strong>主动式攻击</strong>是指攻击者通过有选择的修改、删除、延迟、乱序、复制、插入数据等以达到其非法目的。主动式攻击可以归纳为中断、篡改、伪造三种。被动式攻击主要是指攻击者监听网络上传递的信息流，从而获取信息的内容，或仅仅希望得到信息流的长度、传输频率等数据。这两种攻击方式是各有所长，被动式攻击往往很难检测出来但很容易预防，而主动式攻击很难预防但却很容易检测出来，所以攻击者攻击时一般同时采取两种方式。</p>
+<p><strong>被动式攻击</strong>一般采用网络分析（network analysis）和窃听（eavesdropping）来收集信息。</p>
+<p>当收集到足够的信息后，黑客就会对目标系统发起攻击，意欲获取足够的控制权，这包括对数据或程序的未经授权的修改、进行拒绝服务攻击扩大取得的权限或窃取个人的敏感性信息。主动式攻击会影响到信息的真实性、身份的验证及网络安全参数的设定。通用的主动式攻击方法有暴力破解、假冒、互联网或Web服务的未授权访问、拒绝服务攻击、电子邮件炸弹与垃圾邮件攻击、电子邮件欺骗等。</p>
+<h5 id="3）互联网的安全管理"><a href="#3）互联网的安全管理" class="headerlink" title="3）互联网的安全管理"></a>3）互联网的安全管理</h5><p>为了建立一个有效的互联网安全控制，组织必须开发具有可操作性的信息系统安全管理框架。框架详细描述了公司的安全策略，安全程序及遵循的原则。例如，互联网资源的使用原则，它规定<strong>只有“业务需要”才有互联网资源使用权</strong>；确定哪些信息对外部用户有效；组织内部和外部哪些是可信网络，哪些是不可信网络；另外，还应该定义一些控制的支持过程。</p>
+<p>监理工程师协助建设单位并监督承建单位进行互联网的安全管理包括如下一些原则：</p>
+<p>（1）对基于互联网的Web应用的开发与设计应该<strong>定期进行风险评估</strong>：<br>（2）员工<strong>安全意识</strong>的养成与培训；<br>（3）开发和实施<strong>防火墙安全体系架构</strong>；<br>（4）开发和实施<strong>入侵检测系统</strong>：<br>（5）控制通过<strong>内部局域网拨号访问互联网</strong>；<br>（6）意外事件的发现、响应、遏制和修复；<br>（7）当发生变化时，安全控制指南的变更管理；<br>（8）员工办公环境的控制；<br>（9）监测未授权使用的行为，并通知最终用户事件的发生。</p>
+<h4 id="4-采用加密技术"><a href="#4-采用加密技术" class="headerlink" title="4. 采用加密技术"></a>4. 采用加密技术</h4><h5 id="1）加密的定义"><a href="#1）加密的定义" class="headerlink" title="1）加密的定义"></a>1）加密的定义</h5><p>加密是把数据（普通文本）变换为不可读形式（加密文本）的过程。这个变换过程按照一定的算法通过各种各样的替换和移位对信息进行加密。数据加密对网络通信或数据存储有很重要的意义，它能起到数据保密、身份验证、保持数据完整性、确认事件发生等作用。</p>
+<ul>
+<li>数据保密的意义是确保<strong>只有特定的人员能够得到那些数据</strong>。对数据进行加密是 最常见的保密法，只有掌握解密方法的人才能读出加密数据。</li>
+<li>身份验证是证明某人与他人所称的身份是否符合的过程，只有在对方提供了足 够证据的情况下，我们才能确认和相信他就是我们要找的人。</li>
+<li><strong>数据完整性</strong>的含义是数据没有在传输或保存期间被别人修改。常见的数据完整性检查手段是信息分类法。</li>
+</ul>
+<h5 id="2）加密算法、加密密钥和密钥长度"><a href="#2）加密算法、加密密钥和密钥长度" class="headerlink" title="2）加密算法、加密密钥和密钥长度"></a>2）加密算法、加密密钥和密钥长度</h5><p>加密算法是加密用于进行加密&#x2F;解密数据的运算规则。加密算法中使用的信息以确保加密或解密过程的惟一。</p>
+<p>与密码相似，用户需要使用正确的密钥访问或解密信息，错误的密钥不能解密信息。</p>
+<p>密钥规定了长度或位数。处理密钥所需要的开销和资源会随密钥长度的增加而迅速加大。</p>
+<h5 id="3）私钥密码机制和公钥密码机制"><a href="#3）私钥密码机制和公钥密码机制" class="headerlink" title="3）私钥密码机制和公钥密码机制"></a>3）私钥密码机制和公钥密码机制</h5><p><strong>（1）对称密钥加密</strong></p>
+<p>对称密钥加密是指发件人和收件人使用其共同拥有的单个密钥。这种密钥既用于加密，也用于解密，叫做机密密钥（也称为对称密钥或会话密钥）。对称密钥是加密大量数据的一种行之有效的方法。</p>
+<p>对称密钥加密有许多种算法，但所有这些算法都有一个共同的目的—以可还原的方式将明文（未加密的数据）转换为密文。密文使用加密密钥编码，对于没有密钥的任何人来说它都是没有意义的。由于对称密钥加密在加密和解密时使用相同的密钥，所以这种加密过程的安全性取决于是否存在未经授权的人获得了对称密钥，也就是它为什么也叫做机密密钥加密的原因。希望使用对称密钥加密通信的双方，在交换加密数据之前必须先安全地交换密钥。</p>
+<p>衡量对称算法优劣的主要尺度是其密钥的长度。密钥越长，在找到解密数据所需正确密钥之前必须测试的密钥数量就越多。需要测试的密钥越多，破解这种算法就越困难。有了好的加密算法和足够长的密钥，如果有人想在一段实际可行的时间内进行逆向转换，并从密文中推导出明文，从计算的角度来讲，这种做法是行不通的。</p>
+<p><strong>（2）不对称密钥加密</strong></p>
+<p>另一类加密方法叫做<strong>公钥加密</strong>，或者叫做不对称加密。这类加密方法需要用到两个密钥—一个公钥和一个私钥，这两个密钥在数学上是相关的。为了与对称密钥加密相对照，公钥加密有时也叫做不对称密钥加密。在公钥加密中，公钥可在通信双方之间公开传递，或在公用储备库中发布，但相关的私钥是保密的。只有使用私钥才能解密用公钥加密的数据，同样使用私钥加密的数据也只能用公钥解密。</p>
+<p>与对称密钥加密相似，公钥加密也有许多种算法。然而，对称密钥和公钥算法在设计上并无相似之处。尽管可以在程序内部使用一种对称算法替换另一种，但变化不大，因为它们的工作方式是相同的。而另一方面，不同公钥算法的工作方式却完全不同，因此它们不可互换。</p>
+<p>公钥算法的主要局限在于这种加密形式的速度相对较低。实际上，通常仅在关键时刻才使用公匙算法，如在实体之间用对称密匙时，或者在签署一封邮件时进行散列（散列是通过应用一种单向数学函数获得的一个定长结果）。将公匙加密与其他加密形式（如对称密匙加密）结合使用，可以优化性能。公匙加密提供了一种有效的方法，可用来把为大量数据执行对称加密时使用的机密密钥发送给某人，也可以将公钥加密与散列算法结合使用以生成数字签名。</p>
+<p>公钥算法的算法有多种。</p>
+<h5 id="4）数字签名和证书"><a href="#4）数字签名和证书" class="headerlink" title="4）数字签名和证书"></a>4）数字签名和证书</h5><p>在书面文件上签名是确认文件的一种手段。<strong>签名的作用</strong>有两点，一是因为自己的签名难以否认，从而确认文件已签署这一事实；二是因为签名不易仿冒，从而确定文件是真的这一事实。数字签名与书面文件签名有相同之处，采用数字签名，也能确认以下两点：信息是由签名者发送的；信息自签发到收到为止未曾作过任何修改。这样数字签名就可用来防止电子信息因易被修改而被人伪造，或冒用别人名义发送信息，或发出（收到）信件后又加以否认等情况发生。数字签名并非用“手书签名”的类型图形标志，它采用了双重加密的方法来实现防伪造和防抵赖。</p>
+<p>公钥证书通常简称为证书，用于在互联网（Internet ）、外联网（ixtranet）和内联网（ intranet）上进行身份验证并确保数据交换的安全。证书的颁发者和签署者就是众所周知的正书颁发机构CA。颁发证书的实体是证书的主体。</p>
+<p>公钥证书是以<strong>数字方式</strong>签名的声明，它将公钥的值与持有相应私钥的主体（个人、设备和服务）的身份绑定在一起。通过在证书上签名，CA可以核实与证书上公题相应的私题为证书所指定的主体所拥有。</p>
+<h4 id="5-网闸"><a href="#5-网闸" class="headerlink" title="5. 网闸"></a>5. 网闸</h4><p><strong>网闸</strong>，即<strong>安全隔离与信息交换系统</strong>，是新一代高安全度的企业级信息安全防护设备，它依托安全隔离技术为信息网络提供了更高层次的安全防护能力，不仅使得信息网络的抗攻击能力大大增强，而且有效地防范了信息外泄事件的发生。</p>
+<h5 id="1）网闸技术的发展过程"><a href="#1）网闸技术的发展过程" class="headerlink" title="1）网闸技术的发展过程"></a>1）网闸技术的发展过程</h5><p>网闸技术最早起源于以色列，通常在物理隔离的情况下要在外网和内网之间进行数据交换，一般是通过磁盘或其他存储设备进行人工的数据交换，而通过自动方式来模拟这种数据交换过程，其实就是网闸的雏形。现今，网闸实际的安全交换过程是先提取网络包中的应用数据，经安全审查后再完成数据交换，相对于人工的交换而言，整个过程是由软件自动完成的，并且增加了安全审查的过程，从而大大提高了交换效率。但是，由于整个交换过程是持续不断进行的，其实质是在网间形成了一个稳定的数据流，也就意味着在网间存在有逻辑上的连接，尽管网闸有了安全审查的过程，但是仍然不能彻底保证交换数据的安全性，因此，网闸无法满足物理隔离的要求，属于非物理隔离设备。</p>
+<p>第一代网闸的技术原理是利用单刀双掷开关使得内外网的处理单元分时存取共享存储设备来完成数据交换的，实现了在空气缝隙隔离（air gap）情况下的数据交换，安全原理是通过应用层数据提取与安全审查达到杜绝基于协议层的攻击和增强应用层安全的效果。</p>
+<p>第二代网闸正是在吸取了第一代网闸优点的基础上，创造性地利用全新理念的<strong>专用交换通道PET <strong>（Private Exchange Tunnel）技术，在不降低安全性的前提下能够完成内外网之间高速的数据交换，有效地克服了第一代网闸的弊端。第二代网闸的安全数据交换过程是通过专用</strong>硬件通信卡、私有通信协议和加密签名机制</strong>来实现的。虽然仍是通过应用层数据提取与安全审查达到杜绝基于协议层的攻击和增强应用层安全效果的，但却提供了比第一代网闸更多的网络应用支持，并且由于其采用的是专用高速硬件通信卡，使得处理能力大大提高，达到第一代网闸的几十倍之多，而私有通信协议和加密签名机制保证了内外处理单元之间数据交换的机密性、完整性和可信性，从而在保证安全性的同时，提供更好的处理性能，能够适应复杂网络对隔离应用的需求。</p>
+<h5 id="2）实现安全的信息交换"><a href="#2）实现安全的信息交换" class="headerlink" title="2）实现安全的信息交换"></a>2）实现安全的信息交换</h5><p>目前国内市场上的网络隔离设备大多是基于主机的，基于主机的网络隔离产品符合国家对内、外网物理隔离的要求，其不同网络之间的信息交换将完全依赖手工操作的方式，以磁盘等为中间介质进行。这种信息交换方式实时性差、效率很低，往往会造成信息传递的阻塞。同时，这种方式对所传递的数据的合法性、安全性没有可靠的技术措施保障，人为因素造成失误的可能性极大，仍然存在网络安全隐患。</p>
+<p>采用协议转换方式的隔离网闸产品，没有从理论上解释其安全性，以及如何实现物理隔离和网络断开，并且这些产品在实际使用中也出现了一些安全问题。</p>
+<p>目前，国内外已有非常成熟的网闸产品，如由中网公司研制开发的安全隔离和信息交换系统（X-Gap），能够较好地解决隔离断开和数据交换的难题。X-Gap中断了两个网络之间的链路连接、通信连接、网络连接和应用连接，在保证两个网络完全断开和协议中止的情况下，以非网络方式实现了数据交换。没有任何包、命令和TCPIIP协议（包括UDP和ICMP ）可以穿透X-Gap，它具有高安全、高带宽、高速度、高可用性的优点。此外，由于采用了SCSI （ Small Computer System Interface，小型计算机系统接口）技术，背板速率高达5Gb&#x2F;s，开关效率达到纳秒级，彻底解决了速度慢、效率低的问题。除此之外，SCSI控制系统本身具有不可编程的特性和冲突机制，形成简单的开关原理，从而彻底解决了网闸开关的安全性问题。</p>
+<p>隔离系统被认为是安全性最高的安全设备。它是在保证安全的情况下，尽可能支持信息交换，如果不安全就断开隔离。隔离技术被广泛地应用于专网和公网之间、内网和外网之间，在用户要求进行物理隔离，同时又需要实时地交换数据，解决物理隔离和信息交流的问题时，采用中网X-GAP系列产品则可以实现两网之间必要的“摆渡”，又保证不会有相互入侵的安全问题。</p>
+<h5 id="3）网闸的应用领域"><a href="#3）网闸的应用领域" class="headerlink" title="3）网闸的应用领域"></a>3）网闸的应用领域</h5><p>安全网闸适用于政府、军队、公安、银行、工商、航空、电力和电子商务等有高安全级别需求的网络，在电子政务中的典型应用是安装在政务外网和Internet之间或者是在政务内网划分不同的安全域，或者是安装在政务内网和其他不与Internet相连的网络之间。当然网闸也可用来隔离保护主机服务器或专门隔离保护数据库服务器。</p>
+<h4 id="6-防火墙"><a href="#6-防火墙" class="headerlink" title="6. 防火墙"></a>6. 防火墙</h4><p><strong>防火墙</strong>是指设置在不同网络（如可信任的企业内部网和不可信的公共网）或网络安全域之间的一系列部件的组合。它是不同网络或网络安全域之间信息的惟一出入口，能根据建设单位的安全政策控制（允许、拒绝、监测）出入网络的信息流，且本身具有较强的抗攻击能力。它是提供信息安全服务，实现网络和信息安全的基础设施。</p>
+<p>防火墙在物理上基本上是一台具有网关或路由功能的计算机或服务器。在逻辑上，防火墙完成了<strong>网络通信的限制、分离和分析功能</strong>，有效地监控了内部网和Internet之间的任何活动，保证了内部网络的安全。</p>
+<p>防火墙作为主要的安全产品来说，技术比较成熟，产品较多，对于防火墙的分类方式比较烦杂。基本上有以下几种分类方式。</p>
+<ul>
+<li>按照采用的防御技术方式分类，可以分为包过滤防火墙、应用网关防火墙和复 合防火墙。</li>
+<li>按照防火墙存在形式分类，可以分为硬件防火墙、软件防火墙和软硬结合防火墙。</li>
+<li>按照应用对象分类，可以分为企业级防火墙和个人防火墙。</li>
+<li>按照支持网络吞吐能力分类，可以分为百兆防火墙和千兆防火墙。</li>
+</ul>
+<h4 id="7-入侵检测系统"><a href="#7-入侵检测系统" class="headerlink" title="7. 入侵检测系统"></a>7. 入侵检测系统</h4><p>入侵行为主要是指<strong>对系统资源的非授权使用</strong>，可以造成系统数据的丢失和破坏、系统拒绝服务等危害。</p>
+<p>入侵检测通过对计算机网络或计算机系统中的若干关键点收集信息并进行分析，从中发现网络或系统中是否有违反安全策略的行为和被攻击的迹象。进行入侵检测的软件与硬件的组合就是入侵检测系统。</p>
+<p><strong>入侵检测系统执行的主要任务</strong>包括：</p>
+<p>（1）监视、分析用户及系统活动；<strong>审计系统构造和弱点</strong>；<br>（2）识别、反映已知进攻的活动模式，向相关人士报警；<br>（3）统计分析异常行为模式；<br>（4）评估重要系统和数据文件的完整性；<br>（5）审计、跟踪管理操作系统，识别用户违反安全策略的行为。</p>
+<h5 id="1）入侵检测步骤"><a href="#1）入侵检测步骤" class="headerlink" title="1）入侵检测步骤"></a>1）入侵检测步骤</h5><p>入侵检测一般分为三个步骤：<strong>信息收集、数据分析和响应</strong>。</p>
+<p>信息收集的内容包括系统、网络、数据及用户活动的状态和行为。入侵检测利用的信息一般来自系统日志、目录以及文件中的异常改变、程序执行中的异常行为及物理形式的入侵信息。</p>
+<p>数据分析是入侵检测的核心。它首先构建分析器，把收集到的信息经过预处理，建立一个行为分析引擎或模型，然后向模型中植入时间数据，在知识库中保存植入数据的模型。数据分析一般通过模式匹配、统计分析和完整性分析三种手段进行。前两种方法用于实时入侵检测，而完整性分析则用于事后分析。可用五种统计模型进行数据分析：操作模型、方差、多元模型、马尔柯夫过程模型和时间序列分析。统计分析的最大优点是可以学习用户的使用习惯。</p>
+<p>入侵检测系统在发现入侵后会及时做出响应，包括切断网络连接、记录事件和报警等。响应一般分为主动响应（阻止攻击或影响进而改变攻击的进程）和被动响应（报告和记录所检测出的问题）两种类型。主动响应由用户驱动或系统本身自动执行，可对入侵者采取行动（如断开连接）、修正系统环境或收集有用信息；被动响应则包括告警和通知、简单网络管理协议（SNMP ）陷阱和插件等。另外，还可以按策略配置响应，可分别采取立即、紧急、适时、本地的长期和全局的长期等行动。</p>
+<h5 id="2）入侵检测系统的分类"><a href="#2）入侵检测系统的分类" class="headerlink" title="2）入侵检测系统的分类"></a>2）入侵检测系统的分类</h5><p>基于<strong>主机</strong>的入侵检测系统，其输入数据来源于系统的审计日志一般只能检测该主机上发生的入侵。</p>
+<p>基于<strong>网络</strong>的入侵检测系统，其输入数据来源于网络的信息流，能够检测该网段上发生的网络入侵。</p>
+<p>分布式入侵检测系统，能够同时分析来自主机系统审计日志和网络数据流的入侵检测系统，系统由多个部件组成，采用分布式结构。</p>
+<p>另外，入侵检测系统还有其他一些分类方法。如根据布控物理位置可分为基于网络边界（防火墙、路由器）的监控系统、基于网络的流量监控系统以及基于主机的审计追踪监控系统；根据建模方法可分为基于异常检测的系统、基于行为检测的系统、基于分布式免疫的系统；根据时间分析可分为实时入侵检测系统、离线入侵检测系统。</p>
+<h5 id="3）入侵检测系统的检测方法"><a href="#3）入侵检测系统的检测方法" class="headerlink" title="3）入侵检测系统的检测方法"></a>3）入侵检测系统的检测方法</h5><p>静态配置分析通过检查系统的当前系统配置，诸如系统文件的内容或者系统表，来检查系统是否己经或者可能会遭到破坏。静态是指检查系统的静态特征（系统配置信息），而不是系统中的活动。</p>
+<p>异常性检测技术是一种在不需要操作系统及其防范安全性缺陷专门知识的情况下，就可以检测入侵者的方法，同时它也是检测冒充合法用户的入侵者的有效方法。但是，在许多环境中，为用户建立正常行为模式的特征轮廓以及对用户活动的异常性进行报警的门限值的确定都是比较困难的事，所以仅使用异常性检测技术不可能检测出所有的入侵行为。</p>
+<p>基于行为检测方法是通过检测用户行为中那些与己知入侵行为模式类似的行为、那些利用系统中缺陷或间接违背系统安全规则的行为，来判断系统中的入侵活动。</p>
+<p>基于行为的入侵检测系统只是在表示入侵模式（签名）的方式，以及在系统的审计中检查入侵签名的机制上有所区别，主要可以分为基于专家系统、基于状态迁移分析和基于模式匹配等几类。这些方法的主要局限在于，只是根据已知的入侵序列和系统缺陷模式来检测系统中的可疑行为，而不能检测新的入侵攻击行为以及未知的、潜在的系统缺陷。</p>
+<h4 id="8-漏洞扫描"><a href="#8-漏洞扫描" class="headerlink" title="8. 漏洞扫描"></a>8. 漏洞扫描</h4><p>安全漏洞扫描通常都是借助于特定的漏洞扫描器完成的。漏洞扫描器是一种自动检测远程或本地主机安全性弱点的程序。通过使用漏洞扫描器，系统管理员能够发现所维护信息系统存在的安全漏洞，从而在信息系统网络安全保卫工作中做到“有的放矢”，及时修补漏洞，构筑坚固的安全长城。<br>按常规标准，可以将漏洞扫描器分为两种类型：</p>
+<p>主机漏洞扫描器（Host Scanner），指在系统本地运行检测系统漏洞的程序，如著名的COPS、tripewire、tiger等自由软件。</p>
+<p>网络漏洞扫描器（Network Scanner），指基于网络远程检测目标网络和主机系统漏洞的程序，如Satan、 ISS Internet Scanner等。</p>
+<h4 id="9-病毒防范"><a href="#9-病毒防范" class="headerlink" title="9. 病毒防范"></a>9. 病毒防范</h4><p>病毒是一种具有自我复制能力的程序。目前，许多计算机病毒都具有特定的功能，而远非仅仅是自我复制。其功能（常称为PAYLOAD）可能无害，如只是在计算机的监视器中显示消息；也可能有害，如毁坏系统硬盘中所存储的数据，一旦被触发器（如特定的组合键击、特定的日期或预定义操作数）触发，就会引发病毒。</p>
+<p>随着计算机技术的不断发展，病毒也变得越来越复杂和高级。最近几年，病毒的花样层出不穷，如宏病毒和变形病毒。变形病毒每次感染新文件时都会发生变化，因此显得神秘莫测。只要反病毒软件搜索到病毒的“标记”（病毒所特有的代码段），那么，反病毒软件也能检测到每次感染文件就更改其标记的变形病毒。宏病毒主要感染文档和文档模板。几年前，文档文件都不含可执行代码，因此不会受病毒的感染，现在，应用软件，如Microsoft Word和Microsoft Excel，已经嵌入了宏命令，病毒就可以通过宏语言来感染由这些软件创建的文档。</p>
+<p>由于Internet的迅快发展，将文件附加在电子邮件中的能力不断提高，以及世界对计算机的依赖程度不断提高，使得病毒的扩散速度也急骤提高，受感染的范围越来越广，病毒的感染方式也由主要从软盘介质感染转到了从网络服务器或Internet感染。同样据NCSA调查，在1996年只有21%的病毒是通过电子邮件、服务器或Internet下载来感染的，到1997年，这一比例就达到52%，目前已达到了80%以上。</p>
+<p><strong>多层病毒防御体系</strong><br>通常情况下，信息网络系统中采取的安全措施主要考虑外部网络安全性，但由于病毒的极大危害及特殊性，网络用户可能会受到来自于多方面的病毒威胁，包括来自Internet网关上、与各级单位连接的网段上，为了免受病毒所造成的损失，在内部网络部署防病毒系统也是必要的，即多层的病毒防卫体系。所谓多层病毒防卫体系，是指在建设单位的每个工作站上，即客户端都要安装反病毒软件，在服务器上要安装基于服务器的反病毒软件，在Internet网关上要安装基于Internet网关的反病毒软件。</p>
+<p>根据统计，50%以上的病毒是通过软盘进入系统，有超过20%是通过网络下载文档感染，另外有26%是经电子邮件的附件所感染。</p>
+<p>病毒防范是一项综合性的防护措施。监理工程师可以根据具体的建设情况和建设单位具体应用要求加以分析和审核，并提出有针对性的具体建议。</p>
+<h3 id="11-3-5-数据备份与灾难恢复的安全管理"><a href="#11-3-5-数据备份与灾难恢复的安全管理" class="headerlink" title="11.3.5 数据备份与灾难恢复的安全管理"></a>11.3.5 数据备份与灾难恢复的安全管理</h3><h4 id="1-数据备份与灾难恢复的意义"><a href="#1-数据备份与灾难恢复的意义" class="headerlink" title="1. 数据备份与灾难恢复的意义"></a>1. 数据备份与灾难恢复的意义</h4><p>许多事件都可能造成业务中断，从系统内部故障和操作错误到各种环境灾难等，由此引起的损失也是屡见不鲜，因此需要定期进行严格的数据备份工作和相应的灾难恢复计划。</p>
+<h5 id="1）数据备份的意义"><a href="#1）数据备份的意义" class="headerlink" title="1）数据备份的意义"></a>1）数据备份的意义</h5><p>分析网络系统环境中数据被破坏的原因，主要有以下几个方面：</p>
+<ul>
+<li>自然灾害，如水灾、火灾、雷击、地震等造成计算机系统的破坏，导致存储数据被破坏或完全丢失；</li>
+<li>系统管理员及维护人员的误操作；</li>
+<li>计算机设备故障，其中包括存储介质的老化、失效：</li>
+<li>病毒感染造成的数据破坏；</li>
+<li>Internet上“黑客”的侵入和来自内部网的蓄意破坏等。</li>
+</ul>
+<p>近几年来，国内网络系统的规划和设计不断推陈出新，在众多网络方案中，通常对数据的存储和备份管理的重要性重视不够，至少在方案中提及不多，甚至忽略。当网络建成运行后，缺乏可靠的数据保护措施，等到出现事故后才来弥补。可以说，网络设计方案中如果没有相应的数据存储备份和恢复的解决方案，就不能算是完整的网络系统方案。计算机系统不是永远可靠的。</p>
+<h5 id="2）灾难恢复的意义"><a href="#2）灾难恢复的意义" class="headerlink" title="2）灾难恢复的意义"></a>2）灾难恢复的意义</h5><p>降低风险，保证在发生各种不可预料的故障、破坏性事故或其他灾难情况下，能够持续服务，确保业务系统的不间断运行，降低各种损失。</p>
+<p>在遇到灾难袭击时，最大限度地保护数据的实时性、完整性和一致性，降低数据的损失，快速恢复系统的操作、应用和数据。<br>提供各种恢复策略的选择，尽量减少数据损失和恢复时间。</p>
+<h4 id="2-数据备份的策略与方式"><a href="#2-数据备份的策略与方式" class="headerlink" title="2.数据备份的策略与方式"></a>2.数据备份的策略与方式</h4><h5 id="1）备份策略的选择"><a href="#1）备份策略的选择" class="headerlink" title="1）备份策略的选择"></a>1）备份策略的选择</h5><p>备份与恢复是一种数据安全策略，通过备份软件把数据备份到磁带上：在原始数据丢失或遭到破坏的情况下，利用备份数据把原始数据恢复出来，使系统能够正常工作。</p>
+<p><strong>（1）备份策略</strong> ▲ 考点</p>
+<ul>
+<li><strong>全备份</strong>，将系统中所有的数据信息全部备份；</li>
+<li><strong>差分备份</strong>，只备份上次备份后系统中变化过的数据信息；</li>
+<li><strong>增量备份</strong>，只备份上次完全备份后系统中变化过的数据信息；</li>
+<li><strong>备份介质轮换</strong>，避免因备份介质过于频繁地使用，以提高备份介质的寿命。</li>
+</ul>
+<p>理想的备份系统是全方位、多层次的。例如，使用硬件备份来防止硬件故障；如果由于软件故障或人为误操作造成了数据的逻辑损坏，则使用软件方式和手工方式结合的方法恢复系统。这种结合方式构成了对系统的多级防护，不仅能够有效地防止物理损坏，还能够彻底防止逻辑损坏。理想的备份系统成本太高，不易实现。在设计备份方案时，我们往往只选用简单的硬件备份措施，而将重点放在软件备份措施上，用高性能的备份软件来防止逻辑损坏和物理损坏。</p>
+<p><strong>（2）数据备份与恢复技术通常涉及的几个方面</strong></p>
+<ul>
+<li>存储设备：磁盘阵列、磁带、光盘、SAN设备</li>
+<li>存储优化：DAS、 NAS、 SAN</li>
+<li>存储保护：磁盘阵列、双机容错、集群、备份与恢复</li>
+<li>存储管理：文件与卷管理、复制、SAN管理</li>
+<li>备份与恢复技术</li>
+</ul>
+<h5 id="2）备份方式的选择"><a href="#2）备份方式的选择" class="headerlink" title="2）备份方式的选择"></a>2）备份方式的选择</h5><p><strong>（1）硬件备份</strong><br>硬件备份是指用冗余的硬件来保证系统的连续运行。比如磁盘镜像、磁盘阵列、双机容错等方式。</p>
+<p><strong>磁盘镜像</strong></p>
+<p>简单地讲，磁盘镜像（mirroring）就是一个原始的设备虚拟技术，它的原理是：系统产生的每个I&#x2F;O （输入&#x2F;输出）操作都在两个磁盘上执行，而两个磁盘看起来就像一个磁盘一样。有三种方式可以实现磁盘镜像：运行在主机系统的软件，外部磁盘子系统和主机I&#x2F;O控制器。第一种方式是软件方式，而后两种主要是硬件实现方式。</p>
+<p><strong>磁盘阵列</strong></p>
+<p>磁盘阵列（disk array）分为软阵列（software raid）和硬阵列（hardware raid）两种。软阵列即通过软件程序并由计算机的CPU提供运行能力所成。由于软件程序不是一个完整系统，它只能提供最基本的RAID （Redundant Array of Independent Prive，独立磁盘冗余阵列）容错功能。硬阵列是由独立操作的硬件提供整个磁盘阵列的控制和计算功能，不依靠系统的CPU资源。由于硬阵列是一个完整的系统，所有需要的功能均可以做进去，所以硬阵列所提供的功能和性能均比软阵列好，而且，如果你想把系统也做到磁盘阵列中，硬阵列是惟一的选择。</p>
+<p>冗余是采用多个设备同时工作，当其中一个设备失效时，其他设备能够接替失效设备继续工作的体系。在PC服务器上，通常在磁盘子系统、电源子系统采用冗余技术。</p>
+<p><strong>双机容错</strong></p>
+<p>双机容错是计算机应用系统稳定、可靠、有效、持续运行的重要保证。它通过系统冗余的方法解决计算机应用系统的可靠性问题，并具有安装维护简单、稳定可靠、监测直观等优点。当一台主机出现故障，双机容错软件可及时启动另一台主机接替原主机任务，采用智能型磁盘阵列可保证数据永不丢失，采用双机容错软件可保证系统永不停机，保证数据永不丢失和系统永不停机，保证了用户数据的可靠性和系统的持续运行。它的基本架构共分两种模式：双机互备援（dual active）模式和双机热备份（hot standby ）模式。</p>
+<p>硬件备份的方式具有以下特点：如果主硬件损坏，后备硬件马上能够接替其工作，这种方式可以有效地防止硬件故障，但无法防止数据的逻辑损坏。当逻辑损坏发生时，硬件备份只会将错误复制一遍，无法真正保护数据。硬件备份的作用实际上是保证系统在出现故障时能够连续运行，更应称为硬件容错。</p>
+<p><strong>（2）软件备份</strong></p>
+<p>软件备份是指将系统数据保存到其他介质上，当出现错误时可以将系统恢复到备份时的状态。由于这种备份是由<strong>软件来完成</strong>的，所以称为软件备份。当然，用这种方法备份和恢复都要花费一定时间。但这种方法<strong>可以完全防止逻辑损坏</strong>，因为备份介质和计算机系统是分开的，错误不会复写到介质上。这就意味着，只要保存足够长时间的历史数据，就能够恢复正确的数据。</p>
+<p><strong>（3）人工备份</strong></p>
+<p>人工级的备份最为原始，也最简单和有效。但用手工方式从头恢复所有数据，<strong>耗费的时间过长</strong>。</p>
+<h5 id="3）灾难恢复的策略-▲"><a href="#3）灾难恢复的策略-▲" class="headerlink" title="3）灾难恢复的策略 ▲"></a>3）灾难恢复的策略 ▲</h5><p>灾难恢复方案主要包括灾难备份计划和灾难恢复计划。一方面要采用先进的备份软、硬件，保证快速、有效地进行数据备份，另一方面还应该制定方便、快捷的灾难恢复措施。</p>
+<p>灾难有时是不可避免的，关键是在灾难发生时如何有效地恢复系统。灾难恢复系统可根据操作方式分为以下三种，其达到的效果各有所不同。</p>
+<p><strong>（1）全自动恢复系统</strong></p>
+<p>它配合区域集群等高可靠性软件可在灾害发生时自动实现：<strong>主应用端的应用切换到远程的副应用端</strong>，并把主应用端的数据切换到远程的副应用端。它在主应用端修复后，把在副应用端运行的应用，返回给主应用端，操作非常简单。在灾害发生时全自动恢复系统可达到不中断响应的切换，很好地保证了重要应用的继续性。这种方法的优点是，大大地减少了系统管理员在灾害发生后的工作量。缺点是，一些次要因素，如<strong>服务器死机、通信联络中断</strong>等，也随时有可能引发主生产系统切换到副应用端的操作。</p>
+<p><strong>（2）手动恢复系统</strong></p>
+<p>在这种应用中，如果主应用端全部被破坏掉，在副应用端利用手动方法把应用加载到服务器上，并且手动完成将主应用端的数据切换到远程的副应用端的操作，以继续开展业务处理。这种方法的优点是，整个系统的安全性非常好，不会因为服务器或网卡损坏而发生误切换。缺点是，会产生一段时间的<strong>应用中断</strong>。</p>
+<p><strong>（3）数据备份系统</strong></p>
+<p>在这种系统中，系统将主应用端的数据实时地备份到远地的存储器中。这样，一旦主应用端的存储设备遭到损坏时，远程的存储器中会<strong>保留事故发生前写入本地存储器的所有数据</strong>，使丢失数据造成的损失降到最低点。当主应用端的存储器恢复正常，并将远地存储器的数据回装入本地存储器之后，应用可恢复到故障前的状态。这个时间差异取决于服务器的缓存中丢失了多少数据。与上述两种相比，此方法<strong>恢复系统正常应用所用时间最长，但成本最低</strong>。</p>
+<h5 id="4）监理单位法"><a href="#4）监理单位法" class="headerlink" title="4）监理单位法"></a>4）监理单位法</h5><p><strong>（1）建议建设单位制定灾难恢复计划</strong></p>
+<p>为有效进行灾难恢复，需要编制灾难恢复计划。有效地制定灾难恢复计划必须和商业优先权以及现有的IT基础及预算相配合。灾难恢复计划的目的是能够保证在灾难发生时，迅速安装计算机系统，尽快恢复操作，重新开展业务。此外，由于系统安装的资源通常不断更新，如开发了新的应用、现有系统的改进、人员的离职、新硬件的获取等，也要求恢复计划随之更新。维护恢复计划的目的是减少灾难恢复过程中决策的不确定性，也减少对灾难恢复团队人员的依赖。灾难恢复计划应该是书面材料，它包括如下内容：</p>
+<ul>
+<li>鉴别关键应用，确定灾难恢复计划的使命；</li>
+<li>数据的备份（<strong>全部备份、差分备份或增量备份</strong>）；</li>
+<li><strong>热站、冷站或温站</strong>；</li>
+<li>灾难恢复计划的测试或培训；</li>
+<li>指定灾难恢复计划负责人；</li>
+<li>操作系统、设施和文件的备份；</li>
+<li>紧急电话号码列表；</li>
+<li>保险；</li>
+<li>通信计划；</li>
+<li>信息系统和操作文档；</li>
+<li>替代工作站点的雇员配置计划；</li>
+<li>水与食品的供应；</li>
+<li>关键人员职位的备份；</li>
+<li>软硬件清单；</li>
+<li>采用手工部分对自动步骤进行备份；</li>
+<li>与员工签订协议。</li>
+</ul>
+<p><strong>（2）灾难恢复计划的监理工作</strong></p>
+<p>在对灾难恢复计划进行监理时，需要强调以下几点：</p>
+<ul>
+<li>获得<strong>管理层的支持</strong>。这一点非常重要，因为所有的资金投入都要得到高级管理层的通过。高级管理层的介入可以确保灾难发生时能够从他们那里得到思想和财政上的支持。</li>
+<li>召开一次<strong>解决方案研讨会</strong>，设计组织独有的恢复解决方案并提出项目实现计划，探讨如何实施在解决方案研讨会中所提出的项目计划。</li>
+<li><strong>选定负责人</strong>。潜在的人选包括业务主管、数据中心主管甚至是基础设施管理人员。</li>
+<li>进行业务影响分析，鉴别关键的业务过程，评估重要恢复点和恢复时间目标以及IT环境。并围绕组织所有的关键部分制定计划，包括人员、设备、连通性、数据、应用、访问等。</li>
+<li>评定保持业务持续性的战略。这项评定包括公司内部有代表性的远程站点和外部供应商提供的冷站。</li>
+<li>进行恢复功能测试和灾难恢复模拟，保证在组织所规定的时间内完成恢复，并进行评审。</li>
+<li>一旦<strong>计划制定</strong>，组织全体人员都应熟悉此项计划，便于灾难发生时，每个人都能迅速各司其职。</li>
+<li>提供全面的备援中心设施，包括UPS、备份设备、消防系统以及烟雾&#x2F;水探测系统。并确保备援中心安全，提供进入机房的身份鉴定、安全保卫措施，并确保备援中心可用性和现场操作支持。</li>
+<li>灾难恢复计划应以文档记录，在工作人员之间共享，并应该进行灾难计划的测试以及升级。保证计划在灾难发生时必须是易于访问和执行。</li>
+<li>在系统上装载和运行必需的工具来衡量恢复解决方案的要求。</li>
+<li>保证解决方案中的所有硬件、软件和网络部件的<strong>可用性</strong>。</li>
+<li>提供<strong>可扩展</strong>的容量来满足组织的预期工作负荷。</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/8908.html" title="笔记-信息安全管理-11.3 信息系统安全管理分析与对策">https://www.zenwu.site/posts/8908.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 信息安全管理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/6803.html" rel="prev" title="笔记-合同管理-10.6 知识产权保护管理">
+                  <i class="fa fa-angle-left"></i> 笔记-合同管理-10.6 知识产权保护管理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/7bee.html" rel="next" title="笔记-信息管理-12.1 信息工程信息与信息管理">
+                  笔记-信息管理-12.1 信息工程信息与信息管理 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

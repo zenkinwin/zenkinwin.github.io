@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="原文GitHub插件：hexo-qiniu-sync使用插件，与github+hexo+nexT结合，图片上存到七牛，此文转载GitHub上说明。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github-Hexo-Qiniu-Sync">
+<meta property="og:url" content="https://www.zenwu.site/posts/e76.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="原文GitHub插件：hexo-qiniu-sync使用插件，与github+hexo+nexT结合，图片上存到七牛，此文转载GitHub上说明。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2017-02-09T01:46:58.000Z">
+<meta property="article:modified_time" content="2017-02-09T01:46:58.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="Github">
+<meta property="article:tag" content="hexo">
+<meta property="article:tag" content="七牛">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/e76.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/e76.html","path":"posts/e76.html","title":"Github-Hexo-Qiniu-Sync"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Github-Hexo-Qiniu-Sync | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%A0%87%E7%AD%BE"><span class="nav-text">使用标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Demo"><span class="nav-text">Demo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E8%A1%8C"><span class="nav-text">命令行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E9%9D%99%E6%80%81%E8%B5%84%E6%BA%90"><span class="nav-text">同步静态资源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-text">小技巧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="nav-text">常见问题</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/e76.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Github-Hexo-Qiniu-Sync | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Github-Hexo-Qiniu-Sync
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2017-02-09 09:46:58" itemprop="dateCreated datePublished" datetime="2017-02-09T09:46:58+08:00">2017-02-09</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">前端技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<p>原文GitHub插件：<br><a target="_blank" rel="noopener" href="https://github.com/gyk001/hexo-qiniu-sync">hexo-qiniu-sync</a><br>使用插件，与github+hexo+nexT结合，图片上存到七牛，此文转载GitHub上说明。</p>
+ <span id="more"></span>
+
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在你的hexo主目录下运行以下命令进行安装：</p>
+<figure class="highlight fortran"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-qiniu-<span class="built_in">sync</span> --<span class="keyword">save</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>添加插件配置信息到 <code>_config.yml</code> 文件中:</p>
+<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">plugins:</span></span><br><span class="line">  - hexo-qiniu-sync</span><br><span class="line"></span><br><span class="line"><span class="meta">#七牛云存储设置</span></span><br><span class="line"><span class="meta">##offline       是否离线. 离线状态将使用本地地址渲染</span></span><br><span class="line"><span class="meta">##sync          是否同步</span></span><br><span class="line"><span class="meta">##bucket        空间名称.</span></span><br><span class="line"><span class="meta">##access_key    上传密钥AccessKey</span></span><br><span class="line"><span class="meta">##secret_key    上传密钥SecretKey</span></span><br><span class="line"><span class="meta">##secret_file   秘钥文件路径，可以将上述两个属性配置到文件内，防止泄露，json格式。绝对路径相对路径均可</span></span><br><span class="line"><span class="meta">##dirPrefix     上传的资源子目录前缀.如设置，需与urlPrefix同步 </span></span><br><span class="line"><span class="meta">##urlPrefix     外链前缀.</span></span><br><span class="line"><span class="meta">##up_host      上传服务器路径,如选择华北区域的话配置为http:<span class="comment">//up-z1.qiniu.com</span></span></span><br><span class="line"><span class="meta">##local_dir     本地目录.</span></span><br><span class="line"><span class="meta">##update_exist  是否更新已经上传过的文件(仅文件大小不同或在上次上传后进行更新的才会重新上传)</span></span><br><span class="line"><span class="meta">##image/js/css  子参数folder为不同静态资源种类的目录名称，一般不需要改动</span></span><br><span class="line"><span class="meta">##image.extend  这是个特殊参数，用于生成缩略图或加水印等操作。具体请参考http:<span class="comment">//developer.qiniu.com/docs/v6/api/reference/fop/image/ </span></span></span><br><span class="line"><span class="meta">##              可使用基本图片处理、高级图片处理、图片水印处理这3个接口。例如 ?imageView2/2/w/500 即生成宽度最多500px的缩略图</span></span><br><span class="line"><span class="symbol">qiniu:</span></span><br><span class="line"><span class="symbol">  offline:</span> false</span><br><span class="line"><span class="symbol">  sync:</span> true</span><br><span class="line"><span class="symbol">  bucket:</span> bucket_name</span><br><span class="line"><span class="symbol">  secret_file:</span> sec/qn.json or C:</span><br><span class="line"><span class="symbol">  access_key:</span> AccessKey</span><br><span class="line"><span class="symbol">  secret_key:</span> SecretKey</span><br><span class="line"><span class="symbol">  dirPrefix:</span> static</span><br><span class="line"><span class="symbol">  urlPrefix:</span> http:<span class="comment">//bucket_name.qiniudn.com/static</span></span><br><span class="line"><span class="symbol">  up_host:</span> http:<span class="comment">//upload.qiniu.com</span></span><br><span class="line"><span class="symbol">  local_dir:</span> static</span><br><span class="line"><span class="symbol">  update_exist:</span> true</span><br><span class="line"><span class="symbol">  image:</span> </span><br><span class="line"><span class="symbol">    folder:</span> images</span><br><span class="line"><span class="symbol">    extend:</span> </span><br><span class="line"><span class="symbol">  js:</span></span><br><span class="line"><span class="symbol">    folder:</span> js</span><br><span class="line"><span class="symbol">  css:</span></span><br><span class="line"><span class="symbol">    folder:</span> css</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>这里对配置中的几个需要注意的参数进行说明：</strong></p>
+<ul>
+<li><p><code>offline</code> 参数：</p>
+<blockquote>
+<p>如果要使用同步到七牛空间的静态资源，请设置为 <code>false</code>。如果只想浏览在本地的静态资源文件，则设置为 <code>true</code>。</p>
+</blockquote>
+</li>
+<li><p><code>sync</code> 参数：</p>
+<blockquote>
+<p>如果你想关掉七牛同步，将此参数设置为false即可，不过一般用不到修改这个参数。</p>
+</blockquote>
+</li>
+<li><p><code>dirPrefix</code> 参数：</p>
+<blockquote>
+<p>将资源上传到七牛空间内这个目录下(说是目录会容易理解点)，默认为 <code>static</code> 目录。</p>
+</blockquote>
+</li>
+<li><p><code>urlPrefix</code> 参数：</p>
+<blockquote>
+<p>七牛空间地址的前缀，会按默认格式自动生成地址，所以此参数<strong>可省略</strong>。<br>默认格式为 <code>http://bucket_name.qiniudn.com/static</code> ，如果你的七牛空间使用自定义域名或域名不是此格式的，请配置此参数。<br>当你设置了 <code>dirPrefix</code> 参数后，如<code>static</code>。则此url地址必须加上目录后缀 <code>/static</code> ， 即<code>http://bucket_name.qiniudn.com/static</code>，否则静态资源将无法访问。</p>
+</blockquote>
+</li>
+<li><p><code>local_dir</code> 参数：</p>
+<blockquote>
+<p>只填写一个目录名称即可，建立在hexo博客的主目录，不需要使用子目录。<br>当你在配置中填写好文件夹后，运行hexo时，会自动建立对应的目录。<br>如果你了解hexo文件夹的关系，担心这样会导致离线模式不能查看到图片，我可以告诉你你不需要担心这个问题。<br>在你以离线模式运行时，会自动使用软连接&#x2F;联接方式帮你建立文件夹的引用，可以让你的离线浏览节省<strong>一倍</strong>的空间。</p>
+</blockquote>
+</li>
+<li><p><code>update_exist</code> 参数：</p>
+<blockquote>
+<p>如果你的静态文件会进行修改或替换，并需要更新七牛空间上原先上传的文件，则设置为 <code>true</code> 。<br>是否更新空间上已上传的文件，是按照<code>对比文件大小是否相同</code>或者<code>本地文件在上传到七牛空间之后进行过修改</code>的规则进行判断的。</p>
+</blockquote>
+</li>
+<li><p><code>image</code> : <code>extend</code> 参数：</p>
+<blockquote>
+<p>这是个特殊参数，是文章内使用 <code>qnimg</code> 标签引用图片的默认图片处理操作。请参考 **<a target="_blank" rel="noopener" href="http://developer.qiniu.com/docs/v6/api/reference/fop/image/">七牛开发者中心-图片处理</a>**。<br>可以使用 基本图片处理（imageView2）、高级图片处理（imageMogr2）、图片水印处理（watermark） 这三个图片处理接口，多个接口内容之间用 <code>|</code> 间隔。<br>例如 <code>?imageView2/2/w/500</code> 即生成宽度最多500px的缩略图。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="使用标签"><a href="#使用标签" class="headerlink" title="使用标签"></a>使用标签</h2><figure class="highlight twig"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="template-tag">&#123;%</span> <span class="name">qnimg</span> imageFile attr<span class="number">1</span>:value<span class="number">1</span> attr<span class="number">2</span>:value<span class="number">2</span> <span class="string">&#x27;attr3:value31 value32 value3n&#x27;</span> [extend:?imageView<span class="number">2</span>/<span class="number">2</span>/w/<span class="number">600</span> | normal:yes] <span class="template-tag">%&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;%</span> <span class="name">qnjs</span> jsFile attr<span class="number">1</span>:value<span class="number">1</span> attr<span class="number">2</span>:value<span class="number">2</span> <span class="string">&#x27;attr3:value31 value32 value3n&#x27;</span> <span class="template-tag">%&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span><span class="template-tag">&#123;%</span> <span class="name">qncss</span> cssFile attr<span class="number">1</span>:value<span class="number">1</span> attr<span class="number">2</span>:value<span class="number">2</span> <span class="string">&#x27;attr3:value31 value32 value3n&#x27;</span> <span class="template-tag">%&#125;</span><span class="language-xml"></span></span><br><span class="line"><span class="language-xml"></span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>jnimg</code> 标签的图片处理： &gt;如果你在 <code>_config.yml</code> 文件中配置了 <code>extend</code> 字段，则默认会对插入的图片进行对应的处理。<br>如果不想对一个图片进行处理，则可在 <code>jnimg</code> 标签内增加 <code>normal:yes</code> 参数，则使用原图，不进行图片处理。<br>如果只对当前图片进行处理，则可在 <code>jnimg</code> 标签内增加 <code>extend:?imageView2/2/w/600</code> 样式的配置参数。<br>当 <code>_config.yml</code> 文件中和 <code>jnimg</code> 标签内都定义了 <code>extend</code> 参数，则只会使用 <code>jnimg</code> 标签的 <code>extend</code> 参数。<br>请参考**<a target="_blank" rel="noopener" href="http://developer.qiniu.com/docs/v6/api/reference/fop/image/">七牛开发者中心-图片处理</a>** ，可以使用 基本图片处理（imageView2）、高级图片处理（imageMogr2）、图片水印处理（watermark） 这三个图片处理接口，多个接口内容之间用 <code>|</code> 间隔。</li>
+</ul>
+<h3 id="Demo"><a href="#Demo" class="headerlink" title="Demo"></a>Demo</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将会被渲染成：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;img <span class="attribute">title</span>=<span class="string">&quot;图片标题&quot;</span> <span class="attribute">alt</span>=<span class="string">&quot;图片说明&quot;</span> <span class="attribute">class</span>=<span class="string">&quot;class1 class2&quot;</span> <span class="attribute">src</span>=<span class="string">&quot;http://gyk001.u.qiniudn.com/images/test/demo.png?imageView2/2/w/600&quot;</span>&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="命令行"><a href="#命令行" class="headerlink" title="命令行"></a>命令行</h2><p><strong>作为一个带命令行功能的插件，漏掉了命令行的使用说明不是好习惯。</strong> 本插件命令行为 <code>hexo qiniu</code> ，所支持的子命令有：</p>
+<ul>
+<li><p><code>info</code> (简写 <code>i</code> )</p>
+<blockquote>
+<p>功能：显示插件版本，作者及Github地址信息等</p>
+</blockquote>
+</li>
+<li><p><code>sync</code> (简写 <code>s</code> )</p>
+<blockquote>
+<p>功能：同步静态资源到七牛空间</p>
+</blockquote>
+</li>
+<li><p><code>sync2</code> (简写 <code>s2</code> )</p>
+<blockquote>
+<p>功能：同步静态资源到七牛空间，且会同步上传那些本地与七牛空间有差异的文件。<br><strong>这个命令会无视 <code>update_exist</code> 配置</strong>。<br>对比规则请看 <code>update_exist</code> 配置参数说明。</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="同步静态资源"><a href="#同步静态资源" class="headerlink" title="同步静态资源"></a>同步静态资源</h2><p><strong>当需要把静态资源同步到七牛空间中时，有如下几种方式可以同步资源：</strong></p>
+<ul>
+<li><p>启用本地服务器.即使用 <code>hexo server</code> 命令（简写为 <code>hexo s</code>）</p>
+<blockquote>
+<p>当以本地服务器模式启动后，会自动监测 <code>local_dir</code> 目录下的文件变化， 会自动将新文件进行上传。<br>如果文件进行了修改，但设置中没有启用 <code>update_exist</code> 配置，则不会更新到七牛空间。</p>
+</blockquote>
+</li>
+<li><p>使用命令行命令(<code>sync</code> | <code>s</code> | <code>sync2</code> | <code>s2</code>)</p>
+<blockquote>
+<p>命令行命令会扫描 <code>local_dir</code> 目录下的文件，同步至七牛空间。</p>
+</blockquote>
+</li>
+</ul>
+<p>备注：使用生成(<code>generate</code>)或部署(<code>deploy</code>)命令时，会提示需要上传的文件数量：</p>
+<blockquote>
+<p>[info] Need upload file num: 0</p>
+</blockquote>
+<h2 id="小技巧"><a href="#小技巧" class="headerlink" title="小技巧"></a>小技巧</h2><ul>
+<li><p>文章模板</p>
+<blockquote>
+<p>如果你经常在文章内插入图片，你可以修改文章模板，将空白的图片插入标签粘贴进去。<br>这样新建立的文章就有空白标签可以让你直接填写图片路径就好了，会很省事。<br>文章模板文件：<code>./scaffolds/post.md</code><br>图片标签 <code>&#123;</code>% qnimg test&#x2F;demo.png title:图片标题 alt:图片说明 ‘class:class1 class2’ % <code>&#125;</code></p>
+</blockquote>
+</li>
+<li><p>图片处理样式</p>
+<blockquote>
+<p>在前边的内容里，已经介绍了图片处理参数，下面来介绍一个更省事的技巧。<br>如果你经常使用的图片效果是固定的，你可以通过设置数据处理样式来达到灵活的控制。</p>
+</blockquote>
+<blockquote>
+<ol>
+<li>首先登陆七牛空间，选择存储空间后，再选择<code>数据处理</code>菜单。</li>
+<li>设置分隔符。默认的 <code>-</code> 即可。</li>
+<li>点击 <code>新建样式</code> 按钮，根据提示创建一个处理样式。</li>
+<li>创建样式完毕后，你就可以将 <code>extend</code> 参数设置为 <code>分隔符+样式名称</code>了。<br>如你设置的分隔符为 <code>-</code> ，样式名称为 <code>new</code> ，则 <code>extend</code> 参数就是 <code>-new</code> 了。<br>简单吧？<br>你可以根据自己的需要，建立多个样式，然后在文章内使用时，为不同图片标签设置 不同的<code>extend</code>参数，来达到不同的显示效果。</li>
+</ol>
+</blockquote>
+</li>
+</ul>
+<h2 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h2><ul>
+<li><p>WINDOWS系统下使用离线模式，运行 <code>hexo s</code> 后，在文章页面中不能无法看到引用的静态资源图片<br>如：<code>local_dir</code> 参数设置为 <code>static</code> ，运行 <code>hexo s</code> 后 <code>source</code> 目录下没有出现一个名字为 <code>static</code> 的目录链接。</p>
+<blockquote>
+<p>首先检查以下内容：</p>
+</blockquote>
+<ul>
+<li>所在的磁盘的文件系统是否为<code>NTFS</code>。因为 WINDOWS 下 <code>NTFS</code> 系统才支持目录链接。</li>
+<li>运行 <code>hexo s</code> 时，是否以管理员身份运行的。目录链接操作需要管理员身份才可以执行，<br>如果你是在打开的cmd命令行中执行 <code>hexo s</code> 的，需要以管理员身份运行cmd才可以。<br>如果你是运行批处理文件运行( 例如内容为 <code>hexo s</code> )，请批处理文件的属性中设置为以管理员身份运行。</li>
+<li>不要把 <code>local_dir</code> 参数指定的目录设置为 <code>source</code> 目录的子目录，应当为 <code>source</code> 目录的同级目录。</li>
+<li>如果你是FAT32格式的磁盘，你只使用离线模式的话，可以把<code>local_dir</code> 参数设置为<code>source</code> 目录的子目录， 这样在 <code>hexo s</code> 时，才可以正常预览。</li>
+</ul>
+</li>
+<li><p>在同步模式下，不能同步，出现报错为 <code>[error] SyntaxError: Unexpected end of input</code></p>
+<blockquote>
+<p>请检查设置中的 <code>access_key</code> 与 <code>secret_key</code> 是否正确，以及是否可用。</p>
+</blockquote>
+</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/e76.html" title="Github-Hexo-Qiniu-Sync">https://www.zenwu.site/posts/e76.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/Github/" rel="tag"><i class="fa fa-tag"></i> Github</a>
+              <a href="/tags/hexo/" rel="tag"><i class="fa fa-tag"></i> hexo</a>
+              <a href="/tags/%E4%B8%83%E7%89%9B/" rel="tag"><i class="fa fa-tag"></i> 七牛</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/1be4.html" rel="prev" title="Github-Hexo-theme-NexT">
+                  <i class="fa fa-angle-left"></i> Github-Hexo-theme-NexT
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/8b38.html" rel="next" title="备--the-terrible-work（2005-2008）">
+                  备--the-terrible-work（2005-2008） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="7.4 进度控制的技术手段控制进度应随时掌握工程的实际进度情况，及时发现计划与实际的偏差，谋求修正和补偿的措施。监理工程师可以采用多种技术手段实施信息系统工程的进度控制，其中图表控制法、网络图计划法和“香蕉”曲线图法是基本的技术手段。但是应该注意，使用这些技术手段进行进度控制时，必须与具体工程项目紧密结合，灵活运用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-进度控制-7.4 进度控制的技术手段">
+<meta property="og:url" content="https://www.zenwu.site/posts/9015.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="7.4 进度控制的技术手段控制进度应随时掌握工程的实际进度情况，及时发现计划与实际的偏差，谋求修正和补偿的措施。监理工程师可以采用多种技术手段实施信息系统工程的进度控制，其中图表控制法、网络图计划法和“香蕉”曲线图法是基本的技术手段。但是应该注意，使用这些技术手段进行进度控制时，必须与具体工程项目紧密结合，灵活运用。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230404180012.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230404180126.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230404180215.png">
+<meta property="article:published_time" content="2023-04-01T14:41:39.000Z">
+<meta property="article:modified_time" content="2023-04-01T15:04:23.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="进度控制">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230404180012.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/9015.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/9015.html","path":"posts/9015.html","title":"笔记-进度控制-7.4 进度控制的技术手段"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-进度控制-7.4 进度控制的技术手段 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#7-4-%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E7%9A%84%E6%8A%80%E6%9C%AF%E6%89%8B%E6%AE%B5"><span class="nav-text">7.4 进度控制的技术手段</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-1-%E5%9B%BE%E8%A1%A8%E6%8E%A7%E5%88%B6%E6%B3%95"><span class="nav-text">7.4.1 图表控制法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%88%A9%E7%94%A8%E7%94%98%E7%89%B9%E5%9B%BE%E8%BF%9B%E8%A1%8C%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6"><span class="nav-text">1. 利用甘特图进行进度控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%88%A9%E7%94%A8%E5%B7%A5%E7%A8%8B%E8%BF%9B%E5%BA%A6%E6%9B%B2%E7%BA%BF%E4%BD%9C%E4%B8%BA%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E7%9A%84%E5%AF%B9%E6%AF%94%E6%89%8B%E6%AE%B5"><span class="nav-text">2. 利用工程进度曲线作为进度控制的对比手段</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-2-%E7%BD%91%E7%BB%9C%E5%9B%BE%E8%AE%A1%E5%88%92%E6%B3%95"><span class="nav-text">7.4.2 网络图计划法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-4-3-%E2%80%9C%E9%A6%99%E8%95%89%E2%80%9D%E6%9B%B2%E7%BA%BF%E5%9B%BE%E6%B3%95"><span class="nav-text">7.4.3 “香蕉”曲线图法</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/9015.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-进度控制-7.4 进度控制的技术手段 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-进度控制-7.4 进度控制的技术手段
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-01 22:41:39 / 修改时间：23:04:23" itemprop="dateCreated datePublished" datetime="2023-04-01T22:41:39+08:00">2023-04-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h2 id="7-4-进度控制的技术手段"><a href="#7-4-进度控制的技术手段" class="headerlink" title="7.4 进度控制的技术手段"></a>7.4 进度控制的技术手段</h2><p>控制进度应随时掌握工程的实际进度情况，及时发现计划与实际的偏差，谋求修正和补偿的措施。监理工程师可以采用多种技术手段实施信息系统工程的进度控制，其中<strong>图表控制法</strong>、<strong>网络图计划法</strong>和<strong>“香蕉”曲线图法</strong>是基本的技术手段。但是应该注意，使用这些技术手段进行进度控制时，必须与具体工程项目紧密结合，灵活运用。</p>
+<span id="more"></span>
+<h3 id="7-4-1-图表控制法"><a href="#7-4-1-图表控制法" class="headerlink" title="7.4.1 图表控制法"></a>7.4.1 图表控制法</h3><p>进度控制的线性图表，通常是横道式进度图表（也称甘特图）和进度曲线表。</p>
+<h4 id="1-利用甘特图进行进度控制"><a href="#1-利用甘特图进行进度控制" class="headerlink" title="1. 利用甘特图进行进度控制"></a>1. 利用甘特图进行进度控制</h4><p>甘特图是一种比较简单的直观进度控制图，如图7.4所示。细线表示计划进度，粗线表示实际进度。当施工进度表编制完成后，就可以此为基础编制服务于进度要求，满足进度需要的其他计划表，如适应进度要求的设备供应计划表、劳动力计划表、资金计划表等。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230404180012.png" alt="甘特图"></p>
+<p>监理工程师应将每天、每周或每月定期的工程实际情况记录在工程施工进度表内，并与计划进度比较是超前还是落后，还是按预定的进度进行。若检查结果得出工程进度已经落后，则应立即提出<strong>监理报告</strong>，并与承建单位一起商讨对策，采取补救加快进度的措施，改变落后情况。</p>
+<h4 id="2-利用工程进度曲线作为进度控制的对比手段"><a href="#2-利用工程进度曲线作为进度控制的对比手段" class="headerlink" title="2. 利用工程进度曲线作为进度控制的对比手段"></a>2. 利用工程进度曲线作为进度控制的对比手段</h4><p>甘特图虽然简单直观，但在计划与实际的对比上，很难准确表示出实际进度较计划进度超前或延迟的程度。为了更准确地掌握工程进度状况，有效地进行进度控制，可采用工程施工进度曲线。</p>
+<p><strong>施工进度曲线图</strong>采用直角坐标，一般横轴代表工期，纵轴代表工程完成的数量或施工的累计。将有关数据表示在坐标纸上，将不同时间和完成不同工程量的数量的交点连起来，就形成了施工实际进度曲线。把计划进度曲线与实际进度曲线相比较，则可分析掌握工程进度情况并据此采取相应措施控制施工进度，如图7.5所示。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230404180126.png" alt="“香蕉”曲线图"><br>工程施工进度曲线的切线斜率即为施工进度速度，它是由施工速度决定的。</p>
+<h3 id="7-4-2-网络图计划法"><a href="#7-4-2-网络图计划法" class="headerlink" title="7.4.2 网络图计划法"></a>7.4.2 网络图计划法</h3><p>监理工程师利用甘特图来控制进度有一个较大的缺点，就是很难了解或者说难以迅速准确地了解该项工程的迟延及变化对整个工期的影响，特别是在处理错综复杂的关系时，往往不能预先确定哪些属于关键作业，以及在监理工作中处理索赔及工期是否可以延长时往往难于决策。</p>
+<p>采用网络图计划法进行进度控制，不仅能够将现在和将来完成的工程内容、各工作单元间的关系明确地表示出来，而且能够预先确定各作业、各系统的时差。这就使监理工程师十分明确地了解关键作业或某一环节进度的超前、落后对以后衔接工程和总工期的影响程度，就可以及时采取措施或调整进度计划，以确保总目标的实现。</p>
+<p>网络图是由箭线和节点组成，用来表示<strong>工作流程的有向网状图形</strong>：<strong>网络图有单代号网络和双代号网络图</strong>两种。</p>
+<p>双代号网络图又称箭线式网络图，它以箭线表示工作，以节点表示工作的开始或结束状及工作之间的连接点，以工作两端节点的编号代表一项工作，如图7.6所示。</p>
+<p>单代号网络图又称节点式网络图，它以节点及其编号表示工作，以箭线表示工作之间的逻辑关系，如图7.7所示。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230404180215.png" alt="图标"></p>
+<p>在施工过程中，工期的超前和落后是经常发生的，为此，在利用网络图控制进度时：<strong>首先是掌握现状</strong>，看进度是超前还是落后；<strong>其次是分析现状、分析超前落后的主客观因素及对工期的影响程度</strong>；<strong>最后是研究解决工期超前或落后应采取的相应措施。</strong></p>
+<p>应当注意的是，当工期推延发生时，采用无目标地补充设备、增加劳动力或加班加点的做法，往往既不经济，效果也不佳，还会导致降低质量和效率；而要压缩工期，往往需要增加施工费用，采用一些特别措施更要增加额外费用，但由于工程施工速度加快，工程提前交付使用，将会提前发挥企业效益和社会效益。承建单位的超额支出，一般也会从合同的条款和建设单位（发包单位）的奖励中得到补偿。</p>
+<h3 id="7-4-3-“香蕉”曲线图法"><a href="#7-4-3-“香蕉”曲线图法" class="headerlink" title="7.4.3 “香蕉”曲线图法"></a>7.4.3 “香蕉”曲线图法</h3><p>根据网络计划的最快时间和最慢时间可以绘制出“香蕉”曲线图，如图7.5所示。图中曲线A为最早时间计划，曲线B为最迟时间计划，曲线N为实际进度。曲线N处在两曲线之中，表示进度正常，处于曲线A之上，表示提前，处于曲线B之下为延期。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/9015.html" title="笔记-进度控制-7.4 进度控制的技术手段">https://www.zenwu.site/posts/9015.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6/" rel="tag"><i class="fa fa-tag"></i> 进度控制</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/663f.html" rel="prev" title="笔记-进度控制-7.3 进度控制的任务、程序与方法措施">
+                  <i class="fa fa-angle-left"></i> 笔记-进度控制-7.3 进度控制的任务、程序与方法措施
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/2fe0.html" rel="next" title="笔记-变更控制-9.1 项目变更的含义和原因">
+                  笔记-变更控制-9.1 项目变更的含义和原因 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

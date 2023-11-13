@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="学习第一步！先从历史题目的内容开始认识。2020年系统架构设计师题目中的知识点。  1. 前趋图前趋图中，箭线代表前趋关系，节点代表进程。 2. 线程相关概念 在同一进程中的各个线程都可以共享该进程所拥有的资源，如访问进程地址空间中的每一个虚地址； 访问进程所拥有的已打开文件、定时器、信号量等，但是不能共享进程中某线程的栈指针。 已打开的文件是共享的； 线程的栈指针属于线程独享资源，不可被其他线">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-真题-综合知识（2020年系统架构设计师上午题）">
+<meta property="og:url" content="https://www.zenwu.site/posts/bc45.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="学习第一步！先从历史题目的内容开始认识。2020年系统架构设计师题目中的知识点。  1. 前趋图前趋图中，箭线代表前趋关系，节点代表进程。 2. 线程相关概念 在同一进程中的各个线程都可以共享该进程所拥有的资源，如访问进程地址空间中的每一个虚地址； 访问进程所拥有的已打开文件、定时器、信号量等，但是不能共享进程中某线程的栈指针。 已打开的文件是共享的； 线程的栈指针属于线程独享资源，不可被其他线">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230920140408.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230920141449.png">
+<meta property="article:published_time" content="2023-09-13T14:57:49.000Z">
+<meta property="article:modified_time" content="2023-09-15T15:57:49.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="历年真题知识点">
+<meta property="article:tag" content="系统架构设计师">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230920140408.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/bc45.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/bc45.html","path":"posts/bc45.html","title":"笔记-真题-综合知识（2020年系统架构设计师上午题）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-真题-综合知识（2020年系统架构设计师上午题） | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%89%8D%E8%B6%8B%E5%9B%BE"><span class="nav-text">1. 前趋图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%BA%BF%E7%A8%8B%E7%9B%B8%E5%85%B3%E6%A6%82%E5%BF%B5"><span class="nav-text">2. 线程相关概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BD%8D%E7%A4%BA%E5%9B%BE"><span class="nav-text">3. 位示图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E5%AE%9E%E6%97%B6%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F"><span class="nav-text">4. 实时操作系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E6%B4%BE%E7%94%9F%E5%B1%9E%E6%80%A7"><span class="nav-text">5. 派生属性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%BA%93"><span class="nav-text">6. 分布式数据库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E6%AE%B5%E9%A1%B5%E5%BC%8F%E5%AD%98%E5%82%A8"><span class="nav-text">7. 段页式存储</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E5%88%86%E5%B1%82%E7%BB%93%E6%9E%84%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">8. 分层结构的特点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%8C%BA%E5%9D%97%E9%93%BE%E6%8A%80%E6%9C%AF"><span class="nav-text">9. 区块链技术</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-DNS%E7%9A%84%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8"><span class="nav-text">10. DNS的相关应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E7%BD%91%E7%BB%9C%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="nav-text">11. 网络相关知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="nav-text">12. 系统安全相关知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E7%94%B5%E5%AD%90%E6%94%BF%E5%8A%A1"><span class="nav-text">13. 电子政务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#14-%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3"><span class="nav-text">14. 用户文档</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#14-1-%E7%94%A8%E6%88%B7%E6%96%87%E6%A1%A3"><span class="nav-text">14.1. 用户文档</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-2-%E7%B3%BB%E7%BB%9F%E6%96%87%E6%A1%A3"><span class="nav-text">14.2. 系统文档</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#15-%E9%9C%80%E6%B1%82%E5%B7%A5%E7%A8%8B"><span class="nav-text">15. 需求工程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7"><span class="nav-text">16. 软件开发工具</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#16-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7"><span class="nav-text">16.1. 需求分析工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16-2-%E8%AE%BE%E8%AE%A1%E5%B7%A5%E5%85%B7"><span class="nav-text">16.2. 设计工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16-3-%E7%BC%96%E7%A0%81%E4%B8%8E%E6%8E%92%E9%94%99%E5%B7%A5%E5%85%B7"><span class="nav-text">16.3. 编码与排错工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16-4-%E8%BD%AF%E4%BB%B6%E7%BB%B4%E6%8A%A4%E5%B7%A5%E5%85%B7"><span class="nav-text">16.4. 软件维护工具</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#16-5-%E8%BD%AF%E4%BB%B6%E7%AE%A1%E7%90%86%E5%92%8C%E8%BD%AF%E4%BB%B6%E6%94%AF%E6%8C%81%E5%B7%A5%E5%85%B7"><span class="nav-text">16.5. 软件管理和软件支持工具</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#17-%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="nav-text">17. 软件设计阶段的任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7"><span class="nav-text">18. 质量属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#18-1-1%E3%80%81%E6%80%A7%E8%83%BD"><span class="nav-text">18.1. 1、性能</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18-2-2%E3%80%81%E5%8F%AF%E7%94%A8%E6%80%A7"><span class="nav-text">18.2. 2、可用性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18-3-3%E3%80%81%E5%AE%89%E5%85%A8%E6%80%A7"><span class="nav-text">18.3. 3、安全性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18-4-4%E3%80%81%E5%8F%AF%E4%BF%AE%E6%94%B9%E6%80%A7"><span class="nav-text">18.4. 4、可修改性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#18-5-5%E3%80%81%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="nav-text">18.5. 5、可靠性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#19-%E6%9E%84%E4%BB%B6%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">19. 构件的基本概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-%E6%9E%84%E4%BB%B6%E4%B8%8E%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-text">20. 构件与中间件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#21-%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E6%A8%A1%E5%9E%8B"><span class="nav-text">21. 软件开发模型</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#21-1-%E7%80%91%E5%B8%83%E6%A8%A1%E5%9E%8B"><span class="nav-text">21.1. 瀑布模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#21-2-%E8%9E%BA%E6%97%8B%E6%A8%A1%E5%9E%8B"><span class="nav-text">21.2. 螺旋模型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#21-3-%E6%9E%84%E4%BB%B6%E7%BB%84%E8%A3%85"><span class="nav-text">21.3. 构件组装</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-%E6%95%8F%E6%8D%B7%E5%BC%80%E5%8F%91%E6%96%B9%E6%B3%95"><span class="nav-text">22. 敏捷开发方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-%E8%87%AA%E5%8A%A8%E5%8C%96%E6%B5%8B%E8%AF%95%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86"><span class="nav-text">23. 自动化测试相关知识</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-%E8%BD%AF%E4%BB%B6%E6%9E%B6%E6%9E%84%E7%9B%B8%E5%85%B3%E7%9F%A5%E8%AF%86-%EF%BC%9F%EF%BC%9F"><span class="nav-text">24. 软件架构相关知识 ？？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25-%E6%9E%B6%E6%9E%84%E8%AF%84%E4%BC%B0"><span class="nav-text">25. 架构评估</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26-C-S%E6%9E%B6%E6%9E%84%E9%A3%8E%E6%A0%BC"><span class="nav-text">26. C&#x2F;S架构风格</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#26-1-%E4%BA%8C%E5%B1%82C-S%E7%BB%93%E6%9E%84"><span class="nav-text">26.1. 二层C&#x2F;S结构</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#26-2-%E4%B8%89%E5%B1%82C-S%E7%BB%93%E6%9E%84"><span class="nav-text">26.2. 三层C&#x2F;S结构</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-text">27. 设计模式的基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#27-1-%EF%BC%881%EF%BC%89%E6%A0%B9%E6%8D%AE%E7%9B%AE%E7%9A%84%E5%88%86%E7%B1%BB"><span class="nav-text">27.1. （1）根据目的分类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#27-2-%EF%BC%882%EF%BC%89%E6%A0%B9%E6%8D%AE%E4%BD%9C%E7%94%A8%E8%8C%83%E5%9B%B4%E5%88%86%E7%B1%BB"><span class="nav-text">27.2. （2）根据作用范围分类</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#28-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F"><span class="nav-text">28. 设计模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7%E7%9A%84%E7%90%86%E8%A7%A3%E5%92%8C%E8%B4%A8%E9%87%8F%E5%B1%9E%E6%80%A7%E5%AE%9E%E7%8E%B0%E7%AD%96%E7%95%A5"><span class="nav-text">29. 质量属性的理解和质量属性实现策略</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#30-SYN-Flooding%E6%94%BB%E5%87%BB%E5%8E%9F%E7%90%86"><span class="nav-text">30. SYN Flooding攻击原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#31-%E6%95%B0%E5%AD%97%E8%AF%81%E4%B9%A6%E7%9B%B8%E5%85%B3%E5%BA%94%E7%94%A8"><span class="nav-text">31. 数字证书相关应用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#32-%E8%91%97%E4%BD%9C%E6%9D%83%E6%B3%95-%E2%96%B2"><span class="nav-text">32. 著作权法 ▲</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#33-%E7%9F%A5%E8%AF%86%E4%BA%A7%E6%9D%83%E4%BA%BA%E7%A1%AE%E5%AE%9A-%E2%96%B2"><span class="nav-text">33. 知识产权人确定 ▲</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#34-%E7%9B%88%E4%BA%8F%E5%B9%B3%E8%A1%A1%E7%82%B9%E7%9A%84%E6%95%B0%E5%AD%A6%E9%A2%98"><span class="nav-text">34. 盈亏平衡点的数学题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#35-%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1"><span class="nav-text">35. 系统设计</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/bc45.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-真题-综合知识（2020年系统架构设计师上午题） | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-真题-综合知识（2020年系统架构设计师上午题）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-09-13 22:57:49" itemprop="dateCreated datePublished" datetime="2023-09-13T22:57:49+08:00">2023-09-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-09-15 23:57:49" itemprop="dateModified" datetime="2023-09-15T23:57:49+08:00">2023-09-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" itemprop="url" rel="index"><span itemprop="name">系统架构设计师</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/%E5%8E%86%E5%B9%B4%E7%9C%9F%E9%A2%98%E7%9F%A5%E8%AF%86%E7%82%B9/" itemprop="url" rel="index"><span itemprop="name">历年真题知识点</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<p>学习第一步！先从历史题目的内容开始认识。2020年系统架构设计师题目中的知识点。</p>
+</blockquote>
+<h3 id="1-前趋图"><a href="#1-前趋图" class="headerlink" title="1. 前趋图"></a>1. 前趋图</h3><p>前趋图中，<strong>箭线</strong>代表前趋关系，<strong>节点</strong>代表进程。</p>
+<h3 id="2-线程相关概念"><a href="#2-线程相关概念" class="headerlink" title="2. 线程相关概念"></a>2. 线程相关概念</h3><ul>
+<li>在同一进程中的各个线程都可以共享该进程所拥有的资源，如访问进程地址空间中的每一个<strong>虚地址</strong>；</li>
+<li>访问进程所拥有的<strong>已打开文件、定时器、信号量</strong>等，但是不能共享进程中某线程的<strong>栈指针</strong>。</li>
+<li>已打开的文件是共享的；</li>
+<li>线程的栈指针属于线程独享资源，不可被其他线程共享；</li>
+<li>栈指针是T1线程独享的，不可以被T2和T3共享；<span id="more"></span></li>
+</ul>
+<h3 id="3-位示图"><a href="#3-位示图" class="headerlink" title="3. 位示图"></a>3. 位示图</h3><p><strong>位示图</strong>是利用<strong>二进制的一位来表示磁盘中的一个盘块的使用情况</strong>。一般把“1”作为盘块已分配的标记，把“0”作为空闲标志。根据题意系统中字长为32位，所以一个字可记录32个物理块的使用情况。若磁盘的容量为300GB，物理块的大小为4MB，那么该<strong>磁盘</strong>有300*1024&#x2F;4&#x3D;76800个物理块，所需的位示图的大小为76800&#x2F;32&#x3D;2400个字。</p>
+<h3 id="4-实时操作系统"><a href="#4-实时操作系统" class="headerlink" title="4. 实时操作系统"></a>4. 实时操作系统</h3><p><strong>实时</strong>是指计算机对于外来信息能够以足够快的速度进行处理，并在被控对象允许的时间范围内做出快速响应。</p>
+<p><strong>实时操作系统</strong>是保证在<strong>一定时间限制内完成特定功能的操作系统</strong>。实时操作系统有硬实时和软实时之分，<strong>硬实时</strong>要求在规定的时间内必须完成操作，这是在操作系统设计时保证的；<strong>软实时</strong>则只要按照任务的优先级，尽可能快地完成操作即可。</p>
+<h3 id="5-派生属性"><a href="#5-派生属性" class="headerlink" title="5. 派生属性"></a>5. 派生属性</h3><p>派生属性是数据库中的衍生数据，是一种特殊属性。<strong>派生属性是指可以由其他属性进行计算来获得的属性</strong>，如年龄可以由出生日期和系统当前时间计算获得，是派生属性。</p>
+<p>注意这里出生日期并不是派生属性，因为年龄和系统当前时间只能计算出生年份，不能准确地计算出日期。</p>
+<h3 id="6-分布式数据库"><a href="#6-分布式数据库" class="headerlink" title="6. 分布式数据库"></a>6. 分布式数据库</h3><p>在分布式数据库中有<strong>分片透明、复制透明、位置透明和逻辑透明</strong>等基本概念。</p>
+<ul>
+<li><strong>分片透明性</strong>：是指用户不必关心数据是如何分片的，它们对数据的操作在全局关系上进行，即如何分片对用户是透明的，因此，当分片改变时应用程序可以不变。分片透明性是最高层次的透明性，如果用户能在全局关系一级操作，则数据如何分布，如何存储等细节自不必关心，其应用程序的编写与集中式数据库相同。</li>
+<li><strong>复制透明</strong>：用户不用关心数据库在网络中各个节点的复制情况，被复制的数据的更新都由系统自动完成。在分布式数据库系统中，可以把一个场地的数据复制到其他场地存放，应用程序可以使用复制到本地的数据在本地完成分布式操作，避免通过网络传输数据，提高了系统的运行和查询效率。但是对于复制数据的更新操作，就要涉及对所有复制数据的更新。</li>
+<li><strong>位置透明性</strong>：是指用户<strong>不必知道所操作的数据放在何处</strong>，即数据分配到哪个或哪些站点存储对用户是透明的。因此，数据分片模式的改变，如把数据从一个站点转移到另一个站点将不会影响应用程序，因而应用程序不必改写。</li>
+<li>局部映像透明性（逻辑透明）：是最低层次的透明性，该透明性提供<strong>数据到局部数据库的映像</strong>，即用户不必关心局部DBMS支持哪种数据模型、使用哪种数据操纵语言，数据模型和操纵语言的转换是由系统完成的。因此，局部映像透明性对异构型和同构异质的分布式数据库系统是非常重要的。</li>
+</ul>
+<h3 id="7-段页式存储"><a href="#7-段页式存储" class="headerlink" title="7. 段页式存储"></a>7. 段页式存储</h3><p><strong>段页式存储</strong>管理方式即先将用户程序<strong>分成若干个段</strong>，再把每个段分成<strong>若干个页</strong>，并为每一个段赋予一个段名，使用<strong>段页表</strong>来进行管理。</p>
+<ul>
+<li><strong>分区式管理</strong>：一个程序就是一段，使用基址极限对来进行管理；</li>
+<li><strong>页式管理</strong>：一个程序分为许多固定大小的页面，使用页表进行管理；</li>
+<li><strong>段页式存储</strong>：程序按逻辑分为多段，每一段内又进行分页，使用段页表来进行管理；</li>
+<li><strong>段式管理</strong>：程序按逻辑分成多段，用一组基址极限对来进行管理。基址极限对存放在段表里。</li>
+</ul>
+<h3 id="8-分层结构的特点"><a href="#8-分层结构的特点" class="headerlink" title="8. 分层结构的特点"></a>8. 分层结构的特点</h3><p>首先根据分层的特点来看，分层架构是<strong>低耦合</strong>的，依赖关系非常简单，上层只能依赖于下层，没有循环依赖。所以底层错误将导致整个系统无法运行，而上层错误一般影响的是错误的这一部分，对整个系统的影响并不是完全的。</p>
+<p>其次，系统的风险可以看作是威胁利用了脆弱性而引起的。其中，威胁可以看成从系统外部对系统产生的作用而导致系统功能及目标受阻的现象。<strong>脆弱性可以看成是系统内部的薄弱点</strong>。脆弱性是客观存在的，但它本身没有实际伤害。层与层之间引入通信机制势必造成性能下降是<strong>客观存在的系统薄弱点</strong>，是<strong>系统脆弱性</strong>的体现。</p>
+<h3 id="9-区块链技术"><a href="#9-区块链技术" class="headerlink" title="9. 区块链技术"></a>9. 区块链技术</h3><p>比特币网络通过“挖矿”来生成<strong>新的比特币</strong>。所谓“挖矿”实质上是用<strong>计算机</strong>解决一项复杂的数学问题，来<strong>保证比特币网络分布式记账系统的一致性</strong>。比特币网络会自动调整数学问题的难度，让整个网络约每10分钟得到一个合格答案。随后比特币网络会新生成一定量的比特币作为区块奖励，奖励获得答案的人。</p>
+<p>本质上，挖矿的过程就是<strong>计算哈希函数</strong>，并以此来确认交易的过程。哈希函数值具有不可篡改、不可逆性。但哈希函数输入的原始数据长度是不定长的，可以随意长度，而得出的摘要值是固定长度的。因此，存在一个可能，同样一个哈希值对应的不止一个数据串。这个现象就是哈希碰撞。</p>
+<p><strong>工作量证明机制</strong>（PoW）是我们最熟知的一种共识机制。工作量证明机制PoW就是工作越多，收益越大。这里的工作就是计算出一个满足规则的随机数，谁能最快地计算出唯一的数字，谁就能做信息公示人。</p>
+<p>“双花”问题是指一笔数字现金在交易中被反复使用的现象。传统的加密数字货币和其他数字资产，都具有无限可复制性，人们在交易过程中，难以确认这笔数字现金是否已经产生过一次交易。在区块链技术中，中本聪通过对产生的每一个区块盖上时间戳（时间戳相当于区块链公证人）的方式保证了交易记录的真实性，保证每笔货币被支付后，不能再用于其他支付。在这个过程中，当且仅当包含在区块中的所有交易都是有效的且之前从未存在过的，其他节点才认同该区块的有效性。所以双花攻击解决的方法就是通过时间戳。用户发起的每一笔交易都有<strong>时间记录</strong>，“挖矿”行为<strong>不能防止双花攻击</strong>。</p>
+<ul>
+<li>矿工“挖矿”取得区块链的记账权，同时获得代币奖励；</li>
+<li>“挖矿”本质上是在尝试计算一个Hash碰撞；</li>
+<li>“挖矿”是一种工作量证明机制；</li>
+<li>用户发起的每一笔交易都有时间记录，“挖矿”行为不能防止双花攻击；</li>
+</ul>
+<h3 id="10-DNS的相关应用"><a href="#10-DNS的相关应用" class="headerlink" title="10. DNS的相关应用"></a>10. DNS的相关应用</h3><p>当进行DNS解析的时候，需要系统指定一台DNS服务器，以便当系统要解析域名的时候，可以向所设定的域名服务器进行查询。在包括Linux系统在内的大部分UNIX系统中，DNS服务器的IP地址都存放在 <code>/etc/resolv.conf</code> 文件中。也就是说在图形方式配置网络参数的时候，所设置的DNS服务器就是存放在这个文件中的。用户也完全可以用手动的方式修改这个文件的内容来进行DNS设置。配置文件不会放在dev目录下。</p>
+<p>在 <code>/etc/resolv.conf</code> 文件的每一行是由一个关键字和随后的参数组成的，常见的关键字有：</p>
+<ul>
+<li>Nameserver：指定DNS服务器的IP地址，可以有多行，查询的时候按照次序进行，只有当一个DNS服务器不能使用的时候，才查询后面的DNS服务器。</li>
+<li>Domain：用来定义默认域名（主机的本地域名）。</li>
+<li>Search：它的多个参数指明域名查询顺序。当要查询没有域名的主机，主机将在由Search声明的域中分别查找。<code>Domain</code> 和 <code>Search</code> 不能共存；如果同时存在，后面出现的将会被使用。</li>
+</ul>
+<h3 id="11-网络相关知识"><a href="#11-网络相关知识" class="headerlink" title="11. 网络相关知识"></a>11. 网络相关知识</h3><ul>
+<li>对等网络，即对等计算机网络，是一种在对等者(Peer)之间<strong>分配任务和工作负载的分布式应用架构</strong>，是对等计算模型在应用层形成的一种组网或网络形式。在对等网络中，由于采用<strong>总线式的连接</strong>，因此网络中的终端数量越多，终端所能够分配到的<strong>转发时隙就越小</strong>，所带来的延迟也就越大。</li>
+<li>路由器一般采取<strong>存储转发</strong>方式，而交换机采取的是<strong>直接转发</strong>方式，相比存储转发方式，直接转发方式转发时延更小。因为存储转发方式需要对待转发的数据包进行重新拆包，分析其源地址和目的地址，再根据路由表对其进行路由和转发，而直接转发方式不对数据包的三层地址进行分析，因此<strong>路由器转发所带来的延迟要大于交换机</strong>。</li>
+<li>数据在Internet中传输时，由于互联网中的<strong>转发数据量大且所需经过的节点多，势必会带来更大的延迟</strong>。</li>
+<li><strong>网络延迟&#x3D;处理延迟+排队延迟+发送延迟+传播延迟</strong>。如果不考虑网络环境，服务器的延迟的主要因素是队列延迟和磁盘IO延迟。</li>
+</ul>
+<h3 id="12-系统安全相关知识"><a href="#12-系统安全相关知识" class="headerlink" title="12. 系统安全相关知识"></a>12. 系统安全相关知识</h3><p>系统监视的目标是为了评估系统性能，要监视系统性能，需要收集某个时间段内的3种不同类型的性能数据：</p>
+<ol>
+<li>常规性能数据。该信息可帮助识别短期趋势（如内存泄漏）。经过一两个月的数据收集后，可以求出结果的平均值并用更紧凑的格式保存这些结果。这种存档数据可帮助人们在业务增长时作出容量规划，并有助于在日后评估上述规划的效果。</li>
+<li>比较基准的性能数据。该信息可帮助人们发现缓慢、历经长时间才发生的变化。通过将系统的当前状态与历史记录数据相比较，可以排除系统问题并调整系统。由于该信息只是定期收集的，所以不必对其进行压缩存储。</li>
+<li>服务水平报告数据。该信息可帮助人们确保系统能满足一定的服务或性能水平，也可能会将该信息提供给并不是性能分析人员的决策者。收集和维护该数据的频率取决于特定的业务需要。</li>
+</ol>
+<p>进行系统监视通常有3种方式：</p>
+<ul>
+<li>一是通过系统本身提供的命令，如 UNIX&#x2F;Liunx 中的 <code>w</code>、<code>ps</code>、<code>last</code>，<code>Windows</code> 中的 <code>netstat</code> 等；</li>
+<li>二是通过系统记录文件查阅系统在特定时间内的运行状态；</li>
+<li>三是集成命令、文件记录和可视化技术的监控工具，提供直观的界面，操作人员只需要进行一些可视化的设置，而不需要记忆繁杂的命令行参数，即可完成监视操作，如<strong>Windows的Perfmon应用程序</strong>。</li>
+</ul>
+<p>▲：Linux 的 <code>top</code> 是基于命令行的，Linux 的 <code>iptables</code> 是基于包过滤的防火墙工具。<br>▲：已经有些厂商提供专业化的监视平台，将上面3种方式集成到一个统一的监控平台，进行统一监控，并提供各类分析数据和分析报表，帮助用户进行性能的评估和诊断。</p>
+<h3 id="13-电子政务"><a href="#13-电子政务" class="headerlink" title="13. 电子政务"></a>13. 电子政务</h3><p>电子政务主要3类角色：政府、企（事）业单位及居民。如果有第4类就是公务员。</p>
+<ul>
+<li>政府对政府（G2G，Government To Government）：政府之间的互动及政府与公务员之间的互动。包括基础信息的采集、处理和利用，如人口&#x2F;地理&#x2F;资源信息等；各级政府决策支持；政府间通信。</li>
+<li>政府对企业（G2B，Government To Business）：政府为企业提供的政策环境。包括产业政策、进出口、注册、纳税、工资、劳保、社保等各种规定；政府向企事业单位颁发的各种<strong>营业执照、许可证、合格证、质量认证</strong>等。</li>
+<li>政府对公民（G2C，Government To Citizen）：政府对公民提供的服务。包括关于<strong>社区公安和水、火、天灾等与公共安全有关的信息等，还包括户口、各种证件</strong>的管理等政府提供的各种服务。</li>
+<li>政府对公务员（G2E，Government To Employee）：政府与政府公务员即政府雇员。包括政府机构通过网络技术<strong>实现内部电子化管理</strong>（例如，OA系统等）的重要形式。</li>
+<li>企业对政府（B2G，Business To Government）：企业纳税及企业为政府提供服务。包括企业参加政府各项工程的<strong>竞&#x2F;投标</strong>，向政府供应各种商品和服务，企业向政府提建议，申诉。</li>
+<li>公民对政府（C2G，Citizen To Government）：个人除了应向政府缴纳税费和罚款及按政府要求填报各种信息和表格外，更重要的是开辟居民<strong>参政、议政</strong>的渠道，使政府的各项工作不断得以改进和完善。政府需要利用这个渠道来了解民意，征求群众意见，以便更好地为人民服务。此外，报警服务（盗贼、医疗、急救、火警等）即在紧急情况下居民需要向政府报告并要求政府提供的服务，也属于这个范围。</li>
+</ul>
+<h3 id="14-用户文档"><a href="#14-用户文档" class="headerlink" title="14. 用户文档"></a>14. 用户文档</h3><p>软件系统的文档可以分为<strong>用户文档和系统文档</strong>两类，它是影响软件可维护性的重要因素。</p>
+<h4 id="14-1-用户文档"><a href="#14-1-用户文档" class="headerlink" title="14.1. 用户文档"></a>14.1. 用户文档</h4><p><strong>用户文档</strong>主要描述所交付系统的功能和使用方法，并不关心这些功能是怎样实现的。用户文档是了解系统的第一步，它可以让用户获得对系统准确的初步印象。用户文档至少应该包括下述5方面的内容。</p>
+<ol>
+<li>功能描述：说明系统能做什么。</li>
+<li>安装文档：说明怎样安装这个系统以及怎样使系统适应特定的硬件配置。</li>
+<li>使用手册：简要说明如何着手使用这个系统（通过丰富的例子说明怎样使用常用的系统功能，并说明用户操作错误是怎样恢复和重新启动的）。</li>
+<li>参考手册：详尽描述用户可以使用的所有系统设施以及它们的使用方法，并解释系统可能产生的各种出错信息的含义（对参考手册最主要的要求是完整，因此通常使用形式化的描述技术）。</li>
+<li>操作员指南（如果需要有系统操作员的话）：说明操作员应如何处理使用中出现的各种情况。</li>
+</ol>
+<h4 id="14-2-系统文档"><a href="#14-2-系统文档" class="headerlink" title="14.2. 系统文档"></a>14.2. 系统文档</h4><p><strong>系统文档</strong>是从问题定义、需求说明到验收测试计划这样一系列和系统实现有关的文档。描述<strong>系统设计、实现和测试的文档</strong>对于理解程序和维护程序来说是非常重要的。</p>
+<h3 id="15-需求工程"><a href="#15-需求工程" class="headerlink" title="15. 需求工程"></a>15. 需求工程</h3><p><strong>需求开发</strong>的结果应该有<strong>项目视图和范围文档、用例文档和SRS</strong>，以及相关的<strong>分析模型</strong>。经<strong>评审</strong>批准，这些文档就定义了开发工作的需<strong>求基线</strong>。这个基线在用户和开发人员之间就构成了<strong>软件需求的一个约定</strong>，它是需求开发和需求管理之间的桥梁。</p>
+<h3 id="16-软件开发工具"><a href="#16-软件开发工具" class="headerlink" title="16. 软件开发工具"></a>16. 软件开发工具</h3><p>软件开发工具用来辅助开发人员进行软件开发活动，对应软件开发过程的各种活动，软件开发工具包括<strong>需求分析工具、设计工具、编码与排错工具、测试工具</strong>等。</p>
+<h4 id="16-1-需求分析工具"><a href="#16-1-需求分析工具" class="headerlink" title="16.1. 需求分析工具"></a>16.1. 需求分析工具</h4><p>需求分析工具用以辅助软件需求分析活动，辅助系统分析员从<strong>需求定义</strong>出发，生成完成的、清晰的、一致的<strong>功能规范</strong>。按描述需求定义的方法可以将需求分析工具分为基于自然语言或图像描述的工具和基于形式化需求定义语言的工具。</p>
+<p>（1）基于<strong>自然语言或图形描述的工具</strong>：这类工具采用分解与抽象等基本手段，对用户问题逐步求精，并在检测机制的辅助下，发现其中可能存在的问题（如一致性），通过对问题描述的修改，逐步形成能正确反映用户需求的功能规范。比如结构化分析方法采用的<strong>数据流图</strong>。<br>（2）基于<strong>形式化需求定义语言的工具</strong>：基于形式化需求定义语言的工具大多以基于知识的需求智能助手的形式出现，并把人工智能技术运用于软件工程。这类工具通常具有一个<strong>知识库</strong>和一个<strong>推理机制</strong>。<br>（3）其他需求分析工具：可执行规范语言以及<strong>原型技术</strong>为需求分析工具提供了另一条实现途径，这些工具通过运行可执行规范或原型，将有关的结果显示给用户和系统分析员，以便进行需求确认。</p>
+<h4 id="16-2-设计工具"><a href="#16-2-设计工具" class="headerlink" title="16.2. 设计工具"></a>16.2. 设计工具</h4><p>设计工具用以辅助软件设计活动，辅助设计人员从软件功能规范出发，得到相应的<strong>设计规范</strong>。</p>
+<h4 id="16-3-编码与排错工具"><a href="#16-3-编码与排错工具" class="headerlink" title="16.3. 编码与排错工具"></a>16.3. 编码与排错工具</h4><p><strong>编码工具和排错工具</strong>用以辅助程序员进行编码活动。编码工具辅助程序员用某种程序语言编制源程序，并对源程序进行翻译，最终转换成可执行的代码，主要有编辑程序、汇编程序、编译程序和生成程序等。<strong>排错工具</strong>用来辅助程序员寻找源程序中错误的性质和原因，并确定其出错的位置，主要有<strong>源代码排错程序</strong>和<strong>排错程序生成程序</strong>两类。</p>
+<h4 id="16-4-软件维护工具"><a href="#16-4-软件维护工具" class="headerlink" title="16.4. 软件维护工具"></a>16.4. 软件维护工具</h4><p>软件维护工具辅助软件维护过程中的活动，辅助维护人员对软件代码及其文档进行各种维护活动。软件维护工具主要有<strong>版本控制工具、文档分析工具、开发信息库工具、逆向工程工具和再工程工具</strong>等。</p>
+<h4 id="16-5-软件管理和软件支持工具"><a href="#16-5-软件管理和软件支持工具" class="headerlink" title="16.5. 软件管理和软件支持工具"></a>16.5. 软件管理和软件支持工具</h4><p>软件管理过程和软件支持过程往往要涉及软件生存周期中的多个活动，<strong>软件管理和软件支持工具</strong>用来辅助管理人员和软件支持人员的管理活动和支持活动，以确保软件高质高效地完成。其中常用的工具有<strong>项目管理工具、配置管理工具、软件评价工具</strong>等。</p>
+<h3 id="17-软件设计阶段的任务"><a href="#17-软件设计阶段的任务" class="headerlink" title="17. 软件设计阶段的任务"></a>17. 软件设计阶段的任务</h3><p><strong>软件设计</strong>包括体系<strong>结构设计、接口设计、数据设计和过程设计</strong>。</p>
+<ul>
+<li>结构设计：定义软件系统<strong>各主要部件之间</strong>的关系。</li>
+<li>数据设计：将<strong>模型转换成数据结构的定义</strong>。好的数据设计将改善程序结构和模块划分，降低过程复杂性。</li>
+<li>接口设计（人机界面设计）：软件内部、软件和操作系统之间以及软件和人之间如何通信。</li>
+<li>过程设计：系统结构部件转换成软件的过程描述。确定软件各个组成部分内的算法及内部数据结构，并选定某种过程的表达形式来描述各种算法。</li>
+</ul>
+<h3 id="18-质量属性"><a href="#18-质量属性" class="headerlink" title="18. 质量属性"></a>18. 质量属性</h3><p><strong>信息隐蔽</strong>是开发整体程序结构时使用的法则，即将每个程序的成分隐蔽或封装在一个单一的设计模块中，并且尽可能少地暴露其内部的处理过程。通常会将困难的决策、可能修改的决策、数据结构的内部连接，以及对它们所做的操作细节、内部特征码、与计算机硬件有关的细节等隐蔽起来。通过信息隐蔽可以提高软件的<strong>可修改性、可测试性和可移植性</strong>，它也是现代软件设计的一个关键性原则。</p>
+<h4 id="18-1-1、性能"><a href="#18-1-1、性能" class="headerlink" title="18.1. 1、性能"></a>18.1. 1、性能</h4><p>性能（performance）是指系统的响应能力，即要经过多长时间才能对某个事件做出响应，或者在某段时间内系统所能处理的事件的个数。</p>
+<ul>
+<li>代表参数：响应时间、吞吐量</li>
+<li>设计策略：优先级队列、资源调度</li>
+</ul>
+<h4 id="18-2-2、可用性"><a href="#18-2-2、可用性" class="headerlink" title="18.2. 2、可用性"></a>18.2. 2、可用性</h4><p>可用性（availability）是系统能够正常运行的时间比例。经常用两次故障之间的时间长度或在出现故障时系统能够恢复正常的速度来表示。</p>
+<ul>
+<li>代表参数：故障间隔时间</li>
+<li>设计策略：冗余、心跳线</li>
+</ul>
+<h4 id="18-3-3、安全性"><a href="#18-3-3、安全性" class="headerlink" title="18.3. 3、安全性"></a>18.3. 3、安全性</h4><p>安全性（security）是指系统在向合法用户提供服务的同时能够阻止非授权用户使用的企图或拒绝服务的能力。安全性又可划分为机密性、完整性、不可否认性及可控性等特性。</p>
+<ul>
+<li>设计策略：追踪审计</li>
+</ul>
+<h4 id="18-4-4、可修改性"><a href="#18-4-4、可修改性" class="headerlink" title="18.4. 4、可修改性"></a>18.4. 4、可修改性</h4><p>可修改性（modifiability）是指能够快速地以较高的性能价格比对系统进行变更的能力。通常以某些具体的变更为基准，通过考察这些变更的代价衡量可修改性。</p>
+<ul>
+<li>主要策略：信息隐藏</li>
+</ul>
+<h4 id="18-5-5、可靠性"><a href="#18-5-5、可靠性" class="headerlink" title="18.5. 5、可靠性"></a>18.5. 5、可靠性</h4><p>可靠性（reliability）是软件系统在应用或系统错误面前，在意外或错误使用的情况下维持软件系统的功能特性的基本能力。主要考虑两个方面：容错、健壮性。</p>
+<ul>
+<li>代表参数：MTTF、MTBF</li>
+<li>设计策略：冗余、心跳线</li>
+</ul>
+<h3 id="19-构件的基本概念"><a href="#19-构件的基本概念" class="headerlink" title="19. 构件的基本概念"></a>19. 构件的基本概念</h3><p>如果把<strong>软件系统</strong>看成是<strong>构件的集合</strong>，那么从构件的外部形态来看，构成一个系统的构件可分为5类：</p>
+<p>（1）<strong>独立而成熟的构件</strong>。独立而成熟的构件得到了实际运行环境的多次检验，该类构件隐藏了所有接口，用户只需用规定好的命令进行使用。例如，<strong>数据库管理系统和操作系统</strong>等。<br>（2）<strong>有限制的构件</strong>。有限制的构件提供了接口，指出了使用的条件和前提，这种构件在装配时，会产生资源冲突、覆盖等影响，在使用时需要加以测试。例如，各种面向对象程序设计语言中的<strong>基础类库</strong>等。<br>（3）<strong>适应性构件</strong>。适应性构件进行了包装或使用了接口技术，把不兼容性、资源冲突等进行了处理，可以直接使用。这种构件可以不加修改地使用在各种环境中。例如 <code>ActiveX</code> 等。<br>（4）<strong>装配的构件</strong>。装配（ <code>assemble</code> ）的构件在安装时，已经装配在操作系统、数据库管理系统或信息系统不同层次上，使用胶水代码（ <code>glue code</code> ）就可以进行连接使用。目前一些软件商提供的大多数软件产品都属这一类。<br>（5）<strong>可修改的构件</strong>。可修改的构件可以进行<strong>版本替换</strong>。如果对原构件修改错误、增加新功能，可以利用重新“包装”或写接口来实现构件的替换。这种构件在应用系统开发中使用得比较多。</p>
+<h3 id="20-构件与中间件"><a href="#20-构件与中间件" class="headerlink" title="20. 构件与中间件"></a>20. 构件与中间件</h3><p><strong>中间件</strong>是一种独立的系统软件或服务程序，可以帮助分布式应用软件在不同的技术之间共享资源。中间件可以：</p>
+<p>1、负责客户机与服务器之间的<strong>连接和通信</strong>，以及客户机与应用层之间的高效率通信机制。<br>2、提供应用的<strong>负载均衡和高可用性、安全机制与管理功能，以及交易管理机制</strong>，保证<strong>交易的一致性</strong>。<br>3、提供应用层不同服务之间的<strong>互操作机制</strong>，以及应用层与数据库之间的连接和控制机制。<br>4、提供多层架构的<strong>应用开发和运行的平台，以及应用开发框架，支持模块化的应用开发</strong>。<br>5、屏蔽硬件、操作系统、网络和数据库的差异。<br>6、提供一组通用的服务去执行不同的功能，避免重复的工作，使应用之间可以协作。</p>
+<h3 id="21-软件开发模型"><a href="#21-软件开发模型" class="headerlink" title="21. 软件开发模型"></a>21. 软件开发模型</h3><h4 id="21-1-瀑布模型"><a href="#21-1-瀑布模型" class="headerlink" title="21.1. 瀑布模型"></a>21.1. 瀑布模型</h4><p><strong>瀑布模型</strong>可以说是最早使用的软件生存周期模型之一。由于这个模型描述了软件生存的一些基本过程活动，所以它被称为软件生存周期模型。这些活动从一个阶段到另一个阶段逐次下降，形式上很像瀑布。瀑布模型的特点是<strong>因果</strong>关系紧密相连，前一个阶段工作的结果是后一个阶段工作的输入。</p>
+<h4 id="21-2-螺旋模型"><a href="#21-2-螺旋模型" class="headerlink" title="21.2. 螺旋模型"></a>21.2. 螺旋模型</h4><p><strong>螺旋模型</strong>是在快速原型的基础上扩展而成的。这个模型把整个软件开发流程分成多个阶段，每个阶段都由4部分组成，它们是：<br>①目标设定。为该项目进行需求分析，定义和确定这一个阶段的专门目标，指定对过程和产品的约束，并且制定详细的管理计划。<br>②风险分析。对可选方案进行风险识别和详细分析，制定解决办法，采取有效的措施避免这些风险。<br>③开发和有效性验证。风险评估后，可以为系统选择开发模型，并且进行原型开发，即开发软件产品。<br>④评审。对项目进行评审，以确定是否需要进入螺旋线的下一次回路，如果决定继续，就要制定下一阶段计划。</p>
+<h4 id="21-3-构件组装"><a href="#21-3-构件组装" class="headerlink" title="21.3. 构件组装"></a>21.3. 构件组装</h4><p><strong>构件组装</strong>模型通过<strong>重用</strong>来提高软件的可靠性和易维护性，程序在进行修改时产生较少的副作用。一般开发过程为：<strong>设计构件组装→建立构件库→构建应用软件→测试与发布</strong>。构件组装模型的优点如下：<br>（1）构件的自包容性让系统的扩展变得更加容易。<br>（2）设计良好的构件更容易被重用，降低软件开发成本。<br>（3）构件的粒度较整个系统更小，因此安排开发任务更加灵活，可以将开发团队分成若干组，并行地独立开发构件。</p>
+<h3 id="22-敏捷开发方法"><a href="#22-敏捷开发方法" class="headerlink" title="22. 敏捷开发方法"></a>22. 敏捷开发方法</h3><p><strong>敏捷开发</strong>是一种<strong>以人为核心、迭代、循序渐进</strong>的开发方法。</p>
+<ul>
+<li>在敏捷开发中，软件项目的构建被切分成多个子项目，各个子项目的成果都经过测试，具备集成和可运行的特征。换言之，就是把一个大项目分为多个相互联系，但也可独立运行的小项目，并分别完成，在此过程中软件一直处<strong>于可使用</strong>状态。</li>
+<li>敏捷方法特别强调<strong>相关人员之间的信息交流</strong>。因为项目失败的原因最终都可以追溯到信息没有及时准确地传递到应该接受它的人。特别提倡直接的面对面交流，交流成本远远低于文档的交流。</li>
+<li>按照<strong>高内聚、松散耦合</strong>的原则将项目划分为若干个小组，以增加沟通。</li>
+</ul>
+<p>（1）敏捷开发方法是“适应性”（Adaptive）而非“预设性”（Predictive）。<br>（2）敏捷开发方法是“面向人”（people oriented）而非“面向过程”（process oriented）。</p>
+<h3 id="23-自动化测试相关知识"><a href="#23-自动化测试相关知识" class="headerlink" title="23. 自动化测试相关知识"></a>23. 自动化测试相关知识</h3><p><strong>自动化测试工具</strong>主要使用<strong>脚本技术</strong>来生成测试用例，测试脚本不仅可以在功能测试上模拟用户的操作，比较分析，而且可以用在性能测试、负载测试上。虚拟用户可以同时进行相同的、不同的操作，给被测软件施加足够的数据和操作，检查系统的响应速度和数据吞吐能力。</p>
+<ul>
+<li><strong>线性脚本</strong>，是<strong>录制手工执行</strong>的测试用例得到的脚本，这种脚本包含所有的<strong>击键、移动、输入数据</strong>等，所有录制的测试用例都可以得到完整的回放。</li>
+<li><strong>结构化脚本</strong>，类似于结构化程序设计，具有各种逻辑结构、函数调用功能。</li>
+<li><strong>共享脚本</strong>，共享脚本是指可以<strong>被多个测试用例使用的脚本</strong>，也允许其他脚本调用。共享脚本可以在不同主机、不同系统之间共享，也可以在同一主机、同一系统之间共享。</li>
+<li><strong>数据驱动脚本</strong>，将测试输入存储在独立的（数据）文件中，而不是存储在脚本中。可以针对不同数据输入实现多个测试用例。</li>
+<li><strong>关键字驱动脚本</strong>，关键字驱动脚本是<strong>数据驱动脚本</strong>的逻辑扩展。它将数据文件变成测试用例的描述，采用一些<strong>关键字指定要执行的任务</strong>。</li>
+</ul>
+<h3 id="24-软件架构相关知识-？？"><a href="#24-软件架构相关知识-？？" class="headerlink" title="24. 软件架构相关知识 ？？"></a>24. 软件架构相关知识 ？？</h3><p>当考虑架构时，重要的是从不同的视角 <code>perspective</code> 来检查，这促使设计师考虑具体架构的不同属性。</p>
+<ul>
+<li>展示功能组织的<strong>静态视角</strong>能判断质量特性，展示并发行为的<strong>动态视角</strong>能判断系统行为特性。在ABSD（基于架构的软件设计）方法中，使用不同的视角来观察设计元素，一个子系统并不总是一个静态的架构元素，而是可以从<strong>动态和静态视角</strong>观察的架构元素。</li>
+<li>将选择的特定视角或视图与Kruchten提出的类似，也就是<strong>逻辑视图、进程视图、实现视图和配置视图</strong>。<ul>
+<li>使用<strong>逻辑视图</strong>来记录设计元素的<strong>功能和概念接口</strong>，设计元素的功能定义了它本身在系统中的角色，这些角色包括功能性能等。</li>
+<li><strong>进程视图</strong>也称为并发视图，使用并发视图来检查系统多用户的并发行为。使用“并发”来代替“进程”，是为了强调没有对进程或线程进行任何操作，一旦这些执行操作，则并发视图就演化为进程视图。</li>
+<li>使用的最后一个视图是<strong>配置视图</strong>，配置视图代表了计算机网络中的节点，也就是系统的物理结构。</li>
+<li><strong>开发视图</strong>又称为<strong>实现视图</strong>，显示的是源代码以及实际执行代码的组织结构。</li>
+</ul>
+</li>
+</ul>
+<h3 id="25-架构评估"><a href="#25-架构评估" class="headerlink" title="25. 架构评估"></a>25. 架构评估</h3><ul>
+<li><strong>敏感点</strong>是一个或多个构件（和&#x2F;或构件之间的关系）的特性。</li>
+<li><strong>权衡点</strong>是影响<strong>多个质量属性</strong>的特性，是<strong>多个质量属性的敏感点</strong>。</li>
+<li><strong>风险点</strong>是指架构设计中潜在的、存在问题的架构决策所带来的隐患。</li>
+<li><strong>非风险点</strong>是指不会带来隐患，一般以“XXX要求是可以实现（或接受）的”方式表达。</li>
+</ul>
+<h3 id="26-C-S架构风格"><a href="#26-C-S架构风格" class="headerlink" title="26. C&#x2F;S架构风格"></a>26. C&#x2F;S架构风格</h3><h4 id="26-1-二层C-S结构"><a href="#26-1-二层C-S结构" class="headerlink" title="26.1. 二层C&#x2F;S结构"></a>26.1. 二层C&#x2F;S结构</h4><p>C&#x2F;S架构是基于资源不对等，且为实现共享而提出来的，是20世纪90年代成熟起来的技术，C&#x2F;S结构将应用一分为二，服务器（后台）负责数据管理，客户机（前台）完成与用户的交互任务。</p>
+<p>C&#x2F;S软件架构具有强大的数据操作和事务处理能力，模型思想简单，易于人们理解和接受。但随着企业规模的日益扩大，软件的复杂程度不断提高，传统的二层C&#x2F;S结构存在以下几个局限：</p>
+<ol>
+<li>二层C&#x2F;S结构为单一服务器且以<strong>局域网</strong>为中心，所以<strong>难以扩展至大型企业广域网</strong>或Internet；</li>
+<li>软、硬件的组合及<strong>集成能力</strong>有限；</li>
+<li>服务器的<strong>负荷太重</strong>，难以管理大量的客户机，系统的性能容易变坏；</li>
+<li>数据<strong>安全性不好</strong>。因为客户端程序可以直接访问数据库服务器，那么，在客户端计算机上的其他程序也可想办法访问数据库服务器，从而使数据库的安全性受到威胁。</li>
+</ol>
+<h4 id="26-2-三层C-S结构"><a href="#26-2-三层C-S结构" class="headerlink" title="26.2. 三层C&#x2F;S结构"></a>26.2. 三层C&#x2F;S结构</h4><p>正是因为二层C&#x2F;S有这么多缺点，因此，三层C&#x2F;S结构应运而生。三层C&#x2F;S结构是将应用功能分成<strong>表示层、功能层和数据层</strong>三个部分。</p>
+<h5 id="26-2-1-表示层"><a href="#26-2-1-表示层" class="headerlink" title="26.2.1. 表示层"></a>26.2.1. 表示层</h5><p><strong>表示层</strong>是应用的<strong>用户接口</strong>部分，它担负着用户与应用间的对话功能。它用于检查用户从键盘等输入的数据，并显示应用输出的数据。在变更用户接口时，只需改写显示控制和数据检查程序，而不影响其他两层。检查的内容也只限于数据的形式和取值的范围，不包括有关业务本身的处理逻辑。</p>
+<h5 id="26-2-2-功能层"><a href="#26-2-2-功能层" class="headerlink" title="26.2.2. 功能层"></a>26.2.2. 功能层</h5><p><strong>功能层</strong>相当于应用的本体，它是将具体的业务处理逻辑编入程序中。而处理所需的数据则要从表示层或数据层取得。表示层和功能层之间的数据交往要尽可能简洁。</p>
+<h5 id="26-2-3-数据层"><a href="#26-2-3-数据层" class="headerlink" title="26.2.3. 数据层"></a>26.2.3. 数据层</h5><p><strong>数据层</strong>就是数据库管理系统，负责管理对数据库数据的读写。数据库管理系统必须能迅速执行大量数据的更新和检索。因此，一般从功能层传送到数据层的要求大都使用SQL语言。</p>
+<h3 id="27-设计模式的基本概念"><a href="#27-设计模式的基本概念" class="headerlink" title="27. 设计模式的基本概念"></a>27. 设计模式的基本概念</h3><p>设计模式是一套可以被反复使用的、多数人知晓的、经过分类编目的、代码设计经验的总结，使用设计模式是为了可重用代码、让代码更容易被他人理解并且提高代码的可靠性。设计模式的分类：</p>
+<h4 id="27-1-（1）根据目的分类"><a href="#27-1-（1）根据目的分类" class="headerlink" title="27.1. （1）根据目的分类"></a>27.1. （1）根据目的分类</h4><h5 id="27-1-1-创建型"><a href="#27-1-1-创建型" class="headerlink" title="27.1.1. 创建型"></a>27.1.1. 创建型</h5><p><strong>创建型主要用于创建对象</strong>。有<strong>工厂方法模式</strong>（Factory Method）、<strong>抽象工厂模式</strong>（Abstract Factory）、<strong>建造者模式</strong>（Builder）、<strong>原型模式</strong>（Prototype）、<strong>单例模式</strong>（Singleton）共5种。</p>
+<h5 id="27-1-2-结构型"><a href="#27-1-2-结构型" class="headerlink" title="27.1.2. 结构型"></a>27.1.2. 结构型</h5><p><strong>结构型</strong>主要用于<strong>处理类和对象的组合</strong>。有适配器模式（Adapter）、桥接模式（Bridge）、组合模式（Composite）、装饰模式（Decorator）、外观模式（Facade）、享元模式（Flyweight）、代理模式（Proxy）共7种。</p>
+<h5 id="27-1-3-行为型"><a href="#27-1-3-行为型" class="headerlink" title="27.1.3. 行为型"></a>27.1.3. 行为型</h5><p><strong>行为型</strong>主要用于描述类或对象怎样交互和怎样分配职责。有职责链模式（Chain of Responsibility）、命令模式（Command）、解释器模式（Interpreter）、迭代器模式（Iterator）、中介者模式（Mediator）、备忘录模式（Memento）、观察者模式（Observer）、状态模式（State）、策略模式（Stratege）、模板方法模式（Template Method）、访问者模式（Visitor）共11种。</p>
+<h4 id="27-2-（2）根据作用范围分类"><a href="#27-2-（2）根据作用范围分类" class="headerlink" title="27.2. （2）根据作用范围分类"></a>27.2. （2）根据作用范围分类</h4><p>可分为<strong>类模式和对象模式</strong>。</p>
+<ul>
+<li><strong>类模式</strong>用于处理类和子类的关系，这种关系通过继承建立，在编译时就确定了，是一种静态关系。</li>
+<li><strong>对象模式</strong>处理对象间的关系，具有动态关系。</li>
+</ul>
+<h3 id="28-设计模式"><a href="#28-设计模式" class="headerlink" title="28. 设计模式"></a>28. 设计模式</h3><ul>
+<li><strong>Prototype（原型模式）</strong>：用原型实例指定创建对象的类型，并且通过拷贝这个原型来创建新的对象。允许对象在不了解创建对象的确切类以及如何创建细节的情况下创建自定义对象。</li>
+<li><strong>Abstract Factory（抽象工厂模式）</strong>：提供一个创建一系列相关或相互依赖对象的接口，而无需指定它们具体的类。</li>
+<li><strong>Builder（构建器模式）</strong>：将一个复杂类的表示与其构造相分离，使得相同的构建过程能够得出不同的表示。</li>
+<li><strong>Singleton（单例模式）</strong>：保证一个类只有一个实例，并提供一个访问它的全局访问点。</li>
+</ul>
+<h3 id="29-质量属性的理解和质量属性实现策略"><a href="#29-质量属性的理解和质量属性实现策略" class="headerlink" title="29. 质量属性的理解和质量属性实现策略"></a>29. 质量属性的理解和质量属性实现策略</h3><ul>
+<li>对于题干描述：“网站在并发用户数量10万的负载情况下，用户请求的平均响应时间应小于3秒”，主要与<strong>性能质量属性</strong>相关，实现该属性的常见架构策略包括：<strong>增加计算资源、减少计算开销、引入并发机制、采用资源调度</strong>等。</li>
+<li>“主站宕机后，系统能够在10秒内自动切换至备用站点并恢复正常运行”主要与<strong>可用性质量属性</strong>相关，通常可采用<strong>心跳、Ping&#x2F;Echo、主动冗余、被动冗余、选举等架构策略</strong>实现该属性。</li>
+<li>“系统完成上线后，少量的外围业务功能和界面的调整与修改不超过10人&#x2F;月”主要与<strong>可修改性质量属性</strong>相关，通常可采用<strong>接口-实现分离</strong>、<strong>抽象</strong>、<strong>信息隐藏</strong>等架构策略实现该属性。</li>
+</ul>
+<h3 id="30-SYN-Flooding攻击原理"><a href="#30-SYN-Flooding攻击原理" class="headerlink" title="30. SYN Flooding攻击原理"></a>30. SYN Flooding攻击原理</h3><p><strong>SYN Flood攻击</strong>利用<strong>TCP三次握手</strong>的一个漏洞向目标计算机发动攻击。攻击者向目标计算机发送 <code>TCP</code> 连接请求（ <code>SYN</code> 报文），然后对于目标返回的 <code>SYN-ACK</code> 报文不作回应。目标计算机如果没有收到攻击者的ACK回应，就会一直等待，形成半连接，直到连接超时才释放。攻击者利用这种方式发送大量 <code>TCP SYN</code> 报文，让目标计算机上<strong>生成大量的半连接</strong>，迫使其大量资源浪费在这些半连接上。目标计算机一旦资源耗尽，就会出现速度极慢、正常的用户不能接入等情况。攻击者还可以伪造 <code>SYN</code> 报文，其源地址是伪造的或者不存在的地址，向目标计算机发起攻击。<code>SYN Flooding</code> 攻击与 <code>TCP</code> 报文的处理过程没有很大的关系。</p>
+<h3 id="31-数字证书相关应用"><a href="#31-数字证书相关应用" class="headerlink" title="31. 数字证书相关应用"></a>31. 数字证书相关应用</h3><p><code>Kerberos</code> 是一种<strong>网络认证协议</strong>，其设计目标是通过密钥系统为客户机、服务器应用程序提供强大的认证服务。 Kerberos 作为一种可信任的第三方认证服务，是通过传统的<strong>密码技术</strong>（如：共享密钥）来执行<strong>认证服务</strong>的。Kerberos也能达到单点登录的效果，即当 <code>Client</code> 通过了 <code>Kerberos server</code> 的认证后，便可以访问多个 <code>Real Server</code>。</p>
+<p>目前常用的密钥分配方式是设立<strong>密钥分配中心 KDC</strong>，KDC是大家都信任的机构，其任务就是给需要进行秘密通信的用户临时分配一个会话密钥。目前用得最多的<strong>密钥分配协议</strong>是 <code>Kerberos</code> 。Kerberos使用两个服务器：<strong>认证服务器AS、票据授权服务器TGS</strong>。在 <code>Kerberos</code> 认证系统中，用户<strong>首先向认证服务器AS申请初始票据，然后票据授权服务器（TGS）获得会话密码。</strong></p>
+<p>Kerberos可以<strong>防止偷听和重放攻击</strong>，保护数据的完整性。当客户向票据授予服务器（TGS）请求会话票据时会发送用于会话密钥加密的<strong>时间戳</strong>，以<strong>防止重放攻击</strong>；当客户使用从票据授予服务器获取的会话票据请求登录时，要附上用该会话<strong>票据加密的时间戳</strong>，以防止重放攻击。</p>
+<h3 id="32-著作权法-▲"><a href="#32-著作权法-▲" class="headerlink" title="32. 著作权法 ▲"></a>32. 著作权法 ▲</h3><p>《中华人民共和国著作权法》规定：作者的<strong>署名权、修改权、保护作品完整权</strong>的保护期不受限制。发表权的保护期限为作者终生及死后50年（第50年的12月31日），发行权和复制权的保护期限为作者终生及死后50年（第50年的12月31日），合作开发以最后死亡作者为准。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230920140408.png" alt="著作权法"></p>
+<h3 id="33-知识产权人确定-▲"><a href="#33-知识产权人确定-▲" class="headerlink" title="33. 知识产权人确定 ▲"></a>33. 知识产权人确定 ▲</h3><p>根据题目描述，该软件公司的研发人员参与开发的该软件是职务作品，因此该<strong>软件著作权属于公司</strong>，且该研发人员将该软件中的算法和部分程序代码公开发表的行为<strong>涉嫌侵犯公司的软件著作权</strong>。</p>
+<p>根据《合同法》的诚实信用原则和劳动者对单位的忠实义务，<strong>保守商业秘密</strong>的义务属于法定的义务，权利人与义务人即使没有约定保密期限，只要该项商业秘密未被公开，仍然具有经济价值，且权利人对其采取了合理的保密措施，属于法律意义上的商业秘密，则知悉该商业秘密的单位和个人就应当继续履行保密义务，直到该项商业秘密公开为止，即当事人保密义务的期限与商业秘密的存续期限相同。但当事人另有约定的，依约定。无论什么原因导致商业秘密被公之于众，其“秘密性”不复存在，也就不能作为商业秘密继续保护。因为该研发人员将该软件中的算法和部分程序代码公开发表了，其“秘密性”不复存在，也就<strong>丧失了这套应用软件的商业秘密权</strong>。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230920141449.png" alt="知识产权人确定"></p>
+<h3 id="34-盈亏平衡点的数学题"><a href="#34-盈亏平衡点的数学题" class="headerlink" title="34. 盈亏平衡点的数学题"></a>34. 盈亏平衡点的数学题</h3><blockquote>
+<p>某厂生产的某种电视机，销售价为每台2500元，去年的总销售量为25000台，固定成本总额为250万元，可变成本总额为4000万元，税率为16%，则该产品年销售量的盈亏平衡点为（）台(只有在年销售量超过它时才能盈利)。</p>
+</blockquote>
+<p><strong>盈亏平衡点也称为零利润点或保本点</strong>，是全部销售收入等于全部成本时的产量。当销售收入高于盈亏平衡点时，表示企业是盈利的状态；当销售收入低于盈亏平衡点时，表示企业是亏损的状态。<br>▲ 可变成本每年不一样，但比例一样；</p>
+<p>去年卖了25000台电视机，每台售价2500元，固定成本250万，可变成本4000万，税率16%。<br>&#x3D;&#x3D;&gt; 总营收：<code>25000*2500=6250万</code><br>&#x3D;&#x3D;&gt; 固定成本：<code>250万</code><br>&#x3D;&#x3D;&gt; <strong>可变成本</strong>：<code>4000万</code>，<strong>占营收比例</strong>：<code>64%（4000万/6250万=64%）</code>。<br>&#x3D;&#x3D;&gt; 税不属于成本，但与可变成本性质相似，会随销量变化。</p>
+<div>设盈亏平衡时的销售量为X台，则有：2500000+X*2500*64%+X*2500*16%=X*2500</div>
+<div>500X=2500000，解得：X=5000</div>
+
+<h3 id="35-系统设计"><a href="#35-系统设计" class="headerlink" title="35. 系统设计"></a>35. 系统设计</h3><p>系统设计的目的是指定一种（ <strong>应用体系架构</strong> ），它定义了用于构建拟议信息系统的技术。此任务通过分析最初在（ <strong>需求分析</strong> ）期间创建的数据模型和流程模型来完成。（ <strong>物理数据流图</strong> ）用于跨网络建立物理过程和数据存储。为了完成这项活动，分析师可能会让许多系统设计师和（ <strong>系统用户</strong> ）参与这项活动，以帮助解决业务数据、流程和位置问题。这项任务的关键输入是从各种来源征求的事实、建议和意见，以及决策分析阶段获得的批准（ <strong>系统建议书</strong> ）。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/bc45.html" title="笔记-真题-综合知识（2020年系统架构设计师上午题）">https://www.zenwu.site/posts/bc45.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%8E%86%E5%B9%B4%E7%9C%9F%E9%A2%98%E7%9F%A5%E8%AF%86%E7%82%B9/" rel="tag"><i class="fa fa-tag"></i> 历年真题知识点</a>
+              <a href="/tags/%E7%B3%BB%E7%BB%9F%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%B8%88/" rel="tag"><i class="fa fa-tag"></i> 系统架构设计师</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/8f65.html" rel="prev" title="笔记-线程之间的共享资源以及独占资源">
+                  <i class="fa fa-angle-left"></i> 笔记-线程之间的共享资源以及独占资源
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/2c59.html" rel="next" title="笔记-真题-综合知识（2021年系统架构设计师上午题）">
+                  笔记-真题-综合知识（2021年系统架构设计师上午题） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

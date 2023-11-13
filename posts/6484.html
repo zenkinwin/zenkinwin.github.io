@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="网络拓扑结构，包括总线型（bus）、星型（star）、环型（ring）、树型（tree）网络结构。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-计算机网络基础-计算机网络分类-总线型-星型-环状-树形-网状-网络拓扑结构">
+<meta property="og:url" content="https://www.zenwu.site/posts/6484.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="网络拓扑结构，包括总线型（bus）、星型（star）、环型（ring）、树型（tree）网络结构。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/07/12/3wgjATJOfqPCHda.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/12/K19yJfDXEjAUFrS.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/12/HFmBQTt7ZUoDEA6.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/12/LQUgzSGchOadrC5.png">
+<meta property="og:image" content="https://i.loli.net/2020/07/12/wtzcurPLQAGgEFN.png">
+<meta property="article:published_time" content="2020-07-12T08:38:44.000Z">
+<meta property="article:modified_time" content="2020-07-12T08:38:44.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="网络拓扑结构">
+<meta property="article:tag" content="总线型">
+<meta property="article:tag" content="星型">
+<meta property="article:tag" content="环状">
+<meta property="article:tag" content="树形">
+<meta property="article:tag" content="网状">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/07/12/3wgjATJOfqPCHda.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/6484.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/6484.html","path":"posts/6484.html","title":"笔记-计算机网络基础-计算机网络分类-总线型-星型-环状-树形-网状-网络拓扑结构"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-计算机网络基础-计算机网络分类-总线型-星型-环状-树形-网状-网络拓扑结构 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%80%BB%E7%BA%BF%E5%BD%A2%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="nav-text">总线形网络拓扑结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%98%9F%E5%BD%A2%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="nav-text">星形网络拓扑结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8E%AF%E5%BD%A2%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="nav-text">环形网络拓扑结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%91%E5%9E%8B%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="nav-text">树型网络拓扑结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E7%8A%B6%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84"><span class="nav-text">网状网络拓扑结构</span></a></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/6484.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-计算机网络基础-计算机网络分类-总线型-星型-环状-树形-网状-网络拓扑结构 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-计算机网络基础-计算机网络分类-总线型-星型-环状-树形-网状-网络拓扑结构
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-07-12 16:38:44" itemprop="dateCreated datePublished" datetime="2020-07-12T16:38:44+08:00">2020-07-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">计算机网络基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<p>网络拓扑结构，包括总线型（bus）、星型（star）、环型（ring）、树型（tree）网络结构。</p>
+<span id="more"></span>
+
+
+<h3 id="总线形网络拓扑结构"><a href="#总线形网络拓扑结构" class="headerlink" title="总线形网络拓扑结构"></a>总线形网络拓扑结构</h3><p>总线拓扑结构所有设备连接到<strong>一条连接</strong>介质上。<strong>总线结构所需要的电缆数量少，线缆长度短，易于布线和维护。多个结点共用一条传输信道，信道利用率高。但不找诊断故障</strong>。</p>
+<p>所有入网设备共用一条物理传输线路，所有的数据发往同一条线路，并能够由附接在线路上的所有设备感知。入网设备通过专用的分接头接入线路。总线网拓扑是局域网的一种组成形式。</p>
+<p><img src="https://i.loli.net/2020/07/12/3wgjATJOfqPCHda.png" alt="总线形网络拓扑结构"></p>
+<p>总线网的特点：</p>
+<p>（1）多台机器共用一条传输信道，信道利用率较高；<br>（2）同一时刻只能由两台计算机通信；<br>（3）某个结点的故障不影响网络的工作；<br>（4）网络的延伸距离有限，结点数有限。</p>
+<p>适用场合：局域网，对实时性要求不高的环境。</p>
+<h2 id="星形网络拓扑结构"><a href="#星形网络拓扑结构" class="headerlink" title="星形网络拓扑结构"></a>星形网络拓扑结构</h2><p>星型拓扑结构是<strong>一个中心，多个分节点</strong>。它<strong>结构简单，连接方便</strong>，管理和维护都相对容易，而且<strong>扩展性强</strong>。网络延迟时间较小，<strong>传输误差低</strong>。中心无故障，一般网络没问题。中心故障，网络就出问题，同时<strong>共享能力差</strong>，通信线路利用率不高。</p>
+<p>以一台中心处理机（通信设备）为主而构成的网络，其它入网机器仅与该中心处理机之间有直接的物理链路，中心处理机采用分时或轮询的方法为入网机器服务，所有的数据必须经过中心处理机。</p>
+<p><img src="https://i.loli.net/2020/07/12/K19yJfDXEjAUFrS.png" alt="星形网络拓扑结构"></p>
+<p>星形网的特点：</p>
+<p>（1）网络结构简单，便于管理（集中式）；<br>（2）每台入网机均需物理线路与处理机互连，线路利用率低；<br>（3）处理机负载重（需处理所有的服务），因为任何两台入网机之间交换信息，都必须通过中心处理机；<br>（4）入网主机故障不影响整个网络的正常工作，中心处理机的故障将导致网络的瘫痪。</p>
+<p>适用场合：局域网、广域网。</p>
+<h2 id="环形网络拓扑结构"><a href="#环形网络拓扑结构" class="headerlink" title="环形网络拓扑结构"></a>环形网络拓扑结构</h2><p>环形拓扑结构是节点形成一个<strong>闭合环</strong>。<strong>工作站少，节约设备</strong>。当然，这样就导致一个节点出问题，网络就会出问题，而且不好诊断故障。</p>
+<p>入网设备通过转发器接入网络，每个转发器仅与两个相邻的转发器有直接的物理线路。环形网的数据传输具有单向性，一个转发器发出的数据只能被另一个转发器接收并转发。所有的转发器及其物理线路构成了一个环状的网络系统。</p>
+<p><img src="https://i.loli.net/2020/07/12/HFmBQTt7ZUoDEA6.png" alt="环形网络拓扑结构"></p>
+<p>环形网特点：</p>
+<p>（1）实时性较好（信息在网中传输的最大时间固定）；<br>（2）每个结点只与相邻两个结点有物理链路；<br>（3）传输控制机制比较简单；<br>（4）某个结点的故障将导致物理瘫痪；<br>（5）单个环网的结点数有限。</p>
+<p>适用场合：局域网，实时性要求较高的环境。</p>
+<h2 id="树型网络拓扑结构"><a href="#树型网络拓扑结构" class="headerlink" title="树型网络拓扑结构"></a>树型网络拓扑结构</h2><p>树形拓扑结构从总线拓扑演变而来。形状像一棵倒置的树,顶端是树根，树根以下带分支，每个分支还可再带子分支，树根接收各站点发送的数据，然后再广播发送到全网。好扩展，容易诊断错误，但对根部要求高。</p>
+<p><img src="https://i.loli.net/2020/07/12/LQUgzSGchOadrC5.png" alt="树型网络拓扑结构"></p>
+<h2 id="网状网络拓扑结构"><a href="#网状网络拓扑结构" class="headerlink" title="网状网络拓扑结构"></a>网状网络拓扑结构</h2><p>网形拓扑结构是应用最广泛的，它的优点是不受瓶颈问题和失效问题的影响，一旦线路出问题，可以做其他线路，但太复杂，成本高。</p>
+<p>利用专门负责数据通信和传输的结点机构成的网状网络，入网设备直接接入结点机进行通信。网状网络通常利用冗余的设备和线路来提高网络的可靠性，因此，结点机可以根据当前的网络信息流量有选择地将数据发往不同的线路。</p>
+<p><img src="https://i.loli.net/2020/07/12/wtzcurPLQAGgEFN.png" alt="网状网络拓扑结构"></p>
+<p>适用场合：主要用于地域范围大、入网主机多（机型多）的环境，常用于构造广域网络。 </p>
+<p>参考：</p>
+<ul>
+<li>Draught_Bear：<a target="_blank" rel="noopener" href="https://blog.csdn.net/Draught_Bear/article/details/80784777">总线型，星型，环状，树形,网状拓扑结构</a></li>
+<li>一只懒懒的coder：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u011990285/article/details/30286785]https://blog.csdn.net/u011990285/article/details/30286785">局域网常用的几种网络拓扑结构及其特点</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/6484.html" title="笔记-计算机网络基础-计算机网络分类-总线型-星型-环状-树形-网状-网络拓扑结构">https://www.zenwu.site/posts/6484.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84/" rel="tag"><i class="fa fa-tag"></i> 网络拓扑结构</a>
+              <a href="/tags/%E6%80%BB%E7%BA%BF%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i> 总线型</a>
+              <a href="/tags/%E6%98%9F%E5%9E%8B/" rel="tag"><i class="fa fa-tag"></i> 星型</a>
+              <a href="/tags/%E7%8E%AF%E7%8A%B6/" rel="tag"><i class="fa fa-tag"></i> 环状</a>
+              <a href="/tags/%E6%A0%91%E5%BD%A2/" rel="tag"><i class="fa fa-tag"></i> 树形</a>
+              <a href="/tags/%E7%BD%91%E7%8A%B6/" rel="tag"><i class="fa fa-tag"></i> 网状</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/2f70.html" rel="prev" title="笔记-计算机网络基础-5G">
+                  <i class="fa fa-angle-left"></i> 笔记-计算机网络基础-5G
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/b98a.html" rel="next" title="笔记-知识产权与标准化知识-中华人民共和国政府采购法">
+                  笔记-知识产权与标准化知识-中华人民共和国政府采购法 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

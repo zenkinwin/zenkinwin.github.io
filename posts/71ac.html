@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="8.2 信息系统工程投资控制基础知识与方法8.2.1 信息工程项目投资所谓项目投资，就是投资主体为了达到一定的目的而将其能支配的资金（或其他资源）投入工程项目建设的过程。这里，投资包含三层含义，一是指投入资金（或其他资源）；二是指投资主体的资金投放行为，包括资金的筹措、投向、投资决策、投资计划、实施、调控等活动；三是指资金（或其他资源）的投入过程。 在信息系统工程建设项目中，投资可理解成进行某项信">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-投资控制-8.2 信息系统工程投资控制基础知识与方法">
+<meta property="og:url" content="https://www.zenwu.site/posts/71ac.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="8.2 信息系统工程投资控制基础知识与方法8.2.1 信息工程项目投资所谓项目投资，就是投资主体为了达到一定的目的而将其能支配的资金（或其他资源）投入工程项目建设的过程。这里，投资包含三层含义，一是指投入资金（或其他资源）；二是指投资主体的资金投放行为，包括资金的筹措、投向、投资决策、投资计划、实施、调控等活动；三是指资金（或其他资源）的投入过程。 在信息系统工程建设项目中，投资可理解成进行某项信">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327105450.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327165235.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327165515.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327173020.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327173801.png">
+<meta property="article:published_time" content="2023-03-22T12:11:49.000Z">
+<meta property="article:modified_time" content="2023-03-23T15:29:21.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="投资控制">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327105450.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/71ac.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/71ac.html","path":"posts/71ac.html","title":"笔记-投资控制-8.2 信息系统工程投资控制基础知识与方法"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-投资控制-8.2 信息系统工程投资控制基础知识与方法 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#8-2-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%8E%E6%96%B9%E6%B3%95"><span class="nav-text">8.2 信息系统工程投资控制基础知识与方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-1-%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E9%A1%B9%E7%9B%AE%E6%8A%95%E8%B5%84"><span class="nav-text">8.2.1 信息工程项目投资</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-2-%E4%BF%A1%E6%81%AF%E5%B7%A5%E7%A8%8B%E9%A1%B9%E7%9B%AE%E6%8A%95%E8%B5%84%E6%9E%84%E6%88%90%E5%88%86%E6%9E%90"><span class="nav-text">8.2.2 信息工程项目投资构成分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%B7%A5%E7%A8%8B%E7%9B%91%E7%90%86%E8%B4%B9"><span class="nav-text">1. 工程监理费</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%B7%A5%E7%A8%8B%E5%89%8D%E6%9C%9F%E8%B4%B9"><span class="nav-text">2. 工程前期费</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%92%A8%E8%AF%A2%E8%AE%BE%E8%AE%A1%E8%B4%B9"><span class="nav-text">3. 咨询设计费</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E5%B7%A5%E7%A8%8B%E8%B4%B9%E7%94%A8"><span class="nav-text">4. 工程费用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E7%AC%AC%E4%B8%89%E6%96%B9%E6%B5%8B%E8%AF%95%E8%B4%B9%E7%94%A8"><span class="nav-text">5. 第三方测试费用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E5%B7%A5%E7%A8%8B%E9%AA%8C%E6%94%B6%E8%B4%B9%E7%94%A8"><span class="nav-text">6. 工程验收费用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E7%B3%BB%E7%BB%9F%E8%BF%90%E7%BB%B4%E8%B4%B9"><span class="nav-text">7. 系统运维费</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-%E9%A3%8E%E9%99%A9%E8%B4%B9%E7%94%A8"><span class="nav-text">8. 风险费用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-%E5%85%B6%E4%BB%96%E8%B4%B9%E7%94%A8"><span class="nav-text">9. 其他费用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-3-%E8%B4%A7%E5%B8%81%E7%9A%84%E6%97%B6%E9%97%B4%E4%BB%B7%E5%80%BC%E4%B8%8E%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96"><span class="nav-text">8.2.3 货币的时间价值与投资决策</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%B4%A7%E5%B8%81%E6%97%B6%E9%97%B4%E4%BB%B7%E5%80%BC%E7%9A%84%E5%BC%95%E5%85%A5"><span class="nav-text">1. 货币时间价值的引入</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%8A%95%E8%B5%84%E5%86%B3%E7%AD%96%E5%88%86%E6%9E%90"><span class="nav-text">2. 投资决策分析</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-4-%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6%E4%B8%AD%E7%9A%84%E6%8A%80%E6%9C%AF%E7%BB%8F%E6%B5%8E%E5%88%86%E6%9E%90"><span class="nav-text">8.2.4 投资控制中的技术经济分析</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%8A%80%E6%9C%AF%E7%BB%8F%E6%B5%8E%E5%88%86%E6%9E%90%E7%9A%84%E7%89%B9%E7%82%B9%E5%92%8C%E6%96%B9%E6%B3%95%E6%AD%A5%E9%AA%A4"><span class="nav-text">1. 技术经济分析的特点和方法步骤</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%8D%95%E6%96%B9%E6%A1%88%E7%9A%84%E7%BB%8F%E6%B5%8E%E8%AF%84%E4%BB%B7%E6%96%B9%E6%B3%95"><span class="nav-text">2. 单方案的经济评价方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E5%A4%9A%E6%96%B9%E6%A1%88%E7%BB%8F%E6%B5%8E%E8%AF%84%E4%BB%B7%E7%9A%84%E5%8F%AF%E6%AF%94%E6%80%A7"><span class="nav-text">3. 多方案经济评价的可比性</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/71ac.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-投资控制-8.2 信息系统工程投资控制基础知识与方法 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-投资控制-8.2 信息系统工程投资控制基础知识与方法
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-03-22 20:11:49" itemprop="dateCreated datePublished" datetime="2023-03-22T20:11:49+08:00">2023-03-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-03-23 23:29:21" itemprop="dateModified" datetime="2023-03-23T23:29:21+08:00">2023-03-23</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6/" itemprop="url" rel="index"><span itemprop="name">投资控制</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h2 id="8-2-信息系统工程投资控制基础知识与方法"><a href="#8-2-信息系统工程投资控制基础知识与方法" class="headerlink" title="8.2 信息系统工程投资控制基础知识与方法"></a>8.2 信息系统工程投资控制基础知识与方法</h2><h3 id="8-2-1-信息工程项目投资"><a href="#8-2-1-信息工程项目投资" class="headerlink" title="8.2.1 信息工程项目投资"></a>8.2.1 信息工程项目投资</h3><p>所谓项目投资，就是投资主体为了达到一定的目的而将其能支配的资金（或其他资源）投入工程项目建设的过程。这里，投资包含三层含义，一是指投入资金（或其他资源）；二是指投资主体的资金投放行为，包括资金的筹措、投向、投资决策、投资计划、实施、调控等活动；三是指资金（或其他资源）的投入过程。</p>
+<p>在信息系统工程建设项目中，投资可理解成进行某项信息工程建设花费的全部费用，即为项目实施完成，建设单位所支付的设备采购费用、应用环境所需的系统软件和配置软件费用；支付承建单位的设计、开发、服务费用；监理费用等。</p>
+<span id="more"></span>
+<h3 id="8-2-2-信息工程项目投资构成分析"><a href="#8-2-2-信息工程项目投资构成分析" class="headerlink" title="8.2.2 信息工程项目投资构成分析"></a>8.2.2 信息工程项目投资构成分析</h3><p>信息工程项目投资构成一般可以划分为：<strong>工程前期费用</strong>、<strong>监理费</strong>、<strong>咨询&#x2F;设计费用</strong>、<strong>工程费用</strong>、<strong>第三方工程测试费用</strong>、<strong>工程验收费用</strong>、<strong>系统运行维护费用</strong>、<strong>风险费用</strong>和<strong>其他费用</strong>。</p>
+<p>具体项目投资构成如图8.6所示。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230327105450.png" alt="项目投资构成"></p>
+<h4 id="1-工程监理费"><a href="#1-工程监理费" class="headerlink" title="1. 工程监理费"></a>1. 工程监理费</h4><p>工程监理费是付给信息系统工程项目监理单位的<strong>监理服务费用</strong>。工程监理的取费应综合考虑信息工程项目的监理特点、项目建设周期、地域分布、监理对象、监理单位式、监理难度等因素。一般采取以下主要取费方式。</p>
+<p><strong>1）按照信息系统工程建设费（或合同价格）的百分比取费</strong><br>主要根据信息系统工程的规模、类型（软件开发、硬件集成、网络和信息系统集成、机房工程等等）、阶段、内容、复杂程序、监理成本等多方面因素综合计算。</p>
+<p><strong>2）按照参与信息系统工程的监理人员服务费读取</strong><br>如小型信息系统工程、建设单位有特殊要求的工程等，按人&#x2F;月取费。</p>
+<p><strong>3）由建设单位和监理单位商定</strong><br>不宜按1）、2）办法计取的，可以由建设单位和监理单位按商定的其他办法计取。</p>
+<h4 id="2-工程前期费"><a href="#2-工程前期费" class="headerlink" title="2. 工程前期费"></a>2. 工程前期费</h4><p>是指建设单位请<strong>专业公司在编制工程方案设计</strong>、<strong>项目可行性分析、造价是否合理评估</strong>，以及<strong>项目招、投标等方面所需要的费用</strong>。</p>
+<h4 id="3-咨询设计费"><a href="#3-咨询设计费" class="headerlink" title="3. 咨询设计费"></a>3. 咨询设计费</h4><p>指<strong>建设单位</strong>聘请专业的顾问公司或设计单位进行信息系统工程项目咨询或进行项目规划设计所需要的费用。</p>
+<h4 id="4-工程费用"><a href="#4-工程费用" class="headerlink" title="4. 工程费用"></a>4. 工程费用</h4><p>工程费用由<strong>直接费用、实施方案设计费、硬件费、软件费、间接费、计划利润、税金</strong>构成。</p>
+<p><strong>1）直接费用</strong><br>指信息系统工程中耗用的构成工程实体和有助于工程实体形成的各项费用，包括人工费、现场经费。</p>
+<p><strong>（1）人工费</strong><br>指直接从事工程的专业技术人员开支的各项费用，主要包括：</p>
+<ul>
+<li>基本工资指发放生产人员的<strong>岗位工资和技能工资</strong>。</li>
+<li>工资性补贴指规定标准的<strong>物价补贴，煤、燃气补贴，交通费补贴，住房补贴</strong>等。</li>
+<li><strong>辅助工资</strong>指生产人员平均有效施工天数以外非作业天数的工资。包括职工学习、培训期间的工资，调动工作、探亲、休假期间的工资，因气候影响的停工工资，女工哺乳期间的工资，病假在六个月以内的工资及产、婚、丧假期的工资。</li>
+</ul>
+<p><strong>（2）现场经费</strong><br>指施工现场组织施工生产和管理所需费用，主要包括：</p>
+<ul>
+<li>临时设施费指承建单位为进行安装工程施工所需的生产和生活用的临时建筑物和其他临时实施费用；为开发、实施而搭建的临时开发或实施实验环境；临时实施费用包括临时设施的搭设、维修、拆除费和摊销费。</li>
+<li>现场管理费指企业在实施现场为组织和管理工程实施所需的费用，内容包括：<ul>
+<li>现场管理人员的基本工资、工资性补贴、职工福利费、劳动保护费等</li>
+<li>办公费</li>
+<li>差旅交通费</li>
+<li>固定资产使用费</li>
+<li>工具、用具使用费</li>
+<li>保险费</li>
+<li>其他费用</li>
+</ul>
+</li>
+</ul>
+<p><strong>2）实施方案设计费</strong><br>根据建设单位需求、可行性报告或规划设计方案，编制信息系统工程实施方案所需要发生的费用。</p>
+<p><strong>3）硬件费用</strong></p>
+<ul>
+<li>设备原价</li>
+<li>供销部门手续费</li>
+<li>包装费</li>
+<li>运杂费</li>
+<li>采购及保管费</li>
+<li>运输保险费</li>
+<li>关税（对进口货物）</li>
+</ul>
+<p><strong>4）软件费用</strong></p>
+<ul>
+<li>开发软件费用</li>
+<li>系统软件费用（操作系统、数据库、中间件等）</li>
+</ul>
+<p><strong>5）间接费用</strong></p>
+<p><strong>（1）企业管理费</strong><br>指企业为组织施工生产经营活动多发生的管理费用，主要包括：</p>
+<ul>
+<li>管理人员的基本工资、工资性补贴及按规定标准计提的职工福利费</li>
+<li>差旅交通费</li>
+<li>办公费</li>
+<li>固定资产使用费</li>
+<li>工具、用具使用费</li>
+<li>保险费</li>
+<li>职工教育费</li>
+<li>工费经费</li>
+<li>税金</li>
+<li>劳动保险费</li>
+<li>职工养老保险费及待业保险费</li>
+<li>其他费用</li>
+</ul>
+<p><strong>（2）财务费用</strong><br>指企业为筹集资金而发生的各项费用，包括企业经营期间发生的短期贷款利息净支出、汇兑净损失、调剂外汇手续费、金融机构手续费，以及企业筹集资金发生的其他财务费用。</p>
+<p><strong>6）计划利润</strong><br>指按规定应计入安装工程造价的利润。依据工程类别实行差价利润率。</p>
+<p><strong>7）税金</strong><br>指按国家税法规定应计入安装工程造价内的营业税、城市维护建设税及教育费附加。</p>
+<h4 id="5-第三方测试费用"><a href="#5-第三方测试费用" class="headerlink" title="5. 第三方测试费用"></a>5. 第三方测试费用</h4><p>对于许多的复杂大型信息系统工程项目，为了防止在验收时定性评价的随意性，在验收前，往往聘请<strong>第三方评测机构</strong>对项目进行验收测试，通过定量性的测试结果对项目进行评价，作为验收的依据之一。另外承建单位往往不具备针对复杂大型信息系统工程项目进行性能、安全性测试的条件、技术和资质，性能和安全性测试往往要聘请第三方的专业测试机构。所以建设单位必须<strong>预留相应的测试费用</strong>，以便支付给第三方测试机构。</p>
+<h4 id="6-工程验收费用"><a href="#6-工程验收费用" class="headerlink" title="6. 工程验收费用"></a>6. 工程验收费用</h4><p>指工程质量监督机构或建设单位对信息系统工程进行质量监督检验所发生的费用。</p>
+<h4 id="7-系统运维费"><a href="#7-系统运维费" class="headerlink" title="7. 系统运维费"></a>7. 系统运维费</h4><p>指工程完成后在正常使用中所需要的维护费用（设备、人工、材料）等。</p>
+<h4 id="8-风险费用"><a href="#8-风险费用" class="headerlink" title="8. 风险费用"></a>8. 风险费用</h4><p>为顺利完成项目，保证内、外部出现一定风险时，项目仍能顺利完成所需要的费用。例如新出台的政策要求正在进行的这类项目必须具有比以前更为严密的、高水平的安全保障措施，这会使项目的设计进行变动，所需要的安全防护系统增加，从而使项目必须增加费用才能顺利完成。</p>
+<h4 id="9-其他费用"><a href="#9-其他费用" class="headerlink" title="9. 其他费用"></a>9. 其他费用</h4><p>指根据建设任务的需要，必须在建设项目中列支的其他费用。</p>
+<h3 id="8-2-3-货币的时间价值与投资决策"><a href="#8-2-3-货币的时间价值与投资决策" class="headerlink" title="8.2.3 货币的时间价值与投资决策"></a>8.2.3 货币的时间价值与投资决策</h3><h4 id="1-货币时间价值的引入"><a href="#1-货币时间价值的引入" class="headerlink" title="1. 货币时间价值的引入"></a>1. 货币时间价值的引入</h4><p><strong>货币时间价值</strong>表现为同质同量的<strong>货币在不同时点上具有不同的经济价值</strong>。现假设某项目在建设期第一年初由银行贷款100万元，年利率为12%，每年复利一次，根据复利公式Fn&#x3D;P（1+R）<sup>n</sup>。（式中Fn为n年末的终值，P为n年初的本金，R为年利率，（1+R）<sup>n</sup>为到n年末的复利因子）计算可得第三年末的终值为140.49万元。年初100万元的贷款到第三年末其价值变为140.49万元，这就说明了<strong>货币具有时间价值</strong>。在不考虑通货膨胀、物价上涨等因素的情况下，对银行来说，其差就是<strong>利息</strong>。反过来，将第三年末的140.49万元终值依据贴现公式P&#x3D;Fn&#x2F;（1+R）<sup>n</sup> （式中1&#x2F;（1+R）<sup>n</sup>为贴现因子），贴现至经营期初的贴现值为100万元。同理，在项目建成投产后各年的净现金流入量（由于投资带来的净收益）也可贴现。通常，我们在进行项目分析时，是把不同时间的资金投入和净现金流入量依照一定的贴现率折算成现时的、投入时点的价值，然后将同一时点的各种经济数据进行对比，从而做出正确的决策。</p>
+<p>既然货币具有时间价值，那么采用静态分析法来评估项目就会忽视从投入到产出这个时间差因素对资金价值本身带来的影响，使项目评估不真实可靠。事实上，由于目前的单利档次是根据复利计算而得的，因此，我们沿用的、根据不同项目还款期限采用不同档次的单利计算利息，然后将投入本金连同利息一起同经营期内的净现金流入量进行比较的那种区别单利分析法，实质上已部分考虑到货币的时间价值，但这种决策法还没有完全体现货币的时间价值，还有其局限性。其一，投入、产出往往是分年逐次、分期流回的，而不是年初、年末一次性的，区别单利法是按原定利率随本金计息，这就在很大程度上忽视了时间差因素。其二，项目投资往往不全由银行包揽，还有企业自筹资金，对企业投资的那部分资金，分析时没有考虑到时间价值。其三，贴现率受社会诸方面的影响，不完全就等于银行贷款利率。预测的经济效益由于多方原因，也不一定完全能实现。贴现率上升，效益下降，原来可行的项目又是否可行呢?这也是区别单利法无法解决的问题。这个难题，可通过货币时间价值指标体系，对投资方案及其数据的变动进行综合、全面的分析来解决。</p>
+<h4 id="2-投资决策分析"><a href="#2-投资决策分析" class="headerlink" title="2. 投资决策分析"></a>2. 投资决策分析</h4><p>依据前述贴现原理。<strong>设置净现值（NPV），现值指数（PVI），内含报酬率（IRR）</strong>等指标，并据以分析。</p>
+<p><strong>1）净现值的分析</strong><br>净现值是指经营期各年末的净现金流入量同建设期各年初的投资额均按照一定的相同的贴现率贴现到现时的，投入时点的现值之差。即<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230327165235.png" alt="净现值"></p>
+<p>式中：　Pt为建设期各年初投资额<br>　　　　Nt为经营期各年末的净现金流入量<br>　　　　t为年数<br>　　　　n为建设期年数<br>　　　　m为经营期年数<br>　　　　R为年利率</p>
+<p>一般地说，若<strong>净现值是正数，则说明该投资方案是可行的</strong>；否则，投资方案是不可行的。若有几个可行方案，以净现值越大为越好。</p>
+<p>现假设有甲、乙、丙三个投资方案，其建设期各年初投资总额均为100万元，经营期各年末净现金流入量均为200万元，年利率为12%，年复利一次，详见表8-1。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230327165515.png" alt="例子"></p>
+<p>由表中三方案的计算结果可以看出，由于三方案各年投资额以及收益额结构不同（100万元和200万元），造成建设期各年初的投资额同经营期各年末的现金流入量贴现至建设期初的贴现值亦有差异，在不考虑货币的时间价值，采用<strong>静态分析法</strong>，即<strong>采用净现金流入总量同投资总额比较作为决策准则的</strong>情况下，则由于三方案的四年投资额和五年净现金流入量合计都相同（分别为100万元和200万元），而使三方案因投资效果相同而均为可行。若采用<strong>净现金流入量现值作</strong>为决策准则，而不考虑其建设期各年初投资的时间价值，则有甲方案五年贴现值合计最高（96.80万元），乙方案次之（91.64万元），丙方案最低（86.4’7万元）。事实上以上两种分析方法都是不可取的，只有采用<strong>净现值分析法</strong>才是较科学的。在表内三方案中，<strong>甲、乙两方案的净现值均为正数</strong>，为<strong>可行方案</strong>，丙方案的净现值为负数，是不可行方案。但在甲、乙两方案中，以乙方案的净现值高（ 11.39万元），甲方案的净现值低（6.95万元）。</p>
+<p><strong>2）现值指数的分析</strong><br>在几个方案的原投资额不相同的情况下，仅凭净现值的绝对数的大小进行决策是不够的，还需要结合<strong>现值指数进行分析</strong>。现值指数<strong>是投资方案经营期各年末净现金流入量的总现值与建设期各年初投资额总现值之比</strong>。即现值指数亦称投资收益率，它是一个重要的经济效益指标，特别是在资金紧缺时尤显重要。现值指数分析法就是根据各个投资方案的现值指数的大小来判定该方案是否可行的方法。凡现值指数大于1的方案均为可接受的方案，否则为不可行方案。现值指数分析与净现值分析一样，都考虑到了货币的时间价值，所不同的是现值指数是以相对数表示，便于在不同投资额的方案之间进行对比。从表中计算结果可知，丙方案现值指数小于1，因而是不可行方案，甲、乙两方案的现值指数均大于1，因而是可接受方案，其中乙方案的现值指数最大（1.14），因而是最优方案。</p>
+<p><strong>3）内含报酬率的分析</strong><br>对评价一个投资方案是否可行所应用的利率，实际上是取得长期投资的资金来源的成本，也就是资金成本。前已述及，这种资金来源包括银行贷款和企业自筹，分析时，这两项资金成本都以银行贷款利率为基准来贴现，而实际贴现率往往会因为通货膨胀、市场物价、货币流通、当地的投资环境、投资风险等因素使得其偏高于银行贷款利率。也就是说，对企业来说，资金成本具有不确定性，这种不确定的资金成本也就是资金的机会成本。若贴现率出现偏高于基准利率，原来可行的方案又是否可行呢?当贴现率高到什么程度时，原来可行的方案将变为不可行方案呢?这是净现值分析法和现值指数分析法无法解决的问题，这就需要通过内含报酬率来解决。所谓内含报酬率，就是根据某贴现率使投资方案的各年投资总现值和净现金流入量总现值正好与贴现率相等。也就是说，是一种能使投资方案的净现值为零的贴现率，根据插值法可得其公式：<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230327173020.png" alt="内含报酬率"></p>
+<p>有了内含报酬率就可与资金的机会成本相比较：<strong>若内含报酬率大于资金机会成本，则此方案为可行方案</strong>；若内含报酬率小于资金机会成本，则此方案不一定是合理方案。当有几个可供选择的方案需要择一决策时，应选内含报酬率高的方案为决策方案。资金的机会成本如何确定是这里的关键，它同当时当地的投资环境及投资项目的具体行业等因素有关。一般来说，以国家银行贷款利率为基准，一风险大的地区和大的项目资金机会成本应定得高些。现仍以表8-1乙方案为例，若资金的机会成本定为巧%，经过多次计算找出有剩余净现值低贴现率r，和不足净现值的高贴现率r2分别为14%和16%，并计算出b的绝对值分别为3.69万元和2.83万元，则净现值为零时的内含报酬率为：<br>IRR&#x3D;0.14+（0.16-0.14）×3.6÷（3.69+2.83） &#x3D;0.1513（即15.13%），具体见图8.7。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230327173801.png" alt="甲乙丙投资方案"></p>
+<p>由上可知，乙方案的内含报酬率大于资金的机会成本（15.13%&gt; 15%），因此乙方案仍是可行方案。</p>
+<p><strong>4）敏感性分析</strong><br>内含报酬率的分析说明了资金机会成本具有不确定性，但不管其上升多少，只要不超过内含报酬率，方案仍为可行。同样，我们对未来的净现金流入量也只是个预测，都不一定精确，往往会因利润、经营期、折旧等因素的变动而有所变动，从而影响投资效果。因此很有必要对<strong>这些数据的变动是否影响方案的可行性进行分析，这种分析称为敏感性分析。</strong></p>
+<p>仍以上例乙方案为例，若经营期由五年变为四年，并且四年的净现金流入量均为50万元，则净现金流入量现值为：</p>
+<div align=center>50/（1+12%）5+50/（1+12%）6+50/（1+12%）7+50/（1+12%）8=96.51万元</div>
+此时净现值= 96.51-80.25=16.26（万元）>0，该方案仍为可行方案。若经营期由五年变为四年，并且四年的均净现金流入量均为40万元，则净现金流入量现值为：
+
+<div align=center>40/（1+12%）5+40/（1+12%）6+401（1+12%）7+40/（1+12%）8=77.22万元</div>
+此时净现值=77.22-88.25 =-3.03（万元）<0，现在情况就不同了，原来可行方案变为不可行方案。
+
+<p>如果设四年的现金流入量为N，计算出净现金流入量现值并使之同投资现值相等，得</p>
+<div align=center>N×{1/（1+12%）5+1/（1+12%）6+1/（1+12%）7+1/（1+12%）8}=80.25万元
+求得N=41.58（万元）</div>
+
+<p>也就是说当四年的净现金流入量均大于41.58万元为可行方案，否则为不可行方案，41.58万元就称为该种情况下可行与不可行转折点的净现金流入量（这里忽略了资金机会成本的影响）。</p>
+<p>通常，为了保证决策的可靠性，我们把对未来的估算值多做几次变动，并反复进行计算比较，看看净现值是否变动很大，是否对方案的可行性和最优性有影响。若对估测数据稍加变动，而最优方案保持不变，则这个方案是较稳定的；否则此方案就是不稳定的，值得进一步分析。</p>
+<p>在实际投资决策分析时，不能孤立地采用某种分析法，应将以上几种分析法结合起来分析；不能简单地、机械地计算，要做到通盘考虑、综合评价；不能光从数量上进行分析，还须考虑到国家经济政策、社会效益、市场变化情况等问题，以提高决策的准确性，减少失误。</p>
+<h3 id="8-2-4-投资控制中的技术经济分析"><a href="#8-2-4-投资控制中的技术经济分析" class="headerlink" title="8.2.4 投资控制中的技术经济分析"></a>8.2.4 投资控制中的技术经济分析</h3><p><strong>技术经济分析方法</strong>是成本控制的基础。它是一种综合评价方法。综合评价决定成本控制的合理性。本章所以特别强调对方案的综合评价，就在于在投资控制的监理实务中。要特别注意投资控制不是一个单打一的问题，也绝不是指初期投资越少的方案就是最佳方案，而是要通过具体的经济对比计算，如年成本法，净现值法和内部收益率法等计算求得整体经济效果最佳的方案，据以合理的控制投资。而合理的控制投资的另一个必须掌握的尺寸和原则就是综合评价。只有通过综合评价而优选的方案才能算是最佳方案。最佳方案的标志是技术上最佳、经济上最合理而不是最少。</p>
+<h4 id="1-技术经济分析的特点和方法步骤"><a href="#1-技术经济分析的特点和方法步骤" class="headerlink" title="1. 技术经济分析的特点和方法步骤"></a>1. 技术经济分析的特点和方法步骤</h4><p><strong>1）技术经济分析的特点</strong><br>据有关资料统计，在同样能满足功能要求的前提下，合理的**技术经济设计可以降低工程造价5%—20%**，因此，搞好方案的技术经济分析，就成为建设项目设计阶段优选方案和控制造价的重点环节。技术经济分析有以下特点。</p>
+<p><strong>（1）综合性</strong><br>技术经济分析学是根据现代科学技术和国民经济发展的需要，逐渐地从自然科学和社会科学的发展过程中交叉形成发展起来的一门综合性边缘科学。</p>
+<p><strong>（2）系统性</strong><br>它研究的对象大多是由若干个相互联系的单元所组成的整体，因此要具备系统分析的思想方法和工作方法，要从整体着眼，周密地分析各个因素和环节，取得科学依据，实现总体优化。</p>
+<p><strong>（3）实用性</strong><br>它是一门实践性很强的应用科学，其主要研究对象是技术方案，设计方案的优选问题，是解决具体问题，进行具体分析研究，做具体评价，为采用的方案提出技术经济效果的论据。如工程优化设计、系统方案选择等。</p>
+<p><strong>（4）数据化</strong><br>技术经济学采用了许多定量分析方法，把各种有关因素定量化，通过定量计算，进行分析比较。由于计算机和数学方法的迅速发展，定量分析范围日益扩大。除去环境保护、政治因素、学术发展等社会因素目前还只能做定性分析外，大量问题均可数据化。因此定性分析与定量分析相结合以量化为主是技术经济分析的一大特点。</p>
+<p><strong>2）技术经济分析的方法步骤</strong><br>技术经济学研究主要有两种方法，即调查研究方法和理论研究法，后者是对调查得到的原始数据与资料进行加工管理，去粗取精，去伪存真的过程，在这个过程中既要采取定量的数字计算与分析，也要采取定性的推理、论证、分析等方法。技术经济分析一般包括以下几个步骤。</p>
+<p><strong>（1）确定目标</strong><br>比如对于一个新建项目，要根据市场需要及资金条件研究确定；对项目中的某一个子系统，要根据其既能满足功能要求，又要在经济上合理确定；对一个系统方案或一项主要设备选址，既要可行和适用，又要在经济评价的各项指标上先进等等。</p>
+<p><strong>（2）调查研究</strong><br>收集各种有关的资料和数据，通过调查研究，搞清有关的技术因素情况，这些因素之间以及与其他有关的经济因素之间的联系、依据和条件。</p>
+<p><strong>（3）拟定各种可行方案</strong><br>为了满足同一功能或应用的需要，一般可以采用多种不同的、彼此可以代替的方案。为了选出最优的方案，首先就要列出所有可能实行的方案。</p>
+<p><strong>（4）方案评价</strong></p>
+<ul>
+<li>分析各种了解的技术方案在技术上的优缺点。应该指出，对每个技术方案优缺 点分析得愈细致、愈透彻、愈全面、愈具体，则对每个技术方案的经济评价就愈准确。在分析技术方案的优缺点时，必须进行充分的调查研究，并且从国民经济整体利益出发，客观地分析不同的技术方案所引起的对外部各种自然、技术、经济、社会等方面所产生的影响，从而准确地找到现有条件下最优的技术方案。</li>
+<li>建立各种技术方案的经济指标和各种参数间的函数关系。列出相应的方程式或数学表达式，这种方程式、表达式称为数学模型。在分析技术方案优缺点的基础上，能用相应的数学方程式描述各方案的经济指标与参数间量的关系，这就是经济数学模型。</li>
+<li>计算与求解数学模型。第一步，把有关数据资料，包括各种自然资源的地质的、技术的、经济的指标代入数学模型并进行数学运算。第二步，求得各个方案的经济效果指标，利用方案比较法，进行择优。求最优方案的方法一般可用列表法或图解法。</li>
+<li>技术方案的综合评价。由于技术方案的许多优缺点往往不能用数学指标来描述，而且一个方案不可能兼备各种优点，这就要求从各个侧面对某个技术方案进行综合分析及论证，最后选出在技术、经济、社会、政治等方面综合性最优的方案。</li>
+</ul>
+<h4 id="2-单方案的经济评价方法"><a href="#2-单方案的经济评价方法" class="headerlink" title="2. 单方案的经济评价方法"></a>2. 单方案的经济评价方法</h4><p>对于单方案一般可以通过四种方法进行经济评价，这种评价主要是对技术上可行的方案，评价其经济上的合理性，做到使设计人员和建设监理人员心中有数，并对一些技术上可行而经济上不合理的方案，采取必要的修正办法，从而在满足功能要求的基础上做到经济合理。</p>
+<p><strong>1）成本回收期法</strong><br>成本回收期分为静态成本回收期与动态成本回收期。</p>
+<p><strong>（1）静态成本回收期</strong><br>静态成本回收期是指以工程项目的净收益补偿全部成本所需要的时间，通常情况下，成本回收期愈短愈好。对于单方案经济评价时，通常是以计算结果同国家或部门所规定的标准成本回收期TM进行比较来取定其“经济合理性”。当所计算的T&gt;TM时，一般应对技术方案做出总成本的削减修正措施；否则应予舍弃。</p>
+<p><strong>（2）动态成本回收期</strong><br>动态成本回收期是指给定基准收益率i用项目方案的净现金收入求出偿还全部成本的时间。<br>这种设计方案经济评价法可以用于单方案评价，也可以用于多方案的比选。</p>
+<p><strong>2）等效年值法</strong><br>等效年值法就是工程项目的所有现金流量都化为其等值的年金，用以评价方案经济效益的经济分析方法。等效年值是指把工程项目在寿命期内所有收入和支出，按基准收益率折算成与其等值的各年年末的等效年金。这里所说的基准收益率是指最低要求的贴现率（亦称折现率），在国外又称作最低有吸引力的收益率，一般用代号MARR表示，它是成本决策部门做出取舍决定的重要决策参数。通常情况下，如果把基准收益率定得太高，可能会使许多经济效果较好的方案被告弃，反之定得太低，又可能接受一些其经济效果并不理想的方案。</p>
+<p>按照惯例，通常基准收益率应高于贷款的利率。很显然由于一些成本方案大多带有一定的风险和不确定性，再加上市场经济供需要求对产品价格浮动的影响，如果基准收益率不高于贷款利率，就不值得进行投资。只有当方案的等效年值大于零，在经济上才是合理的。等效年值法可以用存储基金法或资金还原法计算。</p>
+<p><strong>3）净现值法与净现值指数法</strong><br>这种方法是根据方案的净现值大小来评定方案经济效果的一种方法。这里的净现值是指按基准收益率或设定的折现率，将各年的净现金流量折现到基准年的现值之和。基准年一般选在基建开始年。如果NPV&gt;0，表示技术方案本身的收益不仅可以达到基准收益率的水平，而且还有盈余；如果NPV&#x3D;0，表示方案的收益率正好等于基准收益率。在上述两种情况下，方案均可取；如果NPV&lt; 0，则表示方案的收益率达不到基准收益率水平，应被舍弃。<br>净现值指数法是将技术方案在寿命期的净现值与逐年成本的现值之和进行比较，该数值反映了单位成本现值所创造的现值收益。<br>当NPV&gt; 0或&#x3D;0时方案可行，否则应告弃。</p>
+<p><strong>4）内部收益率法</strong><br>内部收益率法是目前国内外广泛采用的一种经济评价方法，它是根据内部收益率指标的大小对方案进行评价的。内部收益率和净现值有密切关系，对一个技术方案来说，其净现值的大小与所选用的折现率有关。折现率愈小，净现值愈大，反之折现率愈高则净现值就愈小。</p>
+<p>通常，内部收益率法只能用于评价常规的成本方案，即现金流量中所表示的开始年份为负值的成本支出；以后各年均为正（收益）的项目，也就是说净现值函数NPy （i）随i的增加而减小，曲线与横轴有惟一曲交点，并且在0－n内，否则不能计算。求得内部收益率后，如其值大于或等于基准收益率时，方案认为可取。通常比较评价方案时i应在8%－15%的范围内。</p>
+<h4 id="3-多方案经济评价的可比性"><a href="#3-多方案经济评价的可比性" class="headerlink" title="3. 多方案经济评价的可比性"></a>3. 多方案经济评价的可比性</h4><p>在项目设计中往往可以提出许多不同的设计方案，这些方案可以采用不同的技术、开发与实施方法、设备等。当这些设计方案在技术上都是可行的，经济上也合理时，就要通过经济分析从中选出最佳的方案。但是不同的方案必须具备一定的可比条件，如满足需求可比、时间因素可比、价格指标可比和消耗费用可比。满足需求可比是指项目的质量、进度、和类型完全一样或基本相似，在对比时应用一致的指标，如单位项目投资额、单位项目年运营费。价格指标的可比是因为无论是投入的费用还是产出的效益，都要借助于价格进行计算。消耗费用可比性是指在计算比较费用的指标时，必须考虑有关的费用，各种费用计算必须采用统一的原则和方法。目前国内常用的设计方案、技术方案的经济计算方法主要有：不考虑时间价值的追加投资回收法和计算费用法；考虑时间价值的方法有净现值法、年成本法和内部收益率法。<br>有以下多方案经济评价法。</p>
+<p><strong>1）追加成本回收期与计算费用法</strong><br>追加成本回收期（△T）是一个相对经济效果指标，它是指两个方案比较时，用成本大的方案年经营费的节约额，抵偿追加成本所需要的时间。当△T小于或等于标准成本回收期时，则认为成本大的方案为优，反之则成本小的方案为优。<br>计算费用法是很多个方案不考虑时间价值时进行经济比较常用的方法。年计算费用是指年生产成本与按标准成本效果系数换算的年成本费用总额。</p>
+<p><strong>2）年成本法</strong><br>年成本法是在年产量相同条件下简易而有效的一种方案比较方法。这种方法是把各方案项目的寿命期内的现金支出（成本、年经营费、残值），按基准收益率折算成等值的等额年成本然后进行比较，年成本最小的方案为优选方案。用这种方法进行对设计方案的成本控制比较适用于市场经济体制下考虑资金时间价值时的方案优选。</p>
+<p><strong>3）追加成本净现值法</strong><br>当评选的两个方案均可行而计算经济效果进行优选时，如第二方案的成本大于第一方案（这部分称为追加成本），就需要考虑这一部分追加成本在经济上是否是更合算，我们把两方案现金流量之差的净现值称为追加成本净现值（或差额成本净现值）。如果追加成本而增加的收益按基准收益率折现后的现值大于追加成本的折现值，即追加成本净现值大于零，则成本大的方案从整个时间看比成本小的方案经济，说明追加成本是合算的。</p>
+<p>追加成本净现值法的实质就在于此。由此可知，作为监理工程师在控制成本和评价方案优劣时，要做到公正合理，并非只选用初期成本小的方案，而应当用追加成本净现值法对多种方案做出比较再行择优选用。</p>
+<p><strong>4）追加成本内部收益率法</strong><br>这是在方案经济比较中重要的方法之一。追加成本内部收益率是指两对比方案净现金流量之差的各年折现值之和等于零时的折现率。采用此法进行方案比较时，如果计算出的追加成本内部收益率大于或等于基准收益率时，则成本大的方案比较经济，反之则成本小的方案比较经济。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/71ac.html" title="笔记-投资控制-8.2 信息系统工程投资控制基础知识与方法">https://www.zenwu.site/posts/71ac.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6/" rel="tag"><i class="fa fa-tag"></i> 投资控制</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/77ad.html" rel="prev" title="笔记-投资控制-8.1 投资控制概述">
+                  <i class="fa fa-angle-left"></i> 笔记-投资控制-8.1 投资控制概述
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/e3bc.html" rel="next" title="笔记-投资控制-8.2.5 投资控制的方法与技术">
+                  笔记-投资控制-8.2.5 投资控制的方法与技术 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html-aria&#x2F; http:&#x2F;&#x2F;www.w3cplus.com&#x2F;wai-aria&#x2F;wai-aria.html   W3C的Web信息无障碍计划 (WAI)与全球行业一起致力于为残障人士和年长用户打造一个更易于访问的万维网。WAI通过保证Web技术队无障碍的支持，开发Web内容、浏览器、媒体播放器以及编辑工具的开发指南，开发资源以支持改善评估工具，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WAI-ARIA无障碍web规范">
+<meta property="og:url" content="https://www.zenwu.site/posts/WAI-ARIA.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html-aria&#x2F; http:&#x2F;&#x2F;www.w3cplus.com&#x2F;wai-aria&#x2F;wai-aria.html   W3C的Web信息无障碍计划 (WAI)与全球行业一起致力于为残障人士和年长用户打造一个更易于访问的万维网。WAI通过保证Web技术队无障碍的支持，开发Web内容、浏览器、媒体播放器以及编辑工具的开发指南，开发资源以支持改善评估工具，">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703164956.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703165444.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703170146.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703170353.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703175104.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703175537.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703201524.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703201641.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703201756.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703201859.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703202028.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703202217.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703202354.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703202551.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703203133.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703203409.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703203509.png">
+<meta property="article:published_time" content="2023-07-02T04:31:09.000Z">
+<meta property="article:modified_time" content="2023-07-03T07:21:04.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="WAI-ARIA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230703164956.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/WAI-ARIA.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/WAI-ARIA.html","path":"posts/WAI-ARIA.html","title":"WAI-ARIA无障碍web规范"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>WAI-ARIA无障碍web规范 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E6%97%A0%E9%9A%9C%E7%A2%8D%E8%AE%BE%E8%AE%A1"><span class="nav-text">1. 无障碍设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%AF%8C%E4%BA%92%E8%81%94%E7%BD%91%E5%BA%94%E7%94%A8"><span class="nav-text">2. 富互联网应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-ARIA%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F"><span class="nav-text">3. ARIA是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8ARIA"><span class="nav-text">4. 如何使用ARIA?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-HTML%E4%B8%AD%E7%9A%84ARIA"><span class="nav-text">5. HTML中的ARIA</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-ARIA%E5%9C%A8HTML%E4%B8%AD%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-text">5.1. ARIA在HTML中的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-1-ARIA%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E4%B8%80"><span class="nav-text">5.1.1. ARIA使用规则一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-2-ARIA%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E4%BA%8C"><span class="nav-text">5.1.2. ARIA使用规则二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-3-ARIA%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E4%B8%89"><span class="nav-text">5.1.3. ARIA使用规则三</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-4-ARIA%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E5%9B%9B"><span class="nav-text">5.1.4. ARIA使用规则四</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-1-5-ARIA%E4%BD%BF%E7%94%A8%E8%A7%84%E5%88%99%E4%BA%94"><span class="nav-text">5.1.5. ARIA使用规则五</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-ARIA-%E7%9A%84%E8%A7%92%E8%89%B2-role"><span class="nav-text">6. ARIA 的角色 role</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E6%B3%A8%E9%87%8A%E4%B8%80"><span class="nav-text">6.1. 注释一</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-ARIA%E7%9A%84%E5%B1%9E%E6%80%A7"><span class="nav-text">7. ARIA的属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-ARAI%E7%8A%B6%E6%80%81"><span class="nav-text">8. ARAI状态</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-%E6%9C%89%E5%85%B3%E4%BA%8ERoles%E3%80%81States-%E5%92%8C-Properties%E7%9B%B8%E5%85%B3%E8%A7%84%E8%8C%83%E6%96%87%E6%A1%A3-W3C%E8%A7%84%E8%8C%83"><span class="nav-text">8.1. 有关于Roles、States 和 Properties相关规范文档(W3C规范)</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-%E5%BC%80%E5%8F%91%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="nav-text">9. 开发最佳实践</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-%E5%85%B3%E4%BA%8E-Image"><span class="nav-text">9.1. 关于 Image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-%E5%85%B3%E4%BA%8E-Table"><span class="nav-text">9.2. 关于 Table</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-%E5%85%B3%E4%BA%8E-Form"><span class="nav-text">9.3. 关于 Form</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-4-%E5%85%B3%E4%BA%8E-Tabindex-%E4%B8%8E%E8%8E%B7%E5%8F%96%E7%84%A6%E7%82%B9%E7%9A%84%E9%A1%BA%E5%BA%8F"><span class="nav-text">9.4. 关于 Tabindex 与获取焦点的顺序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-5-%E5%85%B3%E4%BA%8E%E9%9A%90%E8%97%8F%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-text">9.5. 关于隐藏的内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-6-%E9%AB%98%E5%AF%B9%E6%AF%94%E5%BA%A6%E6%A8%A1%E5%BC%8F%E7%9A%84%E5%B0%8F%E6%8A%80%E5%B7%A7"><span class="nav-text">9.6. 高对比度模式的小技巧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10-ARIA-Widgets"><span class="nav-text">10. ARIA Widgets</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#10-1-Label"><span class="nav-text">10.1. Label</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-2-Alert-Dialog"><span class="nav-text">10.2. Alert Dialog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-3-headings"><span class="nav-text">10.3. headings</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-4-list-listitem"><span class="nav-text">10.4. list&#x2F;listitem</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-5-button"><span class="nav-text">10.5. button</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-6-toggle-button"><span class="nav-text">10.6. toggle button</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-7-checkbox"><span class="nav-text">10.7. checkbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-8-radio"><span class="nav-text">10.8. radio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-9-link"><span class="nav-text">10.9. link</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-10-tooltip"><span class="nav-text">10.10. tooltip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-11-status-bar"><span class="nav-text">10.11. status bar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-12-alert"><span class="nav-text">10.12. alert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-13-progress-bar"><span class="nav-text">10.13. progress bar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-14-menu"><span class="nav-text">10.14. menu</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-15-Menubar"><span class="nav-text">10.15. Menubar</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-16-listbox"><span class="nav-text">10.16. listbox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-17-combobox"><span class="nav-text">10.17. combobox</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-18-tree"><span class="nav-text">10.18. tree</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-19-grid"><span class="nav-text">10.19. grid</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11-Bootstrap-ARIA%E7%A4%BA%E4%BE%8B"><span class="nav-text">11. Bootstrap ARIA示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#11-1-Glyphicons"><span class="nav-text">11.1. Glyphicons</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-2-Dropdowns"><span class="nav-text">11.2. Dropdowns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-3-Divider"><span class="nav-text">11.3. Divider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-4-Button-Groups"><span class="nav-text">11.4. Button Groups</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-5-Button-dropdowns"><span class="nav-text">11.5. Button dropdowns</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-6-Input-groups"><span class="nav-text">11.6. Input groups</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-7-Pagination"><span class="nav-text">11.7. Pagination</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-8-Alert"><span class="nav-text">11.8. Alert</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-9-Progress-bars"><span class="nav-text">11.9. Progress bars</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-10-dialog"><span class="nav-text">11.10. dialog</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-11-tab"><span class="nav-text">11.11. tab</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-12-tooltip"><span class="nav-text">11.12. tooltip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-13-Collapse"><span class="nav-text">11.13. Collapse</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/WAI-ARIA.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="WAI-ARIA无障碍web规范 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WAI-ARIA无障碍web规范
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-07-02 12:31:09" itemprop="dateCreated datePublished" datetime="2023-07-02T12:31:09+08:00">2023-07-02</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-03 15:21:04" itemprop="dateModified" datetime="2023-07-03T15:21:04+08:00">2023-07-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">前端技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></li>
+<li><a target="_blank" rel="noopener" href="http://www.w3cplus.com/wai-aria/wai-aria.html">http://www.w3cplus.com/wai-aria/wai-aria.html</a></li>
+</ul>
+</blockquote>
+<p><strong>W3C的Web信息无障碍计划</strong> (WAI)与全球行业一起致力于为残障人士和年长用户打造一个更易于访问的万维网。WAI通过保证Web技术队无障碍的支持，开发Web内容、浏览器、媒体播放器以及编辑工具的开发指南，开发资源以支持改善评估工具，开发教育与宣传的资源，与工业界及科研院所合作，以促进Web无障碍事业的发展。</p>
+<p>更多关于WAI的信息请见 <a target="_blank" rel="noopener" href="http://www.w3.org/WAI/">http://www.w3.org/WAI/</a></p>
+<span id="more"></span>
+<h2 id="1-无障碍设计"><a href="#1-无障碍设计" class="headerlink" title="1. 无障碍设计"></a>1. 无障碍设计</h2><p>无障碍设计是指产品、设备、服务，或者环境是为残疾人士设计的。无障碍设计的概念意味着与一个人的辅助技术(例如, 脑屏幕阅读器)相兼容, 确保直接访问（即独立）和“间接访问”。</p>
+<p>无障碍设计可以理解为“能够访问”，并对一个系统或实体是有利的，其侧重于使身体残障，或有特殊需要，或要依赖辅助技术的人群能够访问 Web。然后，研究和开发无障碍设计对每个人都带来了好处。</p>
+<p>无障碍设计<strong>不应该和可用性混淆</strong>。大多数情况下，可用性是指产品（如：设备、服务、或者环境）能在特定的环境下被特定的用户使用，来高效地实现制定目标。</p>
+<p>无障碍设计和<strong>通用性设计是息息相关的</strong>。通用型设计是指产品的创造过程中，产品对人们是可用的，并尽可能最大范围覆盖各能力范围内的人群和各种情形下的操作，即对所有人是可访问的（无论他们访问 Web 是否有障碍）。</p>
+<h2 id="2-富互联网应用"><a href="#2-富互联网应用" class="headerlink" title="2. 富互联网应用"></a>2. 富互联网应用</h2><p>开发人员使用HTML、CSS和JavaScript创建富互联网应用程序时，往往把残疾人士抛在脑后，因为这些应用程序无法提供被辅助技术理解所需的语义信息。可悲的是，直到现在这种情况并没有多少改变，其实我们可以扭转这种局面。<strong>WAI-ARIA</strong> 能够提供足够的语义，以确保富互联网应用是可以理解的，并且现在已经得到相对较好的支持。</p>
+<h2 id="3-ARIA是什么？"><a href="#3-ARIA是什么？" class="headerlink" title="3. ARIA是什么？"></a>3. ARIA是什么？</h2><p><strong>ARIA</strong> 是 <strong>Accessible Rich Internet Applications</strong> 的缩写。它是W3C的 <a target="_blank" rel="noopener" href="http://www.w3.org/WAI/">Web无障碍推进组织(Web Accessibility Initiative &#x2F; WAI)</a>，在 2014年3月20日 发布的 <a target="_blank" rel="noopener" href="http://www.w3.org/TR/2014/REC-wai-aria-20140320/">可访问富互联网应用</a> 实现指南。</p>
+<p><strong>WAI-ARIA</strong> 是一个为残疾人士等提供无障碍访问动态、可交互Web内容的技术规范。在 <a target="_blank" rel="noopener" href="http://www.w3.org/WAI/intro/aria">WAI-ARIA概述</a> 中对 WAI-ARIA 及其他支持文档进行了介绍。</p>
+<p><strong>简单点描述：</strong></p>
+<ul>
+<li><strong>ARIA</strong> 是 W3C 的一个独立规范，帮助 Web 应用程序和 Web 页面变得更具可访问性；</li>
+<li><strong>ARIA</strong> 主要是为了提升网页的可用性，网页对残疾人士的无障碍化；</li>
+<li><strong>HTML5</strong> 已经开始使用 <strong>ARIA，并且</strong> W3C 发布的很多其他标准也开始使用 <strong>ARIA</strong>；</li>
+<li><strong>ARIA</strong> 是对 <strong>HTML语义化</strong> 的补充。它具备比现有的 HTML 元素和属性更完善的表达能力，并让你页面中元素的关系和含义更明确；</li>
+<li><strong>ARIA</strong> 规范为浏览器和解析 HTML 文档的辅助性技术提供了一种可以让人们以多种方式访问和使用 Web 的标准方法；</li>
+</ul>
+<h2 id="4-如何使用ARIA"><a href="#4-如何使用ARIA" class="headerlink" title="4. 如何使用ARIA?"></a>4. 如何使用ARIA?</h2><p>应用于HTML的 ARIA 有两部分组成：<code>role</code>（角色）和带 <code>aria-</code> 前缀的属性，其作用：</p>
+<ul>
+<li><code>role</code> (角色)标识了一个<strong>元素的作用</strong></li>
+<li><code>aria-</code> 属性描述了与之有关的事物（特征）及其是什么样的（状态）</li>
+</ul>
+<h2 id="5-HTML中的ARIA"><a href="#5-HTML中的ARIA" class="headerlink" title="5. HTML中的ARIA"></a>5. HTML中的ARIA</h2><p>ARIA 在 HTML 中使用有其自己的规范，并不是说在 HTML 中使用了 ARIA，Web页面就无障碍化了，就提高了可访问性了。言外之意，ARIA 没有用好，反而会把你带到另一个坑中，使用你的页面可访问性更差。</p>
+<p>有关于HTML中 ARIA 的文档可以 <a target="_blank" rel="noopener" href="https://specs.webplatform.org/html-aria/webspecs/master">点击这里阅读</a>。</p>
+<h3 id="5-1-ARIA在HTML中的使用"><a href="#5-1-ARIA在HTML中的使用" class="headerlink" title="5.1. ARIA在HTML中的使用"></a>5.1. ARIA在HTML中的使用</h3><h4 id="5-1-1-ARIA使用规则一"><a href="#5-1-1-ARIA使用规则一" class="headerlink" title="5.1.1. ARIA使用规则一"></a>5.1.1. ARIA使用规则一</h4><p>如果你使用的元素 <a target="_blank" rel="noopener" href="https://w3c.github.io/using-aria">HTML5</a> 具有语义化，应该使用这些元素，而不应该重新定义一个添加 ARIA 的角色、状态或属性的元素。</p>
+<p>那么什么时候可用和不可用 ARIA 呢？</p>
+<ul>
+<li>在 HTML（HTML5）元素特性不管支持或不支持，只要不具语义化，就可以使用 ARIA；</li>
+<li>排除视觉设计约束使用一个特定的元素，但不能是样式上所需的元素；</li>
+<li>目前尚不支持的 HTML 特性；</li>
+</ul>
+<h4 id="5-1-2-ARIA使用规则二"><a href="#5-1-2-ARIA使用规则二" class="headerlink" title="5.1.2. ARIA使用规则二"></a>5.1.2. ARIA使用规则二</h4><p>不改变语义，除非你真的需要使用。例如，开发者想创建一个标题，而且它是一个按钮。</p>
+<p>不要这样做：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span>&gt;</span>标题按钮<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>建议这样做：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">button</span>&gt;</span>标题按钮<span class="tag">&lt;/<span class="name">button</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者说，你不使用正确的元素，但你可以这样做：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span>&gt;</span>标题按钮<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>如果使用一个非交互的元素做为一个交互的元素，那么开发人员必须使用 ARIA 添加语义和使用适当的脚本增加交互行为。</strong></p>
+<h4 id="5-1-3-ARIA使用规则三"><a href="#5-1-3-ARIA使用规则三" class="headerlink" title="5.1.3. ARIA使用规则三"></a>5.1.3. ARIA使用规则三</h4><p>所有的 ARIA 制作控件都<strong>必须具有键盘(keyboard)事件</strong>。</p>
+<p>如果创建一个组件(widget)，用户可以点击、拖放、滑动或滚动，用户使用键盘能定位到创建好的组件部件上，并且执行相应的操作动作。</p>
+<p>例如，如果使用 <code>role=button</code> 必须能够接收到焦点和用户能够使用键盘激活相应动作，比如Win操作系统上的<code>enter</code>和 iOS 系统上的 <code>return</code> 或者键盘的空格键 <code>space</code>。</p>
+<h4 id="5-1-4-ARIA使用规则四"><a href="#5-1-4-ARIA使用规则四" class="headerlink" title="5.1.4. ARIA使用规则四"></a>5.1.4. ARIA使用规则四</h4><p>不建议在可获取焦点元素 <code>focusable</code> 使用ARIA的角色：<code>role=presentation</code> 或 <code>aria-hidden=&quot;true&quot;</code>。</p>
+<p>可获取焦点元素上使用ARIA这两规则，会导致一些用户无法获取元素焦点。</p>
+<p>不要这样做：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">role</span>=<span class="string">&quot;presentation&quot;</span>&gt;</span>按下我，按下我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>也不要这样做：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span>按下我，按下我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果说一个交互元素无法看到或者不能与之交互，那么可以尝试使用 <code>aria-hidden</code>，例如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">button &#123;visibility:hidden&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span>按下我，按下我<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果一个交互元素使用 <code>display:none;</code> 来隐藏，那么它对应的 <a target="_blank" rel="noopener" href="http://w3c.github.io/aria/html-aam/html-aam.html#dfn-accessibility-tree">可访问性</a> 也将一并被删除，如此一来，在可交互元素上使用<code>aria-hidden=&quot;true&quot;</code>就没有必要了。</p>
+<h4 id="5-1-5-ARIA使用规则五"><a href="#5-1-5-ARIA使用规则五" class="headerlink" title="5.1.5. ARIA使用规则五"></a>5.1.5. ARIA使用规则五</h4><p>所有交互元素都必须有一个 <a target="_blank" rel="noopener" href="https://www.w3.org/TR/accname-aam-1.1/#dfn-accessible-name">可访问的名称</a>。</p>
+<p>当可交互元素的可访问性API的可访问名属性只有一个值时，那么可交互元素就只有一个可访问的名称。</p>
+<p>比如下面的示例，<code>input type=&quot;text&quot;</code> 有一个可见的 <code>&lt;label&gt;&lt;/label&gt;</code>标签，但它并没有可访问的名称：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">user name <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>user name<span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>此时 MSAA (<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Microsoft_Active_Accessibility">Microsoft Active Accessibility </a>)控制器的 <code>accName</code> 属性是空的：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703164956.png" alt="示例显示MSAA控制名和role信息，accName属性值为空，accRole的属性值为&#39;editable text&#39;"></p>
+<p>相比之下，下面示例中 <code>input type=&quot;text&quot;</code> 有一个可见的 <code>&lt;label&gt;&lt;/label&gt;</code> 标签并且包含一个可访问性名称：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span>&gt;</span>user name <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;uname&quot;</span>&gt;</span>user name<span class="tag">&lt;/<span class="name">label</span>&gt;</span><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;uname&quot;</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>此时MSAA (<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Microsoft_Active_Accessibility">Microsoft Active Accessibility </a>)控制器的<code>accName</code> 属性值是 <code>user name</code>：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703165444.png" alt="示例显示MSAA控制名和role信息，accName属性值为&#39;user name&#39;，accRole的属性值为&#39;editable text&#39;"></p>
+<p>另外 <code>label</code> 标签元素是不能被用来给自定义控件提供一个访问性名称，除非 <code>label</code> 引用了HTML的 <a target="_blank" rel="noopener" href="http://www.w3.org/TR/html51/semantics.html#category-label"> <code>labelable</code> 元素</a>。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML input element with combox role --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  user name <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span>  <span class="attr">role</span>=<span class="string">&quot;combobox&quot;</span> &gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>MSAA(<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Microsoft_Active_Accessibility">Microsoft Active Accessibility </a>)控制器的<code>accName</code> 属性值是 <code>user name</code>：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703170146.png" alt="例显示MSAA控制名和role信息，accName属性值为&#39;user name&#39;，accRole的属性值为&#39;combo box&#39;"></p>
+<p>除此之外，使用非HTML <code>labelable</code> 元素来模拟控件，不管给其分配什么角色( <code>role</code> )都不会是HTML的 <code>labelable</code> 元素，比如下面的 <code>div</code> 元素：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML div element with combox role --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">label</span>&gt;</span></span><br><span class="line">  user name <span class="tag">&lt;<span class="name">div</span>  <span class="attr">role</span>=<span class="string">&quot;combobox&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>MSAA(<a target="_blank" rel="noopener" href="http://en.wikipedia.org/wiki/Microsoft_Active_Accessibility">Microsoft Active Accessibility </a>)控制器的 <code>accName</code> 属性值是空的：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703170353.png" alt="示例显示MSAA控制名和role信息，accName属性值为空，accRole的属性值为&#39;combo box&#39;"></p>
+<h2 id="6-ARIA-的角色-role"><a href="#6-ARIA-的角色-role" class="headerlink" title="6. ARIA 的角色 role"></a>6. ARIA 的角色 <code>role</code></h2><p>下面的表格详细的示意了 HTML 中元素如何使用ARIA的角色 <code>role</code>，以及对应的含意：</p>
+<p><a href="/post/wai-aria-role.html">WAI-ARIA无障碍网页应用属性（role）</a></p>
+<p>上表中并没有列出所有 ARIA 的角色，当然并不是所有的HTML元素都具有对应的 ARIA 的 <code>role</code>，下表列出了常用的标签元素对应的 ARIA 的role，仅供参考：</p>
+<p><a href="/post/Rules-of-ARIA-attribute-usage-by-HTML-element.html">WAI-ARIA无障碍网页应用属性（html-role）</a></p>
+<h3 id="6-1-注释一"><a href="#6-1-注释一" class="headerlink" title="6.1. 注释一"></a>6.1. 注释一</h3><p>通过一个示例来看看 <code>role=&quot;presentation&quot;</code> 运用前后对HTML元素可访问树对比。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">abbr</span>&gt;</span>API<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在上面的代码上添加 <code>role=&quot;presentation&quot;</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span> <span class="attr">role</span>=<span class="string">&quot;presentation&quot;</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">tr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">td</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="name">abbr</span>&gt;</span>API<span class="tag">&lt;/<span class="name">abbr</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>table</code> 元素可访问树前后对比示意图如下：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703175104.png" alt="able元素可访问树前后对比示意图"></p>
+<p>前面也说到过，并不是在HTML中添加ARIA角色对屏幕阅读器就是好的，特别是对于一些默认带有交互功能的元素中，添加ARIA就是浪费时间，比如：</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;button <span class="attribute">role</span>=<span class="string">&quot;button&quot;</span>&gt;按我&lt;/button&gt;</span><br><span class="line">&lt;h1 <span class="attribute">role</span>=<span class="string">&quot;heading&quot;</span> <span class="attribute">aria-level</span>=<span class="string">&quot;1&quot;</span>&gt;标题一&lt;/h1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当然在HTML5的一些特定元素上，ARIA的 <code>role</code>和自带的语义化元素是可以重叠的，如下表所示:</p>
+<table class="inner_table">
+<thead>
+<tr>
+  <th width="150px">HTML5元素</th>
+  <th>ARIA Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>&lt;header&gt;</td>
+  <td>role="banner"</td>
+</tr>
+<tr>
+  <td>&lt;nav&gt;</td>
+  <td>role="navigation"</td>
+</tr>
+<tr>
+  <td>&lt;main&gt;</td>
+  <td>role="main"</td>
+</tr>
+<tr>
+  <td>&lt;footer&gt;</td>
+  <td>role="contentinfo"</td>
+</tr>
+<tr>
+  <td>&lt;aside&gt;</td>
+  <td>role="complementary"</td>
+</tr>
+<tr>
+  <td>&lt;section&gt;</td>
+  <td>role="region"</td>
+</tr>
+<tr>
+  <td>&lt;article&gt;</td>
+  <td>role="article"</td>
+</tr>
+<tr>
+  <td>&lt;form&gt;</td>
+  <td>role="form"</td>
+</tr>
+<tr>
+  <td>搜索表单</td>
+  <td>role="search"</td>
+</tr>
+</tbody>
+</table>
+
+<p>假设有一个简单的HTML5页面：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">role</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">nav</span> <span class="attr">role</span>=<span class="string">&quot;navigation&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">main</span> <span class="attr">role</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">aside</span> <span class="attr">class</span>=<span class="string">&quot;complementary&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">aside</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">footer</span> <span class="attr">role</span>=<span class="string">&quot;contentinfo&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">footer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果你不想使用HTML5的元素，可以使用 <code>div</code> 来替代：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;banner&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;navigation&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;main&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;complementary&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;contentinfo&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>如图所示：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703175537.png" alt="HTML5元素和ARIA重叠"></p>
+<h2 id="7-ARIA的属性"><a href="#7-ARIA的属性" class="headerlink" title="7. ARIA的属性"></a>7. ARIA的属性</h2><p>下表介绍了ARIA相关属性的使用方法。</p>
+<p><a href="/post/wai-aria-raia.html">WAI-ARIA无障碍网页应用属性（aria）</a></p>
+<h2 id="8-ARAI状态"><a href="#8-ARAI状态" class="headerlink" title="8. ARAI状态"></a>8. ARAI状态</h2><p>下表介绍了ARIA相关状态的使用方法。</p>
+<p><a href="/post/wai-aria-raia.html">WAI-ARIA无障碍网页应用属性（aria）</a></p>
+<table class="inner_table">
+<thead>
+<tr>
+  <th width="150px">属性状态</th>
+  <th width="350px">属性值</th>
+  <th width="350px">HTML示意</th>
+  <th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>aria-checked</td>
+  <td>字符串。表示检查的状态。true表示元素被选择；false表示元素未被选择；mixed表示元素同时有选择和为选择状态。</td>
+  <td>&lt;li role="checkbox" aria-checked="mixed" tabindex="0"&gt;&lt;/li&gt;</td>
+  <td>该属性用来表明用户是否选择了某些项,类似于input type="checkbox"中的checked</td>
+</tr>
+<tr>
+  <td>aria-disabled</td>
+  <td>字符串。表禁用状态，true表示当前是非激活状态；false表示清除非激活状态。</td>
+  <td>&lt;div role="button" tabindex="0" aria-pressed="false" aria-disabled="false"&gt;&lt;/div&gt;</td>
+  <td>对应单复选框等控件的disabled属性，一般用在自定义模拟控件中</td>
+</tr>
+<tr>
+  <td>aria-expanded</td>
+  <td>字符串。表示展开状态。默认为undefined, 表示当前展开状态未知。其它可选值：true表示元素是展开的；false表示元素不是展开的。</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>aria-hidden</td>
+  <td>字符串。可选值为true和false, true表示元素隐藏(不可见)，false表示元素可见。</td>
+  <td>&lt;div aria-hidden="false"&gt;&lt;/div&gt;</td>
+  <td>该属性使用非常普遍。几乎所有涉及到显示与隐藏这类交互或没有交互的地方都可以应用该属性。左边的示例HTML代码来自进度条进度值显示的div, 当前aria-hidden为false, 表示该进度值是可见的。</td>
+</tr>
+<tr>
+  <td>aria-invalid</td>
+  <td>字符串。表示元素值是否错误的。默认为false, 表示是OK的，如果为true, 则表示值验证不通过。</td>
+  <td>&lt;input type="text" size="3" aria-labelledby="valid" aria-invalid="false" /&gt;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td>aria-pressed</td>
+  <td>字符串。表示按下的状态，可选值有：true, false, mixed, undfined。默认为undfined, 表示按下状态未知；true表示元素往下（按钮按下）；false表示元素抬起；mixed表示元素同时有按下和没有按下的状态。</td>
+  <td>&lt;div role="button" tabindex="0" aria-pressed="false" aria-disabled="false"&gt;&lt;/div&gt;</td>
+  <td>左边HTML表示按钮已经按下，同时处于禁用状态。</td>
+</tr>
+<tr>
+  <td>aria-selected</td>
+  <td>字符串。表示选择状态。可选值有：true, false, undefined。 默认为undefined，表示元素选择状态未知。true表示元素已选择；false表示未被选中。</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="8-1-有关于Roles、States-和-Properties相关规范文档-W3C规范"><a href="#8-1-有关于Roles、States-和-Properties相关规范文档-W3C规范" class="headerlink" title="8.1. 有关于Roles、States 和 Properties相关规范文档(W3C规范)"></a>8.1. 有关于Roles、States 和 Properties相关规范文档(W3C规范)</h3><table class="inner_table" style="width:600px !important">
+<thead>
+<tr>
+  <th width="200px">Roles</th>
+  <th width="200px">States</th>
+  <th width="200px">Properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#alert">alert</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-busy">aria-busy</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-activedescendant">aria-activedescendant</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#alertdialog">alertdialog</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-expanded">aria-expanded</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-atomic">aria-atomic</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#gridcell">gridcell</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-grabbed">aria-grabbed</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-controls">aria-controls</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#log">log</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-hidden">aria-hidden</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-describedby">aria-describedby</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#marquee">marquee</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-pressed">aria-pressed</a></td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-dropeffect">aria-dropeffect</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#menuitemcheckbox">menuitemcheckbox</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-flowto">aria-flowto</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#menuitemradio">menuitemradio</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-haspopup">aria-haspopup</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#scrollbar">scrollbar</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-label">aria-label</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#status">status</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-labelledby">aria-labelledby</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#tab">tab</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-level">aria-level</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#tabpanel">tabpanel</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-live">aria-live</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#timer">timer</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-orientation">aria-orientation</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#tooltip">tooltip</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-owns">aria-owns</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#treeitem">treeitem</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-posinset">aria-posinset</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#grid">grid</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-relevant">aria-relevant</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#menu">menu</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-setsize">aria-setsize</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#menubar">menubar</a></td>
+  <td>&nbsp;</td>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#aria-sort">aria-sort</a></td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#tablist">tablist</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#toolbar">toolbar</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#tree">tree</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#treegrid">treegrid</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#directory">directory</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#document">document</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#group">group</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#note">note</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#presentation">presentation</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#region">region</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#application">application</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+<tr>
+  <td><a target="_blank" rel="noopener" href="https://www.w3.org/TR/wai-aria/#search">search</a></td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="9-开发最佳实践"><a href="#9-开发最佳实践" class="headerlink" title="9. 开发最佳实践"></a>9. 开发最佳实践</h2><p>开发一个可访问的 Web 应用不仅需要工具的支持，浏览器的支持，还需要开发人员遵循一定的规范提供对应的元素信息，才能达到最终的目的。下面着重介绍一些开发中的最佳实践。</p>
+<h3 id="9-1-关于-Image"><a href="#9-1-关于-Image" class="headerlink" title="9.1. 关于 Image"></a>9.1. 关于 Image</h3><p>图片或者动画均需提供 <code>alt</code> 信息，使得读屏软件可以将图片动画的内容清楚的读出来。如图所示：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703201524.png" alt="cat"></p>
+<p>对应的 HTML 如下:</p>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src<span class="operator">=</span><span class="string">&quot;cat.gif&quot;</span> alt<span class="operator">=</span><span class="string">&quot;Image about cat&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
+
+<p>对于某些用于装饰性的图片，则需设置 <code>alt</code> 为空，使得读屏软件可以忽略此元素。如图用于装饰页头的图片，实际并没有传递有价值的信息。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703201641.png" alt=" "></p>
+<p>对应的 HTML 如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;ring.gif&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>必须设置一个空 <code>alt</code> 属性的目的是为了能通过 <code>Webking</code> 的检查，并且使得读屏软件能够忽略此元素。</p>
+<p>对于图表文件，<code>alt</code> 属性的设置则需要简明扼要的表达出图表的信息，并不用把里面的细节都详细得描述出来。例如下面的图 <code>alt</code> 信息设置为销售额从 1996 年到 2004 年间持续稳定增长，从 400 万增长到了 1600 万。并不需要把每一年的增长额都详细得描述出来。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703201756.png" alt="imagetable"></p>
+<p>对于放在链接里面的图片，如果已经有文字的说明，<code>alt</code> 也设置为空，这样避免读屏软件重复同样的内容。如下面的 HTML：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">”http://apple.com/iphone/”</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">”iphone.jpg”</span> <span class="attr">alt</span>=<span class="string">””</span>&gt;</span>Apple iPhone </span><br><span class="line"><span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>a</code> 的内容已经指明了这是个苹果手机，<code>img</code> 的 <code>alt</code> 属性就没必要再设置一次了。否则读屏软件会连续读两次重复的内容，引起混乱。</p>
+<p><code>CSS</code> 将样式跟结构分离，使得 HTML 代码结构清晰。很多装饰性的图片也都放在 CSS 里面来加载，带来的一个问题就是在 CSS 里面的图片在高对比度模式下都无法显示。如果这个图片并不仅仅是装饰性的，还可以触发功能，那就需要从 CSS 里面拿出来，当成一个独立的 <code>img</code> 或者 <code>input</code> 元素。例如下面的一个提示保存的图片：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703201859.png" alt="save"></p>
+<p>写在 CSS 里面的做法是：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">”</span> <span class="attr">save_button</span>” &gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line">.save_button&#123; </span><br><span class="line">    background: url(&quot;images/save_button.png&quot;); </span><br><span class="line">    width: 33px; </span><br><span class="line">    height: 33px; </span><br><span class="line">    vertical-align:middle;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样当用户切换到高对比度模式，这个图片就是一片空白，用户无法再去点击保存。修改如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">“images/save_button.png”</span> <span class="attr">alt</span>=<span class="string">“save”/</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">“image”</span> <span class="attr">src</span>=<span class="string">“images/save_button.png”</span> <span class="attr">alt</span>=<span class="string">“save”/</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在一个图片列表里面选中某个图片，区别选中去否我们通常的做法是用边框的颜色来标识。如下图，选中的图片边框为蓝色</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703202028.png" alt="imageselected"></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.selectedIcon&#123; </span><br><span class="line">    border:5px solid #ACC6F3; </span><br><span class="line">&#125; </span><br><span class="line">.unSelectedIcon&#123; </span><br><span class="line">    border:5px solid #C0D4F7; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>但这样的一个实现实际上违反了可访问检查列表中的一项：不能仅仅通过颜色来区分不同的元素，因为在高对比度下只有黑色或白色，这样的区分在高对比度下是没有任何作用的。我们很容易想到的一种办法就是只有选中的时候才加边框，未选中时则没有边框，这样就可以区分出来了。修改如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">.selectedIcon&#123; </span><br><span class="line">    border:5px solid #ACC6F3; </span><br><span class="line">&#125; </span><br><span class="line">.unSelectedIcon&#123; </span><br><span class="line">    border:0 none; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样引起的问题是，图片的布局在选中的时候会浮动，增加了 5px 的边框，看起来效果就很差。那么怎么保证布局又满足可访问性的要求呢？ 可以在上面 CSS 的基础上通过 <code>padding</code> 属性使得布局正确：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.selectedIcon &#123;</span><br><span class="line">    border:1px solid #ACC6F3;    </span><br><span class="line">    padding:4px;</span><br><span class="line">&#125; </span><br><span class="line">.unSelectedIcon &#123;</span><br><span class="line">    border:0 none;   </span><br><span class="line">    padding:5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样保证整体的边界都是 <code>5px</code>，在高对比度下的效果如图所示：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703202217.png" alt="imageselectedh"></p>
+<h3 id="9-2-关于-Table"><a href="#9-2-关于-Table" class="headerlink" title="9.2. 关于 Table"></a>9.2. 关于 Table</h3><p><code>Table</code> 分为两类：一类是做布局的 <code>table</code>，一类是数据 <code>table</code>。</p>
+<ul>
+<li>对于布局用的 <code>table</code>，读屏软件没必要知道这是一个表，可以通过设置 <code>role=presentation</code> 使 <code>JAWS</code> 忽略这个表，只关注里面的内容。</li>
+<li>对于数据表格，则需要设置 <code>caption</code> 属性，说明整个表是用来做什么的，使得 JAWS 可以告诉用户这个表的作用。</li>
+<li>对于每一个单元内的数据，还应该通过 th 属性使得 JAWS 能识别这个数据的表头是什么。对于复杂表，可以通过 id 和 header 属性来标识。如图所示：</li>
+</ul>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703202354.png" alt="table"></p>
+<p>以第一行的数字 5 为例，正常人可以很容易得看出 5 指的是一年级 Mr.Henry 老师这个班的男生有 5 个，但当 JAWS 面对这个数字 5 的时候，怎么能识别出来呢？通过 header 来标识表头，header 的值就指向对应表头的 id。对应的 HTML 如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;class&quot;</span>&gt;</span> Class <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;teacher&quot;</span>&gt;</span> Teacher <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;boys&quot;</span>&gt;</span> #of Boys <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;girls&quot;</span>&gt;</span> #of Girls <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;1stgrade&quot;</span> <span class="attr">rowspan</span>=<span class="string">&quot;2&quot;</span>&gt;</span> 1st Grade <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;MrHenry&quot;</span> <span class="attr">headers</span>=<span class="string">&quot;1stgrade teacher&quot;</span>&gt;</span> Mr . Henry <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;1stgrade MrHenry boys&quot;</span>&gt;</span> 5 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;1stgrade MrHenry girls&quot;</span>&gt;</span> 4 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;MrsSmith&quot;</span> <span class="attr">headers</span>=<span class="string">&quot;1stgrade teacher&quot;</span>&gt;</span> Mrs . Smith <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;1stgrade MrsSmith boys&quot;</span>&gt;</span> 7 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;1stgrade MrsSmith girls&quot;</span>&gt;</span> 9 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;2ndgrade&quot;</span> <span class="attr">rowspan</span>=<span class="string">&quot;3&quot;</span>&gt;</span> 2nd Grade <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;MrJones&quot;</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade teacher&quot;</span>&gt;</span> Mr . Jones <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade MrJones boys&quot;</span>&gt;</span> 3 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade MrJones girls&quot;</span>&gt;</span> 9 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;MrsSmith&quot;</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade teacher&quot;</span>&gt;</span> Mrs . Smith <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade MrsSmith boys&quot;</span>&gt;</span> 4 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade MrsSmith girls&quot;</span>&gt;</span> 3 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;<span class="name">tr</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">th</span> <span class="attr">id</span>=<span class="string">&quot;MrsKelly&quot;</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade teacher&quot;</span>&gt;</span> Mrs . Kelly <span class="tag">&lt;/<span class="name">th</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade MrsKelly boys&quot;</span>&gt;</span> 6 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line">     <span class="tag">&lt;<span class="name">td</span> <span class="attr">headers</span>=<span class="string">&quot;2ndgrade MrsKelly girls&quot;</span>&gt;</span> 9 <span class="tag">&lt;/<span class="name">td</span>&gt;</span> </span><br><span class="line"> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-3-关于-Form"><a href="#9-3-关于-Form" class="headerlink" title="9.3. 关于 Form"></a>9.3. 关于 Form</h3><p><code>form</code> 元素需要关联一个 <code>label</code> 元素，所有的 <code>button</code> 都已经有了一个隐含的 <code>label</code>，所以不再需要显示关联。对于 <code>input</code> <code>select</code> <code>checkbox</code> <code>radio</code> <code>button</code> 则都需要显示一个 <code>label</code> 元素。这样 JAWS 在面对这个表单元素的时候才能告诉用户这个表单的作用。例如下面的 <code>input</code>， JAWS 会告诉用户这个是需要输入名字的一个输入框。当 <code>label</code> 属性不方便使用的时候，还可以通过 <code>title</code> 属性达到相同的效果，也可以满足 Webking 检查的需要。下面的两种写法都可以。但前提是 name 不需要被显示出来。当 <code>title</code> 和 <code>label</code> 都设置的时候 <code>title</code> 会被 JAWS 忽略。</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;label <span class="attribute">for</span>=<span class="string">&quot;name1&quot;</span>&gt;Name:&lt;/label&gt; </span><br><span class="line">&lt;input <span class="attribute">name</span>=<span class="string">&quot;name&quot;</span> <span class="attribute">id</span>=<span class="string">&quot;name1&quot;</span> <span class="attribute">size</span>=<span class="string">&quot;30&quot;</span> /&gt; </span><br><span class="line">或 </span><br><span class="line">&lt;input <span class="attribute">name</span>=”name” <span class="attribute">id</span>=”name1” <span class="attribute">size</span>=”30” <span class="attribute">title</span>=”name”&gt;</span><br></pre></td></tr></table></figure>
+
+<p>当一个表单元素如果前后都需要描述的时候，<code>label</code> 就显得力不从心了。ARIA 规范的出现解决了这一问题。<code>aria-labelledby</code> 属性可以设置多个值，说明这个表单元素是被那些值所描述的, <code>aria-describedby</code> 属性则更详细的扩展了这个描述。如下图所示：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703202551.png" alt="refresh"></p>
+<p>当 JAWS 把焦点放在 10 上的时候，会告诉用户 10 表示的是 10 分钟刷新一次。对应的 HTML 代码如下所示。aria-required的属性标识这个元素是必须的，JAWS 识别此元素并告知用户必须输入此元素。我们可以看到中间的 input 元素被多个元素来描述（aria-labelledby 中的几个 id 值），这样 JAWS 就能够识别这个标签，并且按照这个标签的顺序读出前后的 label， 并且提示用户如果还有更详细的描述以及如何获取这个更详细的描述。当用户需要时，aria-describedby 所对应的元素信息就会被读出来。增强了视力有障碍人士与普通人了解内容的一致性。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;labelRefresh&quot;</span>&gt;</span> </span><br><span class="line">        <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">“refreshTime</span>&quot;&gt;</span>Refresh after<span class="tag">&lt;/<span class="name">label</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">id</span>=<span class="string">“refreshTime</span>&quot; <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">aria-describedby</span>=<span class="string">“refreshDescriptor</span>&quot; <span class="attr">aria-labelledby</span>=<span class="string">&quot; labelRefresh refreshTime refreshUnit&quot;</span> <span class="attr">value</span>=<span class="string">&quot;10&quot;</span>/&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">“refreshUnit</span>&quot;&gt;</span> minutes<span class="tag">&lt;/<span class="name">span</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span> </span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">“refreshDescriptor</span>&quot;&gt;</span>Allows you to specify the number of minutes of refresh time.<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-4-关于-Tabindex-与获取焦点的顺序"><a href="#9-4-关于-Tabindex-与获取焦点的顺序" class="headerlink" title="9.4. 关于 Tabindex 与获取焦点的顺序"></a>9.4. 关于 <code>Tabindex</code> 与获取焦点的顺序</h3><p><code>Tabindex</code> 属性的使用可以使得原本无法取得焦点的元素获取焦点。目的是为了使用户可以用键盘访问任何可以用鼠标访问的元素。我们知道，使用 <code>Tab</code> 键可以按文档顺序 <code>tab</code> <code>到所有可以获取焦点的元素。tabindex</code> 可以设置为 <code>-1</code>、<code>0</code> 或者是任何自然数。</p>
+<ul>
+<li><code>tabindex = 0</code> 就使原本无法获取焦点的元素可以在用户 <code>tab</code> 的时候获取焦点，并且按照文档顺序排列。</li>
+<li><code>tabindex = -1</code> 使得元素可以获取焦点，但当用户用 tab 键访问的时候并不出现在 tab 的列表里面。可以方便的通过 Javascript 设置上下左右键的响应事件。非常有利于应用小部件（widget）内部的键盘访问。</li>
+<li><code>tabindex</code> 设置为大于 0 的数字则可以控制用户 Tab 时候的顺序，一般很少用。</li>
+</ul>
+<p>当用户使用 Tab 键浏览页面时，元素获取焦点的顺序是按照 HTML 代码里面元素出现的顺序排列的，有时跟实际看到的页面顺序并不一致。例如图 所示的页面：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703203133.png" alt="page"></p>
+<p>按照页面顺序，tab 的顺序为自左向右，可实际上操作的时候却发现“search all”出现在了“go to edit”的前面。对应的 HTML 代码如下所示：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面获取 focus 的顺序 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">”float:left;”</span>&gt;</span>welcome page<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">”float:right;margin-left:6em;”</span>&gt;</span>search all<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">”float:right;”</span>&gt;</span>go to edit<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>原来是通过 <code>float:right</code> 达到了布局上的效果，实际文档顺序确实是 <code>search all</code> 在前面的。所以为了不引起混淆，最后能保持代码的顺序与实际呈现出来的页面上的顺序一致。可以修改上面的代码为，如下所示：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 页面获取 focus 的顺序  调整后 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">”float:left;”</span>&gt;</span>welcome page<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">”float:right;width:15em;”</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">”float:left;”</span>&gt;</span>go to edit<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">”float:right;”</span>&gt;</span>search all<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="9-5-关于隐藏的内容"><a href="#9-5-关于隐藏的内容" class="headerlink" title="9.5. 关于隐藏的内容"></a>9.5. 关于隐藏的内容</h3><p>隐藏的内容分为两种：</p>
+<ul>
+<li>一种是为了布局的需要，在条件满足的情况下才会显示出来；</li>
+<li>另一种是只给读屏软件读的内容。</li>
+</ul>
+<p>有时候我们为了使读屏软件更准确的读取信息，会提供一些额外的描述来达到此效果，但为了不给正常用户带来困扰，这些内容对正常用户来说是隐藏起来的。隐藏内容我们通常用 <code>display：none</code> 或者 <code>visibility:hidden</code> 来表示，但读屏软件同样也会忽略这类内容。那如何隐藏内容又能使读屏软件读出来呢？</p>
+<p>另外一种隐藏内容的方式是使用绝对定位使得内容不出现在当前屏幕上，如：<code>&#123;position:absolute;top:-30000px;&#125;</code>所以在选择使用哪种方式隐藏内容时就需要慎重考虑，<code>display:none</code> <code>visibility:hidden</code> 对任何人都是隐藏的，如果想只给读屏软件读到就需要使用上面的绝对定位方式。例如在下图所示的菜单的选中项上加上如下的 css：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 只给读屏软件读的内容 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;access&quot;</span>&gt;</span>  is selected<span class="tag">&lt;/<span class="name">span</span>&gt;</span> </span><br><span class="line">.access&#123;</span><br><span class="line">    position:absolute;</span><br><span class="line">    top:-30000px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703203409.png" alt="menu"></p>
+<p>这样当用户使用 JAWS 浏览每一个菜单项时，在选中项上就能听到哪一项是当前的所选中。</p>
+<h3 id="9-6-高对比度模式的小技巧"><a href="#9-6-高对比度模式的小技巧" class="headerlink" title="9.6. 高对比度模式的小技巧"></a>9.6. 高对比度模式的小技巧</h3><p>系统切换到<strong>高对比度模式</strong>，只有黑白两色，很多在正常模式下依靠颜色来区分的（如界面边界）都无法辨识了，写在 CSS 里面的很多图片也都无法显示出来。此时就需要在高对比度下增加边界或者另外 DOM 节点来显示同样的内容。Dojo 的 <code>WAIState Api</code> 提供了一种方式来判断系统是否处于高对比模式，如果是则在 <code>body</code> 上增加 <code>dijit_a11y</code> 的一个 CSS。这样可以在正常模式下显示一个 DOM 节点在高对比度下显示另外一个 DOM 节点，从而方便的区分。如下图所展示的正常模式与高对比模式下的对比：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230703203509.png" alt="contrast"></p>
+<p>正常模式下如左图所示，子菜单通过一个图片标识，但这个图片是在 <code>CSS</code> 里面设置的，切换到高对比度模式即无法显示出来。此时，我们增加一个在高对比度模式下才显示出来的节点，达到如图右所示的效果，在高对比度下显示一个 + 号。代码如下所示，在高对比模式下，<code>dijit_a11y</code> 加在 <code>body</code> <code>上，dijitMenuExpandA11y</code> 所对应的 DOM 即应用右面的 CSS 得以显示出来。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 正常模式与高对比模式显示不同的 Dom 节点 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">td</span> <span class="attr">class</span>=<span class="string">&quot;dijitReset dijitMenuArrowCell&quot;</span> <span class="attr">waiRole</span>=<span class="string">&quot;presentation&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">dojoAttachPoint</span>=<span class="string">&quot;arrowWrapper&quot;</span> <span class="attr">style</span>=<span class="string">&quot;visibility: hidden&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;$&#123;_blankGif&#125;&quot;</span> <span class="attr">alt</span>=<span class="string">&quot;&quot;</span> <span class="attr">class</span>=<span class="string">&quot;dijitMenuExpand&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;dijitMenuExpandA11y&quot;</span>&gt;</span>+<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">td</span>&gt;</span></span><br><span class="line"></span><br><span class="line">``` css</span><br><span class="line">tundra .dijitMenuExpand &#123;</span><br><span class="line">    width: 7px;</span><br><span class="line">    height: 7px;</span><br><span class="line">    background-image: url(&#x27;images/spriteArrows.png&#x27;);</span><br><span class="line">    background-position: -14px 0px;</span><br><span class="line">&#125;</span><br><span class="line">.dijitMenuExpandA11y &#123;</span><br><span class="line">    display: none;</span><br><span class="line">&#125;</span><br><span class="line">.dijit_a11y .dijitMenuExpandA11y &#123;</span><br><span class="line">    display: inline;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-ARIA-Widgets"><a href="#10-ARIA-Widgets" class="headerlink" title="10. ARIA Widgets"></a>10. ARIA Widgets</h2><h3 id="10-1-Label"><a href="#10-1-Label" class="headerlink" title="10.1. Label"></a>10.1. Label</h3><p><strong>ARIA前</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">class</span>=<span class="string">&quot;offscreen&quot;</span>&gt;</span>System Folders<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">role</span>=<span class="string">&quot;listbox&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span>&gt;</span>Inbox<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span>&gt;</span>Drafts<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span>&gt;</span>Personal Folders<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">role</span>=<span class="string">&quot;listbox&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span>&gt;</span>Folder 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span>&gt;</span>Folder 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>ARIA后</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">role</span>=<span class="string">&quot;listbox&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;System Folders&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span>&gt;</span>Inbox<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span>&gt;</span>Drafts<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">h2</span> <span class="attr">id</span>=<span class="string">&quot;folders&quot;</span>&gt;</span>Personal Folders<span class="tag">&lt;/<span class="name">h2</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">role</span>=<span class="string">&quot;listbox&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;folders&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span>&gt;</span>Folder 1<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span>&gt;</span>Folder 2<span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-2-Alert-Dialog"><a href="#10-2-Alert-Dialog" class="headerlink" title="10.2. Alert Dialog"></a>10.2. Alert Dialog</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;alertdialog&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;hd&quot;</span> <span class="attr">aria-describedby</span>=<span class="string">&quot;msg&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;hd&quot;</span>&gt;</span>Confirm Close<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span> <span class="attr">id</span>=<span class="string">&quot;msg&quot;</span>&gt;</span>Your message has not been sent. Do you want to</span><br><span class="line">save it in your Drafts folder?</span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span>&gt;</span>Save to Drafts<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span>&gt;</span>Don&#x27;t Save<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">button</span>&gt;</span>Keep Writing<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-3-headings"><a href="#10-3-headings" class="headerlink" title="10.3. headings"></a>10.3. headings</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;heading1&quot;</span> <span class="attr">role</span>=<span class="string">&quot;heading&quot;</span> <span class="attr">aria-level</span>=<span class="string">&quot;1&quot;</span> &gt;</span>Heading 1</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;heading2&quot;</span> <span class="attr">role</span>=<span class="string">&quot;heading&quot;</span> <span class="attr">aria-level</span>=<span class="string">&quot;2&quot;</span> &gt;</span>Heading 2</span><br><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;heading3&quot;</span> <span class="attr">role</span>=<span class="string">&quot;heading&quot;</span> <span class="attr">aria-level</span>=<span class="string">&quot;3&quot;</span> &gt;</span>Heading 3</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-4-list-listitem"><a href="#10-4-list-listitem" class="headerlink" title="10.4. list&#x2F;listitem"></a>10.4. list&#x2F;listitem</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;list&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;listitem&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;listitem&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;listitem&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-5-button"><a href="#10-5-button" class="headerlink" title="10.5. button"></a>10.5. button</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;...&quot;</span>&gt;</span>Button<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-6-toggle-button"><a href="#10-6-toggle-button" class="headerlink" title="10.6. toggle button"></a>10.6. toggle button</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span> <span class="attr">aria-pressed</span>=<span class="string">&quot;false&quot;</span> <span class="attr">class</span>=<span class="string">&quot;...&quot;</span>&gt;</span>Option<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span> <span class="attr">aria-pressed</span>=<span class="string">&quot;true&quot;</span> <span class="attr">class</span>=<span class="string">&quot;... pressed&quot;</span>&gt;</span>Option<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-7-checkbox"><a href="#10-7-checkbox" class="headerlink" title="10.7. checkbox"></a>10.7. checkbox</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">role</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">aria-checked</span>=<span class="string">&quot;false&quot;</span> <span class="attr">class</span>=<span class="string">&quot;...&quot;</span>&gt;</span>Option<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">class</span>=<span class="string">&quot;... checked&quot;</span> <span class="attr">role</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">aria-checked</span>=<span class="string">&quot;true&quot;</span>&gt;</span>Option<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-8-radio"><a href="#10-8-radio" class="headerlink" title="10.8. radio"></a>10.8. radio</h3><figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span <span class="attribute">tabindex</span>=<span class="string">&quot;-1&quot;</span> <span class="attribute">role</span>=<span class="string">&quot;radio&quot;</span> <span class="attribute">aria-checked</span>=<span class="string">&quot;false&quot;</span> <span class="attribute">class</span>=<span class="string">&quot;...&quot;</span>&gt;Yes&lt;/span&gt;</span><br><span class="line">&lt;span <span class="attribute">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attribute">role</span>=<span class="string">&quot;radio&quot;</span> <span class="attribute">aria-checked</span>=<span class="string">&quot;true&quot;</span> <span class="attribute">class</span>=<span class="string">&quot;... selected&quot;</span>&gt;No&lt;/span&gt;</span><br><span class="line">&lt;span <span class="attribute">tabindex</span>=<span class="string">&quot;-1&quot;</span> <span class="attribute">role</span>=<span class="string">&quot;radio&quot;</span> <span class="attribute">aria-checked</span>=<span class="string">&quot;false&quot;</span> <span class="attribute">class</span>=<span class="string">&quot;...&quot;</span>&gt;Maybe&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-9-link"><a href="#10-9-link" class="headerlink" title="10.9. link"></a>10.9. link</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">role</span>=<span class="string">&quot;link&quot;</span> <span class="attr">onclick</span>=<span class="string">&quot;document.location(...)&quot;</span>&gt;</span>link<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-10-tooltip"><a href="#10-10-tooltip" class="headerlink" title="10.10. tooltip"></a>10.10. tooltip</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">onmouseover</span>=<span class="string">&quot;...&quot;</span> <span class="attr">onfocus</span>=<span class="string">&quot;...&quot;</span> <span class="attr">aria-describedby</span>=<span class="string">&quot;tooltip&quot;</span> &gt;</span>...<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">role</span>=<span class="string">&quot;tooltip&quot;</span> <span class="attr">id</span>=<span class="string">&quot;tooltip&quot;</span>&gt;</span> this is the tooltip text<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-11-status-bar"><a href="#10-11-status-bar" class="headerlink" title="10.11. status bar"></a>10.11. status bar</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">role</span>=<span class="string">&quot;status&quot;</span> &gt;</span>some form of status bar message...<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-12-alert"><a href="#10-12-alert" class="headerlink" title="10.12. alert"></a>10.12. alert</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">role</span>=<span class="string">&quot;alert&quot;</span> &gt;</span>an alert message (no user interaction)<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-13-progress-bar"><a href="#10-13-progress-bar" class="headerlink" title="10.13. progress bar"></a>10.13. progress bar</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">aria-valuemin</span>=<span class="string">&quot;0&quot;</span> <span class="attr">role</span>=<span class="string">&quot;progressbar&quot;</span> <span class="attr">aria-valuemin</span>=<span class="string">&quot;0&quot;</span> <span class="attr">aria-valuemax</span>=<span class="string">&quot;100&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;...&quot;</span> <span class="attr">aria-valuenow</span>=<span class="string">&quot;40&quot;</span> <span class="attr">aria-valuetext</span>=<span class="string">&quot;40% complete&quot;</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;width:40%&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-14-menu"><a href="#10-14-menu" class="headerlink" title="10.14. menu"></a>10.14. menu</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menu&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menuitem&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menuitem&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menuitem&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-15-Menubar"><a href="#10-15-Menubar" class="headerlink" title="10.15. Menubar"></a>10.15. Menubar</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menubar&quot;</span>&gt;</span> </span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menuitem&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menu&quot;</span>&gt;</span> </span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menuitem&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menuitem&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;menuitem&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-16-listbox"><a href="#10-16-listbox" class="headerlink" title="10.16. listbox"></a>10.16. listbox</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;listbox&quot;</span> <span class="attr">aria-activedescendant</span>=<span class="string">&quot;opt2&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span> <span class="attr">id</span>=<span class="string">&quot;opt1&quot;</span>&gt;</span>Option 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span> <span class="attr">id</span>=<span class="string">&quot;opt2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;active&quot;</span>&gt;</span>Option 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span> <span class="attr">id</span>=<span class="string">&quot;opt3&quot;</span>&gt;</span>Option 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-17-combobox"><a href="#10-17-combobox" class="headerlink" title="10.17. combobox"></a>10.17. combobox</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- similar to &lt;select&gt; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">role</span>=<span class="string">&quot;combobox&quot;</span> <span class="attr">aira-expanded</span>=<span class="string">&quot;true&quot;</span> <span class="attr">aira-autocomplete</span>=<span class="string">&quot;list&quot;</span> <span class="attr">aria-owns</span>=<span class="string">&quot;optlist&quot;</span> <span class="attr">aira-activedescendant</span>=<span class="string">&quot;opt2&quot;</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;listbox&quot;</span> <span class="attr">id</span>=<span class="string">&quot;optlist&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span> <span class="attr">id</span>=<span class="string">&quot;opt1&quot;</span>&gt;</span>Option 1<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span> <span class="attr">id</span>=<span class="string">&quot;opt2&quot;</span> <span class="attr">class</span>=<span class="string">&quot;active&quot;</span>&gt;</span>Option 2<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;option&quot;</span> <span class="attr">id</span>=<span class="string">&quot;opt3&quot;</span>&gt;</span>Option 3<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-18-tree"><a href="#10-18-tree" class="headerlink" title="10.18. tree"></a>10.18. tree</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- list with selectable items, expand/collapse, nesting --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;tree&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;treeitem&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;treeitem&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;treeitem&quot;</span>&gt;</span>...</span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;group&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;treeitem&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;treeitem&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="10-19-grid"><a href="#10-19-grid" class="headerlink" title="10.19. grid"></a>10.19. grid</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- interactive table/spreadsheet --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;grid&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;columnheader&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;columnheader&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;row&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;gridcell&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;gridcell&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="11-Bootstrap-ARIA示例"><a href="#11-Bootstrap-ARIA示例" class="headerlink" title="11. Bootstrap ARIA示例"></a>11. Bootstrap ARIA示例</h2><h3 id="11-1-Glyphicons"><a href="#11-1-Glyphicons" class="headerlink" title="11.1. Glyphicons"></a>11.1. Glyphicons</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Left Align&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;glyphicon glyphicon-align-left&quot;</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-2-Dropdowns"><a href="#11-2-Dropdowns" class="headerlink" title="11.2. Dropdowns"></a>11.2. Dropdowns</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;dropdown&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">id</span>=<span class="string">&quot;dropdownMenu1&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;dropdown&quot;</span> <span class="attr">aria-haspopup</span>=<span class="string">&quot;true&quot;</span> <span class="attr">aria-expanded</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">    Dropdown</span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;caret&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-menu&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;dropdownMenu1&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Another action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Something else here<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;separator&quot;</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Separated link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-3-Divider"><a href="#11-3-Divider" class="headerlink" title="11.3. Divider"></a>11.3. Divider</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-menu&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;dropdownMenuDivider&quot;</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;separator&quot;</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  ...</span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-4-Button-Groups"><a href="#11-4-Button-Groups" class="headerlink" title="11.4. Button Groups"></a>11.4. Button Groups</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class<span class="operator">=</span><span class="string">&quot;btn-group&quot;</span> role<span class="operator">=</span><span class="string">&quot;group&quot;</span> aria-label<span class="operator">=</span><span class="string">&quot;First group&quot;</span>&gt; </span><br><span class="line">    &lt;button type<span class="operator">=</span><span class="string">&quot;button&quot;</span> class<span class="operator">=</span><span class="string">&quot;btn btn-default&quot;</span>&gt;<span class="number">1</span>&lt;/button&gt; </span><br><span class="line">    &lt;button type<span class="operator">=</span><span class="string">&quot;button&quot;</span> class<span class="operator">=</span><span class="string">&quot;btn btn-default&quot;</span>&gt;<span class="number">2</span>&lt;/button&gt; </span><br><span class="line">    &lt;button type<span class="operator">=</span><span class="string">&quot;button&quot;</span> class<span class="operator">=</span><span class="string">&quot;btn btn-default&quot;</span>&gt;<span class="number">3</span>&lt;/button&gt; </span><br><span class="line">    &lt;button type<span class="operator">=</span><span class="string">&quot;button&quot;</span> class<span class="operator">=</span><span class="string">&quot;btn btn-default&quot;</span>&gt;<span class="number">4</span>&lt;/button&gt; </span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-5-Button-dropdowns"><a href="#11-5-Button-dropdowns" class="headerlink" title="11.5. Button dropdowns"></a>11.5. Button dropdowns</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- Single button --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;btn-group&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default dropdown-toggle&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;dropdown&quot;</span> <span class="attr">aria-haspopup</span>=<span class="string">&quot;true&quot;</span> <span class="attr">aria-expanded</span>=<span class="string">&quot;false&quot;</span>&gt;</span></span><br><span class="line">    Action <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;caret&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;dropdown-menu&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Another action<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Something else here<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;separator&quot;</span> <span class="attr">class</span>=<span class="string">&quot;divider&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>Separated link<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-6-Input-groups"><a href="#11-6-Input-groups" class="headerlink" title="11.6. Input groups"></a>11.6. Input groups</h3><figure class="highlight applescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">&quot;input-group&quot;</span>&gt;</span><br><span class="line">  &lt;span <span class="built_in">class</span>=<span class="string">&quot;input-group-addon&quot;</span> <span class="built_in">id</span>=<span class="string">&quot;basic-addon1&quot;</span>&gt;@&lt;/span&gt;</span><br><span class="line">  &lt;input type=<span class="string">&quot;text&quot;</span> <span class="built_in">class</span>=<span class="string">&quot;form-control&quot;</span> placeholder=<span class="string">&quot;Username&quot;</span> aria-describedby=<span class="string">&quot;basic-addon1&quot;</span>&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="keyword">div</span> <span class="built_in">class</span>=<span class="string">&quot;input-group&quot;</span>&gt;</span><br><span class="line">  &lt;input type=<span class="string">&quot;text&quot;</span> <span class="built_in">class</span>=<span class="string">&quot;form-control&quot;</span> placeholder=<span class="string">&quot;Recipient&#x27;s username&quot;</span> aria-describedby=<span class="string">&quot;basic-addon2&quot;</span>&gt;</span><br><span class="line">  &lt;span <span class="built_in">class</span>=<span class="string">&quot;input-group-addon&quot;</span> <span class="built_in">id</span>=<span class="string">&quot;basic-addon2&quot;</span>&gt;@example.com&lt;/span&gt;</span><br><span class="line">&lt;/<span class="keyword">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-7-Pagination"><a href="#11-7-Pagination" class="headerlink" title="11.7. Pagination"></a>11.7. Pagination</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">nav</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;pagination&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Previous&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="symbol">&amp;laquo;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span>&gt;</span>2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Next&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">span</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="symbol">&amp;raquo;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">nav</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-8-Alert"><a href="#11-8-Alert" class="headerlink" title="11.8. Alert"></a>11.8. Alert</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;alert alert-warning alert-dismissible&quot;</span> <span class="attr">role</span>=<span class="string">&quot;alert&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;close&quot;</span> <span class="attr">data-dismiss</span>=<span class="string">&quot;alert&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Close&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="symbol">&amp;times;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">strong</span>&gt;</span>Warning!<span class="tag">&lt;/<span class="name">strong</span>&gt;</span> Better check yourself, you&#x27;re not looking too good.</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-9-Progress-bars"><a href="#11-9-Progress-bars" class="headerlink" title="11.9. Progress bars"></a>11.9. Progress bars</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class<span class="operator">=</span><span class="string">&quot;progress&quot;</span>&gt;</span><br><span class="line">  &lt;div class<span class="operator">=</span><span class="string">&quot;progress-bar&quot;</span> role<span class="operator">=</span><span class="string">&quot;progressbar&quot;</span> aria-valuenow<span class="operator">=</span><span class="string">&quot;60&quot;</span> aria-valuemin<span class="operator">=</span><span class="string">&quot;0&quot;</span> aria-valuemax<span class="operator">=</span><span class="string">&quot;100&quot;</span> style<span class="operator">=</span><span class="string">&quot;width: 60%;&quot;</span>&gt;</span><br><span class="line">    <span class="number">60</span>%</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-10-dialog"><a href="#11-10-dialog" class="headerlink" title="11.10. dialog"></a>11.10. dialog</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal fade&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;-1&quot;</span> <span class="attr">role</span>=<span class="string">&quot;dialog&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-dialog&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-content&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-header&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;close&quot;</span> <span class="attr">data-dismiss</span>=<span class="string">&quot;modal&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Close&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">aria-hidden</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="symbol">&amp;times;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">h4</span> <span class="attr">class</span>=<span class="string">&quot;modal-title&quot;</span>&gt;</span>Modal title<span class="tag">&lt;/<span class="name">h4</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-body&quot;</span>&gt;</span></span><br><span class="line">        One fine body<span class="symbol">&amp;hellip;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;modal-footer&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-default&quot;</span> <span class="attr">data-dismiss</span>=<span class="string">&quot;modal&quot;</span>&gt;</span>Close<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn btn-primary&quot;</span>&gt;</span>Save changes<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- /.modal-content --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- /.modal-dialog --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="comment">&lt;!-- /.modal --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-11-tab"><a href="#11-11-tab" class="headerlink" title="11.11. tab"></a>11.11. tab</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Nav tabs --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ul</span> <span class="attr">class</span>=<span class="string">&quot;nav nav-tabs&quot;</span> <span class="attr">role</span>=<span class="string">&quot;tablist&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;presentation&quot;</span> <span class="attr">class</span>=<span class="string">&quot;active&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#home&quot;</span> <span class="attr">aria-controls</span>=<span class="string">&quot;home&quot;</span> <span class="attr">role</span>=<span class="string">&quot;tab&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;tab&quot;</span>&gt;</span>Home<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;presentation&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#profile&quot;</span> <span class="attr">aria-controls</span>=<span class="string">&quot;profile&quot;</span> <span class="attr">role</span>=<span class="string">&quot;tab&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;tab&quot;</span>&gt;</span>Profile<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;presentation&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#messages&quot;</span> <span class="attr">aria-controls</span>=<span class="string">&quot;messages&quot;</span> <span class="attr">role</span>=<span class="string">&quot;tab&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;tab&quot;</span>&gt;</span>Messages<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;presentation&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#settings&quot;</span> <span class="attr">aria-controls</span>=<span class="string">&quot;settings&quot;</span> <span class="attr">role</span>=<span class="string">&quot;tab&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;tab&quot;</span>&gt;</span>Settings<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">&lt;!-- Tab panes --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;tab-content&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;tabpanel&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tab-pane active&quot;</span> <span class="attr">id</span>=<span class="string">&quot;home&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;tabpanel&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tab-pane&quot;</span> <span class="attr">id</span>=<span class="string">&quot;profile&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;tabpanel&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tab-pane&quot;</span> <span class="attr">id</span>=<span class="string">&quot;messages&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;tabpanel&quot;</span> <span class="attr">class</span>=<span class="string">&quot;tab-pane&quot;</span> <span class="attr">id</span>=<span class="string">&quot;settings&quot;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-12-tooltip"><a href="#11-12-tooltip" class="headerlink" title="11.12. tooltip"></a>11.12. tooltip</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML to write --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#&quot;</span> <span class="attr">data-toggle</span>=<span class="string">&quot;tooltip&quot;</span> <span class="attr">title</span>=<span class="string">&quot;Some tooltip text!&quot;</span>&gt;</span>Hover over me<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- Generated markup by the plugin --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;tooltip top&quot;</span> <span class="attr">role</span>=<span class="string">&quot;tooltip&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;tooltip-arrow&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;tooltip-inner&quot;</span>&gt;</span></span><br><span class="line">    Some tooltip text!</span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="11-13-Collapse"><a href="#11-13-Collapse" class="headerlink" title="11.13. Collapse"></a>11.13. Collapse</h3><figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;a class<span class="operator">=</span><span class="string">&quot;btn btn-primary&quot;</span> role<span class="operator">=</span><span class="string">&quot;button&quot;</span> data-toggle<span class="operator">=</span><span class="string">&quot;collapse&quot;</span> href<span class="operator">=</span><span class="string">&quot;#collapseExample&quot;</span> aria-expanded<span class="operator">=</span><span class="string">&quot;false&quot;</span> aria-controls<span class="operator">=</span><span class="string">&quot;collapseExample&quot;</span>&gt;</span><br><span class="line">  Link with href</span><br><span class="line">&lt;/a&gt;</span><br><span class="line">&lt;button class<span class="operator">=</span><span class="string">&quot;btn btn-primary&quot;</span> type<span class="operator">=</span><span class="string">&quot;button&quot;</span> data-toggle<span class="operator">=</span><span class="string">&quot;collapse&quot;</span> data-target<span class="operator">=</span><span class="string">&quot;#collapseExample&quot;</span> aria-expanded<span class="operator">=</span><span class="string">&quot;false&quot;</span> aria-controls<span class="operator">=</span><span class="string">&quot;collapseExample&quot;</span>&gt;</span><br><span class="line">  Button with data-target</span><br><span class="line">&lt;/button&gt;</span><br><span class="line">&lt;div class<span class="operator">=</span><span class="string">&quot;collapse&quot;</span> id<span class="operator">=</span><span class="string">&quot;collapseExample&quot;</span>&gt;</span><br><span class="line">  &lt;div class<span class="operator">=</span><span class="string">&quot;well&quot;</span>&gt;</span><br><span class="line">    ...</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/WAI-ARIA.html" title="WAI-ARIA无障碍web规范">https://www.zenwu.site/posts/WAI-ARIA.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/WAI-ARIA/" rel="tag"><i class="fa fa-tag"></i> WAI-ARIA</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/d5fd.html" rel="prev" title="笔记-知识点-各监理阶段监理内容">
+                  <i class="fa fa-angle-left"></i> 笔记-知识点-各监理阶段监理内容
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/wai-aria-role.html" rel="next" title="WAI-ARIA无障碍网页应用属性（role）">
+                  WAI-ARIA无障碍网页应用属性（role） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

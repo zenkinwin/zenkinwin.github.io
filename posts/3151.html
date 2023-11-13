@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="2011年12月份学习总结，创建日期：2012-01-03 22:21:31，有删减。  早年的一篇总结，记录对于前端标准的一些思考和萌芽工作； 对于当时的前端标准，始于2011年，在2013~2014进一步提升，编写和制定了一些硬性条件，但在2015年沉寂和消亡，在2016~2017年有SiteAzure产品后，重新做了点工作…… 可由始至终还没做到位，原因很多，或者是项目性工作千化万变，在共">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2011年12月份学习总结，在PE的前端标准思考和萌芽">
+<meta property="og:url" content="https://www.zenwu.site/posts/3151.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="2011年12月份学习总结，创建日期：2012-01-03 22:21:31，有删减。  早年的一篇总结，记录对于前端标准的一些思考和萌芽工作； 对于当时的前端标准，始于2011年，在2013~2014进一步提升，编写和制定了一些硬性条件，但在2015年沉寂和消亡，在2016~2017年有SiteAzure产品后，重新做了点工作…… 可由始至终还没做到位，原因很多，或者是项目性工作千化万变，在共">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207355125.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207356851.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207351813.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207352591.png">
+<meta property="article:published_time" content="2012-01-03T14:21:31.000Z">
+<meta property="article:modified_time" content="2020-12-27T15:02:25.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="前端标准">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207355125.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/3151.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/3151.html","path":"posts/3151.html","title":"2011年12月份学习总结，在PE的前端标准思考和萌芽"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>2011年12月份学习总结，在PE的前端标准思考和萌芽 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/3151.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="2011年12月份学习总结，在PE的前端标准思考和萌芽 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          2011年12月份学习总结，在PE的前端标准思考和萌芽
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2012-01-03 22:21:31" itemprop="dateCreated datePublished" datetime="2012-01-03T22:21:31+08:00">2012-01-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2020-12-27 23:02:25" itemprop="dateModified" datetime="2020-12-27T23:02:25+08:00">2020-12-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%86%99%E5%9C%A8%E5%85%AC%E5%8F%B8%E5%86%85%E7%BD%91%E7%9A%84%E5%AD%A6%E4%B9%A0%E6%80%BB%E7%BB%93/" itemprop="url" rel="index"><span itemprop="name">写在公司内网的学习总结</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<p>2011年12月份学习总结，创建日期：2012-01-03 22:21:31，有删减。</p>
+<ul>
+<li>早年的一篇总结，记录对于前端标准的一些思考和萌芽工作；</li>
+<li>对于当时的前端标准，始于2011年，在<code>2013~2014</code>进一步提升，编写和制定了一些硬性条件，但在2015年沉寂和消亡，在<code>2016~2017</code>年有SiteAzure产品后，重新做了点工作……</li>
+<li>可由始至终还没做到位，原因很多，或者是项目性工作千化万变，在共性与个性中，难找平衡点，或者是核心人员不断流失，使得标准化过于空谈，或者是并没有重视质量保证和质量控制，使得初有成效的标准流于表面，没在项目中贯彻落实……</li>
+</ul>
+<p>总之，那是10年前对前端标准的一些考量，个人记录。以下正文。</p>
+</blockquote>
+<h3 id="前言说的"><a href="#前言说的" class="headerlink" title="前言说的"></a>前言说的</h3><p>设计中心标准化，为什么要做标准化？<a target="_blank" rel="noopener" href="http://dtop.powereasy.net/pel/">http://dtop.powereasy.net/pel/</a><span style="color:gray">（注：已失效）</span>，这篇也算是标准化建设的2011总结和2012计划。</p>
+<span id="more"></span>
+
+<blockquote>
+<p><em>补充，20201226</em>，解释说明</p>
+<ul>
+<li>PEL（PowerEasy Layout）为动易设计中心规划、制作的，适用于设计中心所有设计师、前端工程师，在模板定制等各种模板输出中，规范应用起来的布局标准。</li>
+<li>PEL应向HTML5靠齐……</li>
+</ul>
+</blockquote>
+<!-- more -->
+
+<p>最近半年现在流行一个词语：“站群配套”，即要做几十个网站模板，各种各样的，里面能搭建起几百个站点，几千个站点，这样的项目我们该怎么做呢？将来怎么面对呢，貌似这一问题我个人已经思考了很久，从贵州教育的县市网站和学校网站已经开始谋划这类站点。</p>
+<p>2011年10月设计中心也开始了标准化的各种规范建设，在前端输出的标准中，从前期的贵州教育教育局站点站群项目上看到，因参与的同事较多，现有的技术水平参次不齐，各有各标准，简单说，一个项目做一套项目模板，这套模板的就只适合这项目，以及这设计师前端工程师修改使用，其他人用起来或修改起来，得熟悉这套模板的的各种规范。总成了模板之间不能通用，项目间模板不能复用，往往造成了设计中心前端输出人员需要进行重复工作，低价值工作。</p>
+<h3 id="我们统一什么？统一哪些？"><a href="#我们统一什么？统一哪些？" class="headerlink" title="我们统一什么？统一哪些？"></a>我们统一什么？统一哪些？</h3><p>我们提倡，使用editplus、或者notepad++，进行前端代码输出，方便快捷，轻量化输出工具，说白了就是强制背熟所有HTML、CSS的词汇，善用各种CHM资源文档，不再建议使用dreamweaver进行前端代码输出。</p>
+<blockquote>
+<p><em>补充，20201226</em>：当时还真没<code>sublime Text2</code>，且当时前端工程师的要求感觉是比较低的；</p>
+</blockquote>
+<ul>
+<li>HTML的规范，我们规定，CSS&#x2F;JS&#x2F;盒子模型的各种使用和书写统一等；</li>
+<li>CSS的规范，CSS文件的建立，我们依照这样的规范，CSS文件的文件命名和区分等；</li>
+<li>JS的规范，基于jquery最新版上开发各种效果，统一学习和使用设计中心的slide库，可应用焦点图、滚动、切换、导航等通用效果；</li>
+<li>标签的规范，我们重构了通用信息列表、通用带图片信息列表、内容信息列表、内容带图片信息列表，已经新创了“头条信息列表”标签。</li>
+</ul>
+<h3 id="标题盒子模型"><a href="#标题盒子模型" class="headerlink" title="标题盒子模型"></a>标题盒子模型</h3><p>HTML的规范的里这里举例说明“<strong>标题盒子模型</strong>”的例子，而标题盒子，应用最广泛的，我们规定，必须按照<code>box/hd/bd</code>的规范。</p>
+<h4 id="一般标题盒子"><a href="#一般标题盒子" class="headerlink" title="一般标题盒子"></a>一般标题盒子</h4><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=&quot;<span class="symbol">box</span>&quot;&gt;</span><br><span class="line">  &lt;<span class="symbol">div</span> <span class="symbol">class</span>=&quot;<span class="symbol">hd</span>&quot;&gt;&lt;<span class="symbol">h3</span>&gt;标题&lt;/<span class="symbol">h3</span>&gt;&lt;/<span class="symbol">div</span>&gt;</span><br><span class="line">  &lt;<span class="symbol">div</span> <span class="symbol">class</span>=&quot;<span class="symbol">bd</span>&quot;&gt;内容&lt;/<span class="symbol">div</span>&gt;</span><br><span class="line">&lt;/<span class="symbol">div</span>&gt;<span class="symbol">s</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="带切换-标题的盒子"><a href="#带切换-标题的盒子" class="headerlink" title="带切换+标题的盒子"></a>带切换+标题的盒子</h4><figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;div <span class="keyword">class</span>=&quot;<span class="symbol">box</span> <span class="symbol">boxTab</span>&quot;<span class="symbol">id</span>=&quot;<span class="symbol">hotRank</span>&quot;&gt;</span><br><span class="line">  &lt;<span class="symbol">div</span> <span class="symbol">class</span>=&quot;<span class="symbol">hd</span>&quot;&gt;&lt;<span class="symbol">h3</span>&gt;热门&lt;/<span class="symbol">h3</span>&gt;&lt;<span class="symbol">ul</span>&gt;&lt;<span class="symbol">li</span>&gt;年&lt;/<span class="symbol">li</span>&gt;月日&lt;/<span class="symbol">ul</span>&gt;&lt;/<span class="symbol">div</span>&gt;</span><br><span class="line">  &lt;<span class="symbol">div</span> <span class="symbol">class</span>=&quot;<span class="symbol">bd</span>&quot;&gt;内容&lt;/<span class="symbol">div</span>&gt;</span><br><span class="line">&lt;/<span class="symbol">div</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>就上面标题盒子模型，基本满足现在页面布局的调整，再看一个旧项目，这一堆代码，作用就是些书签切换效果，我们需要不提倡这样的代码方式：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207355125.png" alt="不提成切换的写法"></p>
+<p>切换，你还用上面这样的代码吗？我们建议统一使用<code>slide.js</code>或 <a target="_blank" rel="noopener" href="http://www.superslide2.com/">http://www.superslide2.com/</a>，我们只需要：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">jQuery</span>(&quot;.slideTxtBox&quot;)<span class="selector-class">.slide</span>();</span><br></pre></td></tr></table></figure>
+
+<p>这是一个切换的HTML代码：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207356851.png" alt="标准的切换结构"></p>
+<p>现在我们要怎样：结合标题<strong>盒子模型+slide.js</strong>，出来标准的切换效果：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207351813.png" alt="盒子模型+slide.js"></p>
+<p>从整个页面上看，我们的命名和代码结构都趋向简洁，没有多余的代码，从是ID还是CLASS，都开始形成统一。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/compowereasynet/201201032207352591.png" alt="整体代码结构"></p>
+<h3 id="后话"><a href="#后话" class="headerlink" title="后话"></a>后话</h3><p>曾经问过腾讯CDC的同学们，他们怎么制定内部的规范，答曰：<strong>规范就是最大内部统一，不用看别人怎样，只需要内部协调确定，执行，那就是最好的规范。</strong></p>
+<p>现在标准化进程还是在开始阶段，虽然已经让各个前端同事往这标准方向靠齐，统一还需很长时间。我们标准规定，并不是限定限制知识的扩展和创新，而是在一个既定范围内，达到最大的认同接纳，目的只有方便项目实施，提高效率，可复用模板。</p>
+<p>在现在的定制里面，很快就得应用起我们标准化的各种知识，例如在贵州教育学校模板、赫章政府站子站模板等的非常多子站站点项目上，能一试身手。在后面不断对标准化的代码和方法更新维护，没有恒定的方法，只有不断向前持续改进的标准化建设。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/3151.html" title="2011年12月份学习总结，在PE的前端标准思考和萌芽">https://www.zenwu.site/posts/3151.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF%E6%A0%87%E5%87%86/" rel="tag"><i class="fa fa-tag"></i> 前端标准</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/bb1f.html" rel="prev" title="历史：2007年总结与2008年展望">
+                  <i class="fa fa-angle-left"></i> 历史：2007年总结与2008年展望
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/bdcc.html" rel="next" title="转载-项目经理与部门经理之间的关系">
+                  转载-项目经理与部门经理之间的关系 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

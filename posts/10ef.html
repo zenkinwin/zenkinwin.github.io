@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="20.3 应用软件建设的质量控制20.3.1 软件工程质量概述1. 软件质量定义一软件质量反映实体满足明确和隐含需要能力的特性综合。 定义的说明：  明确需要，指合同中用户明确提出的要求与需要。 隐含需要，指由生产企业通过市场调研进行识别与探明的要求或需要。 特性，实体所特有的性质，反映了实体满足需要的能力。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-信息应用系统监理工作-20.3 应用软件建设的质量控制">
+<meta property="og:url" content="https://www.zenwu.site/posts/10ef.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="20.3 应用软件建设的质量控制20.3.1 软件工程质量概述1. 软件质量定义一软件质量反映实体满足明确和隐含需要能力的特性综合。 定义的说明：  明确需要，指合同中用户明确提出的要求与需要。 隐含需要，指由生产企业通过市场调研进行识别与探明的要求或需要。 特性，实体所特有的性质，反映了实体满足需要的能力。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230424232646.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230424232814.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230427141700.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230427142013.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230427142203.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230427154728.png">
+<meta property="article:published_time" content="2023-04-22T14:51:15.000Z">
+<meta property="article:modified_time" content="2023-04-22T15:21:56.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="质量控制">
+<meta property="article:tag" content="应用系统监理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230424232646.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/10ef.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/10ef.html","path":"posts/10ef.html","title":"笔记-信息应用系统监理工作-20.3 应用软件建设的质量控制"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-信息应用系统监理工作-20.3 应用软件建设的质量控制 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#20-3-%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BB%BA%E8%AE%BE%E7%9A%84%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="nav-text">20.3 应用软件建设的质量控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#20-3-1-%E8%BD%AF%E4%BB%B6%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E6%A6%82%E8%BF%B0"><span class="nav-text">20.3.1 软件工程质量概述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%AE%9A%E4%B9%89%E4%B8%80"><span class="nav-text">1. 软件质量定义一</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E5%AE%9A%E4%B9%89%E4%BA%8C"><span class="nav-text">2. 软件质量定义二</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-text">3. 软件质量的类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%B4%A8%E9%87%8F"><span class="nav-text">4. 项目的质量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E5%B7%A5%E4%BD%9C%E8%B4%A8%E9%87%8F"><span class="nav-text">5. 工作质量</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-3-2-%E7%9B%91%E7%90%86%E7%9A%84%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E4%BD%93%E7%B3%BB"><span class="nav-text">20.3.2 监理的质量控制体系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-3-3-%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%E7%BB%84%E7%BB%87"><span class="nav-text">20.3.3 质量管理组织</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-3-4-%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6"><span class="nav-text">20.3.4 项目的质量控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E4%BE%9D%E6%8D%AE"><span class="nav-text">1. 质量控制的依据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E7%A8%8B%E5%BA%8F"><span class="nav-text">2. 质量控制的程序</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E6%96%B9%E6%B3%95%E5%92%8C%E6%8A%80%E6%9C%AF"><span class="nav-text">3. 质量控制的方法和技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E7%BB%93%E6%9E%9C"><span class="nav-text">4. 质量控制的结果</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/10ef.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-信息应用系统监理工作-20.3 应用软件建设的质量控制 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-信息应用系统监理工作-20.3 应用软件建设的质量控制
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-04-22 22:51:15 / 修改时间：23:21:56" itemprop="dateCreated datePublished" datetime="2023-04-22T22:51:15+08:00">2023-04-22</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">信息应用系统监理工作</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h2 id="20-3-应用软件建设的质量控制"><a href="#20-3-应用软件建设的质量控制" class="headerlink" title="20.3 应用软件建设的质量控制"></a>20.3 应用软件建设的质量控制</h2><h3 id="20-3-1-软件工程质量概述"><a href="#20-3-1-软件工程质量概述" class="headerlink" title="20.3.1 软件工程质量概述"></a>20.3.1 软件工程质量概述</h3><h4 id="1-软件质量定义一"><a href="#1-软件质量定义一" class="headerlink" title="1. 软件质量定义一"></a>1. 软件质量定义一</h4><p><strong>软件质量</strong>反映实体满足<strong>明确和隐含</strong>需要能力的<strong>特性</strong>综合。</p>
+<p>定义的说明：</p>
+<ul>
+<li>明确需要，指合同中用户明确提出的<strong>要求与需要</strong>。</li>
+<li>隐含需要，指由生产企业通过市场调研进行识别与探明的要求或需要。</li>
+<li>特性，实体所特有的性质，反映了<strong>实体满足需要的能力</strong>。<span id="more"></span></li>
+</ul>
+<h4 id="2-软件质量定义二"><a href="#2-软件质量定义二" class="headerlink" title="2. 软件质量定义二"></a>2. 软件质量定义二</h4><p>也<strong>反映实体满足与要求的一致性和适用性的特性综合</strong>。</p>
+<p>定义的说明：</p>
+<ul>
+<li>与要求的<strong>一致性</strong>，满足书面规范的要求。例如，在范围说明书中，按合同条款需要交付50套桌面Linux系统。</li>
+<li><strong>适用性</strong>，指产品能像它被计划的那样使用。如果这些某个应用软件产品（项目）交付时不带某些模块，或者这些某块还未开发、测试完毕，用户可能会不满意，因为软件不适合使用。</li>
+</ul>
+<h4 id="3-软件质量的类型"><a href="#3-软件质量的类型" class="headerlink" title="3. 软件质量的类型"></a>3. 软件质量的类型</h4><ul>
+<li>软件质量，通常指软件产品的质量，广义的还包括工作的质量。产品质量是指产品的使用价值及其属性。</li>
+<li>工作质量，它是产品质量的保证，反映了与产品质量直接有关的工作对产品质量的保证程度。</li>
+</ul>
+<h4 id="4-项目的质量"><a href="#4-项目的质量" class="headerlink" title="4. 项目的质量"></a>4. 项目的质量</h4><ul>
+<li>从项目作为一次性的活动来看，项目质量体现在由WBS（工作分解结构）反映出的项目范围内所有的阶段、子项目、项目工作单元的<strong>质量所构成，也即项目的工作质量</strong>。</li>
+<li>从项目作为一项最终产品来看，项目质量体现在其<strong>性能或者使用价</strong>值上，也即<strong>项目的产品质量</strong>。</li>
+</ul>
+<p>项目是应业主的要求进行的，不同的业主有着不同的质量要求，其意图已反映在项目合同中。因此，<strong>项目合同是进行项目质量管理的主要依据</strong>。</p>
+<h4 id="5-工作质量"><a href="#5-工作质量" class="headerlink" title="5. 工作质量"></a>5. 工作质量</h4><p>参与项目的实施者为了保证所从事工作的质量水平和完善程度，应包括：</p>
+<ul>
+<li>社会工作质量</li>
+<li>过程工作质量</li>
+<li>管理工作质量</li>
+<li>技术工作质量</li>
+</ul>
+<p>在应用系统软件开发期间，为保证软件工程质量，业主和承建单位应建立一套完善的<strong>质量控制体系</strong>，设置关键的质量控制点，并通过若干质量控制技术与手段，发现问题及时修正。</p>
+<p>质量保障体系如图20.1所示：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230424232646.png" alt="质量保障体系"></p>
+<h3 id="20-3-2-监理的质量控制体系"><a href="#20-3-2-监理的质量控制体系" class="headerlink" title="20.3.2 监理的质量控制体系"></a>20.3.2 监理的质量控制体系</h3><p>在应用软件项目监理工作中，为了有效地实施监理工作，提高监理质量，监理单位必须建立起完善的<strong>质量控制体系</strong>，主要内容包括：</p>
+<ul>
+<li>质量管理<strong>组织</strong></li>
+<li>项目质量<strong>控制</strong></li>
+<li><strong>设计质量</strong>控制程序</li>
+<li><strong>开发质量</strong>控制程序</li>
+<li><strong>测试质量</strong>控制程序</li>
+<li><strong>系统验收质量</strong>控制程序</li>
+</ul>
+<h3 id="20-3-3-质量管理组织"><a href="#20-3-3-质量管理组织" class="headerlink" title="20.3.3 质量管理组织"></a>20.3.3 质量管理组织</h3><p>监理单位的质量管理组织如图20.2所示。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230424232814.png" alt="监理单位的质量管理组织"></p>
+<h3 id="20-3-4-项目的质量控制"><a href="#20-3-4-项目的质量控制" class="headerlink" title="20.3.4 项目的质量控制"></a>20.3.4 项目的质量控制</h3><p><strong>质量控制</strong>主要是监督项目的实施结果，将项目的结果与事先制定的质量标准进行比较，找出其存在的差距，并分析形成这一差距的原因，质量控制同样贯穿于项目实施的全过程。项目的结果包括<strong>产品结果</strong>（如交付）以及<strong>管理结果</strong>（如实施的费用和进度）。</p>
+<p>监理应该具有统计质量控制的工作知识，特别是<strong>抽样检查</strong>和<strong>概率</strong>方面的知识，以便帮助他们评价质量控制的输出。监理应该清楚以下几个方面的不同：</p>
+<ul>
+<li>预防和检查</li>
+<li>特征样本和随机样本</li>
+<li>特殊原因和随机原因</li>
+<li>偏差和控制线</li>
+</ul>
+<h4 id="1-质量控制的依据"><a href="#1-质量控制的依据" class="headerlink" title="1. 质量控制的依据"></a>1. 质量控制的依据</h4><ul>
+<li>工作结果，包括<strong>实施结果和产品结果</strong></li>
+<li><strong>质量管理计划</strong></li>
+<li>操作<strong>规范</strong></li>
+<li><strong>检查表格</strong></li>
+</ul>
+<h4 id="2-质量控制的程序"><a href="#2-质量控制的程序" class="headerlink" title="2. 质量控制的程序"></a>2. 质量控制的程序</h4><p>（1）监理单位按照有关<strong>国家标准和技术标准</strong>提交监理要求文件；<br>（2）承建单位在合同规定日期内按监理要求文件提交<strong>正式文档或软件</strong>；<br>（3）监理工程师根<strong>据合同及有关标准审查文档</strong>；<br>（4）监理工程师<strong>提出审查意见</strong>，并报总监理工程师；<br>（5）必要时，由总监理工程师组织专家进行<strong>评审</strong>，提出评审意见；<br>（6）监理单位向业主提交评审意见，业主根据评审意见对承建单位做出<strong>整改决定</strong>；<br>（7）<strong>质量监理工程师</strong>按有关规定<strong>对开发或测试进行抽查</strong>，并对发现的问题及时通过监理文件向业主和承建单位提交监理意见；<br>（8）对重要问题，总监理工程师将安排专项监理，并向业主提交专项监理报告。专项监理报告提交前须征求业主意见。业主根据监理报告对承建单位做出整改决定；<br>（9）监理单位承担的软件测试工作执行“<strong>XXX质量控制体系</strong>”。并根据需要随时邀请专家组参与会审；</p>
+<h4 id="3-质量控制的方法和技术"><a href="#3-质量控制的方法和技术" class="headerlink" title="3. 质量控制的方法和技术"></a>3. 质量控制的方法和技术</h4><h5 id="1）帕累托分析"><a href="#1）帕累托分析" class="headerlink" title="1）帕累托分析"></a>1）帕累托分析</h5><p>指确认造<strong>成系统质量问题的诸多因素中最为重要的几个因素</strong>。也称为<strong>80-20法则</strong>。意思是，8<strong>0%的问题经常是由于20%的原因引起的</strong>。</p>
+<p>例如，用户抱怨应用系统问题有如下几方面：登录问题、系统上锁、系统太慢、系统难以使用、报告不准确。经统计，第一、二类抱怨占总抱怨数的80%。因此，应集中力量<strong>解决系统登录和系统上锁</strong>问题。</p>
+<h5 id="2）检查"><a href="#2）检查" class="headerlink" title="2）检查"></a>2）检查</h5><p>检查包括<strong>度量、考察和测试</strong>。</p>
+<h5 id="3）控制图"><a href="#3）控制图" class="headerlink" title="3）控制图"></a>3）控制图</h5><p><strong>控制图</strong>可以用来监控任何形式的<strong>输出变量</strong>，它用得最为频繁，可用于监控进度和费用的变化、范围变化的度量和频率、项目说明中的错误以及其他管理结果，如图20.3所示。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230427141700.png" alt="质量控制图"></p>
+<h5 id="4）统计样本"><a href="#4）统计样本" class="headerlink" title="4）统计样本"></a>4）统计样本</h5><p>对项目实际执行情况的统计值是项目质量控制的基础，统计样本涉及样本选择的代表性，合适的样本通常可以减少项目控制的费用。</p>
+<p><strong>样本的大小</strong>取决于想要的<strong>样本有多大的代表性。</strong> 决定样本大小的公式：<br><em>样本大小&#x3D; 0.25×（可信度因子&#x2F;可接受误差） <sup>2</sup></em></p>
+<p>常用的可信度因子见表20-1：<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230427142013.png" alt="可信度因子见"></p>
+<p>● 若要有95%的可信度，则样本大小为：</p>
+<blockquote>
+<p>样本大小&#x3D;0.25×（可信度因子&#x2F;可接受误差）<sup>2</sup>&#x3D; 0.25 × （1.960&#x2F;0.05 ） <sup>2</sup> &#x3D; 384</p>
+</blockquote>
+<p>● 若要有90%的可信度，则样本大小为：</p>
+<blockquote>
+<p>样本大小&#x3D;0.25 ×（可信度因子&#x2F;可接受误差）<sup>2</sup> &#x3D;0.25 × （1.645&#x2F;0.10 ）<sup>2</sup> &#x3D; 68</p>
+</blockquote>
+<p>● 若要有80%的可信度，则样本大小为：</p>
+<blockquote>
+<p>样本大小&#x3D;0.25 ×（可信度因子&#x2F;可接受误差）<sup>2</sup>&#x3D;0.25 × （1.281&#x2F;0.20）<sup>2</sup>&#x3D;10</p>
+</blockquote>
+<h5 id="5）标准差"><a href="#5）标准差" class="headerlink" title="5）标准差"></a>5）标准差</h5><p>标准差测量数据分布中存在多少偏差。一个小的<strong>标准差（σ）</strong>动意味着数据集中聚集在分布的中间，数据之间存在很小的变化，如图20.4所示。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230427142203.png" alt="标准差测量数据分布图"></p>
+<p>标准差在质量控制上很重要，因为它是一个<strong>决定有缺陷个体的可接受数目的关键因素</strong>。</p>
+<p>一些公司，如摩托罗拉、通用电气、宝丽来等使用 <strong>6σ</strong> 作为质量控制标准。<strong>σ和有缺陷的单位数</strong>见表20-2。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230427154728.png" alt="σ和有缺陷的单位数"></p>
+<p>6σ被认为是美国对质量改进的最杰出的贡献之一。</p>
+<h5 id="6）流图"><a href="#6）流图" class="headerlink" title="6）流图"></a>6）流图</h5><p>通常被用于项目质量控制过程中，其主要的目的是<strong>分析问题产生的原因及要素间的关系</strong>。</p>
+<h5 id="7）趋势分析"><a href="#7）趋势分析" class="headerlink" title="7）趋势分析"></a>7）趋势分析</h5><p><strong>趋势分析</strong>是应用数学的技术根据历史的数据预测项目未来的发展，趋势分析通常被用来监控：</p>
+<ul>
+<li>技术参数，<strong>多少错误或缺点已被识别和纠正</strong>，多少错误仍然未被校正；</li>
+<li>费用和进度参数，<strong>多少工作在规定的时间内被按期完成</strong>。</li>
+</ul>
+<h4 id="4-质量控制的结果"><a href="#4-质量控制的结果" class="headerlink" title="4. 质量控制的结果"></a>4. 质量控制的结果</h4><p>（1）<strong>质量改进措施</strong>。<br>（2）<strong>可接受的决定</strong>。每一项目都有接受和拒绝的可能，不被接受的工作需要重新进行。<br>（3）<strong>重新工作</strong>。不被接受的工作需要重新执行，项目工作组的目标是使得返工的工作最少。<br>（4）<strong>完成检查表</strong>。当检查的时候，应该完成对项目质量的记录，及完成检查表格。<br>（5）<strong>过程调整</strong>。过程调整包括对质量控制度量结果的纠正以及预防工作。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/10ef.html" title="笔记-信息应用系统监理工作-20.3 应用软件建设的质量控制">https://www.zenwu.site/posts/10ef.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6/" rel="tag"><i class="fa fa-tag"></i> 质量控制</a>
+              <a href="/tags/%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 应用系统监理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/797.html" rel="prev" title="笔记-信息应用系统监理工作-20.2 监理的目标和内容">
+                  <i class="fa fa-angle-left"></i> 笔记-信息应用系统监理工作-20.2 监理的目标和内容
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/f614.html" rel="next" title="笔记-信息应用系统监理工作-20.3.8 系统验收质量控制">
+                  笔记-信息应用系统监理工作-20.3.8 系统验收质量控制 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

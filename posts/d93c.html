@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="这章节实在要背诵，太重要了。  22.1 分析设计阶段的系统建设任务22.1.1 需求分析的进入条件业主单位与承建单位正式签订建设合同，并对初步的项目开发计划达成一致意见，即可进入需求分析阶段。 22.1.2 需求分析的目标需求分析的目标是深入描述软件的功能和性能，确定软件设计的约束和软件同其他系统元素的接口细节，定义软件的其他有效性需求。 需求分析阶段研究的对象是软件项目的用户要求。一方面，必">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-分析设计阶段监理-22.1 分析设计阶段的系统建设任务">
+<meta property="og:url" content="https://www.zenwu.site/posts/d93c.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="这章节实在要背诵，太重要了。  22.1 分析设计阶段的系统建设任务22.1.1 需求分析的进入条件业主单位与承建单位正式签订建设合同，并对初步的项目开发计划达成一致意见，即可进入需求分析阶段。 22.1.2 需求分析的目标需求分析的目标是深入描述软件的功能和性能，确定软件设计的约束和软件同其他系统元素的接口细节，定义软件的其他有效性需求。 需求分析阶段研究的对象是软件项目的用户要求。一方面，必">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2022/20221025163606.png">
+<meta property="article:published_time" content="2022-10-24T14:31:13.000Z">
+<meta property="article:modified_time" content="2022-10-24T14:35:31.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="需求分析">
+<meta property="article:tag" content="分析设计阶段监理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2022/20221025163606.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/d93c.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/d93c.html","path":"posts/d93c.html","title":"笔记-分析设计阶段监理-22.1 分析设计阶段的系统建设任务"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-分析设计阶段监理-22.1 分析设计阶段的系统建设任务 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#22-1-%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9A%84%E7%B3%BB%E7%BB%9F%E5%BB%BA%E8%AE%BE%E4%BB%BB%E5%8A%A1"><span class="nav-text">22.1 分析设计阶段的系统建设任务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-1-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E8%BF%9B%E5%85%A5%E6%9D%A1%E4%BB%B6"><span class="nav-text">22.1.1 需求分析的进入条件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-2-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="nav-text">22.1.2 需求分析的目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-3-%E8%BD%AF%E4%BB%B6%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="nav-text">22.1.3 软件需求分析的任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-4-%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90%E9%98%B6%E6%AE%B5%E6%88%90%E6%9E%9C"><span class="nav-text">22.1.4 需求分析阶段成果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-5-%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9A%84%E7%9A%84%E8%BF%9B%E5%85%A5%E6%9D%A1%E4%BB%B6"><span class="nav-text">22.1.5 设计阶段的的进入条件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%BD%AF%E4%BB%B6%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1%E8%BF%9B%E5%85%A5%E6%9D%A1%E4%BB%B6"><span class="nav-text">1.软件概要设计进入条件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%BD%AF%E4%BB%B6%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1%E8%BF%9B%E5%85%A5%E6%9D%A1%E4%BB%B6"><span class="nav-text">2.软件详细设计进入条件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-6-%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="nav-text">22.1.6 软件设计的目标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-7-%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E7%9A%84%E4%BB%BB%E5%8A%A1"><span class="nav-text">22.1.7 软件设计的任务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-1-8-%E8%BD%AF%E4%BB%B6%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E6%88%90%E6%9E%9C"><span class="nav-text">22.1.8 软件设计阶段成果</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/d93c.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-分析设计阶段监理-22.1 分析设计阶段的系统建设任务 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-分析设计阶段监理-22.1 分析设计阶段的系统建设任务
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-10-24 22:31:13 / 修改时间：22:35:31" itemprop="dateCreated datePublished" datetime="2022-10-24T22:31:13+08:00">2022-10-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<p>这章节实在要背诵，太重要了。</p>
+</blockquote>
+<h2 id="22-1-分析设计阶段的系统建设任务"><a href="#22-1-分析设计阶段的系统建设任务" class="headerlink" title="22.1 分析设计阶段的系统建设任务"></a>22.1 分析设计阶段的系统建设任务</h2><h3 id="22-1-1-需求分析的进入条件"><a href="#22-1-1-需求分析的进入条件" class="headerlink" title="22.1.1 需求分析的进入条件"></a>22.1.1 需求分析的进入条件</h3><p>业主单位与承建单位<strong>正式签订建设合同</strong>，并对初步的项目开发计划<strong>达成一致意见</strong>，即可进入需求分析阶段。</p>
+<h3 id="22-1-2-需求分析的目标"><a href="#22-1-2-需求分析的目标" class="headerlink" title="22.1.2 需求分析的目标"></a>22.1.2 需求分析的目标</h3><p>需求分析的<strong>目标</strong>是深入描述软件的<strong>功能和性能</strong>，确定软件设计的<strong>约束</strong>和软件同其他系统元素的<strong>接口细节</strong>，定义软件的其他有效性需求。</p>
+<p>需求分析阶段研究的<strong>对象</strong>是软件项目的<strong>用户要求</strong>。一方面，必须全面理解用户的各项要求，但又不能全盘接受所有的要求；另一方面，要准确地表达被接受的用户要求。只有经过<strong>确切描述的软件需求</strong>才能成为<strong>软件设计的基础</strong>。</p>
+<p>通常软件开发项目是要实现目标系统的<strong>物理模型</strong>。作为目标系统的参考，<strong>需求分析的任务</strong>就是<strong>借助于当前系统的逻辑模型导出目标系统的逻辑模型</strong>，解决目标系统的<strong>“做什么”</strong>的问题。</p>
+<h3 id="22-1-3-软件需求分析的任务"><a href="#22-1-3-软件需求分析的任务" class="headerlink" title="22.1.3 软件需求分析的任务"></a>22.1.3 软件需求分析的任务</h3><p>软件产品或软件服务的开发始于业主单位的需要、期望和限制条件，需求开发过程识别这些需要、期望和条件，在特定的限制条件下把这些需要和期望转换成产品需求的集合，对这个产品需求集合进行分析，产生一个<strong>高层次概念的解决方案</strong>，进一步分解直到确定特定产品的构件为止。</p>
+<p>需求开发的产品将成为软件设计的基础，需求开发的过程不仅涉及所有的业主单位的需要和期望，除了业主单位的需要和期望外，还可能从所选择的解决方案中派生产品和产品构件的需求。</p>
+<p>需求开发的功能分析不同于软件开发中的结构化分析，不是假定面向功能的软件设计。功能分析的功能定义和逻辑分组，合并在一起成为<strong>功能体系结构</strong>。需求开发涉及对产品基本功能体系结构的进一步演变，这种<strong>基本功能体系结构</strong>把业主单位的<strong>需要和期望</strong>赋予到各个功能实体上。</p>
+<p>对功能体系结构的细节层次可能需要不断地<strong>进行递归分析</strong>，直到细化程度足以推进产品的详细设计、采办和测试为止。</p>
+<p>从软件产品支持、维护和使用的分析，还能派生出更多的功能需求和界面需求，在分析这些需求时需要予以注意的内容包括：<strong>限制条件、技术制约、成本制约、时间限制、软件风险、业主单位未明确（隐含）的问题</strong>，以及由开发者业务经验和能力引出的需求。这些分析对需求加以精练，进行派生，形成一个完备的逻辑实体。持续进行这些活动，可以确保需求始终得到恰当的定义。</p>
+<h3 id="22-1-4-需求分析阶段成果"><a href="#22-1-4-需求分析阶段成果" class="headerlink" title="22.1.4 需求分析阶段成果"></a>22.1.4 需求分析阶段成果</h3><p>在制定开发计划时应兼顾用户给定的要进度和经费要求，又要注意按照软件工程规定的程序和技术要求进行开发工作。软件需求规格说明应满足需求分析的完整性要求，并保证软件需求规格说明应满足需求说明中的所有功能，性能需求均是可实现的。阶段成果有：▲</p>
+<p>（1）<strong>项目开发计划</strong><br>（2）<strong>软件需求说明书</strong><br>（3）<strong>软件质量保证计划</strong><br>（4）<strong>软件配置管理计划</strong><br>（5）<strong>软件（初步）确认测试计划</strong><br>（6）<strong>用户使用说明书初稿</strong></p>
+<h3 id="22-1-5-设计阶段的的进入条件"><a href="#22-1-5-设计阶段的的进入条件" class="headerlink" title="22.1.5 设计阶段的的进入条件"></a>22.1.5 设计阶段的的进入条件</h3><h4 id="1-软件概要设计进入条件"><a href="#1-软件概要设计进入条件" class="headerlink" title="1.软件概要设计进入条件"></a>1.软件概要设计进入条件</h4><p>（1）项目开发计划、质量保证计划、配置管理计划等配套计划通过<strong>评审</strong>并正式批准；<br>（2）软件需求规格说明书通过<strong>评审</strong>；<br>（3）以软件<strong>需求规格说明书</strong>为核心的配置管理分配<strong>基线建立</strong>。</p>
+<h4 id="2-软件详细设计进入条件"><a href="#2-软件详细设计进入条件" class="headerlink" title="2.软件详细设计进入条件"></a>2.软件详细设计进入条件</h4><p>（1）软件<strong>概要设计</strong>说明通过评审；<br>（2）软件概要设计说明，<strong>外部接口设计己纳入配置管理受控库</strong>。</p>
+<h3 id="22-1-6-软件设计的目标"><a href="#22-1-6-软件设计的目标" class="headerlink" title="22.1.6 软件设计的目标"></a>22.1.6 软件设计的目标</h3><p>根据软件需求，以及功能和性能需求，进行<strong>数据设计、系统结构设计和过程设计</strong>。数据设计侧重于<strong>数据结构的定义</strong>。<strong>系统结构设计</strong>定义软件系统各<strong>主要成分之间的关系</strong>。过程设计则是把结构成分转换成软件的<strong>过程性描述</strong>。在编码步骤，根据这种过程性描，生成源程序代码，然后通过测试最终得到完整有效的软件。</p>
+<p>从工程管理的角度来看，软件设计任务分两步完成，即：<em>概要设计</em>，将<strong>软件需求</strong>转化为<strong>数据结构和软件的系统结构</strong>；<em>详细设计</em>，也就是<strong>过程设计</strong>。通过对结构表示进行<strong>细化</strong>，得到软件的<strong>详细的数据结构和算法</strong>。</p>
+<p>软件设计是后续开发步骤及软件维护工作的基础。如果没有设计，只能建立一个<strong>不稳定</strong>的系统结构。</p>
+<h3 id="22-1-7-软件设计的任务"><a href="#22-1-7-软件设计的任务" class="headerlink" title="22.1.7 软件设计的任务"></a>22.1.7 软件设计的任务</h3><p>软件概要设计是以需求分析所产生的文档为依据，着手解决实现“需求”的软件体系结构，简称<strong>软件结构</strong>。就像建筑工程中的盖大楼，需求分析主要是确定要盖满足什么样功能的大楼，而<strong>概要设计就是施工，盖起满足用户要求的大楼的框架</strong>。这一阶段确定软件结构的具体任务是将系统分解成模块，确定各模块的功能及调用关系，将用户的需求分配到适当的位置上去，得出<strong>系统的结构图</strong>。为了得到好的结构，需要一组标准化准则和工具，软件设计的基本原理、优化软件结构的准则及结构化设计方法在相应的软件工程化书籍中有详细的技术介绍。</p>
+<p><strong>软件详细设计</strong>就是要在概要设计的结果的基础上，<strong>考虑“怎样实现”这个软件系统</strong>，直到对系统中的每个模块给出足够详细的<strong>过程性描述</strong>。主要任务是：<strong>为每个模块确定采用的算法，选择某种适当的工具表达算法的过程，写出模块的详细过程性描述；确定每一模块使用的数据结构；确定模块接口的细节，包括对系统外部的接口和用户界面，对系统内部其他模块的接口，以及模块输入数据、输出数据及局部数据的全部细节；为每一个模块设计出一组测试用例，以便在编码阶段对模块代码（即程序）进行预定的测试，模块的测试用例是软件测试计划的重要组成部分，通常应包括输入数据，期望输出等内容。</strong></p>
+<p><strong>概要设计</strong>确定了系统的<strong>体系结构</strong>，即<strong>划分了模块</strong>，将每个模块的功能及其相互间的联系确定了下来。<strong>详细设计</strong>是解决如何实现每个模块功能的问题，即<strong>设计处理过程，构造模块的实现算法</strong>，给出明确的表达，使之成为编程的依据。描述算法除了流程图外，还有一些别的工具，<strong>如PAD图、PDL语言（伪码）、HIPO图</strong>等。</p>
+<p>软件设计的基础首先是深刻理解模块、模块化、分解与抽象、信息隐蔽、模块独立性及其定性标准这些基本概念，以及由这些概念形成的软件结构设计优化准则所起的作用。</p>
+<p>实际上，软件设计过程的前后活动是彼此支持的，同时<strong>贯穿于软件需求和软件编码之间</strong>。软件设计在选择解决方案时，可以运用<strong>原形设计</strong>作为充分掌握情况的手段，要充分考虑候选解决方案及其优缺点，应该确定关键需求、设计问题和限制条件，以便在分析各种候选方案时使用。</p>
+<p>软件设计要考虑<strong>软件体系结构</strong>，合理的软件体系结构是提高软件可维护性和可移植性的基础。在软件设计中，对于是否选择使用商业软件成品，要结合成本、进度、性能和风险来考虑。</p>
+<p>软件设计方案的选择准则应该具备实质意义上的区别点，能指示达到某个平衡的生存周期解决方案。一般地，这些准则包括有成本、进度、性能和风险等的度量，也包括可维护性和可移植性的考虑。同时也受到那些影响开发活动和产品生存周期的需求驱动。</p>
+<p>软件也和硬件一样，它的质量是设计出来的，生产出来的。其中，设计对软件质量具有关键性的影响。设计的重要性可从图22.1看出，（a）为经历了设计步骤后的效果，在软件使用和维修阶段，软件的问题少；反之，（b）为<strong>跳过设计步骤</strong>，到了使用和维修阶段，软件问题成堆，到了不可收拾的地步。基于这种情况，监理应强调：<strong>软件设计未完成，不得转入软件编码阶段。</strong></p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2022/20221025163606.png" alt="软件设计的重要性"></p>
+<p>良好的软件设计与所采用的<strong>软件设计方法、设计工具和设计准则</strong>有关。软件设计方法主要有<strong>面向数据流的设计和面向对象的设计</strong>。这些方法均有其优缺点和不同的应用领域。</p>
+<p><strong>软件设计监理的基本准则</strong>包括：<strong>审查提交的文档是否齐全</strong>，<strong>审查文档编制与描述工具是否符合规范</strong>。<strong>确定承办单位提出的软件总体结构设计是否实现了软件需求规格说明的要求</strong>，评价软件设计方案与数学模型的可行性，评价接口设计方案和运行环境的适应性，<strong>审查软件集成测试计划的合理性和完备性</strong>，审查数据库设计的完备性和一致性。<strong>并确定该阶段文档能否作为详细设计的依据</strong>，<strong>决定可否转入详细设计阶段</strong>。<strong>确认软件详细设计文档的内容符合软件编码的要求。</strong></p>
+<h3 id="22-1-8-软件设计阶段成果"><a href="#22-1-8-软件设计阶段成果" class="headerlink" title="22.1.8 软件设计阶段成果"></a>22.1.8 软件设计阶段成果</h3><p>设计阶段完成时应编写的文档<br>（1）<strong>概要设计说明书</strong><br>（2）<strong>数据库设计说明书</strong><br>（3）<strong>用户手册</strong><br>（4）<strong>软件概要设计说明书</strong>（数据库设计部分可单列一册）<br>（5）<strong>软件详细设计说明书</strong><br>（6）<strong>软件编码规范</strong><br>（7）<strong>集成测试计划</strong></p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/d93c.html" title="笔记-分析设计阶段监理-22.1 分析设计阶段的系统建设任务">https://www.zenwu.site/posts/d93c.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 需求分析</a>
+              <a href="/tags/%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9B%91%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 分析设计阶段监理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/d9a5.html" rel="prev" title="笔记-监理案例题-2021年下-设计说明书+需求规格说明书">
+                  <i class="fa fa-angle-left"></i> 笔记-监理案例题-2021年下-设计说明书+需求规格说明书
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/dfc6.html" rel="next" title="笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容">
+                  笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

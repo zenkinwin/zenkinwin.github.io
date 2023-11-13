@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="内容太多，2022年上案例题  18.6 信息网络系统测试验收常用工具概览18.6.1 系统资源管理工具Server Vantage1. Server Vantage 简介Server Vantage V8.5主要具有开放的体系结构，针对主机硬件资源、操作系统、数据库和应用程序及输入&#x2F;输出设备进行监控管理。Server Vantage提供了几百个Agent（代理）分别对服务器资源、操作">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-信息网络系统验收阶段的监理-18.6 信息网络系统测试验收常用工具概览">
+<meta property="og:url" content="https://www.zenwu.site/posts/d8c1.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="内容太多，2022年上案例题  18.6 信息网络系统测试验收常用工具概览18.6.1 系统资源管理工具Server Vantage1. Server Vantage 简介Server Vantage V8.5主要具有开放的体系结构，针对主机硬件资源、操作系统、数据库和应用程序及输入&#x2F;输出设备进行监控管理。Server Vantage提供了几百个Agent（代理）分别对服务器资源、操作">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-13T15:11:15.000Z">
+<meta property="article:modified_time" content="2022-10-13T15:11:15.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="常用工具">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/d8c1.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/d8c1.html","path":"posts/d8c1.html","title":"笔记-信息网络系统验收阶段的监理-18.6 信息网络系统测试验收常用工具概览"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-信息网络系统验收阶段的监理-18.6 信息网络系统测试验收常用工具概览 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#18-6-%E4%BF%A1%E6%81%AF%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E6%B5%8B%E8%AF%95%E9%AA%8C%E6%94%B6%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7%E6%A6%82%E8%A7%88"><span class="nav-text">18.6 信息网络系统测试验收常用工具概览</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-1-%E7%B3%BB%E7%BB%9F%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Server-Vantage"><span class="nav-text">18.6.1 系统资源管理工具Server Vantage</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Server-Vantage-%E7%AE%80%E4%BB%8B"><span class="nav-text">1. Server Vantage 简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Server-Vantage-%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-text">2. Server Vantage 应用范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-2-%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E6%80%A7%E8%83%BD%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7Network-Vantage"><span class="nav-text">18.6.2 网络应用性能管理工具Network Vantage</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Network-Vantage-%E7%AE%80%E4%BB%8B"><span class="nav-text">1. Network Vantage 简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Network-Vantage%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-text">2. Network Vantage应用范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-3-%E7%BD%91%E7%BB%9C%E5%BA%94%E7%94%A8%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7-Application-Expert-V8-5"><span class="nav-text">18.6.3 网络应用性能分析工具 Application Expert V8.5</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Application-Expert%E7%AE%80%E4%BB%8B"><span class="nav-text">1. Application Expert简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Application-Expert%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-text">2. Application Expert应用范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-4-%E7%BD%91%E7%BB%9C%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E6%B5%8B%E8%AF%95%E5%B7%A5%E5%85%B7-SmartBits-6000B"><span class="nav-text">18.6.4 网络性能分析测试工具 SmartBits 6000B</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-SmartBits-6000B%E7%AE%80%E4%BB%8B"><span class="nav-text">1. SmartBits 6000B简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-SmartBits-6000B%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-text">2. SmartBits 6000B应用范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-5-%E7%AB%99%E7%82%B9%E8%B4%A8%E9%87%8F%E5%88%86%E6%9E%90%E5%B7%A5%E5%85%B7-Webcheck-V5-0"><span class="nav-text">18.6.5 站点质量分析工具 Webcheck V5.0</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Webcheck%E7%AE%80%E4%BB%8B"><span class="nav-text">1. Webcheck简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Webcheck%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-text">2. Webcheck应用范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-6-MicroMapper%E7%94%B5%E7%BC%86%E7%BA%BF%E5%BA%8F%E6%A3%80%E6%B5%8B%E4%BB%AA"><span class="nav-text">18.6.6 MicroMapper电缆线序检测仪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-7-%E5%A4%9A%E5%8D%8F%E8%AE%AE%E7%BD%91%E7%BB%9C%E7%A6%BB%E6%95%A3%E6%A8%A1%E6%8B%9F%E5%B7%A5%E5%85%B7NS-2"><span class="nav-text">18.6.7 多协议网络离散模拟工具NS-2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-8-DSP-4000%E6%95%B0%E5%AD%97%E5%BC%8F%E7%94%B5%E7%BC%86%E5%88%86%E6%9E%90%E4%BB%AA"><span class="nav-text">18.6.8 DSP-4000数字式电缆分析仪</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-DSP-4000%E7%AE%80%E4%BB%8B"><span class="nav-text">1. DSP-4000简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-DSP-4000%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-text">2. DSP-4000应用范围</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-9-OptiFiber%E5%85%89%E7%BC%86%E8%AE%A4%E8%AF%81%E5%88%86%E6%9E%90%E4%BB%AA"><span class="nav-text">18.6.9 OptiFiber光缆认证分析仪</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#18-6-10-OPNET"><span class="nav-text">18.6.10 OPNET</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-OPNET%E7%AE%80%E4%BB%8B"><span class="nav-text">1. OPNET简介</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%BA%94%E7%94%A8%E8%8C%83%E5%9B%B4"><span class="nav-text">2. 应用范围</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/d8c1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-信息网络系统验收阶段的监理-18.6 信息网络系统测试验收常用工具概览 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-信息网络系统验收阶段的监理-18.6 信息网络系统测试验收常用工具概览
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-13 23:11:15" itemprop="dateCreated datePublished" datetime="2022-10-13T23:11:15+08:00">2022-10-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E9%AA%8C%E6%94%B6%E9%98%B6%E6%AE%B5%E7%9A%84%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息网络系统验收阶段的监理</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<p>内容太多，2022年上案例题</p>
+</blockquote>
+<h2 id="18-6-信息网络系统测试验收常用工具概览"><a href="#18-6-信息网络系统测试验收常用工具概览" class="headerlink" title="18.6 信息网络系统测试验收常用工具概览"></a>18.6 信息网络系统测试验收常用工具概览</h2><h3 id="18-6-1-系统资源管理工具Server-Vantage"><a href="#18-6-1-系统资源管理工具Server-Vantage" class="headerlink" title="18.6.1 系统资源管理工具Server Vantage"></a>18.6.1 系统资源管理工具Server Vantage</h3><h4 id="1-Server-Vantage-简介"><a href="#1-Server-Vantage-简介" class="headerlink" title="1. Server Vantage 简介"></a>1. Server Vantage 简介</h4><p>Server Vantage V8.5主要具有开放的体系结构，针对主机硬件资源、操作系统、数据库和应用程序及输入&#x2F;输出设备进行<strong>监控</strong>管理。Server Vantage提供了几百个Agent（代理）分别对服务器资源、操作系统、数据库平台、应用程序及主机与网络接口进行各种指标的监控并在控制台端动态显示。</p>
+<h4 id="2-Server-Vantage-应用范围"><a href="#2-Server-Vantage-应用范围" class="headerlink" title="2. Server Vantage 应用范围"></a>2. Server Vantage 应用范围</h4><p>Server Vantage V8.5主要用于对服务器、操作系统、数据库平台、应用软件、用户自行开发的应用软件进行全面的<strong>应用级别的监控和管理</strong>。包括<strong>文件系统指标、内存监控指标、进程监控指标、数据库和应用系统的监控指标</strong>等。</p>
+<h3 id="18-6-2-网络应用性能管理工具Network-Vantage"><a href="#18-6-2-网络应用性能管理工具Network-Vantage" class="headerlink" title="18.6.2 网络应用性能管理工具Network Vantage"></a>18.6.2 网络应用性能管理工具Network Vantage</h3><h4 id="1-Network-Vantage-简介"><a href="#1-Network-Vantage-简介" class="headerlink" title="1. Network Vantage 简介"></a>1. Network Vantage 简介</h4><p>Network Vantage V 8.5主要用于<strong>网络应用资源管理</strong>，是以应用为中心的<strong>网络性能管理工具</strong>。它基于 View-Probe结构，可监测客户&#x2F;服务器（C&#x2F;S ）的应用程序执行情况；用户访问应用系统的情况；网络会话在网络系统中寻径的情况：应用系统及其他应用通信占用网络资源的情况。</p>
+<h4 id="2-Network-Vantage应用范围"><a href="#2-Network-Vantage应用范围" class="headerlink" title="2. Network Vantage应用范围"></a>2. Network Vantage应用范围</h4><p>Network Vantage具有进行应用<strong>监视、统计传输负载、评价服务质量、进行趋势分析</strong>等网络资源管理功能。测试内容包括<strong>平均反应时间</strong>、<strong>应用的负载和流量</strong>、<strong>按会话统计传输负载</strong>、<strong>事务响应时间以及服务质量</strong>等。</p>
+<h3 id="18-6-3-网络应用性能分析工具-Application-Expert-V8-5"><a href="#18-6-3-网络应用性能分析工具-Application-Expert-V8-5" class="headerlink" title="18.6.3 网络应用性能分析工具 Application Expert V8.5"></a>18.6.3 网络应用性能分析工具 Application Expert V8.5</h3><h4 id="1-Application-Expert简介"><a href="#1-Application-Expert简介" class="headerlink" title="1. Application Expert简介"></a>1. Application Expert简介</h4><p>Application Expert V8.5能够帮助用户快速发现和解决应用的<strong>性能</strong>问题。它的预测功能可准确展示网络带宽、延迟、负载和TCP端口的变化是如何影响用户的响应时间的。同时，该工具能够<strong>发现应用的瓶颈</strong>，它明确展示应用在网络上运行时在每个阶段发生的应用行为，在应用线程级分析应用的问题。</p>
+<h4 id="2-Application-Expert应用范围"><a href="#2-Application-Expert应用范围" class="headerlink" title="2. Application Expert应用范围"></a>2. Application Expert应用范围</h4><p>Application Expert V8.5能够快速、容易地<strong>仿真应用性能</strong>，通过Application Expert可调整应用在广域网上的性能，展示分布式、多层网络环境下应用的行为，调整应用以便成功地在广域网上运行，在投产前预测应用的响应时间，在开发周期内调整应用的性能，通过全面报告对应用进行分析。</p>
+<h3 id="18-6-4-网络性能分析测试工具-SmartBits-6000B"><a href="#18-6-4-网络性能分析测试工具-SmartBits-6000B" class="headerlink" title="18.6.4 网络性能分析测试工具 SmartBits 6000B"></a>18.6.4 网络性能分析测试工具 SmartBits 6000B</h3><h4 id="1-SmartBits-6000B简介"><a href="#1-SmartBits-6000B简介" class="headerlink" title="1. SmartBits 6000B简介"></a>1. SmartBits 6000B简介</h4><p>SmartBits 6000B是一款集成了多种技术和多种拓扑结构的<strong>测试平台</strong>，能够为10&#x2F;100Mb&#x2F;s以太网、1000M&#x2F;1 OGb&#x2F;s以太网、MPLS, Fibre Channel SANS, Cable Modem,xDSL, VoIP, QoS, POS, VPN，以及防火墙和移动IP等提供全线速的流量发生和分析功能。</p>
+<h4 id="2-SmartBits-6000B应用范围"><a href="#2-SmartBits-6000B应用范围" class="headerlink" title="2. SmartBits 6000B应用范围"></a>2. SmartBits 6000B应用范围</h4><p>主要用于10&#x2F;100&#x2F;1000Mb&#x2F;s以太网、ATM. Packet over SONET、帧中继、xDSL. Cable Modem, IP QoS, VoIP、路由多播IP和TCP&#x2F;IP产品的<strong>性能测试及分析</strong>。</p>
+<h3 id="18-6-5-站点质量分析工具-Webcheck-V5-0"><a href="#18-6-5-站点质量分析工具-Webcheck-V5-0" class="headerlink" title="18.6.5 站点质量分析工具 Webcheck V5.0"></a>18.6.5 站点质量分析工具 Webcheck V5.0</h3><h4 id="1-Webcheck简介"><a href="#1-Webcheck简介" class="headerlink" title="1. Webcheck简介"></a>1. Webcheck简介</h4><p>WebCheck是QACenter<strong>自动测试管理软件包工具</strong>之一。它将网站整体架构以3D方式显示出来，通过对浏览器的检测，分析出50种以上网站的潜在问题与错误、效能信息和网站趋势等，包括：<strong>链接中断错误、链接层次深度、陈旧网页，长期未更新网页、网页显示迟缓，浏览速度过慢、服务器中未被使用的档案、无标题网页、属性网页遗失</strong>等。</p>
+<h4 id="2-Webcheck应用范围"><a href="#2-Webcheck应用范围" class="headerlink" title="2. Webcheck应用范围"></a>2. Webcheck应用范围</h4><p>WebCheck可作为单独的产品使用，亦可与QADirector软件整合，改善资源的使用情况，以利项目追踪、重复测试与测试分享，有效降低网站测试与维护成本。可以检查内部和外部<strong>连接中成功和失败的连接点，分析网站的结构，提供HTML报告</strong>等。</p>
+<h3 id="18-6-6-MicroMapper电缆线序检测仪"><a href="#18-6-6-MicroMapper电缆线序检测仪" class="headerlink" title="18.6.6 MicroMapper电缆线序检测仪"></a>18.6.6 MicroMapper电缆线序检测仪</h3><ol>
+<li><p>简介<br>MicroMapper线序检测仪可以快速方便地<strong>检测开路、短路、跨接、反接以及串扰等</strong>问题，可以自动地扫描所有线对并发现任何电缆连接的问题。测试仪还包括一个远端单元，可方便地完成电缆和用户跳线的测试。线序仪内置音频发生器，通过可选的音频测试探头（或其他音频测试探头）来追踪穿过墙壁、地板、天花板的电缆。</p>
+</li>
+<li><p>应用范围<br>主要用于检查以太网双绞线电缆的连通性。主要<strong>用于双绞线的开路、短路、跨接、反接以及串扰等故障及故障显示、音频发生器、屏蔽层的测试等。</strong></p>
+</li>
+</ol>
+<h3 id="18-6-7-多协议网络离散模拟工具NS-2"><a href="#18-6-7-多协议网络离散模拟工具NS-2" class="headerlink" title="18.6.7 多协议网络离散模拟工具NS-2"></a>18.6.7 多协议网络离散模拟工具NS-2</h3><ol>
+<li><p>简介<br>NS-2是面向对象的、离散事件驱动的<strong>网络环境模拟器</strong>，它可以模拟各种IP网络环境。NS实现了‘对许多网络协议的模拟，如TCP, UDP和数据源发生器（traffic source ） ,如FTP、 WWW、 Telnet、 Web、CBR和VBR等，并且模拟了路由队列的管理机制，如Drop Tail. RED和VBR，实现了Dijkstra和其他的路由算法。同时，NS也实现了多播（ Multicasting）和一些应用于局域网模拟的在MAC层的协议。</p>
+</li>
+<li><p>应用范围<br>模拟网络环境。</p>
+</li>
+</ol>
+<h3 id="18-6-8-DSP-4000数字式电缆分析仪"><a href="#18-6-8-DSP-4000数字式电缆分析仪" class="headerlink" title="18.6.8 DSP-4000数字式电缆分析仪"></a>18.6.8 DSP-4000数字式电缆分析仪</h3><h4 id="1-DSP-4000简介"><a href="#1-DSP-4000简介" class="headerlink" title="1. DSP-4000简介"></a>1. DSP-4000简介</h4><p>Fluk公司的DSP-4000是<strong>数字式电缆分析仪</strong>系列中的最新成员，是专门为集成商和网络使用者依据当前的业界标准和将来的更高标准认证高速铜缆和光缆而设计的，它可<strong>以检测电缆的通断、电缆的连接线序、电缆故障的位置</strong>。DSP-4000可以测试同轴线（RG6,RG59等CATV&#x2F;CCTV电缆）以及双绞线（UTP&#x2F;STP&#x2F;SSTP ），并可诊断其他类型的电缆，如语音传输电缆、网络安全电缆或电话线。DSP-4000支持新标准中要求的所有测试，如<strong>近端串扰、等效远端串扰、综合近端串扰、综合等效远端串扰、衰减、衰减串扰比、时延、时延偏离和回波损耗</strong>等。</p>
+<h4 id="2-DSP-4000应用范围"><a href="#2-DSP-4000应用范围" class="headerlink" title="2. DSP-4000应用范围"></a>2. DSP-4000应用范围</h4><p>主要用于验证测试任何语音、数据或视频电缆的安装和测试。</p>
+<h3 id="18-6-9-OptiFiber光缆认证分析仪"><a href="#18-6-9-OptiFiber光缆认证分析仪" class="headerlink" title="18.6.9 OptiFiber光缆认证分析仪"></a>18.6.9 OptiFiber光缆认证分析仪</h3><ol>
+<li>简介<br>OptiFiber<strong>光缆</strong>认证（OTDR）分析仪将光纤损耗1长度测试、自动OTDR分析、端接面检查等功能集成在一起的现场OTDR（光时域反射计）测试仪，可以满足1Gb&#x2F;s, l0Gb&#x2F;s或更高速率网络应用的严格测试需求。OTDR分析仪增强了光缆布线的测试能力，确保了设备的安装符合最佳专业施工工序及TIA标准。</li>
+<li>应用范围<br>用于单模和多模<strong>光纤和光缆认证测试</strong>。等级一，使用光纤损耗测试设备（OLTS ）来测试光缆的损耗和长度，并依靠OLTS或故障定位器（VFL）验证极性。等级二，包括等级一的测试参数，还包括对已安装的光缆设备的OTDR追踪。</li>
+</ol>
+<h3 id="18-6-10-OPNET"><a href="#18-6-10-OPNET" class="headerlink" title="18.6.10 OPNET"></a>18.6.10 OPNET</h3><h4 id="1-OPNET简介"><a href="#1-OPNET简介" class="headerlink" title="1. OPNET简介"></a>1. OPNET简介</h4><p>OPNET工具主要帮助客户进行网络结构、设备和应用的设计、建设、分析和管理。OPNET能够准确地分析复杂网络的性能和行为，在网络模型中的任意位置都可以插入标准的或用户指定的探头，以采集数据和进行统计。通过探头得到的仿真输出可以用图形化显示、数字方式观察或者输出到第三方的软件包。</p>
+<h4 id="2-应用范围"><a href="#2-应用范围" class="headerlink" title="2. 应用范围"></a>2. 应用范围</h4><p>OPNET主要用于<strong>网络仿真</strong>。<br>测试指标：<strong>网络吞吐量、信道容量、链路利用率、节点利用率、系统的平均响应时间、包延迟时间、延迟抖动、丢包率和可靠性</strong>等。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/d8c1.html" title="笔记-信息网络系统验收阶段的监理-18.6 信息网络系统测试验收常用工具概览">https://www.zenwu.site/posts/d8c1.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 常用工具</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/363a.html" rel="prev" title="笔记-监理案例题-2022年上-信息网络系统验收阶段的监理">
+                  <i class="fa fa-angle-left"></i> 笔记-监理案例题-2022年上-信息网络系统验收阶段的监理
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/de53.html" rel="next" title="教程-信息应用系统建设基础知识-19.2.3 软件生存周期">
+                  教程-信息应用系统建设基础知识-19.2.3 软件生存周期 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

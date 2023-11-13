@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html-aria&#x2F; https:&#x2F;&#x2F;www.zhangxinxu.com&#x2F;wordpress&#x2F;2012&#x2F;03&#x2F;wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB&#x2F;，张大佬的文章，再次学习下，11年前的文章了； WAI-ARIA无障碍网页应用属性（aria），重新整理，个人学习使用。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WAI-ARIA无障碍网页应用属性（aria）">
+<meta property="og:url" content="https://www.zenwu.site/posts/wai-aria-raia.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="https:&#x2F;&#x2F;www.w3.org&#x2F;TR&#x2F;html-aria&#x2F; https:&#x2F;&#x2F;www.zhangxinxu.com&#x2F;wordpress&#x2F;2012&#x2F;03&#x2F;wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB&#x2F;，张大佬的文章，再次学习下，11年前的文章了； WAI-ARIA无障碍网页应用属性（aria），重新整理，个人学习使用。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-07-04T14:31:09.000Z">
+<meta property="article:modified_time" content="2023-07-05T15:51:04.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="WAI-ARIA">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/wai-aria-raia.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/wai-aria-raia.html","path":"posts/wai-aria-raia.html","title":"WAI-ARIA无障碍网页应用属性（aria）"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>WAI-ARIA无障碍网页应用属性（aria） | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/wai-aria-raia.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="WAI-ARIA无障碍网页应用属性（aria） | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          WAI-ARIA无障碍网页应用属性（aria）
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-07-04 22:31:09" itemprop="dateCreated datePublished" datetime="2023-07-04T22:31:09+08:00">2023-07-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-05 23:51:04" itemprop="dateModified" datetime="2023-07-05T23:51:04+08:00">2023-07-05</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">前端技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.w3.org/TR/html-aria/">https://www.w3.org/TR/html-aria/</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.zhangxinxu.com/wordpress/2012/03/wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB/">https://www.zhangxinxu.com/wordpress/2012/03/wai-aria-%E6%97%A0%E9%9A%9C%E7%A2%8D%E9%98%85%E8%AF%BB/</a>，张大佬的文章，再次学习下，11年前的文章了；</li>
+<li>WAI-ARIA无障碍网页应用属性（aria），重新整理，个人学习使用。</li>
+</ul>
+</blockquote>
+<span id="more"></span>
+
+<style>
+@media (min-width: 1600px){
+.header-inner,
+.main-inner,
+.footer-inner {
+    width: 1600px !important;
+  }
+}
+  .table-container{overflow:visible;}
+  .inner_table {}
+  .inner_table tr:nth-of-type(odd){background:#fff !important;}
+  .inner_table .gutter{display:none;}
+  .inner_table ul{padding: 0 10px 0 20px;}
+  .inner_table figure.highlight .code pre{white-space: pre-wrap;width:auto;}
+</style>
+
+<h2 id="ARIA属性表"><a href="#ARIA属性表" class="headerlink" title="ARIA属性表"></a>ARIA属性表</h2><table class="inner_table">
+<thead>
+<tr>
+  <th width="180px">属性名</th>
+  <th width="350px">属性值</th>
+  <th width="500px">HTML示意</th>
+  <th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>aria-activedescendant</td>
+<td>
+
+<p>字符串(后代元素的 <code>id</code> 值)</td></p>
+<td>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;toolbar&quot;</span> <span class="attr">aira-activedscendant</span>=<span class="string">&quot;button1&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;btn.png&quot;</span> <span class="attr">role</span>=<span class="string">&quot;button&quot;</span> <span class="attr">id</span>=<span class="string">&quot;button1&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</td>
+<td>
+
+<p><code>aria-activedescendant</code> 属性定义了当工具栏获取焦点时，哪一个工具栏的子控件获取焦点。在这个示例中，<code>id=&quot;button1&quot;</code> 的按钮控件先获取焦点</td></p>
+</tr>
+
+<tr>
+<td>aria-atomic</td>
+<td>
+
+<p>字符串。表示区域内容是否完整播报。值为 <code>true</code> 和 <code>false</code>。值为 <code>true</code> 时，读屏软件会把整个区域内容都播报出来，如果为 <code>false</code> 则表示只需要播报修改的部分。</td></p>
+<td>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;heading&quot;</span> <span class="attr">aria-live</span>=<span class="string">&quot;assertive&quot;</span> <span class="attr">aria-atomic</span>=<span class="string">&quot;true&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</td>
+<td>
+
+<p>这里的 <code>aria-atomic</code> 为 <code>true</code>，则表示当时间改变的时候，日期的年月都要完整播报出来，不要只改了月份就播报月份的内容。</td></p>
+</tr>
+
+<tr>
+<td>aria-autocomplete</td>
+<td>
+
+<p>字符串，表示用户的文本框的自动提示是否提供，可选值有 <code>inline</code>、<code>list</code>、<code>both</code>和 <code>none</code></td></p>
+<td>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span> <span class="attr">role</span>=<span class="string">&quot;combobox&quot;</span> <span class="attr">aria-autocomplete</span>=<span class="string">&quot;inline&quot;</span> <span class="attr">aria-owns</span>=<span class="string">&quot;list&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+</td>
+<td>
+
+<p><code>aria-autocomplete</code> 对应HTML5中的 <code>autocomplete</code> 属性。</p>
+<ul>
+<li>如果 <code>aria-autocomplete</code> 取值为 <code>list</code>、<code>inline</code> 或 <code>both</code> 时，元素的 <code>autocomplete</code> 要设置为 <code>on</code>；</li>
+<li>如果其值为 <code>none</code>，则 <code>autocomplete</code>取值为 <code>off</code>。</li>
+</ul>
+</td>
+</tr>
+<tr>
+  <td>aria-busy</td>
+  <td>字符串，表示当前区域的忙碌状态。默认为false，表示清除busy状态,取值为true时，表示该区域正在加载；取值为error时，表示该区域验证无效</td>
+  <td>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">aria-atomic</span>=<span class="string">&quot;true&quot;</span> <span class="attr">aria-busy</span>=<span class="string">&quot;true&quot;</span> <span class="attr">aria-live</span>=<span class="string">&quot;polite&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  </td>
+  <td>
+  
+<p>  如果某个区域内(如这里ul)有多个地方需要修改，需要全部修改完毕再通知使用者的话，就可以先将 <code>aria-busy</code> 设为 <code>true</code>, 等到全部内容更新完毕后再设成 <code>false</code>。该属性可以避免辅助工具在区域内容更新完毕前不断即时提醒使用者。</td></p>
+</tr>
+<tr>
+  <td>aria-controls</td>
+  <td>字符串，空格分隔的id属性值列表</td>
+  <td>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h3</span> <span class="attr">aria-controls</span>=<span class="string">&quot;panel1&quot;</span> <span class="attr">role</span>=<span class="string">&quot;tab&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;panel1&quot;</span> <span class="attr">role</span>=<span class="string">&quot;tabpanel&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+  
+  </td>
+<td>
+
+<ul>
+<li>该属性定义了元素间不能通过文档结构决定的关联关系。</li>
+<li><code>aria-controls</code> 属性主要被 <code>role</code> 为 <code>group</code>，<code>region</code>，或 <code>widget</code> 的元素使用。</li>
+</ul>
+</td>
+</tr>
+<tr>
+  <td>aria-describedby</td>
+  <td>字符串，空格分隔的id属性值列表</td>
+  <td>
+  <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span> <span class="attr">role</span>=<span class="string">&quot;group&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">li</span> <span class="attr">role</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">aria-checked</span>=<span class="string">&quot;false&quot;</span> <span class="attr">aria-describedby</span>=<span class="string">&quot;desc1&quot;</span> <span class="attr">tabindex</span>=<span class="string">&quot;0&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;desc1&quot;</span>&gt;</span>desc1的关联内容<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</td>
+<td>同样的，该属性定义了文档结构表现不出来的的元素间的相互关联性。该属性旨在通过标签提供更多用户可能需要的信息。如果指定了不只一个id, 所有元素会合并在一起共同创建一条单独的描述。</td>
+</tr>
+<tr>
+<td>aria-dropeffect</td>
+<td>
+
+<p>字符串。表示拖拽效果。可选值有： <code>copy</code>, <code>move</code>, <code>reference</code>, <code>execute</code>, <code>popup</code>, <code>none</code>, 依次表示：复制，移动，参照，执行，弹出以及没有效果。</td></p>
+<td>&nbsp;</td>
+<td>该属性主要用在拖拽上</td>
+</tr>
+<tr>
+<td>aria-flowto</td>
+<td>字符串，空格分隔的的id值列表</td>
+<td>&nbsp;</td>
+<td>
+
+<p>如果该属性值对应的是单独的 <code>id</code>, 辅助技术会恢复目标元素的阅读；如果对应的是多个 <code>id</code>, 则辅助技术会让用户去选择、导航到目标元素。</td></p>
+</tr>
+<tr>
+<td>aria-grabbed</td>
+<td>
+
+<ul>
+<li>字符串。</li>
+<li>拖拽中元素的捕获状态。可选值有:<code>true</code>, <code>false</code>, <code>undefined</code>。</li>
+<li>默认为 undefined，表示元素捕获状态未知。<code>true</code> 表示元素可以捕获；<code>false</code> 表示不能被捕获。</li>
+</ul>
+</td>
+<td>&nbsp;</td>
+<td>
+
+<p>该属性用在拖拽上。类似于HTML5中的 <code>draggable</code> 属性。</td></p>
+</tr>
+<tr>
+<td>aira-haspopup</td>
+<td>
+
+<ul>
+<li>字符串。</li>
+<li><code>true</code> 表示点击的时候会出现菜单或是浮动元素；</li>
+<li>false表示没有 <code>pop-up</code> 效果。</li>
+</ul>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>aria-label</td>
+<td>字符串</td>
+<td>&nbsp;</td>
+<td>定义一个字符串值标记当前元素。</td>
+</tr>
+<tr>
+<td>aria-labelledby</td>
+<td>字符串，空格分隔的id列表值</td>
+<td>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;title&quot;</span> <span class="attr">role</span>=<span class="string">&quot;alertdialog&quot;</span>&gt;</span><span class="tag">&lt;<span class="name">h3</span> <span class="attr">id</span>=<span class="string">&quot;title&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">h3</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</td>
+<td>
+
+<p><code>aria-labelledby</code> 一般用在区域元素上，对于的 <code>id</code> 一般为对应的标题或是标签元素的 <code>id</code> 关系型属性。</td></p>
+</tr>
+<tr>
+<td>aria-level</td>
+<td>数值，表示等级</td>
+<td>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;heading&quot;</span> <span class="attr">aria-level</span>=<span class="string">&quot;2&quot;</span>&gt;</span>次标题<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</td>
+<td>模拟h2标签元素</td>
+</tr>
+<tr>
+<td>aria-live</td>
+<td>
+
+<ul>
+<li>字符串。可选值有：<code>off</code>, <code>polite</code>, <code>assertive</code>,<code>rude</code>。</li>
+<li>默认为 <code>off</code>, 表示不宣布更新；</li>
+<li><code>polite</code> 表示只有用户闲时宣布；</li>
+<li><code>assertive</code> 表示尽快对用户宣布；</li>
+<li><code>rude</code> 表示即时提醒用户，必要的时候甚至中断用户。</td></li>
+</ul>
+<td>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;heading&quot;</span> <span class="attr">aria-live</span>=<span class="string">&quot;assertive&quot;</span> <span class="attr">aria-atomic</span>=<span class="string">&quot;true&quot;</span>&gt;</span>2012年 3月<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</td>
+<td>
+
+<ul>
+<li>绝大多数的更新应该在用户闲暇的时候告知，即时提示对用户是一种干扰。</li>
+<li>如果希望内容完全更新后再提示，可以使用上面提到的 <code>aria-busy</code>。</li>
+<li>左侧的HTML为时间选择控件的年月标题部分，<code>aria-live=&quot;assertive&quot;</code> 表示的是当用户选择了新的时间的时候，尽快通知用户时间发生了变更。</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td>aria-multiselectable</td>
+<td>
+
+<ul>
+<li>字符串。</li>
+<li>表示是否可多选。默认为 <code>false</code>，表示一次只能选择一个项。<code>true</code> 表示一次可以选择多个项。</li>
+</ul>
+</td>
+<td>&nbsp;</td>
+<td>
+
+<p>例如手风琴展开收起效果，我们可以使用 <code>aria-multiselectable</code> 来告知辅助设备，一次可以展开多个项还是只有一个展开。</td></p>
+</tr>
+<tr>
+<td>aria-owns</td>
+<td>字符串，值为目标元素id</td>
+<td>&nbsp;</td>
+<td>
+
+<p><code>aria-owns</code> 表示元素所拥有的</td></p>
+</tr>
+<tr>
+<td>aria-posinset</td>
+<td>数值，表示当前位置</td>
+<td>&nbsp;</td>
+<td>用在设置和获取一个集合内某项的当前位置</td>
+</tr>
+<tr>
+<td>aria-readonly</td>
+<td>字符串。表示是否只读。默认为false, 表示元素值可以被修改；true表示元素指不能被改变</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>aria-relevant</td>
+<td>字符串。表示区域内哪些操作行为需要做出反应。可选值有：additions, removals, text, all，可以空格分隔多个一起显示。additions表示新增节点的时候做出反应；removals表示删除节点时重要操作；text表示文本改变是值得重视的；all等同于同时使用上面三个属性值</td>
+<td>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">role</span>=<span class="string">&quot;log&quot;</span> <span class="attr">aria-atomic</span>=<span class="string">&quot;false&quot;</span> <span class="attr">aria-relevant</span>=<span class="string">&quot;additions&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</td>
+<td>左边的HTML表示当日志内容有添加的时候做出反应。</td>
+</tr>
+<tr>
+<td>aria-required</td>
+<td>字符串。元素值是否必需。默认为false, 表示元素值可以为空；true表示元素值是必需的</td>
+<td>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;text&quot;</span> <span class="attr">id</span>=<span class="string">&quot;name&quot;</span> <span class="attr">name</span>=<span class="string">&quot;name&quot;</span> <span class="attr">aria-labelledby</span>=<span class="string">&quot;name_label&quot;</span> <span class="attr">aria-describedby</span>=<span class="string">&quot;tip&quot;</span> <span class="attr">aria-required</span>=<span class="string">&quot;true&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+</td>
+<td>
+
+<p>多半用在表单控件中，对应HTML5中的 <code>required</code> 属性</td></p>
+</tr>
+<tr>
+<td>aria-secret</td>
+<td>字符串，表示机密状态</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>aria-setsize</td>
+<td>数值，设置尺寸的大小值</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>aria-sort</td>
+<td>字符串。表示表格或格栅中的项是以升序排列还是降序排列。可选值：ascending(↑), descending(↓), none, other</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>aria-valuemax</td>
+<td>数值，允许的最大值</td>
+<td>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span> <span class="attr">role</span>=<span class="string">&quot;progressbar&quot;</span> <span class="attr">aria-valuenow</span>=<span class="string">&quot;60&quot;</span> <span class="attr">aria-valuemin</span>=<span class="string">&quot;0&quot;</span> <span class="attr">aria-valuemax</span>=<span class="string">&quot;100&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</td>
+<td>
+
+<p>用在 <code>progressbar</code> 组件上，对应HTML5中的 <code>max</code></td></p>
+</tr>
+
+<tr>
+<td>aria-valuemin</td>
+<td>数值，允许的最小值</td>
+<td>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span> <span class="attr">role</span>=<span class="string">&quot;progressbar&quot;</span> <span class="attr">aria-valuenow</span>=<span class="string">&quot;60&quot;</span> <span class="attr">aria-valuemin</span>=<span class="string">&quot;0&quot;</span> <span class="attr">aria-valuemax</span>=<span class="string">&quot;100&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</td>
+<td>
+
+<p>用在 <code>progressbar</code> 组件上，对应HTML5中的 <code>min</code></td></p>
+</tr>
+
+<tr>
+<td>aria-valuenow</td>
+<td>数值，表示当前值</td>
+<td>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;progress-bar&quot;</span> <span class="attr">role</span>=<span class="string">&quot;progressbar&quot;</span> <span class="attr">aria-valuenow</span>=<span class="string">&quot;60&quot;</span> <span class="attr">aria-valuemin</span>=<span class="string">&quot;0&quot;</span> <span class="attr">aria-valuemax</span>=<span class="string">&quot;100&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</td>
+<td>
+
+<p>用在 <code>progressbar</code> 组件上，对应HTML5中的 <code>value</code></td></p>
+</tr>
+<tr>
+<td>aria-valuetext</td>
+<td>
+
+<p>字符串。定义等同于 <code>aria-valuenow</code> 人可读的文本。</td></p>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="ARIA相关状态的使用方法"><a href="#ARIA相关状态的使用方法" class="headerlink" title="ARIA相关状态的使用方法"></a>ARIA相关状态的使用方法</h2><table class="inner_table">
+<thead>
+<tr>
+<th width="150px">属性状态</th>
+<th width="350px">属性值</th>
+<th width="350px">HTML示意</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aria-checked</td>
+<td>字符串。表示检查的状态。true表示元素被选择；false表示元素未被选择；mixed表示元素同时有选择和为选择状态。</td>
+<td>&lt;li role="checkbox" aria-checked="mixed" tabindex="0"&gt;&lt;/li&gt;</td>
+<td>该属性用来表明用户是否选择了某些项,类似于input type="checkbox"中的checked</td>
+</tr>
+<tr>
+<td>aria-disabled</td>
+<td>字符串。表禁用状态，true表示当前是非激活状态；false表示清除非激活状态。</td>
+<td>&lt;div role="button" tabindex="0" aria-pressed="false" aria-disabled="false"&gt;&lt;/div&gt;</td>
+<td>对应单复选框等控件的disabled属性，一般用在自定义模拟控件中</td>
+</tr>
+<tr>
+<td>aria-expanded</td>
+<td>字符串。表示展开状态。默认为undefined, 表示当前展开状态未知。其它可选值：true表示元素是展开的；false表示元素不是展开的。</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>aria-hidden</td>
+<td>字符串。可选值为true和false, true表示元素隐藏(不可见)，false表示元素可见。</td>
+<td>&lt;div aria-hidden="false"&gt;&lt;/div&gt;</td>
+<td>该属性使用非常普遍。几乎所有涉及到显示与隐藏这类交互或没有交互的地方都可以应用该属性。左边的示例HTML代码来自进度条进度值显示的div, 当前aria-hidden为false, 表示该进度值是可见的。</td>
+</tr>
+<tr>
+<td>aria-invalid</td>
+<td>字符串。表示元素值是否错误的。默认为false, 表示是OK的，如果为true, 则表示值验证不通过。</td>
+<td>&lt;input type="text" size="3" aria-labelledby="valid" aria-invalid="false" /&gt;</td>
+<td>&nbsp;</td>
+</tr>
+<tr>
+<td>aria-pressed</td>
+<td>字符串。表示按下的状态，可选值有：true, false, mixed, undfined。默认为undfined, 表示按下状态未知；true表示元素往下（按钮按下）；false表示元素抬起；mixed表示元素同时有按下和没有按下的状态。</td>
+<td>&lt;div role="button" tabindex="0" aria-pressed="false" aria-disabled="false"&gt;&lt;/div&gt;</td>
+<td>左边HTML表示按钮已经按下，同时处于禁用状态。</td>
+</tr>
+<tr>
+<td>aria-selected</td>
+<td>字符串。表示选择状态。可选值有：true, false, undefined。 默认为undefined，表示元素选择状态未知。true表示元素已选择；false表示未被选中。</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/wai-aria-raia.html" title="WAI-ARIA无障碍网页应用属性（aria）">https://www.zenwu.site/posts/wai-aria-raia.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/WAI-ARIA/" rel="tag"><i class="fa fa-tag"></i> WAI-ARIA</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/wai-aria-role.html" rel="prev" title="WAI-ARIA无障碍网页应用属性（role）">
+                  <i class="fa fa-angle-left"></i> WAI-ARIA无障碍网页应用属性（role）
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/Rules-of-ARIA-attribute-usage-by-HTML-element.html" rel="next" title="WAI-ARIA无障碍网页应用属性（html-role）">
+                  WAI-ARIA无障碍网页应用属性（html-role） <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

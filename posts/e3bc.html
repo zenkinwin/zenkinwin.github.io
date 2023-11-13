@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="单独提这章节，感觉教材的内容有点老旧。  8.2.5 投资控制的方法与技术对于信息系统工程项目的成本控制仅依靠经验、直觉、审查的手段是远远不够的，还需要掌握一些先进的技术和方法，只有这样才能更有效地做好成本控制工作。 1. 投资控制的常用技术1）利用费用控制改变系统通常是说明费用线被改变的基本步骤，这包括文档工作、跟踪系统及调整系统，费用的改变应该与其他控制系统相协调。 2）实施的度量主要帮助分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-投资控制-8.2.5 投资控制的方法与技术">
+<meta property="og:url" content="https://www.zenwu.site/posts/e3bc.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="单独提这章节，感觉教材的内容有点老旧。  8.2.5 投资控制的方法与技术对于信息系统工程项目的成本控制仅依靠经验、直觉、审查的手段是远远不够的，还需要掌握一些先进的技术和方法，只有这样才能更有效地做好成本控制工作。 1. 投资控制的常用技术1）利用费用控制改变系统通常是说明费用线被改变的基本步骤，这包括文档工作、跟踪系统及调整系统，费用的改变应该与其他控制系统相协调。 2）实施的度量主要帮助分">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327224419.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327225427.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327231310.png">
+<meta property="article:published_time" content="2023-03-25T12:41:19.000Z">
+<meta property="article:modified_time" content="2023-03-25T14:29:23.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="投资控制">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230327224419.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/e3bc.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/e3bc.html","path":"posts/e3bc.html","title":"笔记-投资控制-8.2.5 投资控制的方法与技术"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-投资控制-8.2.5 投资控制的方法与技术 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-5-%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6%E7%9A%84%E6%96%B9%E6%B3%95%E4%B8%8E%E6%8A%80%E6%9C%AF"><span class="nav-text">8.2.5 投资控制的方法与技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6%E7%9A%84%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF"><span class="nav-text">1. 投资控制的常用技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">2. 投资控制的方法</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/e3bc.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-投资控制-8.2.5 投资控制的方法与技术 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-投资控制-8.2.5 投资控制的方法与技术
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-03-25 20:41:19 / 修改时间：22:29:23" itemprop="dateCreated datePublished" datetime="2023-03-25T20:41:19+08:00">2023-03-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6/" itemprop="url" rel="index"><span itemprop="name">投资控制</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<p>单独提这章节，感觉教材的内容有点老旧。</p>
+</blockquote>
+<h3 id="8-2-5-投资控制的方法与技术"><a href="#8-2-5-投资控制的方法与技术" class="headerlink" title="8.2.5 投资控制的方法与技术"></a>8.2.5 投资控制的方法与技术</h3><p>对于信息系统工程项目的成本控制仅依靠经验、直觉、审查的手段是远远不够的，还需要掌握一些先进的技术和方法，只有这样才能更有效地做好成本控制工作。</p>
+<h4 id="1-投资控制的常用技术"><a href="#1-投资控制的常用技术" class="headerlink" title="1. 投资控制的常用技术"></a>1. 投资控制的常用技术</h4><p><strong>1）利用费用控制改变系统</strong><br>通常是说明费用线被改变的基本步骤，这包括文档工作、跟踪系统及调整系统，费用的改变应该与其他控制系统相协调。</p>
+<p><strong>2）实施的度量</strong><br>主要帮助分析各种变化产生的原因，<strong>挣值分析法</strong>是一种最为常用的分析方法。费用控制的一个重要工作是确定导致误差的原因以及如何弥补、纠正所出现的误差。</p>
+<p><strong>3）督促建立附加的计划</strong><br>很少有项目能够准确地按照期望的计划执行，不可预见的各种情况要求在项目实施过程中重新对项目的费用做出新的估计和修改。</p>
+<p><strong>4）利用计算工具</strong><br>通常是借助相关的计算机项目管理软件和电子制表软件来跟踪计划费用、实际费用和预测费用改变的影响。</p>
+<span id="more"></span>
+<h4 id="2-投资控制的方法"><a href="#2-投资控制的方法" class="headerlink" title="2. 投资控制的方法"></a>2. 投资控制的方法</h4><p><strong>1）挣值分析法</strong><br>项目成本控制的一种重要方法是<strong>挣值分析法</strong>。这一方法的基本思想就是通过引进一个中间变量即“挣值”，来帮助项目管理者分析项目的成本和工期的变动情况并给出相应的信息，以便他们能够对项目成本的发展趋势做出科学的预测与判断，并提出相应的对策。</p>
+<p><strong>（1）挣值管理</strong><br>挣值管理（Earned Value Management EMV）是综合了项目范围、进度计划和资源，测量项目绩效的一种方法。它比较计划工作量、实际挣得多少与实际花费成本，以决定成本和进度绩效是否符合原定计划。要进行挣值管理，必须熟悉与挣值管理密切相关的计划成本（PV）、挣值（EV）和实际成本（AC）之间的相互关系，以及<strong>完工预算（BAC）</strong>,<strong>完工估算（EAC）</strong>和<strong>完工尚需估算（ETC）</strong>之间相互关系。偏差分析如下：当成本偏差（CV）大于零，表明成本节约；反之，当CV小于零，表明成本超支。当进度偏差（SV）大于零，表明进度超前；反之，当SV小于零，表明进度滞后。</p>
+<p>挣值管理也离不开偏差管理。偏差&#x3D;计划一实际，偏差分析图示如图8.8所示。挣值法实际上是一种分析目标实施与目标期望之间差异的方法，故又常称为偏差分析法。挣值法通过测量和己完成的工作的预算费用与己完成工作的实际费用和计划工作的预算费用，得到有关计划实施的进度和费用偏差，而达到判断项目预算和进度计划执行情况的目的。其独特之处在于以预算和费用来衡量工程的进度。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230327224419.png" alt="挣值管理偏差分析图"></p>
+<p><strong>（2）挣值管理的基本思想</strong><br>挣值管理的思想可以概括为以下几方面。</p>
+<ul>
+<li>所有工作开始之前的<strong>预先计划</strong></li>
+<li>基于技术目标上的性能衡量</li>
+<li>时间表状况分析</li>
+<li>按照完成的工作对资金支出的分析（非预定的工作）</li>
+<li>隔离问题：<ul>
+<li>在费用时间表参数内的技术质量问题</li>
+<li>不打算替换或更换技术问题过程中的探测</li>
+</ul>
+</li>
+<li>预测完成日期和最终费用</li>
+<li>纠正行为</li>
+<li>维持性能测定基线的正常控制</li>
+</ul>
+<p><strong>（3）挣值管理的三个基本参数及两个重要指标</strong><br><strong>BCWS （Budgeted Cost of Work Scheduled，计划工作预算费用）</strong>，即根据批准认可的进度计划和预算到某一时点应当完成的土作所需要<strong>投入的资金</strong>。这个值对衡量项目进度和费用都是一个标尺或基准。一般来说，BCWS在项目实施过程中应保持不变，除非预算、计划或合同有变更。如果这些变更影响了工作的进度和费用，经过批准认可，相应的BCWS基准也应作相应的更改。按我国的习惯可以把它称做“计划投资额”或“计划值”。</p>
+<p><strong>BCWP （Budgeted Cost of Work Performed，完成工作预算费用）</strong>，即根据批准认可的预算，到某一时点已经完成的工作应当投入的资金。当然，已完成工作必须经过验收，符合质量要求。这个值反映了满足质量标准的工作实际进展，实现了投资额到项目成果的转化。按我国的习惯可将其称做“实现投资额”或“实绩值”。在很多情况下，由于建设单位正是根据这个值对承包商完成的工作量进行支付，也就是承包商挣得的金额，故常称为<strong>挣得值（Earned Value ）</strong>。但是，这个值在EVM （ Economic Value Management，经济附加值管理）中其实质只是一个监控和管理的数据或信息，并不一定要以这个值支付这笔金额或者能够挣得这笔金额，千万不要引起误解。</p>
+<p><strong>ACWP （Actual Cost of Work Performed，完成工作实际费用）</strong>，即到某一时点已完成的工作所<strong>实际花费</strong>或消耗的金额。按我国的习惯可将其称做“消耗投资额”或“消耗值”。</p>
+<p><strong>进度、费用、质量</strong>是工程项目管理的三个重要目标，监理工程师在以往的情况下往往是对三个目标分别管理，相互之间缺乏紧密的联系，这带来了很多的问题。例如，项目进度因资金不到位而拖延；由于赶工或资金短缺引起潜伏的质量问题；当成本结算发现严重超支时，己为时过晚。因此，进行进度、费用、质量的联合监控是信息工程项目监理迫切需要解决的问题。现代计算机技术的发展为实现进度、费用、质量的联合监控提供了条件。实施进度、费用的联合监理，要求在项目进展过程中即时获得上述三个投资额基本值数据，利用计算机技术把网络进度计划和项目预算有机地结合起来，对一个项目绘制出各种性质的关于时间的费用流曲线，包括计划费用流曲线、实际消耗费用流曲线。这样就可以对工程进度和费用进行跟踪监控。</p>
+<p>在此基础上，及时地对己经完成的项目成果部分进行质量验收，在支付资金之前把好质量关，严格按累计的实绩值（实现投资额）进行支付，同时根据合同扣留一部分质量保留金，这样就能较好地实现进度、费用和质量的联合管理。这是贯穿工程项目生命期全过程的整体管理方法。</p>
+<p>项目投资额的三个基本值实际上是三个关于时间的函数，从上述三个基本值还可导出项目进展中与任何监控时点相对应的两个重要的指标：</p>
+<ul>
+<li>进度业绩指标SPI&#x3D;实绩值&#x2F;计划值，（SPI &gt; 1.0表示进度超前，SPI &lt; 1.0表示进度滞后）</li>
+<li>费用业绩指标CPI&#x3D;实绩值&#x2F;消耗值，（CPI &gt; 1.0表示费用节余，CPI &lt; 1.0表示费用超支）</li>
+</ul>
+<p>采用投资额三值分列的管理体系，通过三个基本值的对比可以对项目的实际进展情况做出明确的测定和衡量，一目了然地掌握项目进展的总体状况，有利于对项目的费用、进度、质量进行整体的有效监控，也可以清楚地反映项目投资管理和工程技术水平的高低。</p>
+<p>从图8.9中可以获得的信息有：</p>
+<ul>
+<li><p>项目进行到两年时，计划作业的预算成本BCWS&#x3D;200万元，己完成作业的实际成本发生额ACWP&#x3D;100万元，挣值EV&#x3D;50万元。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230327225427.png" alt="挣值分析示意图"></p>
+</li>
+<li><p>项目成本差异CV&#x3D;BCWP-ACWP为-50万（在图中由“2”号线段来表示），实际成本比挣值多出50万。这是在项目的实施过程中，由于实际所耗资源价格的变动所造成的，这是一种与成本管理问题有关的成本差异。</p>
+</li>
+<li><p>项目进度差异SV&#x3D;BCWP-BCWS为-150万元（由图中标注“2”和“3”的两条线段之和来表示），即项目成本预算额与实际挣值之间有高达150万元的差异。</p>
+</li>
+<li><p>计划完工指数 <strong>SPI&#x3D;BCWP&#x2F;BCWS (EV&#x2F;PV)</strong> &#x3D;25%，这意味着工期计划完成程度只有25% 。</p>
+</li>
+<li><p>成本绩效指数 <strong>CPI&#x3D;BCWP&#x2F;ACWP (EV&#x2F;AC)</strong> &#x3D;50万元&#x2F;100&#x3D;0.5，这意味着相同的作业量，实际花费的成本是预算成本的2倍。</p>
+<blockquote>
+<p>PS：这里教材有点问题；</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>（4）运用挣值分析进行项目成本预测</strong><br>预测项目未来完工成本（Forecasted Cost At Completion FCAC）的方法有三种：</p>
+<ul>
+<li><p>假定项目未完工部分将按照目前的效率去进行的预测方法：预测完工成本&#x3D;总预算成本&#x2F;成本绩效指数：<strong>FCAC&#x3D;TBC&#x2F;CPI</strong></p>
+<blockquote>
+<p>利用这种方法，并结合图8.8给出的线性变化规律，可以预测该项目需要使用16年的时间才能完成，而该项目总共需要800万元的成本。</p>
+</blockquote>
+</li>
+<li><p>假定项目未完工部分将按计划效率进行的预测方法，使用这种方法的计算公式如下：<br><strong>预测完工成本&#x3D;已完成作业的实际成本+（总预算成本一挣值）</strong><br><strong>FACA&#x3D;ACWP+（TBC-EV）或FCAC&#x3D;ACWP+（TBC-BCWP）</strong></p>
+<blockquote>
+<p>根据这种方法，可以预测出该项目的完工成本为：FACA&#x3D;100+（200-50）&#x3D;250（万元）。即在项目剩余的作业如果严格按照计划和预算实施，项目的完工成本将比原预算高出50万元。</p>
+</blockquote>
+</li>
+<li><p>重估所有剩余工作量的成本做出预测的方法<br> 这是一种不做任何特定的假设，重新估算所有剩余工作量的成本，并依此做出项目成本和工期预测的方法。这一方法要将这个重估的成本与已完成作业的实际成本相加得到预测结果。这种方法的公式为：<br><strong>预测完工成本&#x3D;己完成作业的实际成本＋重估剩余工作量的成本</strong></p>
+<blockquote>
+<p>如果项目计划已经严重背离实际，或者项目情况已有重大变化的话，这种方法是必要的。</p>
+</blockquote>
+</li>
+</ul>
+<p><strong>（5）利用挣值法进行综合控制</strong><br>使用挣值法进行成本雌度综合控制，必须在项目开始之前，先为在整个项目工期内如何和何时使用资金做出预算和计划。项目开始后，监督实际成本和工作绩效以确保成本、进度都在控制范围之内。具体步骤如下：</p>
+<p><strong>①项目预算和计划。</strong><br>首先要制订详细的项目预算，把预算分解到每个工作包（分项工程），尽量分解到详细的实物工作量层次，为每个工作包建立总预算成本TBC （Total Budgeted Cost）。项目预算的第二步是将每一TBC分配到各工作包的整个工期中去。每期的成本计划依据各工作包的各分项工作量进度计划来确定。当每一工作包所需完成的工程量分配到工期的每个区间（这个区间可定义为工程管理和控制的报表时段），就能确定何时需用多少预算。这一数字通过截止到某期的过去每期预算成本累加得出，即累计计划预算成本CBC（ Cumulative Bud Geted Cost）或BCWS。</p>
+<p>CBC反映了到某期为止按计划进度完成的工程预算值。它将作为项目成本&#x2F;进度绩效的基准。</p>
+<p><strong>②收集实际成本。</strong><br>项目执行过程中，会通过合同委托每一工作包的工作给相关承包商。合同工程量及价格清单形成承付款项。承包商在完成相应工作包的实物工程量以后，会按合同进行进度支付。在项目每期对已发生成本进行汇总，即累计己完工程量与合同单价之积，就形成了累计实际成本CAC （cumulative actual cost）或ACWS：</p>
+<p>CAC反映了工程的实际成本花费。为记录项目的实际成本，必须建立及时和定期收集资金实际支出数据的制度，包括收集数据的步骤、报表规范，建立合同执行（成本支出）台账。</p>
+<p><strong>③计算挣值（earned value ）</strong><br>如前所述，仅监控以上两个参数并不能准确地估计项目的状况，有时甚至会导致错误的结论和决策。赢得值是整个项目期间必须确定的重要参数。对项目每期已完工程量与预算单价之积进行累计，即可确定累计赢得值CEV （Cumulative Earned Value）或BCWP：</p>
+<p>CEV反映了工程实际绩效的价值。与跟踪项目的实际成本一样重要，也必须建立经常及时地收集数据的相应制度来确定项目每一工作包工作绩效的价值，主要是必须对每一合同的承付项（报价单项）预先对应相应的预算项目，确定其预算单价，通过合同实际工程量完成情况，计算出挣得值，建立概算执行（投资完成）台账。</p>
+<p><strong>④成本&#x2F;进度绩效监控。</strong><br>利用以上几个指标即可以比较分析项目的成本&#x2F;进度绩效和状况：CEV与CAC实际是在同样进度（相同工作量）下的价值比较，它反映了项目成本控制的状况和效率，因此，衡量成本绩效的指标或称成本绩效指数CPI （Cost Performance Index）可由如下公式确定：<strong>CPI&#x3D; CEV&#x2F;CAC</strong></p>
+<p>另一衡量成本绩效的指标是成本差异CV （Cost Variance ），它是累计赢得值与累计实际成本，即：<strong>CV&#x3D;CEV-CAC</strong><br>与CPI一样，这一指标表明赢得值与实际成本的差异，CV是以货币来表示的。</p>
+<p>同样，CBC与CEV是在同样价格体系（预算价）下的工程量的比较，它用货币量综合反映了项目进度的总体状况，因此，可按上述方法同样去衡量进度绩效。</p>
+<p>以上分析可对整个项目进行，也可针对某一独立的工作包进行。</p>
+<p><strong>⑤成本&#x2F;进度控制</strong><br>有效成本&#x2F;进度控制的关键是经常及时地监控、分析成本&#x2F;进度绩效，及早地发觉成本&#x2F;进度差异和无效率，以便在情况变坏之前能够采取纠偏措施。</p>
+<p>成本&#x2F;进度综合控制包括如下内容：</p>
+<ul>
+<li>分析成本&#x2F;进度绩效以确定需要采取纠正措施的工作包。</li>
+<li>决定采取何种纠偏措施。</li>
+<li>修订项目计划，包括工期和成本估计、综合筹划控制措施。</li>
+</ul>
+<p>要做好成本&#x2F;进度综合控制，应十分关注CPI或CV的走势，当CPI小于1或逐渐变小、CV为负且绝对值越来越大时，就应该及时制定纠偏措施并加以实施。应集中注意力在那些有负成本差异的工作包或分项工程上，根据CPI或CV值确定采取纠正措施的优先权，也就是说，CPI最小或CV负值最大的工作包或分项工程应该给予最高优先权。总体进度控制可使用相同原理和方法。</p>
+<p>挣得值分析法是工程项目成本&#x2F;进度综合度量和监控的有效方法。通过对TBC、CBC, CAC, CEV等指标和参数的及时监控分析，能准确掌握工程项目的成本&#x2F;进度状况和趋势，进而采取纠偏措施使项目能控制在基准范围内。</p>
+<p>有效成本&#x2F;进度综合控制的关键是只要一发现成本&#x2F;进度差异和低效率就积极地着手解决，而不是希望随着工程的进行一切都会自动变好，问题越早提出，对整个项目的影响和冲击就越小。</p>
+<p>当然，并不是说仅观察以上指标就能完全把握工程项目的状况。特别是对于进度控制，以综合货币形式反映的工程量完成情况只能体现项目的总体进度情况，而不能反映关键线路上的进度控制状况，要进一步深入精细地控制项目进度，还必须采用关键线路法（CPM）对进度进行分析控制。</p>
+<p>计算机信息管理技术的发展为实现成本&#x2F;进度的联合监控提供了条件。实施成本&#x2F;进度的联合管理，要求在工程进展过程中即时获得上述几个参数指标的基本值数据，利用计算机信息技术（例如利用Project项目管理软件）把网络进度计划和工程预算有机地结合起来。在工程项目成本&#x2F;进度综合监理控制上，推广应用现代科学管理方法，并采用先进的信息技术手段是十分必要的，这将给信息工程监理工作带来极大的益处。</p>
+<p><strong>2） ABC分析法（Pareto图）原理及应用</strong><br>该法由意大利经济学家<strong>帕累托</strong>（Vifredo Pareto）所创，基本原理为“<strong>关键的少数和次要的多数</strong>”，抓住关键的少数可以解决问题的大部分。ABC分析法也称费用比重分析法、不均匀分布定律法。</p>
+<p>相当多的项目&#x2F;产品，占总项目10%-20%的一些子项目，其费用&#x2F;成本占总费用&#x2F;总成本的60%－80%。选择这10%－20%的子项定位A类，同理，定位B类和C类，见图8.10。</p>
+<p>在ABC分析法的分析图中，有一个纵坐标，一个横坐标，几个长方形，一条曲线，左边纵坐标表示频数，右边纵坐标表示频率，以百分数表示。横坐标表示影响质量的各项因素，按影响大小从左向右排列，曲线表示各种影响因素大小的累计百分数。一般地，是将曲线的累计频率分为三级，与之相对应的因素分为三类：</p>
+<ul>
+<li>A类因素，发生频率为70%－80%，是主要影响因素；</li>
+<li>B类因素，发生频率为10%－20%，是次要影响因素；</li>
+<li>C类因素，发生频率为0%－10%，是一般影响因素。</li>
+</ul>
+<p>这种方法有利于人们找出主次矛盾，有针对性地采取对策。采用ABC法大致可以分五个步骤：</p>
+<p>① 收集数据，针对不同的分析对象和分析内容，收集有关数据。<br>② 统计汇总；<br>③ 编制ABC分析表；<br>④ 编制ABC分析图；<br>⑤ 确定重点管理方式。</p>
+<p>ABC分析法<strong>抓住成本比重大的子项目或阶段作为研究对象</strong>，有利于集中精力重点突破，取得较大效果，且简便易行，所以广泛地在项目管理和项目监理中被采用。但在实际中，有时由于成本分配不合理，造成成本比重不大但建设单位认为功能重要的对象可能漏选或排序推后，而这种情况应列为成本控制监理工作研究对象的重点。ABC分析法的这一缺点可以通过经验分析法、强制确定法等方法补充修正。</p>
+<p><strong>3）全寿命费用方法</strong><br>信息系统工程项目投资控制是每个建设单位和监理所关心的重要内容之一。就工程项目建设而言，投资控制贯穿于项目建设的全过程。从目前监理的投资控制来看，通过招标、设计阶段的投资控制监理工作，使采购成本、设计预算超投资估算的现象得到了基本控制。实施阶段通过实施监理的全面推行，使工程预算投资得到了合理的确定和有效控制，通过对工程结算和决算的审核，剔除其中的不合理部分，使该阶段的投资得到应有的控制。但如何通过对项目建议书和可行性研究阶段投资估算和优化设计来有效控制投资，尚未得到广泛重视。而在信息系统工程项目建设的投资控制中，采取全寿命费用方法是投资规模得到有效控制、杜绝工期马拉松现象的有效手段之一。图8.11表明了采用全寿命费用控制的重要性。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230327231310.png" alt="全寿命费用控制"><br>在使用全寿命成本方法的时候，应注意以下几个问题：</p>
+<p>①在项目决策阶段进行可行性分析是进行全寿命费用的考虑、注重项目成本计划的作用和立足点。<br>②项目的费用管理绝对不单纯是项目实施建设的费用管理，而应考虑项目全寿命费用的控制和管理。<br>③具体方法为多方案技术经济论证和多方案技术经济分析比较。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/e3bc.html" title="笔记-投资控制-8.2.5 投资控制的方法与技术">https://www.zenwu.site/posts/e3bc.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6/" rel="tag"><i class="fa fa-tag"></i> 投资控制</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/71ac.html" rel="prev" title="笔记-投资控制-8.2 信息系统工程投资控制基础知识与方法">
+                  <i class="fa fa-angle-left"></i> 笔记-投资控制-8.2 信息系统工程投资控制基础知识与方法
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/1a2.html" rel="next" title="笔记-投资控制-8.3 信息系统工程资源计划、成本估算及预算">
+                  笔记-投资控制-8.3 信息系统工程资源计划、成本估算及预算 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

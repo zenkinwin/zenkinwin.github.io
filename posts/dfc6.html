@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="这章节实在要背诵，太重要了。  22.2 分析设计阶段监理工作内容分析设计阶段监理一方面监督和控制承建单位工作过程的规范性，另一方面对承建单位需求分析和设计阶段工作成果进行评审，保障软件需求分析设计过程和产品符合规范和要求。 软件需求分析阶段监理主要任务是：  对软件需求分析的相关内容（重点是工程需求、功能需求、性能需求、设计约束等）、需求分析过程、需求分析活动、文档格式进行审查，确认是否满足要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容">
+<meta property="og:url" content="https://www.zenwu.site/posts/dfc6.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="这章节实在要背诵，太重要了。  22.2 分析设计阶段监理工作内容分析设计阶段监理一方面监督和控制承建单位工作过程的规范性，另一方面对承建单位需求分析和设计阶段工作成果进行评审，保障软件需求分析设计过程和产品符合规范和要求。 软件需求分析阶段监理主要任务是：  对软件需求分析的相关内容（重点是工程需求、功能需求、性能需求、设计约束等）、需求分析过程、需求分析活动、文档格式进行审查，确认是否满足要">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2022/20221029221548.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2022/20221029223023.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2022/20221029223957.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2022/20221029235212.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2022/20221029235401.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2022/20221029235709.png">
+<meta property="article:published_time" content="2022-10-25T11:31:13.000Z">
+<meta property="article:modified_time" content="2022-10-27T11:42:33.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="需求分析">
+<meta property="article:tag" content="分析设计阶段监理">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2022/20221029221548.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/dfc6.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/dfc6.html","path":"posts/dfc6.html","title":"笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#22-2-%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9B%91%E7%90%86%E5%B7%A5%E4%BD%9C%E5%86%85%E5%AE%B9"><span class="nav-text">22.2 分析设计阶段监理工作内容</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-1-%E9%A1%B9%E7%9B%AE%E8%AE%A1%E5%88%92%E7%9B%91%E7%90%86"><span class="nav-text">22.2.1 项目计划监理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-2-%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E7%AE%A1%E7%90%86%E4%BD%93%E7%B3%BB%E7%9B%91%E7%90%86"><span class="nav-text">22.2.2 软件质量管理体系监理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-3-%E8%BD%AF%E4%BB%B6%E8%B4%A8%E9%87%8F%E4%BF%9D%E8%AF%81%E8%AE%A1%E5%88%92"><span class="nav-text">22.2.3 软件质量保证计划</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-4-%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE%E7%AE%A1%E7%90%86%E7%9B%91%E7%90%86"><span class="nav-text">22.2.4 软件配置管理监理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-5-%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E%E4%B9%A6%E8%AF%84%E5%AE%A1"><span class="nav-text">22.2.5 需求说明书评审</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%BC%96%E5%88%B6%E8%89%AF%E5%A5%BD%E7%9A%84%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E%E4%B9%A6%E5%85%AB%E6%9D%A1%E5%8E%9F%E5%88%99"><span class="nav-text">1.编制良好的需求说明书八条原则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E%E4%B9%A6%E7%9A%84%E6%A1%86%E6%9E%B6"><span class="nav-text">2.需求说明书的框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E%E4%B9%A6%E8%AF%84%E5%AE%A1%E5%86%85%E5%AE%B9"><span class="nav-text">3.需求说明书评审内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E%E4%B9%A6%E6%A3%80%E6%9F%A5%E8%A1%A8"><span class="nav-text">4.需求说明书检查表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E9%9C%80%E6%B1%82%E8%AF%B4%E6%98%8E%E4%B9%A6%E8%AF%84%E5%AE%A1%E6%8A%A5%E5%91%8A"><span class="nav-text">5.需求说明书评审报告</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-6-%E8%BD%AF%E4%BB%B6%E5%88%86%E5%8C%85%E5%90%88%E5%90%8C%E7%9B%91%E7%90%86"><span class="nav-text">22.2.6 软件分包合同监理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%BD%AF%E4%BB%B6%E5%88%86%E5%8C%85%E5%90%88%E5%90%8C%E7%9B%91%E7%90%86%E7%9A%84%E7%9B%AE%E6%A0%87"><span class="nav-text">1. 软件分包合同监理的目标</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%BD%AF%E4%BB%B6%E5%88%86%E5%8C%85%E5%90%88%E5%90%8C%E7%9B%91%E7%90%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%87%86%E5%88%99"><span class="nav-text">2. 软件分包合同监理的基本准则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BD%AF%E4%BB%B6%E5%88%86%E5%8C%85%E5%90%88%E5%90%8C%E7%9B%91%E7%90%86%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">3. 软件分包合同监理的方法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-7-%E6%A6%82%E8%A6%81%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E%E4%B9%A6%E8%AF%84%E5%AE%A1"><span class="nav-text">22.2.7 概要设计说明书评审</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E%E4%B9%A6%E7%9A%84%E6%A1%86%E6%9E%B6"><span class="nav-text">1. 设计说明书的框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%AE%BE%E8%AE%A1%E8%AF%84%E5%AE%A1%E7%9A%84%E5%86%85%E5%AE%B9"><span class="nav-text">2. 设计评审的内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E%E4%B9%A6%E6%A3%80%E6%9F%A5%E8%A1%A8"><span class="nav-text">3. 设计说明书检查表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-8-%E8%AF%A6%E7%BB%86%E8%AE%BE%E8%AE%A1%E8%AF%B4%E6%98%8E%E4%B9%A6%E8%AF%84%E5%AE%A1"><span class="nav-text">22.2.8 详细设计说明书评审</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-9-%E6%B5%8B%E8%AF%95%E8%AE%A1%E5%88%92%E8%AF%84%E5%AE%A1"><span class="nav-text">22.2.9 测试计划评审</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-10-%E8%BD%AF%E4%BB%B6%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E8%AF%84%E5%AE%A1"><span class="nav-text">22.2.10 软件编码规范评审</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E6%BA%90%E7%A8%8B%E5%BA%8F%E6%96%87%E6%A1%A3%E5%8C%96"><span class="nav-text">1. 源程序文档化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%95%B0%E6%8D%AE%E8%AF%B4%E6%98%8E"><span class="nav-text">2. 数据说明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BE%93%E5%85%A5%E5%92%8C%E8%BE%93%E5%87%BA"><span class="nav-text">3. 输入和输出</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-11-%E5%B7%A5%E7%A8%8B%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E6%8A%95%E8%B5%84%E6%8E%A7%E5%88%B6"><span class="nav-text">22.2.11 工程设计阶段投资控制</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/dfc6.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-25 19:31:13" itemprop="dateCreated datePublished" datetime="2022-10-25T19:31:13+08:00">2022-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-10-27 19:42:33" itemprop="dateModified" datetime="2022-10-27T19:42:33+08:00">2022-10-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<p>这章节实在要背诵，太重要了。</p>
+</blockquote>
+<h2 id="22-2-分析设计阶段监理工作内容"><a href="#22-2-分析设计阶段监理工作内容" class="headerlink" title="22.2 分析设计阶段监理工作内容"></a>22.2 分析设计阶段监理工作内容</h2><p>分析设计阶段监理一方面监督和控制承建单位工作过程的规范性，另一方面对承建单位需求分析和设计阶段工作成果进行评审，保障软件需求分析设计过程和产品符合规范和要求。</p>
+<p><strong>软件需求分析阶段监理主要任务</strong>是：</p>
+<ol>
+<li>对软件需求分析的相关内容（重点是<strong>工程需求、功能需求、性能需求、设计约束</strong>等）、<strong>需求分析过程、需求分析活动、文档格式进行审查</strong>，<strong>确认是</strong>否满足要求；</li>
+<li>给出是否符合要求的结论；</li>
+<li>确定其可否作为软件开发的前提和依据。</li>
+</ol>
+<p>目前国内信息系统工程建设的过程中，常出现承建单位忽视系统设计的情况，而业主单位出于进度等方面的要求以及信息技术上的弱势，也放松了对承建单位系统设计的要求，致使工程处于<strong>边设计、边编码、边修改</strong>的“三边”状态。在这种情况下，工程建设的质量、进度与投资几乎失控，常出现质量问题、进度延迟与投资加大的情况，而编码与设计脱节、设计与需求脱节的情况最终会造成系统后续维护的工作量大为增加，经常出现“补丁摞补丁”，最终导致系统在实质上被废弃的情况。</p>
+<p>所以，在设计阶段中<strong>监理单位要尽可能与业主单位协调配合工作</strong>，听取业主单位<strong>从业务角度出发提出的对开发方设计的意见</strong>。监理单位主要从<strong>文档的规范性</strong>、<strong>可实施性出发</strong>，以国家相关标准为依据，从软件工程学的角度对承建单位<strong>提出意见与建议</strong>，配合业主单位工作，敦促承建单位做好工程项目的设计工作。在设计阶段，监理单位<strong>主要针对需求的覆盖性及可跟踪性、模块划分的合理性、接口的清晰性、技术适用性、技术清晰度、可维护性、约束与需求的一致性、可测试性、对软件设计的质量特性的评估、对软件设计的风险评估、对比情况、文档格式的规范性等方面进行评审</strong>。在此过程中，业主单位也需要对设计文档进行检查，主要在功能设计是否全面准确地反映了需求、输入项是否完全与正确并符合需求、输出项是否符合需求、<strong>与外界的数据接口是否完全与正确并符合需求</strong>、<strong>各类编码表</strong>是否完全与准确并符合需求、<strong>界面设计</strong>是否符合需求、<strong>维护设计</strong>是否符合需求、各类数据表格式和内容是否符合要求、是否存在其他有疑问的设计等方面进行核查。▲▲▲</p>
+<p><strong>软件概要设计监理的目的</strong>是对软件概要设计有关内容（<strong>重点是软件的功能、软件的结构、接口设计、接口关系</strong>等）、<strong>概要设计过程</strong>、<strong>概要设计活动</strong>、<strong>文档格式进行审查</strong>，确定承建单位提出的软件总体结构设计是否实现了软件需求规格说明的要求，确认是否满足要求；<strong>给出是否符合要求的结论</strong>；确定其可否作为软件详细设计的前提和依据。</p>
+<p><strong>软件详细设计监理的目的</strong>是对软件详细设计有关内容（重点是<strong>软件的算法、数据结构、数据类型、异常处理、计算效率</strong>等）、<strong>详细设计过程</strong>、<strong>详细设计活动</strong>、<strong>文档格式进行审查</strong>，确定承建单位提出的软件详细设计内容是否<strong>实现了软件概要设计的要求</strong>，确认是否满足要求；给出是否符合要求的结论；确定其可否作为软件编码的前提和依据。</p>
+<span id="more"></span>
+<h3 id="22-2-1-项目计划监理"><a href="#22-2-1-项目计划监理" class="headerlink" title="22.2.1 项目计划监理"></a>22.2.1 项目计划监理</h3><p><a href="/post/bf23.html">项目计划监理</a></p>
+<h3 id="22-2-2-软件质量管理体系监理"><a href="#22-2-2-软件质量管理体系监理" class="headerlink" title="22.2.2 软件质量管理体系监理"></a>22.2.2 软件质量管理体系监理</h3><p><strong>承建单位软件管理过程</strong>是保证应用软件系统建设质量的重要基础，软件管理过程监理关心的内容是应用软件系统建设承建单位的软件管理能力。</p>
+<p><strong>应用软件系统</strong>建设承建单位软件管理过程监理的目标是确保软件承建单位制定具有规范的、标准的项目软件过程；承建单位依据项目软件过程对项目进行计划和管理。</p>
+<p><strong>软件管理过程监理</strong>的主要内容包括：<br>（1）监督应用软件系统建设承建单位根据项目合同和业主应用软件系统需求，<strong>制定项目软件工程和管理活动</strong>，结合成为密切相关、定义完整的项目软件过程；<br>（2）评估项目软件过程的<strong>技术合理性</strong>，包括是否符合标准和规范，是否符合项目合同和业主技术要求；<br>（3）项目软件过程<strong>文档化</strong>，并得到批准；监督和控制承建单位的项目软件过程的状杰，促使承建单位支持和实施项目软件过程，提高软件项目实施的计划性，减少软件项目实施的风险；<br>（4）监督应用软件系统建设承建单位在软件开发过程中<strong>按照项目软件过程的规范实施，跟踪、记录和审查软件管理过程活动</strong>。</p>
+<h3 id="22-2-3-软件质量保证计划"><a href="#22-2-3-软件质量保证计划" class="headerlink" title="22.2.3 软件质量保证计划"></a>22.2.3 软件质量保证计划</h3><p><strong>▲▲▲</strong> <a href="/post/bf23.html">软件质量保证计划</a></p>
+<h3 id="22-2-4-软件配置管理监理"><a href="#22-2-4-软件配置管理监理" class="headerlink" title="22.2.4 软件配置管理监理"></a>22.2.4 软件配置管理监理</h3><p><strong>▲▲▲</strong> <a href="/post/d586.html">软件配置管理监理</a></p>
+<h3 id="22-2-5-需求说明书评审"><a href="#22-2-5-需求说明书评审" class="headerlink" title="22.2.5 需求说明书评审"></a>22.2.5 需求说明书评审</h3><p>由于信息应用系统建设针对的行业广泛，因此在需求分析阶段可能存在着承建单位对业主单位的业务需求理解不全面、不准确的情况，常发生承建单位认为某一个业务功能的实现非常简单，而实际上业主单位业务标准的要求很复杂的情况。在这种情况下，如果不在监理单位的协调下进行业主单位与承建单位充分的沟通，往往造成承建单位按照自己的理解进行开发的情况出现，如果在测试阶段没有发现此类问题则会给系统造成重大隐患，如果发现问题则会造成工程建设返工与延期。</p>
+<p>因此，在此阶段监理单位的工作重点是<strong>监督承建单位</strong>的分析人员、设计人员和测试人员对<strong>需求说明书的审查</strong>，并协调业主单位与承建单位需求说明书的评审确认。需求分析阶段工作落实的情况，直接决定了后续开发工作的质量、进度、投资与变更的情况，因此必须在监理过程中给予足够的重视。</p>
+<h4 id="1-编制良好的需求说明书八条原则"><a href="#1-编制良好的需求说明书八条原则" class="headerlink" title="1.编制良好的需求说明书八条原则"></a>1.编制良好的需求说明书八条原则</h4><p><strong>▲▲▲</strong> <a href="/post/c0c3.html">编制良好的需求说明书八条原则</a></p>
+<h4 id="2-需求说明书的框架"><a href="#2-需求说明书的框架" class="headerlink" title="2.需求说明书的框架"></a>2.需求说明书的框架</h4><p><strong>需求说明书</strong>是分析任务的最终产物，<strong>通过建立完整的信息描述、详细的功能和行为描述、性能需求和设计约束的说明、合适的验收标准，给出对目标软件的各种需求。</strong></p>
+<p>需求说明书的框架见表22.1。<br><img src="https://cdn.zenwu.site/upload/pic/2022/20221029221548.png" alt="需求说明书的框架"></p>
+<h4 id="3-需求说明书评审内容"><a href="#3-需求说明书评审内容" class="headerlink" title="3.需求说明书评审内容"></a>3.需求说明书评审内容</h4><p><strong>▲▲▲</strong> <a href="/post/15f5.html">需求说明书评审内容</a></p>
+<h4 id="4-需求说明书检查表"><a href="#4-需求说明书检查表" class="headerlink" title="4.需求说明书检查表"></a>4.需求说明书检查表</h4><p>需求说明书检查表见表22.2。<br><img src="https://cdn.zenwu.site/upload/pic/2022/20221029223023.png" alt="需求说明书检查表见表"></p>
+<h4 id="5-需求说明书评审报告"><a href="#5-需求说明书评审报告" class="headerlink" title="5.需求说明书评审报告"></a>5.需求说明书评审报告</h4><p>在需求说明书评审结束后，监理单位应将评审意见以<strong>专题监理报告</strong>形式提交业主单位。</p>
+<h3 id="22-2-6-软件分包合同监理"><a href="#22-2-6-软件分包合同监理" class="headerlink" title="22.2.6 软件分包合同监理"></a>22.2.6 软件分包合同监理</h3><h4 id="1-软件分包合同监理的目标"><a href="#1-软件分包合同监理的目标" class="headerlink" title="1. 软件分包合同监理的目标"></a>1. 软件分包合同监理的目标</h4><p>通过招投标方式签订合同的项目，承建单位可<strong>按照合同约定或者经业主同意</strong>，将中标项目的部分<strong>非主体、非关键性</strong>工作分包给他人完成。分承建单位<strong>应当具备相应的资格条件</strong>，并<strong>不得再次分包</strong>。承建单位应当就分包项目向业主负责，分承建单位承担连带责任。</p>
+<p><strong>软件分包合同管理</strong>包括选择分承建单位，建立同分承建单位的约定，并跟踪、评审分承建单位的执行情况和结果。当进行分包时，制定包括技术和非技术需求（如交付日期）的书面协议，并依此管理分包合同。分承建单位要完成的工作及其计划要成文归档。分承建单位遵循的标准要与主承建单位的<strong>标准一致</strong>。</p>
+<p>由<strong>分承建单位</strong>完成<strong>分包工作的软件计划、跟踪和监督活动</strong>。主承建单位<strong>确保</strong>这些计划、跟踪和监督活动能恰当地完成，并且<strong>分承建单位交付的软件产品能满足其验收标准</strong>。主承建单位和分承建单位共同管理其产品和过程界面。</p>
+<p>承建单位的<strong>软件分包管理</strong>涉及的活动包括：</p>
+<ol>
+<li><strong>识别</strong>所要采办的产品；</li>
+<li><strong>选择</strong>分承建单位；</li>
+<li>与分承建单位<strong>签订</strong>协定并予以管理和维护；</li>
+<li><strong>监督</strong>分承建单位的过程能力；</li>
+<li><strong>验收</strong>分承建单位的产品；</li>
+<li>对所采办的产品<strong>安排支持和维护</strong>。</li>
+</ol>
+<p>对于那些不交付给业主单位产品（如开发工具）的采办，业主单位和承建单位所面临的风险相对较小，软件分包合同监理的内容可以根据需要选择使用。不过，如果项目建立的环境包含有开发工具，而且这个环境又是将要交付给业主单位的产品的组成部分，那么这部分的监理过程是非常值得重视的。</p>
+<h4 id="2-软件分包合同监理的基本准则"><a href="#2-软件分包合同监理的基本准则" class="headerlink" title="2. 软件分包合同监理的基本准则"></a>2. 软件分包合同监理的基本准则</h4><p>承建单位根据需要制定了软件分包合同，同时该分包合同的格式规范，有专人进行负责、管理和维护，软件分包合同的要求与业主单位的合同要求<strong>没有冲突</strong>，进度、质量和软件过程标准与承建单位的项目计划一致。</p>
+<h4 id="3-软件分包合同监理的方法"><a href="#3-软件分包合同监理的方法" class="headerlink" title="3. 软件分包合同监理的方法"></a>3. 软件分包合同监理的方法</h4><p>方法1：<strong>定期审查</strong>软件分包合同的管理活动。实施定期审查的主要目的是适当地、及时地掌握软件分包合同管理的软件过程活动。在满足业主单位需求的前提下，只要有适当的机制来报告异常情况，审查的时间间隔就尽可能长些。</p>
+<p>方法2：根据实际需要<strong>随时跟踪和审查软件</strong>分包合同的管理活动。</p>
+<p>方法3：<strong>评审</strong>和（或）审核软件分包合同的管理活动及其产品，并报告结果。这些评审和（或）审核至少<strong>应验证</strong>：<br>（1）<strong>选择分承建单位</strong>的活动。<br>（2）<strong>管理</strong>软件分包合同的活动。<br>（3）<strong>协调</strong>主承建单位和分承建单位配置管理的活动。<br>（4）与分承建单位按计划评审的实施情况。<br>（5）确认分包合同达到关键里程碑或阶段完成时的<strong>评审</strong>情况。<br>（6）对分承建单位软件产品的<strong>验收过程</strong>。</p>
+<h3 id="22-2-7-概要设计说明书评审"><a href="#22-2-7-概要设计说明书评审" class="headerlink" title="22.2.7 概要设计说明书评审"></a>22.2.7 概要设计说明书评审</h3><h4 id="1-设计说明书的框架"><a href="#1-设计说明书的框架" class="headerlink" title="1. 设计说明书的框架"></a>1. 设计说明书的框架</h4><p>设计说明书的框架见表22.3。<br><img src="https://cdn.zenwu.site/upload/pic/2022/20221029223957.png" alt="软件设计规格说明的大纲"></p>
+<p>软件设计的最终目标是要<strong>取得最佳方案</strong>。“最佳”是指在所有候选方案中，就节省开发费用、降低资源消耗、缩短开发时间的条件，选择能够赢得较高的生产率、较高的可靠性和可维护性的方案。在整个设计的过程中，各个时期的设计结果需要经过一系列的设计质量的评审，以便及时发现和及时解决在软件设计中出现的问题，防止把问题遗留到开发的后期阶段，造成后患。</p>
+<h4 id="2-设计评审的内容"><a href="#2-设计评审的内容" class="headerlink" title="2. 设计评审的内容"></a>2. 设计评审的内容</h4><h5 id="1）评审内容"><a href="#1）评审内容" class="headerlink" title="1）评审内容"></a>1）评审内容</h5><p><strong>（1）可追溯性</strong>：即分析该软件的系统结构、子系统结构，确认该软件设计是否覆盖了所有己确定的软件需求，软件每一成分是否可追溯到某一项需求。<br><strong>（2）接口</strong>：即分析软件各部分之间的联系，确认该软件的内部接口与外部接口是否已经明确定义。模块是否满足高内聚和低耦合的要求。模块作用范围是否在其控制范围之内。<br><strong>（3）风险</strong>：即确认该软件设计在现有技术条件下和预算范围内是否能按时实现。<br><strong>（4）实用性</strong>：即确认该软件设计对于需求的解决方案是否实用。<br><strong>（5）技术清晰度</strong>：即确认该软件设计是否以一种易于翻译成代码的形式表达。<br><strong>（6）可维护性</strong>：从软件维护的角度出发，确认该软件设计是否考虑了方便未来的维护。<br><strong>（7）质量</strong>：即确认该软件设计是否表现出良好的质量特征。<br><strong>（8）各种选择方案</strong>：看是否考虑过其他方案，比较各种选择方案的标准是什么。<br><strong>（9）限制</strong>：评估对该软件的限制是否现实，是否与需求一致。<br><strong>（10）其他具体问</strong>题：对于文档、可测试性、设计过程等进行评估。</p>
+<p>在这里需要特别注意：软件系统的一些外部特性的设计，例如软件的功能、一部分性能以及用户的使用特性等，在软件需求分析阶段就已经开始。这些问题的解决，多少带有一些“怎么做”的性质，因此有人称之为软件的外部设计。</p>
+<h5 id="2）判断设计好坏的三条特征"><a href="#2）判断设计好坏的三条特征" class="headerlink" title="2）判断设计好坏的三条特征"></a>2）判断设计好坏的三条特征</h5><p>McGlanghlin给出在将需求转换为设计时判断设计好坏的三条特征：<br>（1）设计必须实现分析模型中描述的所有<strong>显式需求</strong>，必须满足用户希望的所有<strong>隐式需求</strong>。<br>（2）设计必须是<strong>可读、可理解</strong>的，使得将来<strong>易于编程、易于测试、易于维护</strong>。<br>（3）设计应从<strong>实现</strong>角度出发，给出与<strong>数据、功能、行为相关</strong>的软件全貌。</p>
+<p>以上三点就是<strong>软件设计过程的目标</strong>。为达到这些目标，必须建立衡量设计的技术标准。</p>
+<h5 id="3）衡量设计的技术标准"><a href="#3）衡量设计的技术标准" class="headerlink" title="3）衡量设计的技术标准"></a>3）衡量设计的技术标准</h5><p>（1）设计出来的结构应是<strong>分层</strong>结构，从而建立软件成分之间的控制。<br>（2）设计应当<strong>模块化</strong>，从逻辑上将软件划分为完成特定功能或子功能的构件。<br>（3）设计应当既<strong>包含数据抽象</strong>，也包含<strong>过程抽象</strong>。<br>（4）设计应当建立具有<strong>独立功能特征的模块</strong>。<br>（5）设计应当建立能够<strong>降低</strong>模块与外部环境之间复杂连接的接口。<br>（6）设计应能根据软件需求分析获取的信息，建立<strong>可驱动、可重复</strong>的方法。</p>
+<p>软件设计过程根据基本的设计原则，使用系统化的方法和完全的设计评审来建立良好的设计。</p>
+<h4 id="3-设计说明书检查表"><a href="#3-设计说明书检查表" class="headerlink" title="3. 设计说明书检查表"></a>3. 设计说明书检查表</h4><p><em>清晰、完整、依从、一致、可行性、数据使用、功能性、接口、可维护性、性能、可靠性、易测性、可追溯性</em></p>
+<p>设计说明书检查表见表22.4。<br><img src="https://cdn.zenwu.site/upload/pic/2022/20221029235212.png" alt="设计说明书检查表"></p>
+<h3 id="22-2-8-详细设计说明书评审"><a href="#22-2-8-详细设计说明书评审" class="headerlink" title="22.2.8 详细设计说明书评审"></a>22.2.8 详细设计说明书评审</h3><p><em>清晰、完整、依从、一致、正确性、数据使用、接口、可维护性、性能、可靠性、易测性、可追溯性</em></p>
+<p>详细设计说明书见表22.5。<br><img src="https://cdn.zenwu.site/upload/pic/2022/20221029235401.png" alt="详细设计说明书"></p>
+<h3 id="22-2-9-测试计划评审"><a href="#22-2-9-测试计划评审" class="headerlink" title="22.2.9 测试计划评审"></a>22.2.9 测试计划评审</h3><p><em>完整、依从、一致、正确、详细级别／程度、易测性／可行性、可追溯性</em></p>
+<p>测试计划检查表见表22.6。<br><img src="https://cdn.zenwu.site/upload/pic/2022/20221029235709.png" alt="测试计划检查表"></p>
+<h3 id="22-2-10-软件编码规范评审"><a href="#22-2-10-软件编码规范评审" class="headerlink" title="22.2.10 软件编码规范评审"></a>22.2.10 软件编码规范评审</h3><p>程序实际上是一种供人阅读的文章，也有一个文章的风格问题。应该使程序具有良好的风格，具体表现在:源程序文档化、数据说明的方法、语句结构和输入&#x2F;输出方法等。</p>
+<p>评审的目的是为使程序具有良好的风格，便于阅读。</p>
+<h4 id="1-源程序文档化"><a href="#1-源程序文档化" class="headerlink" title="1. 源程序文档化"></a>1. 源程序文档化</h4><h5 id="1）符号名的命名"><a href="#1）符号名的命名" class="headerlink" title="1）符号名的命名"></a>1）符号名的命名</h5><p>符号名即标识符，包括<strong>模块名、变量名、常量名、标号名、子程序名、数据区名以及缓冲区名</strong>等等。这些名称应能反映它所代表的实际东西，应有一定的实际意义。例如，表示次数的量用Times，表示总量的量用Total，表示平均值的量用Average，表示和的量用Sum等等。</p>
+<p>名称不是越长越好，应当选择<strong>精炼</strong>的、意义明确的名称。必要时可使用缩写名称，但这时要注意缩写规则要一致，并且要给每一个名称加注释。同时，在一个程序中，一个变量只应用于一种用途。</p>
+<h5 id="2）程序的注释"><a href="#2）程序的注释" class="headerlink" title="2）程序的注释"></a>2）程序的注释</h5><p>夹在程序中的注释是程序员与日后的程序读者之间通信的重要手段。注释绝不是可有可无的。一些正规的程序文本中一注释行的数量占到整个源程序的1&#x2F;3－1&#x2F;2，甚至更多。注释分为<strong>序言性注释</strong>和<strong>功能性注释</strong>。</p>
+<p><strong>序言性注释</strong>通常置于每个程序模块的开头部分，它应当给出程序的整体说明，对子理解程序本身具有引导作用。有些软件开发部门对序言性注释做了明确而严格的规定，要求程序编制者逐项列出。有关项目包括：</p>
+<ul>
+<li>程序<strong>标题</strong>；</li>
+<li>有关本模块功能和目的的<strong>说明</strong>；</li>
+<li>主要<strong>算法</strong>；</li>
+<li><strong>接口说明</strong>（包括调用形式、参数描述、子程序清单）；</li>
+<li>有关数据描述（重要的变量及其用途、约束或限制条件，以及其他有关信息）；</li>
+<li>模块位置（在哪一个源文件中，或隶属十哪一个软件包）；</li>
+<li>开发简历（模块设计者、复审者、复审日期、修改日期及有关说明）等。</li>
+</ul>
+<p><strong>功能性注释</strong>功能性注释嵌在源程序体中，用于描述其后的语句或程序段是在做什么工作，或是执行了下面的语句会怎么样。而不要解释下面怎么做。要点：</p>
+<ul>
+<li>描述一段程序，而不是每一个语句；</li>
+<li>用缩进和空行，使程序与注释容易区别；</li>
+<li>注释要正确。</li>
+</ul>
+<h5 id="3）标准的书写格式"><a href="#3）标准的书写格式" class="headerlink" title="3）标准的书写格式"></a>3）标准的书写格式</h5><p>视觉组织用空格、空行和移行来实现。恰当地利用空格，可以突出运算的优先性，减少发生编码的错误；自然的程序段之间可用空行隔开；移行也叫做向右缩格，它是指程序中的各行不必都在左端对齐，不必都从第一格起排列，这样做可以使程序分清层次关系。对于选择语句和循环语句，把其中的程序段语句向右做阶梯式移行，使程序的逻辑结构更加清晰。</p>
+<h4 id="2-数据说明"><a href="#2-数据说明" class="headerlink" title="2. 数据说明"></a>2. 数据说明</h4><p>在设计阶段己经确定了数据结构的组织及其复杂性。在编写程序时，则需要注意数据说明的风格。为了使程序中数据说明更易于理解和维护，必须注意以下几点。</p>
+<h5 id="1）数据说明的次序应当规范化"><a href="#1）数据说明的次序应当规范化" class="headerlink" title="1）数据说明的次序应当规范化"></a>1）数据说明的次序应当规范化</h5><p>数据说明次序<strong>规范化</strong>，使数据属性容易查找，也有利于测试、排错和维护。原则上，数据说明的次序与语法无关，其次序是任意的。但出于阅读、理解和维护的需要，最好使其规范化，使说明的先后次序固定。</p>
+<h5 id="2）说明语句中变量安排有序化"><a href="#2）说明语句中变量安排有序化" class="headerlink" title="2）说明语句中变量安排有序化"></a>2）说明语句中变量安排有序化</h5><p>当多个变量名在一个说明语句中说明时，应当对这些<strong>变量按字母的顺序</strong>排列。带标号的全程数据也应当按字母的顺序排列。</p>
+<h5 id="3）使用注释说明复杂数据结构"><a href="#3）使用注释说明复杂数据结构" class="headerlink" title="3）使用注释说明复杂数据结构"></a>3）使用注释说明复杂数据结构</h5><p>如果设计了一个复杂的数据结构，应当使用<strong>注释来说明</strong>在程序实现时这个数据结构的固有特点。</p>
+<h5 id="4）语句结构"><a href="#4）语句结构" class="headerlink" title="4）语句结构"></a>4）语句结构</h5><p>在设计阶段确定了软件的逻辑流结构，但构造单个语句则是编码阶段的任务。语句构造力求简单、直接，不能为了片面追求效率而使语句复杂化。</p>
+<p>比如：</p>
+<ul>
+<li>在一行内只写一条语句；</li>
+<li>程序编写首先应当考虑清晰性；</li>
+<li>程序要能直截了当地说明程序员的用意；</li>
+<li>除非对效率有特殊的要求，程序编写要做到清晰第一，效率第二，不要为了追求效率而丧失了清晰性；</li>
+<li>首先要保证程序正确，然后才要求提高速度，也就是在使程序高速运行时，首先要保证它是正确的；</li>
+<li>避免使用临时变量而使可读性下降；</li>
+<li>让编译程序做简单的优化；</li>
+<li>尽可能使用库函数；</li>
+<li>避免不必要的转移；</li>
+<li>尽量采用基本的控制结构来编写程序；</li>
+<li>避免采用过于复杂的条件测试；</li>
+<li>尽量减少使用“否定”条件的条件语句；</li>
+<li>尽可能用通俗易懂的伪码来描述程序的流程，然后再翻译成必须使用的语言；</li>
+<li>数据结构要有利于程序的简化；</li>
+<li>程序要模块化，使模块功能尽可能单一化模块间的耦合能够清晰可见；</li>
+<li>利用信息隐蔽，确保每一个模块的独立性；</li>
+<li>从数据出发去构造程序；</li>
+<li>不要修补不好的程序，对不好的程序要重新编写。</li>
+</ul>
+<h4 id="3-输入和输出"><a href="#3-输入和输出" class="headerlink" title="3. 输入和输出"></a>3. 输入和输出</h4><p>输入和输出信息是与用户的使用直接相关的。输入和输出的方式和格式应当尽可能方便用户的使用。一定要避免因设计不当给用户带来的麻烦。因此，在软件需求分析阶段和设计阶段，就应基本确定输入和输出的风格。系统能否被用户接受，有时就取决于输入和输出的风格。输入&#x2F;输出风格还受到许多其他因素的影响。例如输入&#x2F;输出设备（如终端的类型、图形设备、数字化转换设备等）、用户的熟练程度，以及通信环境等。不论是批处理的输入&#x2F;输出方式，还是交互式的输入&#x2F;输出方式，在设计和程序编码时都应考虑下列原则：</p>
+<p>（1）对所有的输入数据都要进行<strong>检验</strong>，识别错误的输入，以保证每个数据的有效性。<br>（2）检查输入项的各种重要组合的<strong>合理性</strong>，必要时报告输入状态信息。<br>（3）使得输入的步骤和操作尽可能简单，并保持简单的输入格式。<br>（4）输入数据时，<strong>应允许使用自由格式输入</strong>。<br>（5）应允许<strong>默认值</strong>。<br>（6）输入一批数据时，最好使用输入结束标志，而不要由用户指定输入数据数目。<br>（7）在交互式输入时，要在屏幕上使用提示符明确提示交互输入的请求，指明可使用选择项的种类和取值范围。同时，在数据输入的过程中和输入结束时，也要在屏幕上给出状态信息。<br>（8）当程序设计语言对输入&#x2F;输出格式有严格要求时，应保持输入格式与输入语句的要求的一致性。<br>（9）给所有的输出加<strong>注解</strong>，并设计输出报表格式。</p>
+<h3 id="22-2-11-工程设计阶段投资控制"><a href="#22-2-11-工程设计阶段投资控制" class="headerlink" title="22.2.11 工程设计阶段投资控制"></a>22.2.11 工程设计阶段投资控制</h3><p>（1）依据招投标文件、承建合同，审核工程计划、设计方案中所说明的工程目标、范围、内容、产品和服务，对可能的投资变化，向业主单位提出监理意见。<br>（2）对涉及费用的设计变更进行控制，对必要的变更应由<strong>三方达成共识</strong>，并做工程备忘录。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/dfc6.html" title="笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容">https://www.zenwu.site/posts/dfc6.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%9C%80%E6%B1%82%E5%88%86%E6%9E%90/" rel="tag"><i class="fa fa-tag"></i> 需求分析</a>
+              <a href="/tags/%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9B%91%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 分析设计阶段监理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/d93c.html" rel="prev" title="笔记-分析设计阶段监理-22.1 分析设计阶段的系统建设任务">
+                  <i class="fa fa-angle-left"></i> 笔记-分析设计阶段监理-22.1 分析设计阶段的系统建设任务
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/bf23.html" rel="next" title="笔记-分析设计阶段监理-22.2.1 项目计划监理">
+                  笔记-分析设计阶段监理-22.2.1 项目计划监理 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

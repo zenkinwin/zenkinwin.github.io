@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="22.2.1 项目计划监理目前国内信息应用系统建设的过程中，常出现承建单位进度计划不能落实的情况，这主要是由于承建单位在制定项目开发计划过程中不能按照软件开发的规律制定计划，在工程建设进度的压力下采取盲目加大工作强度、减少或取消异常情况的处理时间、缩短或取消测试时间等办法进行项目开发计划的制定，业主单位由于工程进度等方面的要求以及信息技术的弱势，往往不能发现计划中存在的问题。这样的计划必然无法落实">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-分析设计阶段监理-22.2.1 项目计划监理">
+<meta property="og:url" content="https://www.zenwu.site/posts/bf23.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="22.2.1 项目计划监理目前国内信息应用系统建设的过程中，常出现承建单位进度计划不能落实的情况，这主要是由于承建单位在制定项目开发计划过程中不能按照软件开发的规律制定计划，在工程建设进度的压力下采取盲目加大工作强度、减少或取消异常情况的处理时间、缩短或取消测试时间等办法进行项目开发计划的制定，业主单位由于工程进度等方面的要求以及信息技术的弱势，往往不能发现计划中存在的问题。这样的计划必然无法落实">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-25T13:31:13.000Z">
+<meta property="article:modified_time" content="2022-10-25T13:42:33.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="分析设计阶段监理">
+<meta property="article:tag" content="项目计划监理">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/bf23.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/bf23.html","path":"posts/bf23.html","title":"笔记-分析设计阶段监理-22.2.1 项目计划监理"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-分析设计阶段监理-22.2.1 项目计划监理 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#22-2-1-%E9%A1%B9%E7%9B%AE%E8%AE%A1%E5%88%92%E7%9B%91%E7%90%86"><span class="nav-text">22.2.1 项目计划监理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E8%AE%A1%E5%88%92%E7%9B%91%E7%90%86%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="nav-text">1. 项目计划监理的目的</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%BB%84%E7%BB%87"><span class="nav-text">2. 软件项目组织</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E8%AE%A1%E5%88%92%E8%BF%9B%E8%A1%8C%E8%BD%AF%E4%BB%B6%E8%A7%84%E6%A8%A1%E7%9A%84%E4%BC%B0%E8%AE%A1"><span class="nav-text">3. 软件项目计划进行软件规模的估计</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E8%AE%A1%E5%88%92%E7%9B%91%E7%90%86%E7%9A%84%E5%9F%BA%E6%9C%AC%E5%87%86%E5%88%99"><span class="nav-text">4. 软件项目计划监理的基本准则</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/bf23.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-分析设计阶段监理-22.2.1 项目计划监理 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-分析设计阶段监理-22.2.1 项目计划监理
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-10-25 21:31:13 / 修改时间：21:42:33" itemprop="dateCreated datePublished" datetime="2022-10-25T21:31:13+08:00">2022-10-25</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h3 id="22-2-1-项目计划监理"><a href="#22-2-1-项目计划监理" class="headerlink" title="22.2.1 项目计划监理"></a>22.2.1 项目计划监理</h3><p>目前国内信息应用系统建设的过程中，常出现承建单位进度计划不能落实的情况，这主要是由于承建单位在制定项目开发计划过程中不能按照软件开发的规律制定计划，在工程建设进度的压力下采取盲目加大工作强度、减少或取消异常情况的处理时间、缩短或取消测试时间等办法进行项目开发计划的制定，业主单位由于工程进度等方面的要求以及信息技术的弱势，往往不能发现计划中存在的问题。这样的计划必然无法落实执行，最终造成工程建设的进度处于无序状态。</p>
+<p>因此，在此阶段<strong>监理单位要对承建单位制定的项目开发计划进行认真的审查</strong>，结合工程的具体情况考虑<strong>开发方在人员投入、各种情况处理程序、测试工作安排等方面的计划制定是否合理</strong>，监督承建单位制定<strong>符合开发合同、切实可行的项目开发计划</strong>。</p>
+<h4 id="1-项目计划监理的目的"><a href="#1-项目计划监理的目的" class="headerlink" title="1. 项目计划监理的目的"></a>1. 项目计划监理的目的</h4><p>软件项目计划为<strong>实施和管理软件项</strong>目活动提供基础，并根据软件项目资源、约束条件和能力向业主提出承诺。</p>
+<p>项目<strong>计划监理</strong>的目的是对软件项目计划的<strong>相关内容</strong>（重点是组织、技术标准、开发计划、进度要求等）、项目计划过程、项目计划组织、文档格式<strong>进行审查****，确认是否满足要求</strong>；给出<strong>是否符合要求的结论</strong>；确定其可否作为软件开发的前提和依据。▲▲▲</p>
+<p>项目计划监理<strong>监督</strong>承建单位实施软件工程和管理软件项目制定合理的计划，包括对要完成的工作进行估计、确定必要的约定和制定工作计划。</p>
+<p>软件项目计划为实施和管理软件项目活动提供基础，并根据软件<strong>项目资源、约束条件和能力</strong>向软件项目的客户提出承诺。</p>
+<p>制定软件项目计划从对<strong>要完成的工作、约束条件和目标的说明</strong>着手。<strong>软件计划制定步骤包括：估计软件工作产品及其资源需求规模、制定进度计划、识别与评估软件风险以及协商相关约定。软件项目计划在需求阶段的早期开始，并形成一个初步的文档结果，为完善所建立软件项目计划，有时可能需要反复制定步骤。</strong></p>
+<h4 id="2-软件项目组织"><a href="#2-软件项目组织" class="headerlink" title="2. 软件项目组织"></a>2. 软件项目组织</h4><p><strong>软件项目组织</strong>指承建单位为完成指定软件项目而设置的<strong>人力资源结构</strong>，完善的组织结构可能有：<strong>项目负责人、软件负责人、软件工程组、软件支持组、软件过程组、系统工程组、系统测试组、质量保证组，配置管理组和技术培训组。</strong></p>
+<ul>
+<li><strong>项目负责人</strong>对整个项目负完全责任，是<strong>指导、控制、管理和规范项目建设的人</strong>，项目负责人是最终对业主单位负责的人。</li>
+<li><strong>软件负责人</strong>对所有的软件活动负完全责任，控制和管理所有的软件资源和工作，按照软件约定由项目负责人协调。</li>
+<li><strong>软件工程组</strong>是指负责一个项目的软件开发和维护活动（如需求分析、设计、编程和测试）的人员（包括管理人员和技术人员）。</li>
+<li><strong>软件支持组</strong>是指代表一个软件工程科目的一组人员（包括负责人和技术人员），这类小组支持但不直接负责软件开发和维护工作。<strong>软件支持组</strong>包括<strong>软件质量保证组</strong>、<strong>软件配置管理组</strong>和<strong>软件过程组</strong>。</li>
+<li><strong>软件过程组</strong>是协助对机构所使用的<strong>软件过程进行定义、维护和改进</strong>的一个<strong>专家</strong>小组。</li>
+<li><strong>系统工程组</strong>是包括有负责人和技术人员的一个小组，负责规格说明系统需求，分配系统需求到硬件、软件和其他部件；规格说明硬件、软件和其他部件之间的接口，并监督对这些部件的设计和开发，以确保与所做的规格说明的一致性。</li>
+<li><strong>系统测试组</strong>是包括有负责人和技术人员的一个小组，负责计划和实施对软件的单独系统测试，以确定其软件产品是否满足其需求。</li>
+<li><strong>软件质量保证组</strong>是包括有负责人和技术人员的一个小组，负责计划和实施项目的质量保证活动，以确保软件开发活动遵循软件过程规程和标准。</li>
+<li><strong>软件配置管理组</strong>负责计划、协调和实施项目的正规配置管理工作。技术培训组负责计划、协调和安排技术培训活动。</li>
+</ul>
+<p>一个小组是一些部门、负责人和人员的组合，负责一组任务和活动。小组的规模可以不同，既可以是单个兼职的人，也可以是多个来自不同部门的兼职人员，也可以由几个专职人员组成。组成小组时考虑的因素包括：<strong>分派的任务和活动、项目规模、承建单位的组织结构和文化</strong>。某些小组，如软件质量保证组，集中关注项目活动；而其他一些小组，例如软件工程过程组，集中关注承建单位业务范围内的活动。</p>
+<h4 id="3-软件项目计划进行软件规模的估计"><a href="#3-软件项目计划进行软件规模的估计" class="headerlink" title="3. 软件项目计划进行软件规模的估计"></a>3. 软件项目计划进行软件规模的估计</h4><p><strong>软件规模估计</strong>首先是<strong>建立和维护项目顶层的分解结构</strong>，分解结构随项目不同而变，可以通过分解结构把一个整体项目划分成若干互相关联的可管理的组成部分。其次是<strong>考虑项目相关的连通性、复杂程度和外部基础</strong>。分解结构是面向产品的，它围绕项目的工作产品，给出一个用以标识和组织项目各个逻辑单元的图解方案。分解结构用于设置组织机制参考，也作为工作量估计、成本估计、工作分配、进度估计和责任的参考框架，进行项目策划、组织和控制。</p>
+<p>在确定项目软件生命周期后，利用<strong>软件规模的估计</strong>结果可以编制项目预算和进度，识别项目风险，策划资料管理方法，建立项目的配置管理和质量保证的详细策略。这些内容的确定可以大量地依据以往的工程经验知识。</p>
+<h4 id="4-软件项目计划监理的基本准则"><a href="#4-软件项目计划监理的基本准则" class="headerlink" title="4. 软件项目计划监理的基本准则"></a>4. 软件项目计划监理的基本准则</h4><p><strong>基本准则</strong>是承建单位制定了软件项目计划，同时该项目计划通过正式的<strong>评审</strong>，软件项目计划对项目组织、进度计划、工程标准进行了承诺，项目的风险分析合理，风险管理方案可行。项目的阶段划分是明确的。</p>
+<h5 id="1）开发计划的内容"><a href="#1）开发计划的内容" class="headerlink" title="1）开发计划的内容"></a>1）开发计划的内容</h5><p>承建单位应编写“<strong>项目开发计划</strong>”。在“项目开发计划”批准之后，承建单位应依照“项目开发计划”开展活动。“项目开发计划”的修改应得到业主单位的批准。“项目开发计划”应包含以下的内容。<br>（1）范围：标识、系统概述、文档概述、与其他计划的关系。<br>（2）引用文件。<br>（3）术语和缩略语。<br>（4）软件开发管理：开发项目组织、进度和里程碑、风险管理、安全保密、与其他软硬件承建单位的接口、转包单位的管理。<br>（5）软件工程：组织和资源、软件开发标准、非开发软件。<br>（6）正式合格性测试。<br>（7）软件评审。<br>（8）软件配置管理：管理、软件配置管理活动、技术及方法和工具、对供货单位的控制、记录的收集维护和保存。</p>
+<h5 id="2）软件项目计划监理的目标"><a href="#2）软件项目计划监理的目标" class="headerlink" title="2）软件项目计划监理的目标"></a>2）软件项目计划监理的目标</h5><p>（1）<strong>监督</strong>承建单位形成<strong>软件规模估计文档</strong>，以供计划和跟踪软件项目使用。<br>（2）监督承建单位<strong>制定软件项目的活动和约定</strong>，并形成文档。<br>（3）监督和控制软件<strong>项目计划的产品</strong>和活动与<strong>软件的需求规格说明</strong>一致。</p>
+<h5 id="3）软件项目计划监理的主要活动"><a href="#3）软件项目计划监理的主要活动" class="headerlink" title="3）软件项目计划监理的主要活动"></a>3）软件项目计划监理的主要活动</h5><p>（1）确保软件承建单位在项目<strong>软件过程规范约定</strong>的基础上制定<strong>软件项目计划</strong>。<br>（2）监督承建单位为实施软件工程和管理软件项目<strong>制定合理的软件项目计划</strong>，包括进行<strong>软件规模估计</strong>和<strong>软件风险分析</strong>，<strong>建立软件项目组织</strong>，<strong>确定软件项目生命周期</strong>，进行<strong>软件项目策划</strong>，<strong>确定必要的约定</strong>。<br>（3）<strong>监督</strong>承建单位依据书面规程制定项目的软件项目计划，确认计划内容<strong>是否满足标准、规范及合同要求</strong>。<br>（4）<strong>审查</strong>承建单位编写的<strong>项目计划文档</strong>，软件项目计划包括：软件项目的<strong>用途、范围、目标和对象</strong>，软件开发计划，软件配置管理，软件质量保证，软件框架设计，问题跟踪与排除方法，软件度量。<br>（5）审查承建单位<strong>标明、建立和保持</strong>对软件项目的控制所必需的软件工作产品。<br>（6）<strong>审查</strong>承建单位依据书面规程估计软件工作产品规模，估计软件项目的<strong>工作量和成本</strong>，估计项目的关键计算机资源。<br>（7）监督承建单位依据书面规程制定项目的<strong>软件进度计划</strong>，分析承建单位制定项目的软件工程设备和支持工具计划的合理性、可行性，分析软件进度计划的合理性。<br>（8）管理和控制软件计划数据，审查软件项目计划的活动情况。<br>（9）<strong>确保软件项自计划通过正式的评审</strong>，在评审后得到技术修改和批准，给出是否符合要求的结论，确定其能否作为软件开发的前提和依据，作为应用软件系统建设进度控制的依据。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/bf23.html" title="笔记-分析设计阶段监理-22.2.1 项目计划监理">https://www.zenwu.site/posts/bf23.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%88%86%E6%9E%90%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9B%91%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 分析设计阶段监理</a>
+              <a href="/tags/%E9%A1%B9%E7%9B%AE%E8%AE%A1%E5%88%92%E7%9B%91%E7%90%86/" rel="tag"><i class="fa fa-tag"></i> 项目计划监理</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/dfc6.html" rel="prev" title="笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容">
+                  <i class="fa fa-angle-left"></i> 笔记-分析设计阶段监理-22.2 分析设计阶段监理工作内容
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/bf23.html" rel="next" title="笔记-分析设计阶段监理-22.2.3 软件质量保证计划">
+                  笔记-分析设计阶段监理-22.2.3 软件质量保证计划 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

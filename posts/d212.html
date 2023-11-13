@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="项目质量是项目建设的核心，是决定整个信息系统工程建设成败的关键，也是一个项目是否成功的最根本标志，质量控制是进度控制、成本控制和变更控制的基础和前提，如果质量失控，那么成本、进度和变更控制就无从谈起，质量控制要贯穿于项目建设的始终。 由于信息系统工作的建设过程是人的智力的劳动，具有可视性差、变更比较频繁等特点，因此信息工程的质量控制过程就显得更加复杂。信息系统的质量控制主要从质量体系控制、实施过程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-质量控制-6.1 信息系统工程质量和质量控制的概念">
+<meta property="og:url" content="https://www.zenwu.site/posts/d212.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="项目质量是项目建设的核心，是决定整个信息系统工程建设成败的关键，也是一个项目是否成功的最根本标志，质量控制是进度控制、成本控制和变更控制的基础和前提，如果质量失控，那么成本、进度和变更控制就无从谈起，质量控制要贯穿于项目建设的始终。 由于信息系统工作的建设过程是人的智力的劳动，具有可视性差、变更比较频繁等特点，因此信息工程的质量控制过程就显得更加复杂。信息系统的质量控制主要从质量体系控制、实施过程">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-19T14:32:12.000Z">
+<meta property="article:modified_time" content="2023-02-24T14:33:51.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="质量控制">
+<meta property="article:tag" content="信息系统工程质量">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/d212.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/d212.html","path":"posts/d212.html","title":"笔记-质量控制-6.1 信息系统工程质量和质量控制的概念"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-质量控制-6.1 信息系统工程质量和质量控制的概念 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#6-1-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E5%92%8C%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">6.1 信息系统工程质量和质量控制的概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-1-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E7%9A%84%E5%AE%9A%E4%B9%89"><span class="nav-text">6.1.1 信息系统工程质量的定义</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%80%BB%E4%BD%93%E8%B4%A8%E9%87%8F%E7%9B%AE%E6%A0%87%E7%9A%84%E5%86%85%E5%AE%B9%E5%85%B7%E6%9C%89%E5%B9%BF%E6%B3%9B%E6%80%A7"><span class="nav-text">1. 项目的总体质量目标的内容具有广泛性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E9%A1%B9%E7%9B%AE%E7%9A%84%E6%80%BB%E4%BD%93%E8%B4%A8%E9%87%8F%E7%9A%84%E5%BD%A2%E6%88%90%E5%85%B7%E6%9C%89%E6%98%8E%E6%98%BE%E7%9A%84%E8%BF%87%E7%A8%8B%E6%80%A7"><span class="nav-text">2. 项目的总体质量的形成具有明显的过程性</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-2-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">6.1.2 信息系统工程质量控制的概念</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-3-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E5%8E%9F%E5%88%99"><span class="nav-text">6.1.3 信息系统工程质量控制的原则</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E8%A6%81%E4%B8%8E%E5%BB%BA%E8%AE%BE%E5%8D%95%E4%BD%8D%E5%AF%B9%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E7%9B%91%E7%9D%A3%E7%B4%A7%E5%AF%86%E7%BB%93%E5%90%88"><span class="nav-text">1. 质量控制要与建设单位对工程质量监督紧密结合</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E6%98%AF%E4%B8%80%E7%A7%8D%E7%B3%BB%E7%BB%9F%E8%BF%87%E7%A8%8B%E7%9A%84%E6%8E%A7%E5%88%B6"><span class="nav-text">2. 质量控制是一种系统过程的控制</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E8%A6%81%E5%AE%9E%E6%96%BD%E5%85%A8%E9%9D%A2%E6%8E%A7%E5%88%B6"><span class="nav-text">3. 质量控制要实施全面控制</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-4-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6%E7%9A%84%E7%89%B9%E7%82%B9"><span class="nav-text">6.1.4 信息系统工程质量控制的特点</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/d212.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-质量控制-6.1 信息系统工程质量和质量控制的概念 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-质量控制-6.1 信息系统工程质量和质量控制的概念
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-02-19 22:32:12" itemprop="dateCreated datePublished" datetime="2023-02-19T22:32:12+08:00">2023-02-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-02-24 22:33:51" itemprop="dateModified" datetime="2023-02-24T22:33:51+08:00">2023-02-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<p>项目质量是项目建设的核心，是决定整个信息系统工程建设成败的关键，也是一个项目是否成功的最根本标志，质量控制是进度控制、成本控制和变更控制的基础和前提，如果质量失控，那么成本、进度和变更控制就无从谈起，质量控制要贯穿于项目建设的始终。</p>
+<p>由于信息系统工作的建设过程是人的智力的劳动，具有可视性差、变更比较频繁等特点，因此信息工程的质量控制过程就显得更加复杂。信息系统的质量控制主要从质量体系控制、实施过程控制以及单元控制入手，通过阶段性评审，评估，以及实时测试等手段尽早地发现质量问题，找出解决问题的方法，最终达到工程的质量目标。</p>
+<p>本章包含的内容主要包括<strong>质量体系控制</strong>、<strong>工程各阶段的质量控制监理单位法</strong>以及<strong>质量控制监理手段</strong>三个方面。</p>
+<span id="more"></span>
+<h2 id="6-1-信息系统工程质量和质量控制的概念"><a href="#6-1-信息系统工程质量和质量控制的概念" class="headerlink" title="6.1 信息系统工程质量和质量控制的概念"></a>6.1 信息系统工程质量和质量控制的概念</h2><h3 id="6-1-1-信息系统工程质量的定义"><a href="#6-1-1-信息系统工程质量的定义" class="headerlink" title="6.1.1 信息系统工程质量的定义"></a>6.1.1 信息系统工程质量的定义</h3><p><strong>质量是指“产品、服务或过程满足规定或潜在要求（或需求）的特征和特征的总和”。</strong>对信息工程项目而言，最终产品就是建成投入使用的信息工程项目，质量要求就是对整个信息工程项目与实施过程所提出的“满足规定或潜在要求（或需求）的特征和特征的总和”，即要达到的信息工程项目质量目标。</p>
+<p>如果项目是在给定的时间、成本和质量等约束条件下完成，那么一个项目就是成功的。一般情况下，时间和成本是可以清楚地度量的，但是项目的质量却很难以简单的一个量化标准来理解和控制。每一个行业都有本行业的一套标准，不管是行为标准还是技术标准或者约定，这些标准也就是所谓的质量标准，项目的结果只有达到了相关的项目质量标准，项目的结果才是满足了质量要求。就信息系统工程来说，一般要从<strong>功能、性能、安全性、可靠性、易用性以及可扩展性</strong>等方面来考察其质量，但是最根本的还要看信息系统工程完成之后所能够满足建设单位预期的要求。如果一个系统的性能<strong>符合预期要求</strong>，并且用户可以方便的使用，令用户感到满意，就可以说明它达到了一定的质量水准，如果一个信息系统工程建成之后，不适合用户使用，那么也不能说它的质量达到了要求。<strong>信息系统工程质量</strong>具有如下特点。</p>
+<h4 id="1-项目的总体质量目标的内容具有广泛性"><a href="#1-项目的总体质量目标的内容具有广泛性" class="headerlink" title="1. 项目的总体质量目标的内容具有广泛性"></a>1. 项目的总体质量目标的内容具有广泛性</h4><p>信息系统工程项目实体、功能和使用价值的各方面都应当列入项目的质量目标范围。同时，对所有参与工程项目建设的单位和人员的资质、素质、能力和水平，特别是对其工作质量的要求也是信息工程项目质量目标不可缺少的组成部分，因为他们的工作质量直接影响产品的质量。</p>
+<h4 id="2-项目的总体质量的形成具有明显的过程性"><a href="#2-项目的总体质量的形成具有明显的过程性" class="headerlink" title="2. 项目的总体质量的形成具有明显的过程性"></a>2. 项目的总体质量的形成具有明显的过程性</h4><p>实现信息工程项目总体质量目标与形成质量的过程息息相关。工程项目建设的每个阶段都对工程建设项目质量的形成起着重要的作用，对工程质量产生重要影响。工程实施的每个阶段都有其具体的质量控制任务，监理工程师应当根据每个阶段的特点，确定各阶段质量控制的目标和任务，以便实行全过程的控制。</p>
+<h3 id="6-1-2-信息系统工程质量控制的概念"><a href="#6-1-2-信息系统工程质量控制的概念" class="headerlink" title="6.1.2 信息系统工程质量控制的概念"></a>6.1.2 信息系统工程质量控制的概念</h3><p>信息系统建立过程中的质量控制是指在力求实现信息工程项目总目标的过程中，为满足信息工程项目总体质量要求所开展的有关的监督管理活动。质量控制是一个系统过程，贯穿全过程，<strong>监理单位的质量控制主要包括项目实施过程的质量控制以及项目实施结果与服务的质量控制</strong>。质量控制就是监理工程师采取有效的措施，监督项目的实施过程以及具体的实施结果，判断是否符合有关的质量标准，并确定消除产生不良结果的方法。质量控制贯穿于项目建设的始终，是信息系统工程监理的四大控制目标（<strong>质量控制、投资控制、进度控制、变更控制</strong>）的重点。</p>
+<h3 id="6-1-3-信息系统工程质量控制的原则"><a href="#6-1-3-信息系统工程质量控制的原则" class="headerlink" title="6.1.3 信息系统工程质量控制的原则"></a>6.1.3 信息系统工程质量控制的原则</h3><p>质量控制，贯穿于可行性研究、设计、实施、验收、投入使用以及系统运行维护等阶段，主要包括组织设计方案评比，进行设计方案磋商审核，控制设计变更，在实施前通过审查承建单位资质等。质量控制把握有如下<strong>原则</strong>。</p>
+<h4 id="1-质量控制要与建设单位对工程质量监督紧密结合"><a href="#1-质量控制要与建设单位对工程质量监督紧密结合" class="headerlink" title="1. 质量控制要与建设单位对工程质量监督紧密结合"></a>1. 质量控制要与建设单位对工程质量监督紧密结合</h4><p>就信息系统工程的投资目标、进度目标、质量目标而言，<strong>质量目标特别受到建设单位项目管理部门的重视</strong>，因此，<strong>衡量</strong>信息工程项目质量是否达到计划标准和要求，需要监理单位及其监理工程师与建设单位的工程质量监督管理部门<strong>共同担负</strong>对信息工程项目的质量进行监督管理的任务。</p>
+<h4 id="2-质量控制是一种系统过程的控制"><a href="#2-质量控制是一种系统过程的控制" class="headerlink" title="2. 质量控制是一种系统过程的控制"></a>2. 质量控制是一种系统过程的控制</h4><p>项目的实施过程，也是其质量形成的过程。要使信息工程项目的质量控制能够产生所期望的成效，信息工程监理单位及其监理工程师就要对信息工程项目的实施全过程不间断地进行质量控制。</p>
+<h4 id="3-质量控制要实施全面控制"><a href="#3-质量控制要实施全面控制" class="headerlink" title="3. 质量控制要实施全面控制"></a>3. 质量控制要实施全面控制</h4><p>由于信息工程项目质量内容具有广泛性，所以信息工程项目需要实施全面的质量控制。对信息工程项目质量实施全面控制，要把控制重点放在各种干扰质量的因素上，做好风险分析和管理工作，预测各种可能出现的质量偏差，并采取有效的预防措施。监理单位工作重点是监督信息系统工程关键性过程和检查工程阶段性结果，判定其是否符合预定的质量要求，并在整个监理过程中强调对项目质量的<strong>事前控制、事中控制和事后控制</strong>。</p>
+<p>（1）对于<strong>不同</strong>的工程内容应采取不同的<strong>质量控制方法</strong>；<br>（2）以信息系统工程建设及验收规范、工程质量验收及评审标准等为依据，<strong>督促</strong>承建单位全面实现承建合同约定的<strong>质量目标</strong>；<br>（3）对承建单位的<strong>人员、设备、方法、环境</strong>等因素进行全面的质量<strong>监察</strong>，督促承建单位的<strong>质量保证体系</strong>落实到位；<br>（4）对信息系统工程建设全过程实施质量控制，以<strong>质量预控</strong>为重点，做好<strong>技术总体方案、系统集成方案、开发&#x2F;测试计划、培训计划等审核把关</strong>；<br>（5）确定项目<strong>质量控制的关键节点</strong>，重点控制，不仅监理工程师要严格把关，还要组织专家顾问组进行集体论证；论证通过后，方可通过质量验收；<br>（6）对<strong>工程的关键工序和重要实施过程</strong>进行跟踪参与，及时发现质量问题，并及时纠正，消除质量隐患；<br>（7）坚持本工序质量不合格或未进行验收签认的下一道工序不得进行建设，以<strong>防止质量隐患积累</strong>；<br>（8）对工程项目的<strong>系统集成、应用系统开发、培训等</strong>进行<strong>全面的质量控制</strong>，监督承建单位的质量保证体系落实到位，加强作业程序管理，实现工程建设的<strong>过程控制</strong>。</p>
+<h3 id="6-1-4-信息系统工程质量控制的特点"><a href="#6-1-4-信息系统工程质量控制的特点" class="headerlink" title="6.1.4 信息系统工程质量控制的特点"></a>6.1.4 信息系统工程质量控制的特点</h3><p>信息系统工程的质量控制和其他工程的质量控制比较，有其<strong>特殊性</strong>，只有对信息系统工程的特点以及质量影响要素有比较清楚的认识，我们对其质量的控制才能有针对性。下面举例说明<strong>信息系统工程特点以及质量影响要素</strong>。</p>
+<p>（1）信息工程的建设过程是人的智力劳动过程，个人发挥的空间比较大，而且人员跳槽的现象比较普遍，因此<strong>要控制质量，首先要控制人</strong>。但是，监理单位对承建单位的人员控制并不是人事权的控制，而主要通过<strong>审查</strong>项目主要负责人是否具有信息产业部颁发的项目经理证书，以保证项目经理的<strong>素质</strong>；审查承建单位的项目过<strong>程质量控制体系</strong>，以保证项目能够在有序的状态下进行，最大可能<strong>减少个人的随意性</strong>；督促承建单位建立有效的版本控制体系和文档管理体系，最大可能减小人员流动所带来的损失。<br>（2）<strong>变更</strong>是信息系统特别是应用系统比较大的一个特点。在需求获取过程中必然会存在需求不完整、不清晰的情况，而对于软件系统来说，随意改动也将引发大量的质量缺陷及隐患，因此，对于信息系统的变更，我们要科学评估变更的风险，并严格执行变更处理程序。具体内容可以参照变更控制部分。<br>（3）定位故障比较困难。比如一个信息系统的性能问题可能是由网络性能、主机性能、数据库性能、中间件性能和应用软件性能共同决定的，某一部分出现故障，就会影响整体的性能，因此我们在进行质量控制时既要切实控制单体的质量，又要有全局的观念。<br>（4）信息系统工程的可视性差，质量缺陷比较掩蔽，无法直接通过人的感官系统直观地判断一个信息系统质量的优劣，质量问题往往在特定的条件下才会出现，因此在质量控制时<strong>要进行大量的、不断的实时测试</strong>。测试对于信息系统工程质量控制来说是必需的。<br>（5）改正错误的代价往往较大，并且可能引发其他的质量问题。比如在软件开发过程中、即使发现了软件的错误，也不能随意修改。因为修改一个问题，可能会引起更多的问题，因此在质量控制时要做好<strong>质量改进评估</strong>。<br>（6）<strong>质量纠纷</strong>认定的难度大。由于信息系统往往存在需求理解的偏差，以及质量问题往往是在特定的条件下才会发生等情况，建设单位和承建单位对质量问题的认定可能会产生分歧，一方认为的质量问题，另外一方可能认为不是问题，因此监理单位在质量控制过程中除了要严把需求关之外，还要站在一个独立公正的立场上去处理质量纠纷，并且要以双方认可的测试结果作为判定质量问题的依据。<br>（7）<strong>理想色彩的进度计划以及献礼工程往往会导致大量的质量问题出现</strong>。信息系统工程不像盖楼房，多增加一些设备和人手就能加快进度，因此进度计划的制定一定要科学合理并且留有余量，避免由于严重的质量问题返工所带来的进度计划的失控，但是同时要注意的是质量控制和进度控制都要在一个适合的范围之内，要协调进行。<br>（8）能否选择优秀的系统承建单位是质量控制最关键的因素。因为信息系统工程完成的主体是承建单位，因此在招投标阶段对集成商的选择非常重要，如果监理单位能较早介入工程，那么在集成商资质的审核方面会严格把关。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/d212.html" title="笔记-质量控制-6.1 信息系统工程质量和质量控制的概念">https://www.zenwu.site/posts/d212.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%B4%A8%E9%87%8F%E6%8E%A7%E5%88%B6/" rel="tag"><i class="fa fa-tag"></i> 质量控制</a>
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/" rel="tag"><i class="fa fa-tag"></i> 信息系统工程质量</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/2872.html" rel="prev" title="笔记-监理案例题-2022年下-网络系统监理-验收阶段+培训+硬件设备">
+                  <i class="fa fa-angle-left"></i> 笔记-监理案例题-2022年下-网络系统监理-验收阶段+培训+硬件设备
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/d213.html" rel="next" title="笔记-质量控制-6.2 质量体系控制">
+                  笔记-质量控制-6.2 质量体系控制 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

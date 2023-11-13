@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="1. 生命周期阶的五阶段划分为了有效地进行系统的开发和管理，根据系统生命周期的概念，一般可以将信息系统的开发分成5个阶段，即总体规划阶段、系统分析阶段、系统设计阶段、系统实施阶段、系统运行和评价阶段。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-信息系统开发基础-信息系统生命周期">
+<meta property="og:url" content="https://www.zenwu.site/posts/c8ab.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="1. 生命周期阶的五阶段划分为了有效地进行系统的开发和管理，根据系统生命周期的概念，一般可以将信息系统的开发分成5个阶段，即总体规划阶段、系统分析阶段、系统设计阶段、系统实施阶段、系统运行和评价阶段。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-26T14:49:51.000Z">
+<meta property="article:modified_time" content="2020-04-26T14:49:51.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="信息系统开发基础">
+<meta property="article:tag" content="生命周期">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/c8ab.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/c8ab.html","path":"posts/c8ab.html","title":"笔记-信息系统开发基础-信息系统生命周期"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-信息系统开发基础-信息系统生命周期 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%98%B6%E7%9A%84%E4%BA%94%E9%98%B6%E6%AE%B5%E5%88%92%E5%88%86"><span class="nav-text">1. 生命周期阶的五阶段划分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-%E6%80%BB%E4%BD%93%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5"><span class="nav-text">1.1. 总体规划阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E9%98%B6%E6%AE%B5"><span class="nav-text">1.2. 系统分析阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5"><span class="nav-text">1.3. 系统设计阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-4-%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%96%BD%E9%98%B6%E6%AE%B5"><span class="nav-text">1.4. 系统实施阶段</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-5-%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E5%92%8C%E8%AF%84%E4%BB%B7%EF%BC%88%E7%BB%B4%E6%8A%A4%EF%BC%89%E9%98%B6%E6%AE%B5"><span class="nav-text">1.5. 系统运行和评价（维护）阶段</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E9%98%B6%E7%9A%84%E5%9B%9B%E9%98%B6%E6%AE%B5%E5%88%92%E5%88%86"><span class="nav-text">2. 生命周期阶的四阶段划分</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5%EF%BC%88%E7%AB%8B%E9%A1%B9%E9%98%B6%E6%AE%B5%EF%BC%89"><span class="nav-text">2.1. 信息系统的规划阶段（立项阶段）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BC%80%E5%8F%91%E9%98%B6%E6%AE%B5%EF%BC%88%E5%BC%80%E5%8F%91%E9%98%B6%E6%AE%B5%EF%BC%89"><span class="nav-text">2.2. 信息系统的开发阶段（开发阶段）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-1-%E6%80%BB%E4%BD%93%E8%A7%84%E5%88%92%E9%98%B6%E6%AE%B5"><span class="nav-text">2.2.1. 总体规划阶段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-2-%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E9%98%B6%E6%AE%B5"><span class="nav-text">2.2.2. 系统分析阶段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-3-%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5"><span class="nav-text">2.2.3. 系统设计阶段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-4-%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%96%BD%E9%98%B6%E6%AE%B5"><span class="nav-text">2.2.4. 系统实施阶段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-5-%E7%B3%BB%E7%BB%9F%E9%AA%8C%E6%94%B6%E9%98%B6%E6%AE%B5"><span class="nav-text">2.2.5. 系统验收阶段</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%BB%B4%E6%8A%A4%E9%98%B6%E6%AE%B5-%E8%BF%90%E7%BB%B4%E9%98%B6%E6%AE%B5"><span class="nav-text">2.3. 信息系统运行维护阶段(运维阶段)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%96%B0%E9%98%B6%E6%AE%B5%EF%BC%88%E6%B6%88%E4%BA%A1%E9%98%B6%E6%AE%B5%EF%BC%89"><span class="nav-text">2.4. 信息系统更新阶段（消亡阶段）</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/c8ab.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-信息系统开发基础-信息系统生命周期 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-信息系统开发基础-信息系统生命周期
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-26 22:49:51" itemprop="dateCreated datePublished" datetime="2020-04-26T22:49:51+08:00">2020-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">项目管理的培训笔记</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E7%9A%84%E5%9F%B9%E8%AE%AD%E7%AC%94%E8%AE%B0/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">信息系统开发基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h2 id="1-生命周期阶的五阶段划分"><a href="#1-生命周期阶的五阶段划分" class="headerlink" title="1. 生命周期阶的五阶段划分"></a>1. 生命周期阶的五阶段划分</h2><p>为了有效地进行系统的开发和管理，根据系统生命周期的概念，一般可以将信息系统的开发分成5个阶段，即<strong>总体规划阶段、系统分析阶段、系统设计阶段、系统实施阶段、系统运行和评价阶段</strong>。</p>
+<span id="more"></span>
+<h3 id="1-1-总体规划阶段"><a href="#1-1-总体规划阶段" class="headerlink" title="1.1. 总体规划阶段"></a>1.1. 总体规划阶段</h3><p>一个比较完整的总体规划应当包括信息系统开发目标、总体结构、管理流程、实施计划、技术规范。系统规划阶段的任务：</p>
+<ol>
+<li>对组织的环境、目标及现行系统的状况进行初步调查，根据组织目标和发展战略，确定信息系统的发展战略；</li>
+<li>对建设新系统的需求做出分析和预测;</li>
+<li>同时考虑建设新系统所受的各种约束；</li>
+<li>研究建设新系统的必要性和可能性；</li>
+<li>根据需要与可能，给出拟建系统的备选方案；</li>
+<li>对这些方案进行可行性研究，写出可行性研究报告。</li>
+</ol>
+<p>可行性研究报告审议通过后，将新系统建设方案及实施计划编写成系统设计任务书。</p>
+<blockquote>
+<p>系统规划阶段是现状分析、了解需求形成可行性研究报告和系统设计任务书。<br>可行性研究报告、系统设计任务书（系统建设方案、实施计划）</p>
+</blockquote>
+<h3 id="1-2-系统分析阶段"><a href="#1-2-系统分析阶段" class="headerlink" title="1.2. 系统分析阶段"></a>1.2. 系统分析阶段</h3><p>目标是为系统设计阶段提供系统的逻辑模型，内容包括组织结构及功能分析、业务流程分析、数据和数据流程分析及系统初步方案。</p>
+<p>数据流图（Data Flow Diagram）：简称DFD，它从数据传递和加工角度，以图形方式来表达系统的逻辑功能、数据在系统内部的逻辑流向和逻辑变换过程，是结构化系统分析方法的主要表达工具及用于表示软件模型的一种图示方法。</p>
+<blockquote>
+<p>系统分析阶段主要是根据系统设计任务书确定系统的目标逻辑模型形成系统说明书。<br>建立新系统逻辑模型（做什么）<br>系统需求规格书、确认&#x2F;新系统测试计划</p>
+</blockquote>
+<h3 id="1-3-系统设计阶段"><a href="#1-3-系统设计阶段" class="headerlink" title="1.3. 系统设计阶段"></a>1.3. 系统设计阶段</h3><p>系统设计的主要目的就是为下一阶段的系统实施制定蓝图。系统设计包括两个方面的内容：</p>
+<p>首先是系统<strong>总体设计</strong>，总体设计的任务是提供信息系统的概括的解决方案，主要内容包括信息系统的功能模块的划分，功能模块之间的层次结构和关系。</p>
+<p>其次是系统<strong>详细设计</strong>，详细设计的任务是把系统总体设计的结果具体化。这个阶段的任务不是编写程序，而是设计出各个功能模块的详细规格说明，如信息系统各个模块的处理流程，系统的数据流程和数据库逻辑结构的设计。工具如使用ER图。</p>
+<p>根据系统分析的结果设计出信息系统的实施方案，主要内容包括系统架构设计、数据库设计、处理流程设计、功能模块设计、安全控制方案设计、系统组织和队伍设计及系统管理流程设计。</p>
+<blockquote>
+<p>系统设计阶段根据系统说明书进行技术方案设计形成总体设计和详细设计报告。<br>建立新系统物理模型（怎么做）<br>系统设计说明书等</p>
+</blockquote>
+<h3 id="1-4-系统实施阶段"><a href="#1-4-系统实施阶段" class="headerlink" title="1.4. 系统实施阶段"></a>1.4. 系统实施阶段</h3><p>是将设计阶段的成果在计算机和网络上具体实现，即将设计文本变成能在计算机上运行的软件系统。由于系统实施阶段是对以前全部工作的检验，因此用户的参与特别重要。</p>
+<blockquote>
+<p>系统实施阶段主要开展设备购置、安装调试、编码测试等工作。<br>源码、测试报告</p>
+</blockquote>
+<h3 id="1-5-系统运行和评价（维护）阶段"><a href="#1-5-系统运行和评价（维护）阶段" class="headerlink" title="1.5. 系统运行和评价（维护）阶段"></a>1.5. 系统运行和评价（维护）阶段</h3><p>通过试运行，系统性能的优劣及其他各种问题都会暴露在用户面前，即进入了系统验收阶段。</p>
+<blockquote>
+<p>系统运行和维护阶段主要是上线后的系统维护和评价工作。<br>维护与评价日志</p>
+</blockquote>
+<pre><code>软件生命周期中时间最长的阶段是（B）阶段。
+A．需求分析
+B．软件维护
+C．软件设计
+D．软件开发
+</code></pre>
+<p>每个阶段都有其明确的任务，任务完成后都将交付给下一阶段一定规格的文档，作为下一阶段开发的依据。这种开发过程在直观上就像一级一级的瀑布，所以系统开发生命周期也称为“瀑布模型”。</p>
+<p>有调查数据显示，系统生命周期中各个阶段的工作量大致为：总体规划阶段占9%，系统分析阶段占15%，系统设计阶段占20%，系统实施阶段占50%，系统运行和评价阶段占6%。可以看出，系统实施阶段的工作约占总工作量的一半，是各个阶段中工作量最大的。</p>
+<h2 id="2-生命周期阶的四阶段划分"><a href="#2-生命周期阶的四阶段划分" class="headerlink" title="2. 生命周期阶的四阶段划分"></a>2. 生命周期阶的四阶段划分</h2><p>参考教程《信息系统项目管理师教程（第3版）》p10，为了便于论述针对信息系统的项目管理，信息系统的生命周期还可以简化：</p>
+<ul>
+<li>立项（系统规划）</li>
+<li>开发（系统分析、系统设计、系统实施、系统验收等工作）</li>
+<li>运维阶段</li>
+<li>消亡阶段</li>
+</ul>
+<h3 id="2-1-信息系统的规划阶段（立项阶段）"><a href="#2-1-信息系统的规划阶段（立项阶段）" class="headerlink" title="2.1. 信息系统的规划阶段（立项阶段）"></a>2.1. 信息系统的规划阶段（立项阶段）</h3><p>本阶段的目标是制定出信息系统的长期发展方案、决定信息系统在整个生命周期内的发展方向、规模和发展进程。</p>
+<h3 id="2-2-信息系统的开发阶段（开发阶段）"><a href="#2-2-信息系统的开发阶段（开发阶段）" class="headerlink" title="2.2. 信息系统的开发阶段（开发阶段）"></a>2.2. 信息系统的开发阶段（开发阶段）</h3><p>信息系统的开发阶段是信息系统生命周期中最重要和最关键的阶段。<strong>该阶段又可分为总体规划、系统分析、系统设计、系统实施和系统验收5个阶段。</strong></p>
+<h4 id="2-2-1-总体规划阶段"><a href="#2-2-1-总体规划阶段" class="headerlink" title="2.2.1. 总体规划阶段"></a>2.2.1. 总体规划阶段</h4><p><strong>信息系统总体规划是系统开发的起始阶段，它的基础是需求分析</strong>。本阶段将：</p>
+<ul>
+<li>明确信息系统在企业经营战略中的作用和地位；</li>
+<li>指导信息系统的开发；</li>
+<li>优化配置和利用各种资源，包括内部资源和外部资源；</li>
+<li>通过规划过程规范企业的业务流程。</li>
+</ul>
+<p>一个比较完整的总体规划，应当包括信息系统的开发目标、信息系统的总体架构、信息系统的组织结构和管理流程、信息系统的实施计划、信息系统的技术规范等。</p>
+<h4 id="2-2-2-系统分析阶段"><a href="#2-2-2-系统分析阶段" class="headerlink" title="2.2.2. 系统分析阶段"></a>2.2.2. 系统分析阶段</h4><p>目标是为系统设计阶段提供系统的<strong>逻辑模型</strong>，内容包括组织结构及功能分析、业务流程分析、数据和数据流程分析、系统初步方案等。</p>
+<p>数据流图（Data Flow Diagram）：简称DFD，它从数据传递和加工角度，以图形方式来表达系统的逻辑功能、数据在系统内部的逻辑流向和逻辑变换过程，是结构化系统分析方法的主要表达工具及用于表示软件模型的一种图示方法。<br>数据流图以图形的方式描绘数据在系统中流动和处理的过程，由于它只反映系统必须完成的逻辑功能，所以它是一种功能模型。</p>
+<h4 id="2-2-3-系统设计阶段"><a href="#2-2-3-系统设计阶段" class="headerlink" title="2.2.3. 系统设计阶段"></a>2.2.3. 系统设计阶段</h4><p>根据系统分析的结果设计出信息系统的实施方案，内容包括系统架构设计、数据库设计、处理流程设计、功能模块设计、安全控制方案设计、系统组织和队伍设计、系统管理流程设计等。</p>
+<h4 id="2-2-4-系统实施阶段"><a href="#2-2-4-系统实施阶段" class="headerlink" title="2.2.4. 系统实施阶段"></a>2.2.4. 系统实施阶段</h4><p>将设计阶段的结果在计算机和网络上具体实现，也就是将设计文本变成能在计算机上运行的软件系统由于系统实施阶段是对以前的全部工作的检验，因此，系统实施阶段用户的参与特别重要。</p>
+<h4 id="2-2-5-系统验收阶段"><a href="#2-2-5-系统验收阶段" class="headerlink" title="2.2.5. 系统验收阶段"></a>2.2.5. 系统验收阶段</h4><p>通过试运行，系统性能的优劣、是否做到了用户友好等问题都会暴露在用户面前，这时就进入了系统验收阶段。</p>
+<h3 id="2-3-信息系统运行维护阶段-运维阶段"><a href="#2-3-信息系统运行维护阶段-运维阶段" class="headerlink" title="2.3. 信息系统运行维护阶段(运维阶段)"></a>2.3. 信息系统运行维护阶段(运维阶段)</h3><p>当信息系统通过验收，正式移交给用户以后，系统就进入了运行阶段。长时间的运行是检验系统质量的试金石。</p>
+<h3 id="2-4-信息系统更新阶段（消亡阶段）"><a href="#2-4-信息系统更新阶段（消亡阶段）" class="headerlink" title="2.4. 信息系统更新阶段（消亡阶段）"></a>2.4. 信息系统更新阶段（消亡阶段）</h3><p>开发好一个信息系统，并想着让它一劳永逸地运行下去，是不现实的。企业的信息系统经常会不可避免地遇到系统更新改造、功能扩展，甚至是报废重建的情况。对此，企业在信息系统建设的初期就要注意系统的消亡条件和时机，以及由此而花费的成本。</p>
+<p>转载&#x2F;整理：<br>希赛教育的试题：<a target="_blank" rel="noopener" href="https://www.educity.cn/">https://www.educity.cn/</a></p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/c8ab.html" title="笔记-信息系统开发基础-信息系统生命周期">https://www.zenwu.site/posts/c8ab.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80/" rel="tag"><i class="fa fa-tag"></i> 信息系统开发基础</a>
+              <a href="/tags/%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/" rel="tag"><i class="fa fa-tag"></i> 生命周期</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/7b8c.html" rel="prev" title="笔记-信息系统开发基础-信息系统规划方法-大型新信息系统特征/企业系统规划步骤">
+                  <i class="fa fa-angle-left"></i> 笔记-信息系统开发基础-信息系统规划方法-大型新信息系统特征/企业系统规划步骤
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/696c.html" rel="next" title="笔记-信息化与系统集成技术-信息资源管理">
+                  笔记-信息化与系统集成技术-信息资源管理 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

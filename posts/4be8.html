@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="16.4 网络安全和管理平台方案的评审与网络工程类似，网络安全系统承建方的质量管理体现了承建方本身的管理水平及工程实施的能力，它将直接影响信息系统安全工程的实施和完成后的质量。 网络安全工程的承建方必须取得国家相关主管部门颁发的相关资质。国家对于若干领域（如涉及国家秘密领域）信息系统的建设实施有非常严格的资质管理制度。承建方内部应建立完整的质量保证体系，对公司内部及所实施的工程项目进行质量管理。此">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-信息网络系统建设设计阶段的监理-16.4 网络安全和管理平台方案的评审">
+<meta property="og:url" content="https://www.zenwu.site/posts/4be8.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="16.4 网络安全和管理平台方案的评审与网络工程类似，网络安全系统承建方的质量管理体现了承建方本身的管理水平及工程实施的能力，它将直接影响信息系统安全工程的实施和完成后的质量。 网络安全工程的承建方必须取得国家相关主管部门颁发的相关资质。国家对于若干领域（如涉及国家秘密领域）信息系统的建设实施有非常严格的资质管理制度。承建方内部应建立完整的质量保证体系，对公司内部及所实施的工程项目进行质量管理。此">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-16T14:25:12.000Z">
+<meta property="article:modified_time" content="2022-10-16T14:25:12.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="网络设备">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/4be8.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/4be8.html","path":"posts/4be8.html","title":"笔记-信息网络系统建设设计阶段的监理-16.4 网络安全和管理平台方案的评审"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-信息网络系统建设设计阶段的监理-16.4 网络安全和管理平台方案的评审 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#16-4-%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%92%8C%E7%AE%A1%E7%90%86%E5%B9%B3%E5%8F%B0%E6%96%B9%E6%A1%88%E7%9A%84%E8%AF%84%E5%AE%A1"><span class="nav-text">16.4 网络安全和管理平台方案的评审</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#16-4-1-%E9%98%B2%E7%81%AB%E5%A2%99%E7%B3%BB%E7%BB%9F"><span class="nav-text">16.4.1 防火墙系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E9%98%B2%E7%81%AB%E5%A2%99%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%80%A7%E8%83%BD%E7%9B%91%E7%90%86%E8%AF%84%E5%AE%A1%E8%A6%81%E7%B4%A0"><span class="nav-text">1. 防火墙的功能和性能监理评审要素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%80%A7%E8%83%BD%E6%8C%87%E6%A0%87"><span class="nav-text">2. 性能指标</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-4-2-%E5%85%A5%E4%BE%B5%E7%9B%91%E6%B5%8B%E5%92%8C%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E7%B3%BB%E7%BB%9F"><span class="nav-text">16.4.2 入侵监测和漏洞扫描系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E5%85%A5%E4%BE%B5%E7%9B%91%E6%B5%8B%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%80%A7%E8%83%BD%E8%A6%81%E7%B4%A0"><span class="nav-text">1. 入侵监测系统的功能和性能要素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E6%BC%8F%E6%B4%9E%E6%89%AB%E6%8F%8F%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%80%A7%E8%83%BD%E8%A6%81%E7%B4%A0"><span class="nav-text">2. 漏洞扫描系统的功能和性能要素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-4-3-%E5%85%B6%E4%BB%96%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%B3%BB%E7%BB%9F"><span class="nav-text">16.4.3 其他网络安全系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%BD%91%E7%BB%9C%E9%98%B2%E7%97%85%E6%AF%92%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%80%A7%E8%83%BD%E8%A6%81%E7%B4%A0"><span class="nav-text">1. 网络防病毒系统的功能和性能要素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AE%89%E5%85%A8%E5%AE%A1%E8%AE%A1%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%80%A7%E8%83%BD%E8%A6%81%E7%B4%A0"><span class="nav-text">2. 安全审计的功能和性能要素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Web%E4%BF%A1%E6%81%AF%E9%98%B2%E7%AF%A1%E6%94%B9%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%80%A7%E8%83%BD%E8%A6%81%E7%B4%A0"><span class="nav-text">3. Web信息防篡改系统的功能和性能要素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E7%BD%91%E9%97%B8%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%80%A7%E8%83%BD%E8%A6%81%E7%B4%A0"><span class="nav-text">4. 网闸的功能和性能要素</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#16-4-4-%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-text">16.4.4 网络管理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%BD%91%E7%AE%A1%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%8A%9F%E8%83%BD%E5%92%8C%E6%80%A7%E8%83%BD%E8%A6%81%E7%B4%A0"><span class="nav-text">1. 网管系统的功能和性能要素</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E5%AE%9E%E9%99%85%E5%BA%94%E7%94%A8%E7%9A%84%E5%9F%BA%E6%9C%AC%E9%9C%80%E6%B1%82"><span class="nav-text">2. 实际应用的基本需求</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/4be8.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-信息网络系统建设设计阶段的监理-16.4 网络安全和管理平台方案的评审 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-信息网络系统建设设计阶段的监理-16.4 网络安全和管理平台方案的评审
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-16 22:25:12" itemprop="dateCreated datePublished" datetime="2022-10-16T22:25:12+08:00">2022-10-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E5%BB%BA%E8%AE%BE%E8%AE%BE%E8%AE%A1%E9%98%B6%E6%AE%B5%E7%9A%84%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息网络系统建设设计阶段的监理</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h2 id="16-4-网络安全和管理平台方案的评审"><a href="#16-4-网络安全和管理平台方案的评审" class="headerlink" title="16.4 网络安全和管理平台方案的评审"></a>16.4 网络安全和管理平台方案的评审</h2><p>与网络工程类似，网络安全系统承建方的质量管理体现了承建方本身的管理水平及工程实施的能力，它将直接影响信息系统安全工程的实施和完成后的质量。</p>
+<p>网络安全工程的承建方必须取得国家相关主管部门颁发的相关资质。国家对于若干领域（如涉及国家秘密领域）信息系统的建设实施有非常严格的资质管理制度。承建方内部应建立完整的质量保证体系，对公司内部及所实施的工程项目进行质量管理。<br>此外，在网络安全系统监理过程，监理方应在以下几个方面加以重视，这是信息安全工程不同于其他工程监理的重要内容。<br>（1）风险分析的有效性、准确性。风险分析是确定安全需求的基础，风险分析的有效性、准确性是确保系统安全的基础，监理需要从风险分析的方法、流程、结论等方面，把握分析结论的科学性、准确性，从而保证其“可信度”。<br>（2）确保符合国家法令、法规的要求。信息安全是一个政策性非常强的领域，符合国家法令、法规是对信息系统安全的基本要求。<br>（3）保证有关评审是在相关职能部门的主持下完成的。由于信息安全的特殊性，国家有关法令规定了其评审单位必须是有关职能部门，监理应协助用户保证这一点，督促承建方进行方案的评审。<br>（4）从技术、市场、工程组织实施、售后服务等各个环节对网络系统的安全性进行整体和分项评估，避免出现任何技术和管理漏洞。</p>
+<h3 id="16-4-1-防火墙系统"><a href="#16-4-1-防火墙系统" class="headerlink" title="16.4.1 防火墙系统"></a>16.4.1 防火墙系统</h3><h4 id="1-防火墙的功能和性能监理评审要素"><a href="#1-防火墙的功能和性能监理评审要素" class="headerlink" title="1. 防火墙的功能和性能监理评审要素"></a>1. 防火墙的功能和性能监理评审要素</h4><p>主要包括以下内容：<br>（1）支持<strong>透明和路由</strong>两种工作模式。<br>（2）集成<strong>VPN网关</strong>功能。<br>（3）支持<strong>广泛的网络通信协议和应用协议</strong>，包括IPSEC、H.323等，能够满足网络视频会议、VOD和IP电话等多媒体数据流的传输要求。支持多种协议及控制，满足应用需要及应用控制严格性要求，支持TCP&#x2F;IP、IPX, ICMP&#x2F;ARP&#x2F;RARP、OSPF、NETBEUI,SNMP、802.1Q、VOIP、DNS等相关协议及控制。<br>（4）支持多种<strong>入侵监测类</strong>型，包括扫描探测、DoS、Web攻击、特洛伊木马等。<br>（5）支持<strong>SSH远程</strong>安全登录。<br>（6）支持对HTTP、FTP、SMTP等服务类型的访问控制。<br>（7）支持<strong>静态、动态和双向的NAT</strong>。<br>（8）支持<strong>域名解析</strong>，支持链路自动切换。<br>（9）支持对日志<strong>的统计分析</strong>功能，同时日志是否可以存储在本地和网络数据库上。<br>（10）对防火墙本身或受保护网段的非法攻击系统提供多种告警方式以及多种级别的告警。<br>（11）提供策略备份和恢复功能。管理员可以灵活地定制和应用不同的策略，可以方便地进行策略的备份和还原，并可用于灾难恢复。<br>（12）具备<strong>检测DoS攻击</strong>的能力，例如可以检测SYN Flood、Tear Drop、Ping of Death、IP Spoofing等攻击，默认数据包拒绝，过滤源路由IP，动态过滤访问等。<br>（13）支持对<strong>接口和策略</strong>的带宽和流量管理。<br>（14）支持SCMIADS客户隧道配置参数自动集中管理。<br>（15）支持<strong>负载均衡</strong>。<br>（16）支持<strong>双机热备</strong>。<br>（17）支持<strong>Web自动页面</strong>恢复。<br>（18）实现与入侵监测系统的联动。</p>
+<h4 id="2-性能指标"><a href="#2-性能指标" class="headerlink" title="2. 性能指标"></a>2. 性能指标</h4><p>（1）单台设备并发<strong>VPN隧道数</strong>；<br>（2）系统平均无故障时间；<br>（3）网络接口：<br>（4）加密速度；<br>（5）密钥长度；<br>（6）设备连续无故障运行时间；<br>（7）在不产生网络瓶颈、千兆和百兆网络环境下防火墙的吞吐量；<br>（8）防火墙的并发连接数。</p>
+<h3 id="16-4-2-入侵监测和漏洞扫描系统"><a href="#16-4-2-入侵监测和漏洞扫描系统" class="headerlink" title="16.4.2 入侵监测和漏洞扫描系统"></a>16.4.2 入侵监测和漏洞扫描系统</h3><h4 id="1-入侵监测系统的功能和性能要素"><a href="#1-入侵监测系统的功能和性能要素" class="headerlink" title="1. 入侵监测系统的功能和性能要素"></a>1. 入侵监测系统的功能和性能要素</h4><p>主要包括：<br>（1）在检测到入侵事件时，<strong>自动执行切断服务</strong>、记录入侵过程、邮件报警等动作。<br>（2）支持攻击特征信息的<strong>集中式发布和攻击取证信息的分布式上载</strong>。<br>（3）提供多种方式对监视引擎和<strong>检测特征的定期更新服务</strong>。<br>（4）内置网络使用状况<strong>监控工具</strong>和网络监听工具。</p>
+<h4 id="2-漏洞扫描系统的功能和性能要素"><a href="#2-漏洞扫描系统的功能和性能要素" class="headerlink" title="2. 漏洞扫描系统的功能和性能要素"></a>2. 漏洞扫描系统的功能和性能要素</h4><p>主要包括：<br>（1）定期或不定期地使用<strong>安全性分析</strong>软件对整个内部系统进行安全扫描，及时发现系统的安全漏洞、报警并提出补救建议。<br>（2）支持与<strong>入侵监测系统</strong>的联动。<br>（3）<strong>检测规则应与相应的国际标准漏洞相对应</strong>，包括CVE、BugTrap、WhiteHats等国际标准漏洞库。<br>（4）支持灵活的<strong>事件</strong>和<strong>规则自定义功</strong>能，允许用户修改和添加自定义检测事件和规则，支持事件查询。<br>（5）支持快速检索事件和规则信息的功能，方便用户通过事件名、详细信息、检测规则等关键字对事件进行快速查询。<br>（6）可以按照风险级别进行事件分级。<br>（7）控制台应能提供事件分析和事后处理功能，应具有对报警事件的源地址进行地址解析，分析主机名，分析攻击来源的功能。<br>（8）传感器应提供TCP连接的检测报警能力。<br>（9）提供安全事件统计概要报表，并按照风险等级进行归类。<br>（10）通过数据库管理工具统计数据库建立时间以及当前<strong>记录数目</strong>。<br>（11）支持对Teardrop、s.cgi缓冲区溢出攻击的检测。</p>
+<h3 id="16-4-3-其他网络安全系统"><a href="#16-4-3-其他网络安全系统" class="headerlink" title="16.4.3 其他网络安全系统"></a>16.4.3 其他网络安全系统</h3><h4 id="1-网络防病毒系统的功能和性能要素"><a href="#1-网络防病毒系统的功能和性能要素" class="headerlink" title="1. 网络防病毒系统的功能和性能要素"></a>1. 网络防病毒系统的功能和性能要素</h4><p>主要包括：<br>（1）支持<strong>多种平台的病毒防范</strong>。<br>（2）支持<strong>对服务器的病毒防治</strong>。<br>（3）支持对<strong>电子邮件</strong>附件的病毒防治。<br>（4）提供对<strong>病毒特征信息和检测引擎的定期在线更新服务</strong>。<br>（5）实现<strong>远程</strong>管理。<br>（6）<strong>实现集中管理、分布式杀毒。</strong><br>（7）防病毒范围广泛，包括UNIX系列、Windows系列、Linux系列等操作系统。</p>
+<h4 id="2-安全审计的功能和性能要素"><a href="#2-安全审计的功能和性能要素" class="headerlink" title="2. 安全审计的功能和性能要素"></a>2. 安全审计的功能和性能要素</h4><p>主要包括：<br>（1）进行系统数据收集，进行统一存储，集中进行安全审计。<br>（2）支持基于<strong>PKI的应用审计</strong>。<br>（3）支持基于XML的审计数据采集协议。<br>（4）提供灵活的自定义审计规则。</p>
+<h4 id="3-Web信息防篡改系统的功能和性能要素"><a href="#3-Web信息防篡改系统的功能和性能要素" class="headerlink" title="3. Web信息防篡改系统的功能和性能要素"></a>3. Web信息防篡改系统的功能和性能要素</h4><p>主要包括：<br>（1）支持多种操作系统。<br>（2）具有集成发布与监控功能，使系统能够区分合法更新与非法篡改。<br>（3）可以实时发布与备份。<br>（4）具备自动监控、自动恢复、自动报警功能。<br>（5）提供日志管理、扫描策略管理、更新管理。</p>
+<h4 id="4-网闸的功能和性能要素"><a href="#4-网闸的功能和性能要素" class="headerlink" title="4. 网闸的功能和性能要素"></a>4. 网闸的功能和性能要素</h4><p>主要包括：<br>（1）应选择正式通过公安部或其他权威机构检测的设备。<br>（2）不改变原有网络和业务系统，即插即用。<br>（3）既保证外网不能直接访问内网，内网也不能直接访问内网，又保证授权的业务请求和业务数据能得到及时的、安全的处理和响应，并自动截断非法网络动作和非授权信息传输。<br>（4）既能防止来自Internet的网络入侵，又能防止业务系统的泄密。<br>（5）技术体系具备自主的知识产权。<br>（6）采用自主可控的安全操作系统。<br>（7）支持双系统体系结构以及双系统间特殊的通信协议，保证外网和外网之间实现网络安全隔离。<br>（8）同时支持多条包过滤规则链式组合使用，提供IP地址、端口和协议组合的包过滤等多重、多级防火墙功能。<br>（9）能够对外网与外网之间交换数据进行基于数据内容的过滤。<br>（10）支持多粒度的过滤，包括端口、协议、网段、主机地址等。<br>（11）能够“无缝”地嵌入当前应用中。</p>
+<h3 id="16-4-4-网络管理系统"><a href="#16-4-4-网络管理系统" class="headerlink" title="16.4.4 网络管理系统"></a>16.4.4 网络管理系统</h3><h4 id="1-网管系统的功能和性能要素"><a href="#1-网管系统的功能和性能要素" class="headerlink" title="1. 网管系统的功能和性能要素"></a>1. 网管系统的功能和性能要素</h4><p>主要包括：<br>（1）能够进行全网范围内的统一管理，包括制定统一的管理模式和策略，对资源的统一分配和调度。<br>（2）能够对网络内部各种平台、数据库、网络应用的运行状态进行有效监控。<br>（3）能够进行高度的自动化管理，尽量减少人为干预，避免由于人员操作不当引起的系统故障。<br>（4）可以对网络节点进行远程配置，并能实时监控各节点的性能状态，一旦出现故障便能自动及时报警。<br>（5）能够提供辅助支持，出现网络故障时可以快速响应，同时为系统的长期规划提供统计依据。<br>（6）尽量减少管理信息对网络传输的压力。</p>
+<h4 id="2-实际应用的基本需求"><a href="#2-实际应用的基本需求" class="headerlink" title="2. 实际应用的基本需求"></a>2. 实际应用的基本需求</h4><p>从功能的角度分析，实际应用对网络管理的基本需求包括以下三部分：<br>（1）网络管理。对整个网络和指定子系统或设备的工作状态进行集中管理和监控，包括拓扑结构、网络设备、连通状态、故障分析等内容。<br>（2）系统管理。服务器系统、存储和备份系统、网络服务、网络安全系统进行统一的管理和监控。<br>（3）运行维护管理。对网络系统各种资源的运行状况进行全面的信息采集和自动预警。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/4be8.html" title="笔记-信息网络系统建设设计阶段的监理-16.4 网络安全和管理平台方案的评审">https://www.zenwu.site/posts/4be8.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87/" rel="tag"><i class="fa fa-tag"></i> 网络设备</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/944b.html" rel="prev" title="笔记-信息网络系统建设设计阶段的监理-16.2.2 网络设备">
+                  <i class="fa fa-angle-left"></i> 笔记-信息网络系统建设设计阶段的监理-16.2.2 网络设备
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/274b.html" rel="next" title="笔记-信息网络系统建设实施阶段的监理-17.5.1 金属线槽安装">
+                  笔记-信息网络系统建设实施阶段的监理-17.5.1 金属线槽安装 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

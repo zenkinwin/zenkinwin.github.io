@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="广域网交换技术在计算机广域网中，主要使用四种数据交换技术：电路恋换、报文交换、分组交换和混合交换。  电路交换是指通过由中间节点建立的专用通信线路来实现两台设备的数据交换的技术，如PSTN、DDN。 报文交换是指通信双方以报文为单位交换数据，无专用线路，通过节点的多次“存储转发”，将报文传送到目的地。报文交换的优点是通信线路的利用率较高；缺点是报文传输时延较大。 分组交换是指数据划分成固定长度的分">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-信息网络系统监理基础-14.1.2 网络基础平台-广域网交换技术">
+<meta property="og:url" content="https://www.zenwu.site/posts/238.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="广域网交换技术在计算机广域网中，主要使用四种数据交换技术：电路恋换、报文交换、分组交换和混合交换。  电路交换是指通过由中间节点建立的专用通信线路来实现两台设备的数据交换的技术，如PSTN、DDN。 报文交换是指通信双方以报文为单位交换数据，无专用线路，通过节点的多次“存储转发”，将报文传送到目的地。报文交换的优点是通信线路的利用率较高；缺点是报文传输时延较大。 分组交换是指数据划分成固定长度的分">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-10-15T05:21:15.000Z">
+<meta property="article:modified_time" content="2022-10-15T05:21:15.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="局域网交换技术">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/238.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/238.html","path":"posts/238.html","title":"笔记-信息网络系统监理基础-14.1.2 网络基础平台-广域网交换技术"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-信息网络系统监理基础-14.1.2 网络基础平台-广域网交换技术 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B9%BF%E5%9F%9F%E7%BD%91%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF"><span class="nav-text">广域网交换技术</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%B8%A7%E4%B8%AD%E7%BB%A7"><span class="nav-text">（1）帧中继</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%882%EF%BC%89-TCP-IP"><span class="nav-text">（2） TCP&#x2F;IP</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%BF%A1%E5%85%83%E4%BA%A4%E6%8D%A2%EF%BC%88ATM%EF%BC%89"><span class="nav-text">（3）信元交换（ATM）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%EF%BC%884%EF%BC%89-MPLS"><span class="nav-text">（4） MPLS</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/238.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-信息网络系统监理基础-14.1.2 网络基础平台-广域网交换技术 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-信息网络系统监理基础-14.1.2 网络基础平台-广域网交换技术
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-15 13:21:15" itemprop="dateCreated datePublished" datetime="2022-10-15T13:21:15+08:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E7%BD%91%E7%BB%9C%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">信息网络系统监理基础</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h3 id="广域网交换技术"><a href="#广域网交换技术" class="headerlink" title="广域网交换技术"></a>广域网交换技术</h3><p>在计算机广域网中，主要使用四种数据交换技术：<strong>电路恋换、报文交换、分组交换和混合交换</strong>。</p>
+<ul>
+<li><strong>电路交换</strong>是指通过由中间节点建立的专用通信线路来实现两台设备的数据交换的技术，如PSTN、DDN。</li>
+<li><strong>报文交换</strong>是指通信双方以<strong>报文</strong>为单位交换数据，无专用线路，通过节点的多次“存储转发”，将报文传送到目的地。报文交换的<strong>优点是通信线路的利用率较高</strong>；缺点是报文传输<strong>时延较大</strong>。</li>
+<li><strong>分组交换</strong>是指数据划分成固定长度的<strong>分组</strong>（<strong>长度远小于报文</strong>），然后进行“存储转发”，从而实现更高的通信线路利用率、更短的传输时延和更低的通信费用，如X.25分组交换网络。</li>
+<li><strong>混合交换</strong>综合了<strong>电路</strong>交换和<strong>分组</strong>交换的技术特点，典型的应用如<strong>ATM交换</strong>。</li>
+</ul>
+<p>目前常用以下几种广域网交换技术：</p>
+<h4 id="（1）帧中继"><a href="#（1）帧中继" class="headerlink" title="（1）帧中继"></a>（1）帧中继</h4><p>帧中继是对<strong>分组交换</strong>的改进，其目的是提高分组交换的速度，<strong>帧中继的工作原理</strong>很简单：由于使用<strong>光纤</strong>传输技术，通信线路的误码率非常低，因此<strong>帧中继不进行差错检测和纠正</strong>，<strong>只进行分组转发</strong>。</p>
+<h4 id="（2）-TCP-IP"><a href="#（2）-TCP-IP" class="headerlink" title="（2） TCP&#x2F;IP"></a>（2） TCP&#x2F;IP</h4><p>TCP&#x2F;IP技术的优点是采取了灵活的<strong>路由</strong>选择体系亨采用<strong>非面向连接</strong>的服务方式，适合于<strong>非实时性</strong>的信息传输。但IP技术对于<strong>时延</strong>、带宽等QoS（ Quality of Service，服务质量）指标，由于标准不统一等原因而缺乏非常完善的保证。</p>
+<h4 id="（3）信元交换（ATM）"><a href="#（3）信元交换（ATM）" class="headerlink" title="（3）信元交换（ATM）"></a>（3）信元交换（ATM）</h4><p><strong>信元</strong>是具有固定长度的<strong>53个字节</strong>的数据单元，信元交换是指以信元为单位而实现的交换。信元交换与帧中继的主要区别在于<strong>帧中继的帧长度可变</strong>，而<strong>信元由固定长度的单元组成</strong>。信元交换的主流技术是ATMs，<strong>ATM</strong>是宽带通信网的核心技术，是一种面向连接的传输技术，它综合了分组交换和电路交换的优点，具有良好的服务质量的保证，支持语音、数据和图像通信。但其技术难度，如建立连接的信令过程过于复杂，路由灵活性不高，在传输数据量较小的一般数据时，ATM的传输效率不高，开销较大。</p>
+<h4 id="（4）-MPLS"><a href="#（4）-MPLS" class="headerlink" title="（4） MPLS"></a>（4） MPLS</h4><p>MPLS（Multi-Protocol Label Switching，多协议标签交换技术）的一种广域网络技术。它是继是目前网络界最流行IP技术以来的新一代广域网传输技术。<strong>MPLS充分利用数据标签引导数据包在开放的通信网络上进行高速、高效传输，通过在一个无连接的网络中引入连接模式，从而减少了网络复杂性，并能兼容现有各种主流网络技术，大大降低了网络成本。</strong>在提高IP业务性能的同时，能确保网络通信的服务质量和数据传输的安全性。</p>
+<p><strong>MPLS有如下的技术特点：</strong> ▲▲▲<br>（1）充分采用原有的<strong>IP路由</strong>，在此基础上加以改进；保证了MPLS网络路由具有灵活性的特点；<br>（2）采用<strong>ATM</strong>的高效传输交换方式，抛弃了复杂的ATM信令，无缝地将<strong>IP技术的优点融合到ATM的高效硬件转发中</strong>；<br>（3）MPLS网络的数据传输和路由计算<strong>分开</strong>，是一种<strong>面向连接</strong>的传输技术，能够提供有效的QoS保证；<br>（4）MPLS不但支持多种网络层技术，而且是一种与<strong>链路层无关的技术</strong>，它同时支持X.25、帧中继、ATM, PPP, SDH, DWDM等，<strong>保证了多种网络的互连互通</strong>，使得各种不同的网络传输技术统一在同一个MPLS平台上；<br>（5）MPLS支持大规模层次化的网络拓扑结构，具有良好的<strong>网络扩展性</strong>；<br>（6）MPLS的<strong>标签合并</strong>机制支持不同数据流的<strong>合并传输</strong>；<br>（7）MPLS支持流量工程、CoS（CClass of Service服务级别）、QoS和大规模的虚拟专用网。</p>
+<p><strong>MPLS从应用</strong>上写前主要有两大类，一类是<strong>MPLS VPN</strong>，另一类是<strong>MPLS TE</strong>（ Traffic Engineering ）。</p>
+<p> <strong>MPLS VPN</strong>是目前一项最热门的广域网技术和应用，它又可以分为第二层MPLS VPN和第三层MPLS VPN两类。第二层MPLS VPN的目的是在IP网络上提供类似ATM和帧中继的专用连接。第三层MPLS VPN是一种基于MPLS技术的IP VPN，是在网络路由和交换设备上应用MPLS技术，利用结合传统路由技术的标记交换实现的<strong>IP虚拟专用网络</strong>。</p>
+<p><strong>MPLS VPN</strong>适用于对服务质量、服务等级划分以及网络资源的利用率、网络的可靠性有较高要求的<strong>VPN业务</strong>。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/238.html" title="笔记-信息网络系统监理基础-14.1.2 网络基础平台-广域网交换技术">https://www.zenwu.site/posts/238.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%BA%A4%E6%8D%A2%E6%8A%80%E6%9C%AF/" rel="tag"><i class="fa fa-tag"></i> 局域网交换技术</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/fb45.html" rel="prev" title="笔记-信息网络系统监理基础-14.1.2 网络基础平台-城域网交换技术">
+                  <i class="fa fa-angle-left"></i> 笔记-信息网络系统监理基础-14.1.2 网络基础平台-城域网交换技术
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/c8e0.html" rel="next" title="笔记-信息网络系统监理基础-14.1.3 网络服务平台-Internet网络服务">
+                  笔记-信息网络系统监理基础-14.1.3 网络服务平台-Internet网络服务 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

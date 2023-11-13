@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="随着浏览器跨越式的发展，微软也把EDGE替换了传统IE，高级CSS的应用迎来了属于他的时代。有云道：这是我学习过的CSS吗？以后在简历的CSS熟练程度改为“听过”。 本文将介绍如何用现代CSS技术用于克服CSS带来的旧问题，先行粗略介绍，后再另篇章展开。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="强大的现代CSS技术(汇总1)">
+<meta property="og:url" content="https://www.zenwu.site/posts/9824.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="随着浏览器跨越式的发展，微软也把EDGE替换了传统IE，高级CSS的应用迎来了属于他的时代。有云道：这是我学习过的CSS吗？以后在简历的CSS熟练程度改为“听过”。 本文将介绍如何用现代CSS技术用于克服CSS带来的旧问题，先行粗略介绍，后再另篇章展开。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503155703.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503162840.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503172502.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503152845.gif">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503175726.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503180335.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503180707.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503180953.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503181412.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503183417.png">
+<meta property="article:published_time" content="2023-05-03T05:08:38.000Z">
+<meta property="article:modified_time" content="2023-05-03T12:08:48.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="css">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503155703.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/9824.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/9824.html","path":"posts/9824.html","title":"强大的现代CSS技术(汇总1)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>强大的现代CSS技术(汇总1) | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E9%AB%98%E7%BA%A7CSS%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">1. 高级CSS选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-1-%E9%80%9A%E7%94%A8%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">1.1. 通用选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-2-%E5%B1%9E%E6%80%A7%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">1.2. 属性选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-3-%E5%AD%90%E7%BB%84%E5%90%88%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">1.3. 子组合选择器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#1-4-%E4%BC%AA%E7%B1%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="nav-text">1.4. 伪类选择器</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E6%9B%B4%E6%8D%A2%E6%97%A7%E7%9A%84%E7%BD%91%E6%A0%BC%E7%B3%BB%E7%BB%9F"><span class="nav-text">2. 更换旧的网格系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BF%9D%E6%8C%81%E5%85%83%E7%B4%A0%E9%AB%98%E5%BA%A6%E7%9A%84%E4%B8%80%E8%87%B4"><span class="nav-text">3. 保持元素高度的一致</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E6%8F%90%E5%8D%87%E6%B5%81%E7%95%85%E6%BB%9A%E5%8A%A8%E7%9A%84%E7%94%A8%E6%88%B7%E4%BD%93%E9%AA%8C"><span class="nav-text">4. 提升流畅滚动的用户体验</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-%E5%85%88%E5%88%9B%E5%BB%BA%E5%86%85%E5%AE%B9"><span class="nav-text">4.1. 先创建内容</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-%E6%B7%BB%E5%8A%A0smooth%E6%BB%9A%E5%8A%A8%E5%88%B0%E9%A1%B5%E9%9D%A2"><span class="nav-text">4.2. 添加smooth滚动到页面</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-back-to-top%E9%93%BE%E6%8E%A5%E7%9A%84%E6%A0%B7%E5%BC%8F"><span class="nav-text">4.3. back-to-top链接的样式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-4-%E8%AE%BE%E7%BD%AE%E6%BB%9A%E5%8A%A8%E6%9D%A1%E6%95%88%E6%9E%9C"><span class="nav-text">4.4. 设置滚动条效果</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-5-%E5%AE%8C%E6%88%90"><span class="nav-text">4.5. 完成</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-%E9%80%9A%E8%BF%87%E6%B7%BB%E5%8A%A0%E6%9B%BF%E4%BB%A3%E9%A1%B9%E6%9D%A5%E6%8F%90%E9%AB%98%E7%BD%91%E7%AB%99%E7%9A%84%E5%8F%AF%E8%AE%BF%E9%97%AE%E6%80%A7%EF%BC%9Afocus"><span class="nav-text">5. 通过添加替代项来提高网站的可访问性：focus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-CSS%E5%AD%97%E4%BD%93%E8%A7%84%E5%88%99%E5%92%8C%E5%88%9B%E5%BB%BA%E6%B5%81%E7%95%85%E7%9A%84%E6%8E%92%E7%89%88%E6%AF%94%E4%BE%8B"><span class="nav-text">6. CSS字体规则和创建流畅的排版比例</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#6-1-%E9%A6%96%E9%80%89%E7%9A%84%E5%AD%97%E4%BD%93%E5%8D%95%E4%BD%8D"><span class="nav-text">6.1. 首选的字体单位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-2-%E9%98%B2%E6%AD%A2%E6%96%87%E6%9C%AC%E6%BA%A2%E5%87%BA"><span class="nav-text">6.2. 防止文本溢出</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-3-%E5%93%8D%E5%BA%94%E5%BC%8F%E6%8E%92%E7%89%88"><span class="nav-text">6.3. 响应式排版</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-%E8%AE%BE%E7%BD%AE%E5%8D%95%E9%80%89%E6%8C%89%E9%92%AE%E7%9A%84%E6%A0%B7%E5%BC%8F"><span class="nav-text">7. 设置单选按钮的样式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-%E4%BF%9D%E6%8C%81%E9%A1%B5%E8%84%9A%E7%9A%84%E5%BA%95%E9%83%A8%E4%BD%8D%E7%BD%AE"><span class="nav-text">8. 保持页脚的底部位置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-1-%E6%96%B9%E6%B3%95%E4%B8%80%EF%BC%9Agrid"><span class="nav-text">8.1. 方法一：grid</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-2-%E6%96%B9%E6%B3%95%E4%BA%8C%EF%BC%9Aflexbox"><span class="nav-text">8.2. 方法二：flexbox</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-%E5%8A%A8%E7%94%BB%E5%9B%BE%E7%89%87"><span class="nav-text">9. 动画图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#10-%E8%BE%B9%E7%95%8C%E5%8D%8A%E5%BE%84%E5%92%8C%E7%9B%92%E7%8A%B6%E9%98%B4%E5%BD%B1%E7%9A%84%E9%AB%98%E7%BA%A7%E4%BD%BF%E7%94%A8"><span class="nav-text">10. 边界半径和盒状阴影的高级使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#11-%E4%BF%9D%E6%8C%81%E5%85%83%E7%B4%A0%E5%B1%85%E4%B8%AD"><span class="nav-text">11. 保持元素居中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#12-%E4%BD%BF%E7%94%A8CSS%E7%BB%98%E5%88%B6%E5%BD%A2%E7%8A%B6"><span class="nav-text">12. 使用CSS绘制形状</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#12-1-%E4%BD%BF%E7%94%A8border%E5%B1%9E%E6%80%A7"><span class="nav-text">12.1. 使用border属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-2-%E4%BD%BF%E7%94%A8%E7%BA%BF%E6%80%A7%E6%B8%90%E5%8F%98"><span class="nav-text">12.2. 使用线性渐变</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#13-%E6%80%BB%E7%BB%93"><span class="nav-text">13. 总结</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/9824.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="强大的现代CSS技术(汇总1) | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          强大的现代CSS技术(汇总1)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2023-05-03 13:08:38 / 修改时间：20:08:48" itemprop="dateCreated datePublished" datetime="2023-05-03T13:08:38+08:00">2023-05-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">前端技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<p>随着浏览器跨越式的发展，微软也把<code>EDGE</code>替换了传统<code>IE</code>，高级CSS的应用迎来了属于他的时代。有云道：这是我学习过的CSS吗？以后在简历的CSS熟练程度改为“听过”。</p>
+<p>本文将介绍如何用现代CSS技术用于克服CSS带来的旧问题，先行粗略介绍，后再另篇章展开。</p>
+<span id="more"></span>
+
+<h3 id="1-高级CSS选择器"><a href="#1-高级CSS选择器" class="headerlink" title="1. 高级CSS选择器"></a>1. 高级CSS选择器</h3><p>如果你打算开发可用于其他页面或UI组件的可重用CSS文件，那么了解CSS选择器的工作原理至关重要。现在让我们来看看一些<strong>高级选择器</strong>。</p>
+<h4 id="1-1-通用选择器"><a href="#1-1-通用选择器" class="headerlink" title="1.1. 通用选择器"></a>1.1. 通用选择器</h4><p><strong>通用选择器</strong>可用于网站的<strong>所有元素</strong>。例如，如果你想为页面中的<strong>所有元素</strong>设置特定的边距，那么需要这样写：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">* &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">1.5rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-属性选择器"><a href="#1-2-属性选择器" class="headerlink" title="1.2. 属性选择器"></a>1.2. 属性选择器</h4><p>如果想将特定样式应用于某些<strong>具有相似属性但类名不同的元素</strong>，则可以使用<strong>属性选择器</strong>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-attr">[class*=<span class="string">&quot;component_&quot;</span>]</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">2px</span> solid blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>属性选择器将对类名为 <code>component_title</code> 和 <code>component_label</code> 的元素应用边框。</p>
+<h4 id="1-3-子组合选择器"><a href="#1-3-子组合选择器" class="headerlink" title="1.3. 子组合选择器"></a>1.3. 子组合选择器</h4><p>如果你想将导航栏中菜单的字体大小设置为粗体但导航内容是动态生成的，怎么办？它们没有任何特定的类。但你可以使用子组合选择器。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.navigation-menu</span> &gt; <span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &gt; <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-4-伪类选择器"><a href="#1-4-伪类选择器" class="headerlink" title="1.4. 伪类选择器"></a>1.4. 伪类选择器</h4><p>不同颜色交替的表格怎么实现？猜猜如何只用几行CSS就做到这一点吗？答案是<strong>伪类</strong>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">tbody</span> <span class="selector-tag">tr</span><span class="selector-pseudo">:nth-child</span>(odd) &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码将对表格中的奇数行应用绿色背景。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503155703.png" alt="tr交替换色"></p>
+<p>除了<code>odd</code>或<code>even</code>，还可以使用<code>n+1</code>或<code>3n+1</code>等属性应用不同的属性到不同的行。下面列出常见的伪类选择器：</p>
+<table>
+<thead>
+<tr>
+<th><div style="width:250px">选择器</div></th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ul li:first-child</td>
+<td>选中ul父元素中的第一个li子元素</td>
+</tr>
+<tr>
+<td>ul li:last-child</td>
+<td>选中ul父元素中的最后一个子元素</td>
+</tr>
+<tr>
+<td>ul li:nth-child(n)</td>
+<td>选中ul父元素中的第n个子元素</td>
+</tr>
+<tr>
+<td>ul li:nth-child(odd)</td>
+<td>选中为奇数下标的li元素</td>
+</tr>
+<tr>
+<td>ulli:nth-child(even)</td>
+<td>选中为偶数下标的li元素</td>
+</tr>
+<tr>
+<td>ul li:nth-child(2n)</td>
+<td>选中为偶数下标的li元素 <span class=gray>（n为自然数，初值为0，依次+1递增，2n 表示是 2*0&#x3D;0  2*1&#x3D;2  2*2&#x3D;4  2*3&#x3D;6  2*4&#x3D;8 2*5&#x3D;10 这样子递增下去）</span></td>
+</tr>
+<tr>
+<td>ul li:nth-child(3n+1)</td>
+<td>选中为1 4 7 10这样顺序的下标li元素 <span class=gray>（n为自然数，初值为0，依次+1递增，3n+1 表示是 3*0+1&#x3D;1  3*1+1&#x3D;4  3*2+1&#x3D;7 这样子递增下去）</span></td>
+</tr>
+<tr>
+<td>ul li:nth-child(-n+5)</td>
+<td>选中前五个li元素 <span class=gray>（n为自然数 初值为0 依次-1递增，-n+5表示是 5+0&#x3D;5  5+[-1]&#x3D;4 5+[-2]&#x3D;3 这样子递增下去）</span></td>
+</tr>
+<tr>
+<td>ul li:nth-child(n+5)</td>
+<td>选中第五个起的li元素 <span class=gray>（n为自然数 初值为0 依次+1递增，n+5表示是 5+0&#x3D;5  5+1&#x3D;6 5+2&#x3D;7 这样子递增下去）</span></td>
+</tr>
+<tr>
+<td>ul li:nth-last-child(n)</td>
+<td>选中ul父元素中的倒数第n个子元素</td>
+</tr>
+<tr>
+<td>ul li:first-of-type</td>
+<td>选中ul父元素中类型为li的的第一个元素</td>
+</tr>
+<tr>
+<td>ul li:last-of-type</td>
+<td>选中ul父元素中类型为li的最后一个元素</td>
+</tr>
+<tr>
+<td>ul li:nth-of-type(n)</td>
+<td>选中ul父元素中类型为li的第n个元素</td>
+</tr>
+<tr>
+<td>ul li:nth-last-of-type(n)</td>
+<td>选中ul父元素中类型为li的倒数第n个元素</td>
+</tr>
+</tbody></table>
+<h3 id="2-更换旧的网格系统"><a href="#2-更换旧的网格系统" class="headerlink" title="2. 更换旧的网格系统"></a>2. 更换旧的网格系统</h3><p><code>bootstrap</code> 网格解决了在不同分辨率的设备中均匀分布响应容器的问题。但随着时间的推移，只用于网格的库越发繁重，因此开发人员需要另一种解决方案。尽管bootstrap依然好用。现代CSS技术，例如网格，为我们提供了一种简化的解决方案。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$minColumnWidth: 10<span class="built_in">rem</span>; // 这个只是在 sass 变量 </span><br><span class="line">.<span class="built_in">grid</span> &#123;</span><br><span class="line">  <span class="built_in">display</span>: <span class="built_in">grid</span>;</span><br><span class="line">  <span class="built_in">grid</span>-template-<span class="built_in">columns</span>: repeat(auto-fit, minmax($minColWidth, 1fr));</span><br><span class="line">  <span class="built_in">grid</span>-gap: 2<span class="built_in">rem</span>;</span><br><span class="line"></span><br><span class="line">&amp; + .<span class="built_in">grid</span> &#123;</span><br><span class="line">    margin-top: $gridGap;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这些代码做了什么：</p>
+<ul>
+<li>首先定义了网格元素的最小宽度 <code>$minColumnWidth</code>；</li>
+<li><code>grid-template-columns</code> 中使用了 <code>repeat</code> 函数，以便CSS将相同的参数应用于每一列。此外，使用<code>auto-fit</code>而不是数字的原因是，列将具有相同的宽度——无论使用多少列，都会拉伸并填充可用空间；</li>
+<li>代码中还使用了 <code>minmax()</code> 函数来设置每列的最大宽度，并将 <code>1fr</code> 作为最大值。这可以确保内容填满一列直至达到总可用空间；</li>
+<li>最后还添加了 <code>gap</code> 和可选规则，以在连续容器之间应用相同的值。</li>
+</ul>
+<p>结果如下：<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503162840.png" alt=" "></p>
+<p>只有一个缺点，对于三个以上的列，在某些视图中，可能会出现孤立的列。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503172502.png" alt=" "></p>
+<p>我们可以通过媒体查询来解决问题，但需要为多个媒体尺寸编写大量代码。</p>
+<h3 id="3-保持元素高度的一致"><a href="#3-保持元素高度的一致" class="headerlink" title="3. 保持元素高度的一致"></a>3. 保持元素高度的一致</h3><p>曾几何时，我们通过 <code>jQuery</code> 计算以确保容器高度相等。那时，两个容器的内容不相等的时候，经常用各种手段，使得高度左右“一致”。但是现代CSS技术“<strong>网格系统（grid布局）</strong>”可以让这个过程变得更简单。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Parent container 父元素内容 */</span></span><br><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-auto-flow</span>: column;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* Child elements 子元素内容*/</span></span><br><span class="line"><span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过将 <code>grid-auto-flow</code> 切换为 <code>row</code> 或 <code>column</code> ，我们可以<strong>拥有统一宽度或高度的容器</strong>。</p>
+<p>此外，还有 <code>CSS flexbox</code> （<strong>flex布局</strong>）允许我们通过更简单的代码来使用相同的功能。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Parent elements */</span></span><br><span class="line"><span class="selector-class">.parent</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Child elements */</span></span><br><span class="line">  <span class="selector-class">.child</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>那么，<strong>grid布局</strong>和<strong>flex布局</strong>哪一个更好呢？答案是，两者各有优势。如果你想解决等高元素的问题，那么flexbox更优。但是，在flexbox中，元素的宽度可能并不相等。</p>
+<p>当然，如果你需要，网格也可以处理等宽的元素。此外，如果想要每一行拥有最大列数，则可以使用网格处理数学。但是如果你使用flexbox，则需要为此定义计算。</p>
+<h3 id="4-提升流畅滚动的用户体验"><a href="#4-提升流畅滚动的用户体验" class="headerlink" title="4. 提升流畅滚动的用户体验"></a>4. 提升流畅滚动的用户体验</h3><p>虽然现如今<strong>back to top</strong>链接用的少了，但曾经有一段时间确实很流行。方法是创建一个链接，允许用户在网站顶部向后滚动。那么如何使用现代CSS技术开发back-to-top链接呢？</p>
+<h4 id="4-1-先创建内容"><a href="#4-1-先创建内容" class="headerlink" title="4.1. 先创建内容"></a>4.1. 先创建内容</h4><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">header</span> <span class="attr">id</span>=<span class="string">&quot;header&quot;</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">main</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">article</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- content goes here --&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line">  <span class="comment">&lt;!-- Back to Top link --&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;back-to-top-wrapper&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;#header&quot;</span> <span class="attr">class</span>=<span class="string">&quot;back-to-top-link&quot;</span> <span class="attr">aria-label</span>=<span class="string">&quot;Go Back to Top&quot;</span>&gt;</span>Top<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">main</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-2-添加smooth滚动到页面"><a href="#4-2-添加smooth滚动到页面" class="headerlink" title="4.2. 添加smooth滚动到页面"></a>4.2. 添加smooth滚动到页面</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">    scroll-behavior: smooth;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-3-back-to-top链接的样式"><a href="#4-3-back-to-top链接的样式" class="headerlink" title="4.3. back-to-top链接的样式"></a>4.3. back-to-top链接的样式</h4><p>然后根据喜好设置back-to-top链接的样式，也可以添加漂亮的SVG图标替换手动样式。</p>
+<h4 id="4-4-设置滚动条效果"><a href="#4-4-设置滚动条效果" class="headerlink" title="4.4. 设置滚动条效果"></a>4.4. 设置滚动条效果</h4><p>下面选择滚动条的行为方式，定义滚动长度：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$scrollLength: <span class="number">100vh</span>; <span class="comment">/* sass定义变量 */</span></span><br></pre></td></tr></table></figure>
+
+<p>在包装器中将滚动值设置为预定义的滚动长度：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.back-to-top-wrapper</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">top</span>: $scrollLength;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>给back-to-top链接添加必要的样式。记住要使用 <code>position-sticky</code> 以将其保持在特定位置。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.back-to-top-link</span> &#123;</span><br><span class="line">  <span class="comment">// using &#x27;fixed&#x27; as fallback when `sticky` not supported</span></span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">position</span>: sticky;</span><br><span class="line">  <span class="comment">// achieves desired positioning within the viewport</span></span><br><span class="line">  <span class="comment">// relative to the top of the viewport once `sticky` takes over, or always if `fixed` fallback is used</span></span><br><span class="line">  <span class="attribute">top</span>: <span class="built_in">calc</span>(<span class="number">100vh</span> - <span class="number">5rem</span>);</span><br><span class="line">  <span class="comment">// ... other styles</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这里处理 <code>position-sticky</code> 需要认识，还有 <code>calc()</code> 需要知道。</p>
+<p><strong>calc() 函数用于动态计算长度值</strong></p>
+<blockquote>
+<ul>
+<li>需要注意的是，运算符前后都需要保留一个空格，例如：width: calc(100% - 10px)；</li>
+<li>任何长度值都可以使用calc()函数进行计算；</li>
+<li>calc()函数支持 “+”, “-“, “*”, “&#x2F;“ 运算；</li>
+<li>calc()函数使用标准的数学运算优先级规则；</li>
+</ul>
+</blockquote>
+<h4 id="4-5-完成"><a href="#4-5-完成" class="headerlink" title="4.5. 完成"></a>4.5. 完成</h4><p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503152845.gif" alt=" "></p>
+<h3 id="5-通过添加替代项来提高网站的可访问性：focus"><a href="#5-通过添加替代项来提高网站的可访问性：focus" class="headerlink" title="5. 通过添加替代项来提高网站的可访问性：focus"></a>5. 通过添加替代项来提高网站的可访问性：focus</h3><p>可访问性是网站的必备功能，且必须遵循WCAG指南。通常，在按钮或链接上移除 <code>:focus</code> 可以摆脱原生样式。然而，在这样做的同时，因为未能提供替代的<strong>焦点状态</strong>，结果就是使用键盘导航站点的人无法检测到当前的焦点元素。直接违背了可访问性的原则。</p>
+<p>我们可能会觉得浏览器的默认 <code>:focus</code> 样式，使那些保存于页面的漂亮元素显得不那么好看。但是，它是为备用焦点样式添加代码的理想选择。例如，假设有一个按钮：</p>
+<div style="margin:30px auto; text-align:center;">
+<button style="color:green;border:none;background:#fff;font-size:24px;" value="Button">Button</button>
+</div>
+
+<p>若可以添加：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">button</span><span class="selector-pseudo">:focus</span> &#123;</span><br><span class="line">  <span class="attribute">outline</span>: <span class="built_in">max</span>(<span class="number">1px</span>, <span class="number">0.1em</span>) solid currentColor;</span><br><span class="line">  <span class="attribute">outline-offset</span>: <span class="number">0.25em</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>将 <code>currentColor</code> 视为页面的主题颜色。在本例中为绿色。使用 <code>outline-offset</code> ，可以<strong>调整轮廓与元素的间距</strong>：<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503175726.png" alt=" "></p>
+<h3 id="6-CSS字体规则和创建流畅的排版比例"><a href="#6-CSS字体规则和创建流畅的排版比例" class="headerlink" title="6. CSS字体规则和创建流畅的排版比例"></a>6. CSS字体规则和创建流畅的排版比例</h3><p><strong>排版</strong>是增强网页<strong>外观和视觉效果</strong>的最佳方式。</p>
+<h4 id="6-1-首选的字体单位"><a href="#6-1-首选的字体单位" class="headerlink" title="6.1. 首选的字体单位"></a>6.1. 首选的字体单位</h4><p>不知道应该使用 <code>%</code>、<code>rem</code>、<code>em</code>还是<code>px</code> ？在定义排版时你需要做的第一件事是：<em>忘记px</em>。因为当用户在浏览器中放大或缩小时，·px· 不会按比例缩放。<strong>推荐单位是rem</strong>。</p>
+<ul>
+<li><code>rem</code>的默认值为 <code>16px</code>，当用户在浏览器中放大时，用rem定义的字体大小保持一致；</li>
+<li><code>em</code> 与元素的字体大小规则成比例。因此只能在你希望子元素相对于父元素的间距行为时使用；</li>
+<li><code>%</code> 的行为与 <code>em</code> 几乎相似。但是，当你需要<strong>相对大小</strong>时，<code>em</code> 更可取。</li>
+</ul>
+<h4 id="6-2-防止文本溢出"><a href="#6-2-防止文本溢出" class="headerlink" title="6.2. 防止文本溢出"></a>6.2. 防止文本溢出</h4><p><strong>防止文本溢出</strong>是使网站面向未来的好方法。它确保了如果将来容器中的某些文本增加，文本也不会超出容器或其边界。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span>,</span><br><span class="line"><span class="selector-tag">li</span>,</span><br><span class="line"><span class="selector-tag">h1</span>,</span><br><span class="line"><span class="selector-tag">h2</span>,</span><br><span class="line"><span class="selector-tag">h3</span>,</span><br><span class="line"><span class="selector-tag">h4</span> &#123;</span><br><span class="line">  // Help prevent <span class="attribute">overflow</span> of long words/names/URLs</span><br><span class="line">  <span class="attribute">word-break</span>: break-word;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-3-响应式排版"><a href="#6-3-响应式排版" class="headerlink" title="6.3. 响应式排版"></a>6.3. 响应式排版</h4><p>如果你在全局范围内选择了较大的字体大小，那么可能会在小型设备上遇到溢出问题。我们可以通过流体类型解决这个问题。即定义一个根据视口调整的字体大小值，就像响应式图像一样。可以使用代码来计算最小和基本字体大小。</p>
+<figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">font-<span class="symbol">size:</span> <span class="keyword">unquote</span>(<span class="string">&quot;min(max(<span class="subst">#&#123;<span class="variable">$fluid</span>-min&#125;</span>rem, <span class="subst">#&#123;<span class="variable">$fluid</span>-scaler&#125;</span>), <span class="subst">#&#123;<span class="variable">$level</span>-size&#125;</span>)&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>或者可以使用 <code>vw</code>（视口宽度）作为字体单位。</p>
+<h3 id="7-设置单选按钮的样式"><a href="#7-设置单选按钮的样式" class="headerlink" title="7. 设置单选按钮的样式"></a>7. 设置单选按钮的样式</h3><p>开发人员需要自定义样式的单选按钮，因为默认的HTML单选按钮在不同浏览器中的显示方式不同。以下是在Mac上运行的Firefox和Safari中中单选按钮的外观对比。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503180335.png" alt=" "></p>
+<p>不仅如此，原生单选按钮不能随字体大小缩放。解决方案是创建统一的单选按钮，该按钮在所有浏览器上的显示都相同，并且与标签的字体大小一致。</p>
+<p>先从HTML开始：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">&quot;radio radio-gradient&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;radio-input&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;radio&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;radio-control&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;radio-label&quot;</span>&gt;</span>Option 1<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">label</span> <span class="attr">class</span>=<span class="string">&quot;radio radio-before&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;radio-input&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;radio&quot;</span> <span class="attr">name</span>=<span class="string">&quot;radio&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;radio-control&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;radio-label&quot;</span>&gt;</span>Option 2<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">label</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>接着是CSS，我们使用SCSS来为单选按钮设置主题。创建自定义颜色变量：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-pseudo">:root</span> &#123;</span><br><span class="line">  <span class="attr">--color</span>: green;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接下来使用通用选择器来重置 <code>box-sizing</code> 方法。它将在计算任意元素的最终大小时包括边框和填充。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*,</span><br><span class="line">*<span class="selector-pseudo">:before</span>,</span><br><span class="line">*<span class="selector-pseudo">:after</span> &#123;</span><br><span class="line">  <span class="attribute">box-sizing</span>: border-box;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们在标签中添加了 <code>.radio</code> 类。使用 <code>grid-gap</code> 将在按钮和标签之间添加一些间距。我们还将使用 <code>:focus-within</code> 和 <code>transform</code> 以便当该特定选项处于焦点时，标签的尺寸会扩大。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.radio</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: min-content auto;</span><br><span class="line">  <span class="attribute">grid-gap</span>: <span class="number">0.5em</span>;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">2.25rem</span>;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">var</span>(--color);</span><br><span class="line"></span><br><span class="line">&amp;<span class="selector-pseudo">:focus</span>-within &#123;</span><br><span class="line">    <span class="selector-class">.radio-label</span> &#123;</span><br><span class="line">      <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1.05</span>);</span><br><span class="line">      <span class="attribute">opacity</span>: <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调整行高，添加过渡，并在选项未处于焦点时，降低标签的不透明度。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.radio-label</span> &#123;</span><br><span class="line">  <span class="attribute">line-height</span>: <span class="number">1</span>;</span><br><span class="line">  <span class="attribute">transition</span>: <span class="number">180ms</span> all ease-in-out;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.8</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>对包装自定义控件和本机输入的按钮添加 <code>display-flex</code> 。对焦点状态使用双框阴影，并确保基本按钮和焦点状态之间存在差异。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.radio-input</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">input</span> &#123;</span><br><span class="line">    <span class="attribute">opacity</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&amp;<span class="selector-pseudo">:focus</span> + <span class="selector-class">.radio-control</span> &#123;</span><br><span class="line">      <span class="attribute">box-shadow</span>: <span class="number">0</span> <span class="number">0</span> <span class="number">0</span> <span class="number">0.05em</span> <span class="number">#fff</span>, <span class="number">0</span> <span class="number">0</span> <span class="number">0.15em</span> <span class="number">0.1em</span> currentColor;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>添加按钮处于选中阶段时的样式。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.radio-gradient</span> <span class="selector-tag">input</span><span class="selector-pseudo">:checked</span> + <span class="selector-class">.radio-control</span> &#123;</span><br><span class="line">  <span class="attribute">background</span>: <span class="built_in">radial-gradient</span>(currentcolor <span class="number">50%</span>, <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>) <span class="number">51%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>创建 <code>:before</code> 元素，以设置按钮未选中时的动画。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.radio-before</span> &#123;</span><br><span class="line">  <span class="selector-class">.radio-control</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: grid;</span><br><span class="line">    place-items: center;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">input</span> + <span class="selector-class">.radio-control</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">0.5em</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">0.5em</span>;</span><br><span class="line">    <span class="attribute">box-shadow</span>: inset <span class="number">0.5em</span> <span class="number">0.5em</span> currentColor;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">    <span class="attribute">transition</span>: <span class="number">180ms</span> transform ease-in-out;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="selector-tag">input</span><span class="selector-pseudo">:checked</span> + <span class="selector-class">.radio-control</span><span class="selector-pseudo">::before</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">scale</span>(<span class="number">1</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最后，添加样式到单选按钮和正文。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.radio-control</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: block;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">1em</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">0.1em</span> solid currentColor;</span><br><span class="line">  <span class="attribute">transform</span>: <span class="built_in">translateY</span>(-<span class="number">0.05em</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  place-<span class="attribute">content</span>: center;</span><br><span class="line">  <span class="attribute">grid-gap</span>: <span class="number">2rem</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">1rem</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>最终结果如下，且各浏览器是统一效果：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503180707.png" alt=" "></p>
+<h3 id="8-保持页脚的底部位置"><a href="#8-保持页脚的底部位置" class="headerlink" title="8. 保持页脚的底部位置"></a>8. 保持页脚的底部位置</h3><p>虽然单页应用程序不会有太多这方面的问题，但如果你正在创建静态网页，那么你可能会发现页脚经常浮动。我们可以通过两种方法摆脱这个问题。</p>
+<h4 id="8-1-方法一：grid"><a href="#8-1-方法一：grid" class="headerlink" title="8.1. 方法一：grid"></a>8.1. 方法一：grid</h4><p>代码如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-rows</span>: auto <span class="number">1</span>fr auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>代码先保持 <code>body</code> 的最小高度。然后使用 <code>grid-template-rows</code> 正确分隔内容。该方法使用小数单元来计算可用空间并将其分配到多行。因此，它将填充页眉和页脚之间的所有可用空间。</p>
+<h4 id="8-2-方法二：flexbox"><a href="#8-2-方法二：flexbox" class="headerlink" title="8.2. 方法二：flexbox"></a>8.2. 方法二：flexbox</h4><p>使用flexbox，方法更简单。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">min-height</span>: <span class="number">100vh</span>;</span><br><span class="line">  <span class="attribute">display</span>: flex;</span><br><span class="line">  <span class="attribute">flex-direction</span>: column;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>首先，通过 <code>min-height</code> 确保 <code>body</code> 伸展到屏幕的全高。然后，设置 <code>flex-direction</code> 保留堆叠的块元素并保持文档行为正常。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503180953.png" alt=" "></p>
+<h3 id="9-动画图片"><a href="#9-动画图片" class="headerlink" title="9. 动画图片"></a>9. 动画图片</h3><p>以前用户需要很艰难地使用 <code>jQuery</code> 和 <code>position:absolute</code> 为图像标题和图像大小设置动画。但是，现如今，只需几行代码就可以为标题设置动画并在鼠标悬停图片时触发动画。请看：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.image-caption</span> &#123;</span><br><span class="line">  <span class="comment">// existing styles</span></span><br><span class="line">  <span class="attribute">transition</span>: transform <span class="number">500ms</span> ease-in;</span><br><span class="line">  <span class="attribute">will-change</span>: transform;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// The transition property helps to animate the caption. We can trigger the animation on hover using - </span></span><br><span class="line"><span class="selector-class">.image</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="selector-class">.image-caption</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解决了鼠标悬停的问题。那么，如果有人使用键盘浏览网页怎么办。在这种情况下，我们可以使用 <code>focus</code> 取代 <code>hover</code>。</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.image</span><span class="selector-pseudo">:focus</span> &#123;</span><br><span class="line">  <span class="attribute">outline</span>: none;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.image</span><span class="selector-pseudo">:hover</span>,</span><br><span class="line"><span class="selector-class">.image</span>:focus&#123;</span><br><span class="line"><span class="selector-class">.image-caption</span> &#123;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">translateY</span>(<span class="number">0</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-边界半径和盒状阴影的高级使用"><a href="#10-边界半径和盒状阴影的高级使用" class="headerlink" title="10. 边界半径和盒状阴影的高级使用"></a>10. 边界半径和盒状阴影的高级使用</h3><p>感谢CSS3的 <code>border-radius</code> 属性，现在的开发人员可以很从容地创建圆角框。例如：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border</span>-radius: <span class="number">20</span>% <span class="number">50</span>%;</span><br></pre></td></tr></table></figure>
+
+<p>或，截图就略了。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">border</span>-radius: <span class="number">3</span>vw <span class="number">4</span>vw <span class="number">8</span>vw <span class="number">2</span>vw;</span><br></pre></td></tr></table></figure>
+
+<p>我们可以使用相对于元素大小的百分比值。如果要保持一致性，像 <code>vw</code>（视口单位）这样的相对单位会很有帮助。这样一来，我们就有了在移动设备上会变小，在桌面上会变大，但保持一致的圆形。</p>
+<p>还有一个有趣的属性可以帮助我们为页面元素添加良好和舒缓的用户体验，那就是 <code>box-shadow</code>。通常盒状阴影用于添加卡片或按钮等元素的立体化。例如：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box</span>-shadow:<span class="number">3</span>px <span class="number">4</span>px <span class="number">5</span>px <span class="number">0</span>px rgba(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>.<span class="number">38</span>);</span><br></pre></td></tr></table></figure>
+
+<p>这里<strong>水平偏移了3px，垂直偏移了4px，还有5px的模糊半径、无扩散半径和灰色阴影</strong>。你可以根据自己的选择调整值以增强框的外观。</p>
+<p><code>box-shadow</code> 的一个独特功能是，可以添加多个图层。例如：</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">box</span>-shadow: <span class="number">2</span>px <span class="number">4</span>px <span class="number">0</span> <span class="number">4</span>px yellowgreen, <span class="number">4</span>px <span class="number">8</span>px <span class="number">0</span> <span class="number">8</span>px yellow, <span class="number">8</span>px <span class="number">10</span>px <span class="number">0</span> <span class="number">12</span>px red;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503181412.png" alt=" "></p>
+<p>使用box-shadow为图像添加晕影效果，即使用嵌入阴影。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.image-container</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">30vmin</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">30vmin</span>;</span><br><span class="line">  <span class="attribute">box-shadow</span>: inset <span class="number">0</span> <span class="number">0</span> <span class="number">4vmin</span> <span class="number">3vmin</span> <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-保持元素居中"><a href="#11-保持元素居中" class="headerlink" title="11. 保持元素居中"></a>11. 保持元素居中</h3><p>早些时候，如果我们需要将元素保持在页面的中心，必须使用绝对定位并定义 <code>left</code>、<code>right</code>、<code>top</code>和<code>bottom</code>值。好吧，这样痛苦的日子已经一去不复返了。现代CSS技术为我们提供了一种简单的解决方案，可以帮助在多种分辨率下保持居中位置。</p>
+<p>使元素水平和垂直居中，只需向元素添加两个属性，<strong>grid布局</strong>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">display</span>: grid;</span><br><span class="line">place-<span class="attribute">content</span>: center;</span><br></pre></td></tr></table></figure>
+
+<div style="margin:30px 0;padding:50px;display: grid;
+place-content: center; border:2px solid #999;background:#f3f2f1">
+<div style="border:2px solid #c90;padding:10px;background:#fff;">
+我在中间，父元素添加：
+display: grid;align-items: center;justify-content: center;
+</div>
+</div>
+
+<p>如果你想使用 <code>flexbox</code> 以便与页面上其他 <code>flexbox</code> 元素保持一致性，则需要三行代码，<strong>flex布局</strong>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">display</span>: flex;</span><br><span class="line"><span class="attribute">align-items</span>: center;</span><br><span class="line"><span class="attribute">justify-content</span>: center;</span><br></pre></td></tr></table></figure>
+
+<p>如果想将元素放置在任何特定轴的中心对齐，该怎么办？在这种情况下，必须删除display属性。对于垂直居中对齐：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">align-content</span>:center;</span><br></pre></td></tr></table></figure>
+
+<p>结果如下：</p>
+<div style="margin:30px 0;padding:50px;display: flex;
+align-items: center; border:2px solid #999;background:#f3f2f1">
+<div style="border:2px solid #c90;padding:10px;background:#fff">
+我在中间，但没有垂直居中?
+</div>
+</div>
+
+<p>而如果想要保持元素水平居中，而不是对齐内容，须使用 <code>justify-content</code>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">justify-content</span>:center;</span><br></pre></td></tr></table></figure>
+
+<div style="margin:30px 0;padding:50px;display: flex;
+align-items: center;justify-content:center; border:2px solid #999;background:#f3f2f1">
+<div style="border:2px solid #c90;padding:10px;background:#fff">
+我在中间，父元素添加：display: flex;align-items: center;justify-content:center
+</div>
+</div>
+
+<p>上面提到的解决方案是针对 <code>gird布局</code> 的。对于 <code>flex布局</code>，代码有所不同。垂直对齐的代码是这样的：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">justify-content</span>: center;</span><br><span class="line"><span class="attribute">flex-direction</span>: column;</span><br><span class="line"><span class="comment">/* For horizontal alignment, you will need */</span></span><br><span class="line"><span class="attribute">justify-content</span>: center;</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-使用CSS绘制形状"><a href="#12-使用CSS绘制形状" class="headerlink" title="12. 使用CSS绘制形状"></a>12. 使用CSS绘制形状</h3><p>现代CSS技术帮助我们摆脱了使用脚本来绘制对象的麻烦。现在有很多方法可用于创建基本的CSS形状。下面让我们看看如何创建CSS三角形。</p>
+<h4 id="12-1-使用border属性"><a href="#12-1-使用border属性" class="headerlink" title="12.1. 使用border属性"></a>12.1. 使用border属性</h4><p>border属性可以帮助创建三角形。先从容器开始：</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">triangle</span> &#123;</span><br><span class="line">  <span class="built_in">border</span>-<span class="built_in">style</span>: solid;</span><br><span class="line">  <span class="built_in">border</span>-<span class="built_in">color</span>: <span class="built_in">transparent</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>border-width</code> 属性并为边框的左侧赋予颜色。</p>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.<span class="built_in">triangle</span> &#123;</span><br><span class="line">  <span class="built_in">border</span>-<span class="built_in">style</span>: solid;</span><br><span class="line">  <span class="built_in">border</span>-<span class="built_in">color</span>: <span class="built_in">transparent</span>;</span><br><span class="line">  <span class="comment">/* top | right | bottom | left */</span></span><br><span class="line">  <span class="built_in">border</span>-<span class="built_in">width</span>: 7px <span class="number">0</span> 7px 10px;</span><br><span class="line">  <span class="built_in">border</span>-left-<span class="built_in">color</span>: blue;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果如下所示：</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503183417.png" alt=" "></p>
+<p>我们可以打乱 <code>border-width</code> 的 <code>top</code>、<code>right</code>、<code>bottom</code> 和 <code>left</code> 值来改变三角形的方向。</p>
+<h4 id="12-2-使用线性渐变"><a href="#12-2-使用线性渐变" class="headerlink" title="12.2. 使用线性渐变"></a>12.2. 使用线性渐变</h4><p>线性渐变可以与 <code>background-image </code>属性一起使用。首先创建容器，给出尺寸并阻止 <code>background-repeat</code>。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.triangle</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">8em</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">10em</span>;</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>接着添加渐变。使容器的一半呈蓝色。添加两个渐变后，形状像容器中的镜像三角形。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>-image: linear-gradient(<span class="number">32</span>deg, blue <span class="number">50</span>%, rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>) <span class="number">50</span>%), linear-gradient(<span class="number">148</span>deg, blue <span class="number">50</span>%, rgba(<span class="number">255</span>, <span class="number">255</span>, <span class="number">255</span>, <span class="number">0</span>) <span class="number">50</span>%);</span><br></pre></td></tr></table></figure>
+
+<p>现在，让我们试着让其看起来像一个三角形。更改背景大小：三角形将有100%的宽度和50%的高度。</p>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">background</span>-size: <span class="number">100</span>% <span class="number">50</span>%;</span><br></pre></td></tr></table></figure>
+
+<p>最后，为了防止重叠，必须添加背景位置，因为两个渐变的默认位置都是0 0。</p>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">background-position: <span class="built_in">top</span> <span class="built_in">left</span>, <span class="built_in">bottom</span> <span class="built_in">left</span>;</span><br></pre></td></tr></table></figure>
+
+<p>现在的形状看起来像三角形了。但是，这种方法有一个缺点。图形不会响应。如果纵横比发生变化，则可能需要重新计算度数。</p>
+<h3 id="13-总结"><a href="#13-总结" class="headerlink" title="13. 总结"></a>13. 总结</h3><p>CSS正在快速发展。开发人员正致力于创建纯CSS库，以减少对脚本的依赖并缩减网站的大小，使其对SEO更加友好。</p>
+<blockquote>
+<p>内容摘录自：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Ng1ZWBcAtMCzIPU4ydOagg">https://mp.weixin.qq.com/s/Ng1ZWBcAtMCzIPU4ydOagg</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/9824.html" title="强大的现代CSS技术(汇总1)">https://www.zenwu.site/posts/9824.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/css/" rel="tag"><i class="fa fa-tag"></i> css</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/4af.html" rel="prev" title="笔记-准备阶段的监理工作-21.1 立项阶段的监理工作">
+                  <i class="fa fa-angle-left"></i> 笔记-准备阶段的监理工作-21.1 立项阶段的监理工作
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/fa08.html" rel="next" title="笔记-监理案例题-2019年上-信息化工程监理的手段和原则">
+                  笔记-监理案例题-2019年上-信息化工程监理的手段和原则 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

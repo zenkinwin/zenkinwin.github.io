@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="20.4 应用软件建设的进度控制软件开发项目进度控制是指在规定的时间内，拟定出合理且经济的进度计划（包括多级管理的子计划），在执行该计划的过程中，经常要检查实际进度是否按计划要求进行，若出现偏差，便要及时找出原因，采取必要的补救措施或调整、修改原计划，直至项目完成。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="笔记-信息应用系统监理工作-20.4 应用软件建设的进度控制">
+<meta property="og:url" content="https://www.zenwu.site/posts/4bd7.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="20.4 应用软件建设的进度控制软件开发项目进度控制是指在规定的时间内，拟定出合理且经济的进度计划（包括多级管理的子计划），在执行该计划的过程中，经常要检查实际进度是否按计划要求进行，若出现偏差，便要及时找出原因，采取必要的补救措施或调整、修改原计划，直至项目完成。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230427172900.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230428163052.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503095352.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503100808.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503100843.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503101010.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503101910.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503102104.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503102206.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503102303.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503102427.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503102554.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503105146.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503105327.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503105634.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503105920.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503110241.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503110343.png">
+<meta property="og:image" content="https://cdn.zenwu.site/upload/pic/2023/20230503110604.png">
+<meta property="article:published_time" content="2023-04-26T12:11:15.000Z">
+<meta property="article:modified_time" content="2023-04-27T13:21:15.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="进度控制">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.zenwu.site/upload/pic/2023/20230427172900.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/4bd7.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/4bd7.html","path":"posts/4bd7.html","title":"笔记-信息应用系统监理工作-20.4 应用软件建设的进度控制"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>笔记-信息应用系统监理工作-20.4 应用软件建设的进度控制 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#20-4-%E5%BA%94%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%BB%BA%E8%AE%BE%E7%9A%84%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6"><span class="nav-text">20.4 应用软件建设的进度控制</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#20-4-1-%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E7%9A%84%E7%9B%AE%E6%A0%87%E5%92%8C%E5%86%85%E5%AE%B9"><span class="nav-text">20.4.1 进度控制的目标和内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-4-2-%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E7%9A%84%E6%8E%AA%E6%96%BD"><span class="nav-text">20.4.2 进度控制的措施</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-4-3-%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E7%9B%91%E7%90%86%E8%A6%81%E7%82%B9%E5%8F%8A%E6%B5%81%E7%A8%8B"><span class="nav-text">20.4.3 进度控制监理要点及流程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E7%9A%84%E7%B1%BB%E5%9E%8B"><span class="nav-text">1. 进度控制的类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E7%9A%84%E7%9B%91%E7%90%86%E8%A6%81%E7%82%B9"><span class="nav-text">2. 进度控制的监理要点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E6%B5%81%E7%A8%8B"><span class="nav-text">3. 进度控制流程</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-4-4-%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E7%9A%84%E6%96%B9%E6%B3%95"><span class="nav-text">20.4.4 进度控制的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1%EF%BC%89%E7%BD%91%E7%BB%9C%E5%9B%BE%E6%B3%95"><span class="nav-text">1）网络图法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2%EF%BC%89%E7%94%98%E7%89%B9%E5%9B%BE%E6%B3%95"><span class="nav-text">2）甘特图法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3%EF%BC%89%E5%BB%BA%E8%AE%AE%E8%BD%AF%E4%BB%B6%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6%E9%87%87%E7%94%A8%E7%94%98%E7%89%B9%E5%9B%BE%E6%B3%95%E5%92%8C%E7%BD%91%E7%BB%9C%E5%9B%BE%E6%B3%95"><span class="nav-text">3）建议软件项目的进度控制采用甘特图法和网络图法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#20-4-5-%E7%BD%91%E7%BB%9C%E8%AE%A1%E5%88%92%E6%8A%80%E6%9C%AF%E5%9C%A8%E4%BF%A1%E6%81%AF%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E8%BF%9B%E5%BA%A6%E7%9B%91%E7%90%86%E4%B8%AD%E7%9A%84%E5%BA%94%E7%94%A8"><span class="nav-text">20.4.5 网络计划技术在信息应用系统进度监理中的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-%E7%BD%91%E7%BB%9C%E8%AE%A1%E5%88%92%E6%8A%80%E6%9C%AF%E7%9A%84%E6%A6%82%E5%BF%B5"><span class="nav-text">1. 网络计划技术的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-%E7%BD%91%E7%BB%9C%E5%9B%BE"><span class="nav-text">2. 网络图</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-%E7%BD%91%E7%BB%9C%E8%AE%A1%E5%88%92%E8%AE%A1%E7%AE%97"><span class="nav-text">3. 网络计划计算</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-%E6%B1%82%E5%85%B3%E9%94%AE%E7%BA%BF%E8%B7%AF"><span class="nav-text">4. 求关键线路</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-%E8%AE%A1%E7%AE%97%E5%AE%8C%E5%B7%A5%E6%9C%9F%E5%8F%8A%E5%85%B6%E6%A6%82%E7%8E%87"><span class="nav-text">5. 计算完工期及其概率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-%E7%BD%91%E7%BB%9C%E8%AE%A1%E5%88%92%E4%BC%98%E5%8C%96"><span class="nav-text">6. 网络计划优化</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-%E7%BB%93%E6%9D%9F%E8%AF%AD"><span class="nav-text">7. 结束语</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/4bd7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="笔记-信息应用系统监理工作-20.4 应用软件建设的进度控制 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          笔记-信息应用系统监理工作-20.4 应用软件建设的进度控制
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2023-04-26 20:11:15" itemprop="dateCreated datePublished" datetime="2023-04-26T20:11:15+08:00">2023-04-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-04-27 21:21:15" itemprop="dateModified" datetime="2023-04-27T21:21:15+08:00">2023-04-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/" itemprop="url" rel="index"><span itemprop="name">信息系统监理</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/" itemprop="url" rel="index"><span itemprop="name">综合知识</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E4%BF%A1%E6%81%AF%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/%E4%BF%A1%E6%81%AF%E5%BA%94%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9B%91%E7%90%86%E5%B7%A5%E4%BD%9C/" itemprop="url" rel="index"><span itemprop="name">信息应用系统监理工作</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<h2 id="20-4-应用软件建设的进度控制"><a href="#20-4-应用软件建设的进度控制" class="headerlink" title="20.4 应用软件建设的进度控制"></a>20.4 应用软件建设的进度控制</h2><p>软件开发项目进度控制是指在规定的时间内，拟定出合理且经济的进度计划（包括多级管理的子计划），在执行该计划的过程中，经常要检查实际进度是否按计划要求进行，若出现偏差，便要及时找出原因，采取必要的补救措施或调整、修改原计划，直至项目完成。</p>
+<span id="more"></span>
+<h3 id="20-4-1-进度控制的目标和内容"><a href="#20-4-1-进度控制的目标和内容" class="headerlink" title="20.4.1 进度控制的目标和内容"></a>20.4.1 进度控制的目标和内容</h3><p>软件项目进度控制的目标是在规定的时间内，保质保量地完成应用软件系统建设的全部工作。<strong>软件项目进度控制的内容</strong>主要是：</p>
+<p>（1）<em>监控项目的进展</em>；<br>（2）<strong>比较实际进度与计划的差别</strong>；<br>（3）修改计划使项目能够返回预定轨道；</p>
+<h3 id="20-4-2-进度控制的措施"><a href="#20-4-2-进度控制的措施" class="headerlink" title="20.4.2 进度控制的措施"></a>20.4.2 进度控制的措施</h3><p><strong>（1）组织措施</strong><br>落实工程进度控制部的<strong>人员组成</strong>，具体控制任务和管理<strong>职责分工</strong>；进行项目<strong>分解</strong>，按项目结构、进度阶段、合同结构多角度划分，并建立<strong>编码体系</strong>；确立进度<strong>协调工作制度</strong>；<strong>对干扰和风险因素进行分析</strong>。</p>
+<p><strong>（2）技术措施</strong><br><strong>审核</strong>项目进度计划，确定合理定额，进行进度<strong>预测分析和进度统计</strong>。</p>
+<p><strong>（3）合同措施</strong><br><strong>分段发包</strong>，合同期与进度协调。</p>
+<p><strong>（4）经济措施</strong><br>保证预算内<strong>资金</strong>供应，控制预算外资金。</p>
+<p><strong>（5）信息管理措施</strong><br>实行进度动态比较，提供比较报告。</p>
+<h3 id="20-4-3-进度控制监理要点及流程"><a href="#20-4-3-进度控制监理要点及流程" class="headerlink" title="20.4.3 进度控制监理要点及流程"></a>20.4.3 进度控制监理要点及流程</h3><p>在应用软件项目进度控制是通过一系列监理手段，运用<strong>运筹学、网络计划、进度可视化</strong>等技术措施，使软件项目建设工作控制在详密计划工期以内，为了有效地进行进度控制的监理工作，必须对进度控制所需的基本知识及方法有所了解。</p>
+<h4 id="1-进度控制的类型"><a href="#1-进度控制的类型" class="headerlink" title="1. 进度控制的类型"></a>1. 进度控制的类型</h4><p>应用软件项目的进度控制可分为两种类型：<strong>作业控制与进度控制</strong>。</p>
+<h5 id="1）作业控制"><a href="#1）作业控制" class="headerlink" title="1）作业控制"></a>1）作业控制</h5><p>作业控制的内容就是采取一定措施，保证每一项作业本身按计划完成。</p>
+<p><strong>作业控制</strong>是以工作分解结构WBS的具体目标为基础的，也是针对具体的工作环节的。通过对每项作业的质量检查以及对其进展情况进行监控，以期发现作业正在按计划进行还是存在缺陷，然后由项目管理部门下达指令，调整或重新安排存在缺陷的作业，以保证其不致影响整个项目工作的进行。</p>
+<h5 id="2）进度控制"><a href="#2）进度控制" class="headerlink" title="2）进度控制"></a>2）进度控制</h5><p><strong>项目进度控制</strong>是一种循环的例行性活动。其活动分为四个阶段：<strong>编制计划、实施计划、检查与调整计划、分析与总结</strong>，如图20.5所示。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230427172900.png" alt="进度控制图"></p>
+<p><strong>进度控制</strong>就是采取措施来保证项目按计划的时间表来完成工作，经常出现的实际进度与计划不符的情况是脱期。</p>
+<p>责任心不强、信息失实或遗漏、协作部门的失误等都会影响到工期。不过有许多工期的拖延都是可以避免的，比如<strong>增强项目人员信心、完善信息制度</strong>等。</p>
+<p>不同层次的项目管理部门对项目进度控制的内容是不同的。</p>
+<p>按照不同管理层次对进度控制的要求分为三类：</p>
+<p><strong>（1）项目总进度控制</strong>。项目总监、总监代表等等高层次项目监理人员对项目中各里程碑事件的进度控制。<br><strong>（2）项目主进度控制</strong>。主要是项目监理部对项目中每一主要事件的进度控制。在多级项目中，这些事件可能就是各个分项目。<br><strong>（3）项目详细进度控制</strong>。主要是各监理作业小组或监理工程师对各具体作业进度计划的控制，这是进度控制的基础。</p>
+<p>项目控制主要解决的问题是克服脱期，但实际进度与计划不符的情况还有另外一种，即工作的过早完成。一般来说，这是有益无害的，但在有些特定情况下，某项工作的过早完成会造成资金、资源流向问题，或支付过多的利息。</p>
+<h4 id="2-进度控制的监理要点"><a href="#2-进度控制的监理要点" class="headerlink" title="2. 进度控制的监理要点"></a>2. 进度控制的监理要点</h4><p>（1）<strong>明确项目控制的目的及工作任务</strong>。<br>项目计划的执行需要做如下两个方面的工作：</p>
+<ul>
+<li>需要多次<strong>反复协调</strong>：</li>
+<li>消除与计划不符的偏差。</li>
+</ul>
+<p>项目计划的控制就是要时刻对每项工作进度进行监督，然后，对那些出现“偏差”的工作采取必要措施，以保证项目按照原定进度执行，使预定目标按时和在预算范围内实现。<br>（2）加强来自各方面的<strong>综合、协调和督促</strong>。<br>（3）要建立<strong>项目管理信息制度</strong>。<br>（4）项目主管应及时向领导<strong>汇报工作执行情况</strong>，也应定期向客户报告，并随时向各职能部门介绍整个项目的进程。<br>（5）项目控制包括对未来情况的<strong>预测</strong>、对当时情况的衡量、预测情况和当时情况的比较和及时制定实现目标、进度或预算的修正方案。</p>
+<h4 id="3-进度控制流程"><a href="#3-进度控制流程" class="headerlink" title="3. 进度控制流程"></a>3. 进度控制流程</h4><p>软件项目进度控制的流程如图20.6所示（这是个不断重复的过程，直至项目完成）。在控制过程中，要重点对以下内容进行监控。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230428163052.png" alt="进度控制流程"></p>
+<h5 id="1）进度评估"><a href="#1）进度评估" class="headerlink" title="1）进度评估"></a>1）进度评估</h5><p>（1）进度评估基础是定期信息收集或者发生的特定事件。<br>（2）这些信息必须是<strong>客观的和可度量的</strong>。<br>（3）并非每一次都能够得到符合要求的信息，因而通常需要项目成员进行主观判断。</p>
+<h5 id="2）检查点（Checkpoints）至少应是"><a href="#2）检查点（Checkpoints）至少应是" class="headerlink" title="2）检查点（Checkpoints）至少应是"></a>2）检查点（Checkpoints）至少应是</h5><ul>
+<li><strong>定期的</strong>（如一星期一次，一月一次）：</li>
+<li>与<strong>特定的事件绑定</strong>的，如生成一份报告或者提交部分产品，或者支付部分费用。</li>
+</ul>
+<p>应用软件系统建设过程的进度控制应<strong>根据承建单位所采取的开发模式和项目类性来确定</strong>。例如某承建单位软件开发模式包括的阶段是：系统需求分析、软件需求分析、软件概要设计、软件详细设计、软件编码与单元测试、软件组装（集成）测试、软件确认测试、系统联试、验收交付、运行与维护等阶段。而某承建单位承担的中小企业信息化软件实施过程的实施模式包括的阶段：领导培训、企业诊断、需求分析、项目组织、ERP原理培训、基础数据准备、产品培训、系统安装调试、模拟运行、系统验收、分步切换运行、改进。针对这些阶段，进度控制应遵循下列计划程序和要求进行：</p>
+<p>分析并提出应用软件系统建设过开发或实施周期内各阶段进入条件、主要开发或实施内容、阶段成果与阶段结束标志，以软件需求分析为例：</p>
+<p><strong>（1）阶段工作内容</strong><br>分析并明确软件需求使之<strong>文档化</strong>，确定被开发软件的运行环境，功能，性能和接口要求，完成《“应用软件系统”开发计划》、《软件需求规格说明》、《软件质量保证计划》、《软件配置管理计划》、《软件配置项（初步）确认测试计划》、《用户使用说明（初稿）》的编写；</p>
+<p><strong>（2）阶段成果要求</strong><br>在制定应用软件系统项目建设计划时应兼顾用户给定的<strong>进度和经费要求</strong>，又要注意按照软件工程规定的程序和技术要求进行软件开发工作。软件需求规格说明应满足需求分析的完整性要求，并保证软件需求规格说明中所有功能，性能需求均是可实现的。阶段成果有：</p>
+<ul>
+<li>项目<strong>开发计划</strong></li>
+<li>软件<strong>需求规格说明</strong></li>
+<li>软件<strong>质量保证计划</strong></li>
+<li>软件<strong>配置管理计划</strong></li>
+<li>软件<strong>配置项确认测试计划</strong>（初步）</li>
+</ul>
+<p><strong>（3）监理控制要点</strong></p>
+<ul>
+<li>完成了所有阶段产品（软件确认测试计划要初步完成，软件使用说明、用户手册要完成初稿）；</li>
+<li>应用软件系统开发计划经批准后生效，有关工作得到落实和实施：</li>
+<li>软件需求规格说明通过<strong>评审</strong>；</li>
+<li>以软件需求规格说明为核心的配置管理分配基线建立。</li>
+</ul>
+<h5 id="3）监控频率"><a href="#3）监控频率" class="headerlink" title="3）监控频率"></a>3）监控频率</h5><p>（1）监测的频率依赖于<strong>项目的大小和风险情况</strong></p>
+<ul>
+<li>监理工程师，可能需要每天都了解一下进度；</li>
+<li>总监理工程师和总监理工程师代表需要每星期或每月了解情况</li>
+</ul>
+<p>（2）监理人员层次越高，频率越低，信息越抽象。</p>
+<h5 id="4）信息收集"><a href="#4）信息收集" class="headerlink" title="4）信息收集"></a>4）信息收集</h5><p>尽管整个过程被分成了容易管理的活动，但是项目执行中仍然需要在活动中对任务完成的比例进行评估，这种评估通常是困难的。</p>
+<p>思考一下：某一软件开发者完成了一个需要5000行代码的软件的2500行，能不能认为他的工作已经完成了一半？</p>
+<p>答案显然是否定的，因为<strong>许多因素决定了不能用完成的代码行的比例来衡量进度</strong>：</p>
+<ul>
+<li>对整个软件的代码行的估计可能不准确；</li>
+<li>写完的代码可能相对容易，或者相对容易：</li>
+<li>一个软件如果没有通过测试就不能算完成，因而即使代码全部写完了，如果没有测试也不能算完成。</li>
+</ul>
+<p>对所需完成内容的深入的了解有助于判断进度，如将整个工作细分为子任务，如设计、编码、单元测试等。</p>
+<h3 id="20-4-4-进度控制的方法"><a href="#20-4-4-进度控制的方法" class="headerlink" title="20.4.4 进度控制的方法"></a>20.4.4 进度控制的方法</h3><h4 id="1）网络图法"><a href="#1）网络图法" class="headerlink" title="1）网络图法"></a>1）网络图法</h4><p><strong>网络图</strong>技术出现于20世纪50年代末，由于这种方法是建立在工作关系网络模型基础上，将研究和开发的项目及其控制过程作为一个系统来加以处理，将组成系统的各项工作通过网络形式，对<strong>整个系统统筹规划、合理安排</strong>，有效地利用人力、物力，以最少的时间和资源消耗来达到整个系统的预期目标，所以是一种十分有效的进度管理方法。</p>
+<h4 id="2）甘特图法"><a href="#2）甘特图法" class="headerlink" title="2）甘特图法"></a>2）甘特图法</h4><p><strong>甘特图也叫横道图</strong>，是信息工程项目进度管理中最常用的方法之一。应用这种方法进行项目进度控制的思路是：首先编制项目进度计划，再按进度计划监督、检查工程实际进度，并在甘特图上做好记录，据此判断项目进度的实施情况，提出控制措施的完整过程。</p>
+<p>甘特图以横坐标表示每项活动的起止时间，纵坐标表示各分项作业，按一定先后作业顺序，用带时间比例的水平横道线来表示对应项目或工序的持续时间，以此作为进度管理的图示。信息工程项目中已经广泛采用了甘特图法制定进度计划。</p>
+<p>软件项目进度控制的过程包括项目进度的<strong>计划编制、审查、实施、检查、分析处理</strong>的过程。软件项目进度控制以项目进度计划为基础。项目进度计划由承建单位与客户协商编制、经监理审核后执行。</p>
+<h4 id="3）建议软件项目的进度控制采用甘特图法和网络图法"><a href="#3）建议软件项目的进度控制采用甘特图法和网络图法" class="headerlink" title="3）建议软件项目的进度控制采用甘特图法和网络图法"></a>3）建议软件项目的进度控制采用甘特图法和网络图法</h4><p>由甘特图法明确各个作业之间的先后顺序，具体做法如下：由软件项目经理编制时间进度计划甘特图，编制完成并批准实施后，随着开发、实施作业的进程，将各个项目或工作的实际进度画在甘特图相应工作的计划进度横道线的下方。对比甘特图上各工作的计划进度和实际进度，能十分清楚地了解计划执行的偏差，进而对偏差进行处理。</p>
+<p>同时配合<strong>网络图法</strong>，它充分提示了各工作项目之间的<strong>相互制约和相互依赖关系</strong>，并能反应进度计划中的矛盾。从中找出关键路径，对其进行重点控制。用网络图法记录各项工作实际作业时间和起止时间，在网络图上用色彩标明已完工工作，可与未完工的工作分开，一目了然。</p>
+<p>另外在软件项目的开发、实施过程中，软件项目经理还要按进度计划<strong>编制实施进度报告</strong>，定期对项目进度向客户负责人、监理和公司进行书面报告，方便存档和检查。</p>
+<h3 id="20-4-5-网络计划技术在信息应用系统进度监理中的应用"><a href="#20-4-5-网络计划技术在信息应用系统进度监理中的应用" class="headerlink" title="20.4.5 网络计划技术在信息应用系统进度监理中的应用"></a>20.4.5 网络计划技术在信息应用系统进度监理中的应用</h3><h4 id="1-网络计划技术的概念"><a href="#1-网络计划技术的概念" class="headerlink" title="1. 网络计划技术的概念"></a>1. 网络计划技术的概念</h4><p>工程项目是指相互关联的许多工作的组合。这些工作按特定次序进行，各项工作有前后承接关系。而信息应用系统项目还具有结构复杂、投资较大、需求设计变更较频繁、不可预见因素多、管理复杂等特点。在以往的信息项目建设中，常使用甘特图（或称横道图）编制进度计划，简单明了，形象直观。但它不适合用于大型和复杂信息应用系统工程的项目的建设和监理工作。<strong>因为大型和复杂信息应用系统项目进度控制监理工作的主要任务是审核项目进度计划</strong>、<strong>协调资源、监督计划实施、控制进度计划变更、保证资源足额投入</strong>，在保证工期的条件下，使总费用控制在预算之内。由于甘特图不反映各项工作之间的逻辑关系，因而难以确定某项工作推迟对完工期的影响，当实际进度与计划有偏差时也难以调整。况且，甘特图虽然直观清楚，但它只是计算的结果，而一项工作什么时候开始，什么时候结束，却是需要计算实现的，甘特图并没有给出好的算法。所以在信息应用系统工程项目监理工作的进度控制过程中，有必要运用<strong>网络计划技术</strong>。</p>
+<p><strong>关键路线法</strong>（Critical Path Method CPM）和<strong>计划评审技术</strong>（Program Evaluation andReview Technique, PERT）是两种目前应用比较广泛的计划方法。CPM和PERT是独立发展起来的计划方法，两者的主要区别在于：</p>
+<ul>
+<li>CPM是以<strong>经验数据</strong>为基础来确定各项工作的时间，而PERT则把各项工作的时间作为随机变量来处理。</li>
+<li>所以，前者往往称为肯定型网络计划技术，而后者往往称为非肯定型网络计划技术。</li>
+<li>前者是以缩短时间、<strong>提高投资效益为目的</strong>，而后者则能指出缩短时间、<strong>节约费用</strong>的关键所在。</li>
+<li>因此，将两者有机的结合，可以获得更显著的效果。</li>
+</ul>
+<p><strong>网络计划技术</strong>的主要特点是：</p>
+<p>（1）直观性强，可形象反映工程全貌；<br>（2）<strong>主次、缓急清楚，便于抓住主要矛盾</strong>；<br>（3）可利用非关键路线上的工作潜力，加速关键工作进程，因而可缩短工期，降低工程成本；<br>（4）可估计各项工作所需时间和资源；<br>（5）<strong>便于修改</strong>；<br>（6）可运用计算机运算和画图，缩短计划编制时间。</p>
+<p>信息工程项目建设过程中不可预见的因素较多，如新技术、需求变化、到货延迟等在施工组织中也常常会涉及，且受许多政策指令性工期影响时还必须给出某项任务完成的可能性。因此，整体工程进度计划与控制采用网络计划技术时大多属于非肯定型网络计划，即<strong>PERT网络模型</strong>，不仅在工序持续时间上要考虑随机因素，而且要应用概率理论算出指令工期完成的可能性大小，从而找出完成可能性最大的工期，以提高工程进度计划与控制的可靠性。</p>
+<p><strong>信息工程项目应用网络计划</strong>有五个步骤组成：</p>
+<p>（1）绘制<strong>网络图</strong>；<br>（2）网络计划计算；<br>（3）求<strong>关键线路</strong>；<br>（4）<strong>计算完工期</strong>及其概率：<br>（5）网络计划<strong>优化</strong>。</p>
+<p>本节主要以某公司（中小型企业）ERP项目建设中采用网络图对各子工作进行工期的计算，监理在整体项目的进度控制中运用网络计划技术为场景，论述网络计划技术在信息应用系统项目监理工作进度控制中的应用。</p>
+<h4 id="2-网络图"><a href="#2-网络图" class="headerlink" title="2. 网络图"></a>2. 网络图</h4><h5 id="1）网络图的组成"><a href="#1）网络图的组成" class="headerlink" title="1）网络图的组成"></a>1）网络图的组成</h5><p>网络图是用来表示工作流程的有向、有序的网状图形，由箭线和节点组成。网络图有多种表示方式，最常见的有<strong>双代号网络</strong>（Activity-On-Arrow network，AOA）和<strong>单代号网络</strong>（Activity-On-Node network, AON），双代号网络是一种用箭线表示工作、节点表示工作相互关系的网络图方法，在我国这种方法应用较多。双代号网络计划一般仅使用结束到开始的关系表示方法，因此为了表示所有工作之间的逻辑关系往往需要引入虚工作加以表示，国内该方面的软件较多。图20.7是双代号网络图的示例。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503095352.png" alt="双代号网络图"></p>
+<p><strong>（1）事项（事件、节点）</strong></p>
+<p>工程（计划）的始点、终点（完成点）或其各项工作的连接点（交接瞬间）。网络图中箭线端部的圆圈或其他形式的封闭图形。在双代号网络图中，它表示一个事件。节点编号依据下列原则确定：</p>
+<ul>
+<li>节点表示事项时间大致顺序，自左向右自上向下排列；</li>
+<li>一般以正整数表示；</li>
+<li>一个节点只有一个编号；</li>
+<li>各节点不允许重复使用一个编号；</li>
+<li>右边的节点编号大于做边的节点编号。</li>
+</ul>
+<p><strong>（2）工作（作业、活动）</strong></p>
+<p>工作是指一项有具体内容的，需要人力、物力、财力，并占用一定空间和时间才能完成的活动过程。例如需求分析、软件架构设计、代码编写、单元测试等。工作由节点和边组成。如图20.7所示，工作从节点i开始，到节点J结束，则前者叫做工作始点，后者叫做工作终点。</p>
+<p><strong>（3）先行工作和后续工作</strong></p>
+<p>如果在工作A完成后才可以开始工作B，如图20.8所示，则工作A叫做工作B的先行工作，工作B叫做工作A的后续工作。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503100808.png" alt="先行工作和后续工作"></p>
+<p><strong>（4）平行工作</strong></p>
+<p>如果工作A结束后，工作B和C可以同时开始进行，如图20.9所示，则工作B和C叫做平行工作。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503100843.png" alt="平行工作"></p>
+<p><strong>（5）虚拟工作</strong></p>
+<p>虚拟工作是指只表示工作之间相互依存、相互制约、相互衔接的关系，但不需要人力、物力、空间和时间的虚设的活动。例如有A, B, X, Y四项工作如图20.10所示，其逻辑关系为：A是X的先行工作，A和B同时是Y的先行工作，这时就需要用到虚拟工作来表示。如图中连接节点2和5的虚线边即表示虚拟工作，<strong>虚拟工作的时间为零</strong>。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503101010.png" alt="虚拟工作"></p>
+<p><strong>（6）网络图的绘制原则</strong></p>
+<ul>
+<li>网络图是有方向的，不允许出现回路，图20.11就是一个错误的网络图；<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503101910.png" alt="不允许出现回路"></li>
+<li>直接连接两个相邻节点之间的活动只能有一个，图20.12中左图就是错的；<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503102104.png" alt="相邻节点之间的活动只能有一个"></li>
+<li>一个工作不能在两处出现；</li>
+<li>箭线首尾必有节点，不能从箭线中间引出另一条箭线，如图20.13所示；<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503102206.png" alt="箭线首尾必有节点"></li>
+<li>网络图必须只有一个网络始点和一个终点，如图20.14所示；<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503102303.png" alt="只有一个网络始点和一个终点"></li>
+<li>各项活动之间的衔接必须按逻辑关系进行；</li>
+</ul>
+<h5 id="2）绘制网络图"><a href="#2）绘制网络图" class="headerlink" title="2）绘制网络图"></a>2）绘制网络图</h5><p>某公司（中小企业）实施ERP项目，按照实施厂商的快速实施方法，监理在进度控制工作中采用网络计划技术，第一步就是要绘制网络图：</p>
+<p><strong>（1）定义各项工作（作业）</strong></p>
+<p>恰当地确定各项工作范围，以使网络图复杂程度适中。</p>
+<p><strong>（2）编制工作表</strong></p>
+<p>首先是根据实施厂商的实施方法和业主单位的实际情况，制定ERP项目工作清单（如表20-3所示），并确定各项工作的先行工作。在工作定义过程中，应考虑有关项目和项目目标的定义、说明以及历史资料。类似项目的历史资料可以在计划编制时避免遗漏某些现在想不到但实际上却必须进行的活动。工作定义过程结束时要提交的成果之一就是工作清单。工作清单必须包括本项目范围内的所有工作，应当对每项工作给出文字说明，保证项目成员准确完整地理解该项工作。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503102427.png" alt="某公司ERP项目活动分析表"><br>其次，进行项目描述，项目的特性通常会影响到工作排序的确定，在工作排序的确定过程中更应明确项目的特性。</p>
+<p>再次，确定或估计各项工作时间，估算的方法在后面介绍。</p>
+<p>最后，表明各项工作之间的逻辑关系。应着重考虑以下几个方面：</p>
+<ul>
+<li><strong>强制性逻辑关系的确定</strong>。这是工作排序的基础。逻辑关系是工作之间所存在的内在关系，通常是不可调整的，一般主要依赖于技术方面的限制，因此确定起来较为明确，通常由技术人员同管理人员的交流就可完成。</li>
+<li><strong>组织关系的确定</strong>。对于无逻辑关系的那些项目工作，由于其工作排序具有随意性，从而将直接影响到项目计划的总体水平。这种关系的确定通常取决于项目管理人员的知识和经验，它的确定对于项目的成功实施是至关重要的。</li>
+<li><strong>外部制约关系的确定</strong>。在项目工作和非项目工作之间通常会存在一定的影响，因此在项目工作计划的安排过程中也需要考虑到外部工作对项目工作的一些制约及影响，这样才能充分把握项目的发展。</li>
+<li><strong>实施过程中的限制和假设</strong>。为了制定良好的项目计划，必须考虑项目实施过程中可能受到的各种限制，同时还应考虑项目计划制定所依赖的假设和条件。</li>
+</ul>
+<p><strong>（3）根据工作清单和工作关系绘制网络图</strong></p>
+<p>根据表20-3中工作间的逻辑关系可绘制双代号网络图如图20.15所示，图中粗线表示关键线路。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503102554.png" alt="网络图"></p>
+<h4 id="3-网络计划计算"><a href="#3-网络计划计算" class="headerlink" title="3. 网络计划计算"></a>3. 网络计划计算</h4><h5 id="1）工作时间估计"><a href="#1）工作时间估计" class="headerlink" title="1）工作时间估计"></a>1）工作时间估计</h5><p>工作延续时间的估计是项目计划制定的一项重要的基础工作，它直接关系到各事项、各工作网络时间的计算和完成整个项目任务所需要的总时间。若工作时间估计得太短，则会在工作中造成被动紧张的局面：相反，若工作时间估计得太长，就会使整个工程的完工期延长。</p>
+<p>网络中所有工作的进度安排都是由工作的延续时间来推算，因此，对延续时间的估计要做到客观正确。这就要求在对工作做出时间估计时，不应受到工作重要性及工程完成期限的影响，要在考虑到各种资源、人力、物力、财力的情况下，把工作置于独立的正常状态下进行估计，要做统盘考虑，不可顾此失彼。估计工作时间的方法主要有以下几种。</p>
+<p><strong>（1）专家判断</strong></p>
+<p>专家判断主要依赖于历史的经验和信息，当然其时间估计的结果也具有一定的不确定性和风险。</p>
+<p><strong>（2）类比估计</strong></p>
+<p>类比估计意味着以先前类似的实际项目的工作时间，来推测估计当前项目各工作的实际时间。当项目的一些详细信息获得有限的情况下，这是一种最为常用的方法，类比估计可以说是专家判断的一种形式。</p>
+<p><strong>（3）单一时间估计法</strong></p>
+<p>估计一个最可能工作实现时间，对应于CPM网络。</p>
+<p><strong>（4）三个时间估计法</strong></p>
+<p>估计工作执行的三个时间，乐观时间“、悲观时间b、正常时间c，对应于PERT网络：</p>
+<blockquote>
+<p>期望时间 t &#x3D; （a + 4c + b）&#x2F;6</p>
+</blockquote>
+<p>这个公式实际上是一种<strong>加权平均</strong>。它假定c的可能性是a和b的两倍，于是c与a的平均值为（a+2c）&#x2F;3， c与b的平均值为（2c+b）&#x2F;3，二者加以平均得：</p>
+<blockquote>
+<p>1&#x2F;2（（a+2c）&#x2F;3+（2c+b）&#x2F;3）&#x3D;（a+4c+b）&#x2F;6</p>
+</blockquote>
+<p>在PERT网络模型中还要计算工序持续时间的方差（σ2）以衡量时间的分散程度，其计算公式为：<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503105146.png" alt="方差"></p>
+<h5 id="2）工作最早开始时间"><a href="#2）工作最早开始时间" class="headerlink" title="2）工作最早开始时间"></a>2）工作最早开始时间</h5><p>工作最早开始时间是指到某个节点前的工作全部完成所需要的时间，它是本项工作刚刚能够开始的时间。如果早于此时间，前面的工作完不成，本项工作不能开始，这个时间称做本项工作的最早开始时间。</p>
+<p><strong>（1）表示方法</strong><br>ES〔节点号码）<br>● ES（i）：作业 i-j 箭尾节点最早开始时间<br>● ES（j）：作业 i-j 箭头节点最早开始时间</p>
+<p><strong>（2）计算规则</strong><br>由始点开始，由左至右计算：<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503105327.png" alt="工作最早开始时间"></p>
+<h5 id="3）工作最迟开始时间"><a href="#3）工作最迟开始时间" class="headerlink" title="3）工作最迟开始时间"></a>3）工作最迟开始时间</h5><p>工作最迟开始时间是指某项工作为保证其后续工作按时开始，它最迟必须开始的时间。如果本想工作完成晚于此时间开始，就将影响到它以后的工作，使整个工期脱期，这个时间称为本想工作最迟开始时间。</p>
+<p><strong>（1）表示方法</strong><br>LF（节点号码）<br>● LF（i）：作业 i－j 箭尾节点最迟结束时间<br>● LF（j）：作业 i－j 箭头节点最迟结束时间</p>
+<p><strong>（2）计算规则</strong><br>由始点开始，由右至左计算<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503105634.png" alt="工作最迟开始时间"></p>
+<h5 id="4）时差的计算"><a href="#4）时差的计算" class="headerlink" title="4）时差的计算"></a>4）时差的计算</h5><p>是指在不影响整个任务完工期的条件下，某项工作从最早开始时间到最迟开始时间，中间可以推迟的最大延迟时间。它表明某项工作可以利用的机动时间，因此也叫松弛时间、宽裕时间。</p>
+<p><strong>（1）节点时差</strong></p>
+<blockquote>
+<p>S（i）&#x3D;LF（i）　－ES（i）</p>
+</blockquote>
+<p><strong>（2）作业时差</strong></p>
+<ul>
+<li><strong>总时差</strong>：一在不影响总工期，即不影响其紧后作业最迟开始时一间的前提下，作业 可推迟开始的一段时间。</li>
+<li><strong>单时差</strong>：在不影响紧后作业最早开始时间的前提下，可推迟的时间。</li>
+</ul>
+<h4 id="4-求关键线路"><a href="#4-求关键线路" class="headerlink" title="4. 求关键线路"></a>4. 求关键线路</h4><p>关键线路有两种定义：</p>
+<ul>
+<li>在一条线路中，每个工作的时间之和等于工程工期，这条线路就是关键线路。</li>
+<li>若在一条线路中，每个工作的<strong>时差都是零</strong>，这条线路就是关键线路。</li>
+</ul>
+<p>图20.15所示的网络图，关键路径所需时一间&#x3D;3+16+10+15+1+30+15&#x3D;90天（图中加黑部分）。</p>
+<h4 id="5-计算完工期及其概率"><a href="#5-计算完工期及其概率" class="headerlink" title="5. 计算完工期及其概率"></a>5. 计算完工期及其概率</h4><p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503105920.png" alt="计算完工期及其概率"></p>
+<h4 id="6-网络计划优化"><a href="#6-网络计划优化" class="headerlink" title="6. 网络计划优化"></a>6. 网络计划优化</h4><p>在项目计划管理中，仅仅满足于编制出项目进度计划，并以此来进行资源调配和工期控制是远远不够的，还必须依据各种主、客观条件，在满足工期要求的同时，合理安排时间与资源，力求达到资源消耗合理和经济效益最佳这一目的，这就是<strong>进度计划的优化</strong>。优化的内容是：</p>
+<ul>
+<li>时间（工期）优化，缩短工期；</li>
+<li>时间（工期）一成本优化，CPM方法。</li>
+</ul>
+<p>CPM方法是解决时间一成本优化的一种较科学的方法。它包含两方面内容，一是根据计划规定的期限，规划最低成本；二是在满足成本最低的要求下，寻求最佳工期。</p>
+<h5 id="1）时间优化"><a href="#1）时间优化" class="headerlink" title="1）时间优化"></a>1）时间优化</h5><p>时间（工期）优化包括两方面内容：一是<strong>网络计划的计算工期Tc超过要求工期TS必须对网络计划进行优化</strong>，使其计算工期满足要求工期，且保证因此而增加的费用最少；二是网络计划的计算工期远小于要求工期，这时也应对网络计划进行优化，使其计算工期接近于要求工期，以达到节约费用的目的。一般前者最为常见。<br>压缩网络计划工期的<strong>方法及其步骤</strong>：</p>
+<ul>
+<li>（1）找出网络计划中的关键线路，并<strong>计算出网络计划总工期</strong></li>
+<li>（2）计算应压缩的时间 <code>△T = Tc一Ts</code><br>选定<strong>最先压缩持续时间的关键工作</strong>，选择时应考虑的因素有：缩短持续时间后，对项目质量的影响不大；有充足的备用资源；缩短持续时间所需增加的费用相对较少。</li>
+<li>（3）<strong>确定压缩时间</strong>。将选定的关键工作的持续时间压缩至允许的最短时间，即要尽量保持关键工作的地位，一旦需要将某一关键工作压缩成非关键工作时，应对新出现的关键工作再次压缩。</li>
+<li>（4）压缩另一关键工作。若压缩后的计算工期仍不能满足要求工期的要求，则按上述原则选定另一个关键工作并压缩其持续时间，直至满足要求工期为止。当将所有的关键工作的持续时间都压缩至允许的最短持续时间，仍不能满足要求工期时，说明原网络计划的技术、组织方案不合理，应重新进行修正、调整，但也有可能是要求的工期不现实，需要重新审定。</li>
+</ul>
+<h5 id="2）时间（工期）一成本优化"><a href="#2）时间（工期）一成本优化" class="headerlink" title="2）时间（工期）一成本优化"></a>2）时间（工期）一成本优化</h5><p>缩短工期的单位时间成本可用如下公式计算（参见图20.16）。</p>
+<p><img src="https://cdn.zenwu.site/upload/pic/2023/20230503110241.png" alt="斜率计算"></p>
+<p><strong>工期一成本优化的步骤</strong>是：</p>
+<p>（1）求<strong>关键线路</strong>；<br>（2）对关键线路上的工作寻找<strong>最优化途径</strong>；<br>（3）对途径中<strong>K值小的工作进行优化</strong>；<br>（4）在优化时，要考虑左邻右舍。</p>
+<p>例如：（参见图20.17）<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503110343.png" alt="项目网络图"></p>
+<ul>
+<li>如果紧考虑正常工期估计。<br>则路径A-B的工期是16，成本是130000；路径C-D的工期是18，成本是700000因此关键路径是路径C-D，项目总工期为18，总成本是200000a</li>
+<li>如果全部活动均在它们各自的应急时间内完成。<br>则路径A-B的工期是11，成本是172000；路径C-D的工期是15，成本是870000因此关键路径是路径C-D，项目总工期为15，总成本是259000。</li>
+<li>用时间（工期）一成本平衡法压缩那些使总成本增加（斜率）最少的活动的工期，确定项目最短完成时间。</li>
+</ul>
+<p>第一次压缩，由于关键路径的工期决定着项目的总工期，所以取路径C-D进行优化。计算得KA&#x3D;6000， KB&#x3D;10000 KC&#x3D;5000， KD&#x3D;6000。为了将项目的工期从18周减至17周，针对关键路径C-D。确定关键路径上哪项活动能以最低的“斜率”（成本被加速），可以看出KC &#x3D;5000最小，因此将活动C的工期压缩1周。得出项目周期17周，总成本为2050000。</p>
+<p>第二次压缩，为了再缩短一个时间段，从17周缩短至16周，必须再次找出关键路径，两路径的工期分别是A-B为16周，C-D为17周，因此关键路径仍是C-D，它必须再次被减少。这时，虽然活动C比活动D的“斜率”（每周加速成本）低，但活动C己达到它的应急时间—9周了。因此，仅有的选择是加速活动D的进程。将活动D的工期压缩1周，项目工期为16周，总成本为2110000</p>
+<p>第三次压缩，再次将项目工期缩短1周，从16周降至15周。有两条关键路径。为了将项目总工期从16周减至15周，必须将每个路径都加速1周。路径A-B压缩活动A，路径C-D压缩活动D，项目周期15周，总成本2230000</p>
+<p>第四次压缩，从15周降至14周。有两条相同的关键路径。必须将两条路径同时加速1周。路径C-D，均己达到它们的应急时间。加速路径A-B的进程会毫无意义。停止优化过程。</p>
+<ul>
+<li>时间（工期）一成本优化结果</li>
+</ul>
+<p>时间（工期）一成本优化对照表见表20-4。<br><img src="https://cdn.zenwu.site/upload/pic/2023/20230503110604.png" alt="时间（工期）一成本优化结果"></p>
+<p>项目总工期减少1周，项目总成本将增加5000元；<br>项目工期减少2周，项目总成本将增加11000元；<br>项目工期减少3周，项目总成本将增加23000元。</p>
+<h4 id="7-结束语"><a href="#7-结束语" class="headerlink" title="7. 结束语"></a>7. 结束语</h4><p>在运用网络图做计划时，要体现系统分析的思想。信息工程项目实施是由多种工作按一定层次组成的复杂系统。其任务由多个方面、多个部门承担和影响，因而各项控制活动只有组成一个既明确分工，又相互协调配合、紧密衔接的有机整体才能达到既定的风险、进度、费用控制目标。运用系统控制的思想，在对信息工程项目进度控制分解的基础上要注重综合管理，在分工的基础上也要注重协调，这样才能把项目的进度控制好。</p>
+<p>实践证明，利用网络计划技术计划并控制工程进度，不仅可解决项目计划与实施管理中的许多问题，而且对技术复杂、投资多、队伍庞大的大型信息工程项目网络技术是缩短工期、提高经济效益的最佳办法。</p>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/4bd7.html" title="笔记-信息应用系统监理工作-20.4 应用软件建设的进度控制">https://www.zenwu.site/posts/4bd7.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E8%BF%9B%E5%BA%A6%E6%8E%A7%E5%88%B6/" rel="tag"><i class="fa fa-tag"></i> 进度控制</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/5f05.html" rel="prev" title="笔记-信息应用系统监理工作-20.3.5 设计质量控制">
+                  <i class="fa fa-angle-left"></i> 笔记-信息应用系统监理工作-20.3.5 设计质量控制
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/c242.html" rel="next" title="笔记-信息应用系统监理工作-20.3.6 开发质量控制">
+                  笔记-信息应用系统监理工作-20.3.6 开发质量控制 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

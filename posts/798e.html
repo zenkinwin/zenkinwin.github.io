@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.3.0">
+<link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-zen.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-zen.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="">
+  <meta name="baidu-site-verification" content="3a30b71bcaac61d5813132b569f2e115">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" integrity="sha256-HtsXJanqjKTc8vVQjO4YMhiqFoXkfBsjBWcX91T1jr8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/pace-js@1.2.4/themes/black/pace-theme-minimal.css">
+  <script src="https://unpkg.com/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.zenwu.site","root":"/","images":"/images","scheme":"Mist","darkmode":true,"version":"8.18.0","exturl":false,"sidebar":{"position":"right","width":240,"display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":true,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true}}</script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/config.js"></script>
+
+    <meta name="description" content="以下文档摘自一次突发任务的记录，几百个网站的处理，以及应对系统缓存、网站缓存、浏览器缓存问题，还有凌晨零点的客户监工。内容有调整。    认识CSS filterfilter就像惹人喜欢的小孩子，IE早年很喜欢他，但IE长大到10后，就一脚踢开了，所以用filter也只能满足大部分浏览器的要求。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页变灰（局部&#x2F;定时&#x2F;政府网站）的兼容方法汇总">
+<meta property="og:url" content="https://www.zenwu.site/posts/798e.html">
+<meta property="og:site_name" content="ZenWu.site">
+<meta property="og:description" content="以下文档摘自一次突发任务的记录，几百个网站的处理，以及应对系统缓存、网站缓存、浏览器缓存问题，还有凌晨零点的客户监工。内容有调整。    认识CSS filterfilter就像惹人喜欢的小孩子，IE早年很喜欢他，但IE长大到10后，就一脚踢开了，所以用filter也只能满足大部分浏览器的要求。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/qZt3I4m51udbN2n.png">
+<meta property="article:published_time" content="2020-04-30T09:39:10.000Z">
+<meta property="article:modified_time" content="2020-04-30T09:39:10.000Z">
+<meta property="article:author" content="Zen.Wu">
+<meta property="article:tag" content="政府网站">
+<meta property="article:tag" content="兼容">
+<meta property="article:tag" content="动易">
+<meta property="article:tag" content="变灰">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/qZt3I4m51udbN2n.png">
+
+
+<link rel="canonical" href="https://www.zenwu.site/posts/798e.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.zenwu.site/posts/798e.html","path":"posts/798e.html","title":"网页变灰（局部/定时/政府网站）的兼容方法汇总"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网页变灰（局部/定时/政府网站）的兼容方法汇总 | ZenWu.site</title>
+  
+
+
+
+
+
+
+
+
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/
+lxgwwenkaiscreen.css" media="all">
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">ZenWu.site</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">存一些内容，记一点文字</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-首页"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">51</span></a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">577</span></a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-light fa-address-card fa-fw"></i>关于</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A4%E8%AF%86CSS-filter"><span class="nav-text">认识CSS filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E4%B8%AA%E9%A1%B5%E9%9D%A2%E5%8F%98%E7%81%B0"><span class="nav-text">整个页面变灰</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%99%A4LOGO%E5%A4%96%EF%BC%8C%E5%85%B6%E4%BB%96%E5%9C%B0%E6%96%B9%E5%8F%98%E7%81%B0"><span class="nav-text">除LOGO外，其他地方变灰</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JS%E5%AE%9E%E7%8E%B0%E5%85%BC%E5%AE%B9IE10%E3%80%81IE11"><span class="nav-text">JS实现兼容IE10、IE11</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%80%9A%E8%BF%87%E7%AE%80%E5%8D%95%E5%AE%9A%E6%97%B6%E6%8E%A7%E5%88%B6%E8%AE%A9%E4%BB%A3%E7%A0%81%E7%94%9F%E6%95%88%E4%B8%8E%E5%8F%96%E6%B6%88"><span class="nav-text">通过简单定时控制让代码生效与取消</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9X-UA-Compatible%E8%AE%A9IE10-%E5%85%BC%E5%AE%B9filter"><span class="nav-text">修改X-UA-Compatible让IE10+兼容filter</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E5%8A%A8%E6%98%93%E7%B3%BB%E7%BB%9F%E5%BC%95%E7%94%A8%E7%9A%84%E7%BB%9F%E4%B8%80%E8%AF%B4%E6%98%8E%EF%BC%88siteazure%EF%BC%89"><span class="nav-text">在动易系统引用的统一说明（siteazure）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%AB%99%E7%BE%A4%E5%AD%90%E7%AB%99%E5%A4%9A%E7%AB%99%E7%82%B9%E6%83%85%E5%86%B5"><span class="nav-text">站群子站多站点情况</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%8B%E6%9C%BA%E7%89%88%E5%8F%98%E7%81%B0"><span class="nav-text">手机版变灰</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Zen.Wu"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Zen.Wu</p>
+  <div class="site-description" itemprop="description">蹉跎错，消磨过，最是光阴化浮沫。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">577</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">51</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">503</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/zenkinwin" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;zenkinwin" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="tencent://message/?uin=43002111&Site=zenwu&Menu=yes" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?uin&#x3D;43002111&amp;Site&#x3D;zenwu&amp;Menu&#x3D;yes" rel="noopener me" target="_blank"><i class="fab fa-qq fa-fw"></i></a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:zenkin@163.com" title="E-Mail → mailto:zenkin@163.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i></a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://unpkg.com/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+        <div class="back-to-top animated" role="button" aria-label="返回顶部">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.zenwu.site/posts/798e.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Zen.Wu">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZenWu.site">
+      <meta itemprop="description" content="蹉跎错，消磨过，最是光阴化浮沫。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网页变灰（局部/定时/政府网站）的兼容方法汇总 | ZenWu.site">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网页变灰（局部/定时/政府网站）的兼容方法汇总
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-04-30 17:39:10" itemprop="dateCreated datePublished" datetime="2020-04-30T17:39:10+08:00">2020-04-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">前端技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%89%8D%E7%AB%AF%E6%8A%80%E6%9C%AF/HTML/" itemprop="url" rel="index"><span itemprop="name">HTML</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><script>
+
+(function () {
+  //不同的日期显示不同的样式，200 天为黄色提示，400天为红色提示，可以自己定义。
+  let warningDay = 200;
+  let errorDay = 400;
+  // 确保能够获取到文章时间以及在文章详情页
+  let times = document.getElementsByTagName('time');
+  if (times.length === 0) {
+      return;
+  }
+  let posts = document.getElementsByClassName('post-body');
+  if (posts.length === 0) {
+      return;
+  }
+  // 获取系统当前的时间
+  let pubTime = new Date(times[0].dateTime); /* 文章发布时间戳 */
+  let now = Date.now() /* 当前时间戳 */
+  let interval = parseInt(now - pubTime)
+  let days = parseInt(interval / 86400000)
+  /* 发布时间超过指定时间（毫秒） */
+  if (interval > warningDay * 3600 * 24 * 1000 && interval < errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note warning">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  } else if (interval >= errorDay * 3600 * 24 * 1000) {
+      posts[0].innerHTML = '<div class="note danger">' +
+          '<h5>文章时效性提示</h5><p>这是一篇发布于 ' + days + ' 天前的文章，部分信息可能已发生改变，请注意甄别。</p>' +
+          '</div>' + posts[0].innerHTML;
+  }
+})();
+</script>
+<blockquote>
+<p>以下文档摘自一次突发任务的记录，几百个网站的处理，以及应对系统缓存、网站缓存、浏览器缓存问题，还有凌晨零点的客户监工。<br>内容有调整。  </p>
+</blockquote>
+<h3 id="认识CSS-filter"><a href="#认识CSS-filter" class="headerlink" title="认识CSS filter"></a>认识CSS filter</h3><p>filter就像惹人喜欢的小孩子，IE早年很喜欢他，但IE长大到10后，就一脚踢开了，所以用filter也只能满足<strong>大部分浏览器</strong>的要求。</p>
+<span id="more"></span>
+
+<p><img src="https://i.loli.net/2020/05/01/qZt3I4m51udbN2n.png" alt="CSS filter "></p>
+<p>filter，能实现透明度、模糊、阴影、发光等效果，这里只说灰度的。</p>
+<h3 id="整个页面变灰"><a href="#整个页面变灰" class="headerlink" title="整个页面变灰"></a>整个页面变灰</h3><p>整个页面变灰，只需要这样，兼容大部分，还有一层<code>svg</code>方法，我没写上了。核心代码为使用css的<code>filter</code>来处理，代码放在<code>&lt;/head&gt;</code>之上即可。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;  </span><br><span class="line">  -webkit-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); <span class="comment">/* webkit */</span></span><br><span class="line">  -moz-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); <span class="comment">/*firefox*/</span></span><br><span class="line">  -ms-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); <span class="comment">/*ie9*/</span></span><br><span class="line">  -o-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); <span class="comment">/*opera*/</span></span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">  <span class="attribute">filter</span>:progid:DXImageTransform.Microsoft.<span class="built_in">BasicImage</span>(grayscale=<span class="number">1</span>); </span><br><span class="line">  <span class="attribute">filter</span>:gray; <span class="comment">/*ie9- */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其实这样也行了：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span>&#123;  </span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); <span class="comment">/* CSS3 filter方式，标准写法*/</span></span><br><span class="line">    <span class="attribute">filter</span>: <span class="built_in">url</span>(<span class="string">filters.svg#grayscale</span>); <span class="comment">/* Firefox 4+ */</span></span><br><span class="line">    <span class="attribute">filter</span>: gray; <span class="comment">/* IE 6-9 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="除LOGO外，其他地方变灰"><a href="#除LOGO外，其他地方变灰" class="headerlink" title="除LOGO外，其他地方变灰"></a>除LOGO外，其他地方变灰</h3><p>个别通知文件里是要求除了国徽外的网站其他地方变灰，因此需要按结构进行定义，绕开LOGO的位置。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#header</span> <span class="selector-tag">nav</span>,</span><br><span class="line">    <span class="selector-id">#header</span> <span class="selector-class">.links</span>,</span><br><span class="line">    <span class="selector-id">#header</span> <span class="selector-class">.siteSearchBar</span>,</span><br><span class="line">    <span class="selector-id">#header</span> <span class="selector-tag">nav</span>,</span><br><span class="line">    <span class="selector-id">#content</span>,</span><br><span class="line">    <span class="selector-id">#footer</span>,</span><br><span class="line">    <span class="selector-class">.friendLinks</span>,</span><br><span class="line">    <span class="selector-class">.sideFixed</span></span><br><span class="line">    //如此类推</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attribute">filter</span>:相同样式</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>对于国徽的处理，可采取：</p>
+<ol>
+<li>纯css代码，隐藏、显示；</li>
+<li>jq 的hide()、append()、html() 特殊处理彩色；</li>
+</ol>
+<h3 id="JS实现兼容IE10、IE11"><a href="#JS实现兼容IE10、IE11" class="headerlink" title="JS实现兼容IE10、IE11"></a>JS实现兼容IE10、IE11</h3><p>为了兼容IE10和IE11，可以使用引入 grayscale.js <a target="_blank" rel="noopener" href="http://www.majas-lapu-izstrade.lv/cross-browser-grayscale-ie11-v2/">点击下载</a>，使其遍历元素加上样式。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;grayscale.js&quot;</span>)&quot;&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">var</span> navStr = navigator.<span class="property">userAgent</span>.<span class="title function_">toLowerCase</span>();</span></span><br><span class="line"><span class="language-javascript">    <span class="keyword">if</span>(navStr.<span class="title function_">indexOf</span>(<span class="string">&quot;msie 10.0&quot;</span>)!==-<span class="number">1</span>||navStr.<span class="title function_">indexOf</span>(<span class="string">&quot;rv:11.0&quot;</span>)!==-<span class="number">1</span>)&#123; </span></span><br><span class="line"><span class="language-javascript">        <span class="title function_">grayscale</span>(<span class="variable language_">document</span>.<span class="property">body</span>); </span></span><br><span class="line"><span class="language-javascript">        &#125;</span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意以上代码需要放在<code>&lt;/body&gt;</code>之上。</p>
+<h4 id="通过简单定时控制让代码生效与取消"><a href="#通过简单定时控制让代码生效与取消" class="headerlink" title="通过简单定时控制让代码生效与取消"></a>通过简单定时控制让代码生效与取消</h4><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="language-handlebars"><span class="language-xml"></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">    var now = new Date();</span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">    var startDate = new Date(2020,3,4,0,0,0); // 自由修改</span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">    var endDate = new Date(2020,3,4,23,59,59);// 自由修改</span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">    if (now &gt;= startDate &amp;&amp; now &lt;= endDate) &#123;</span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">        document.write(&quot;<span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"><span class="selector-tag">html</span>&#123;<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); <span class="attribute">filter</span>: gray <span class="meta">!important</span>; -webkit-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); -moz-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); -ms-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>); -o-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);&#125;</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span>&quot;); </span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">        //如需要复杂的CSS，此处可改为引用CSS文件，如：国徽不去色</span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">        //document.write(&quot;<span class="tag">&lt;<span class="name">link</span> <span class="attr">href</span>=<span class="string">&#x27;/Content/_Common/Base/css/grayscale.css&#x27;</span> <span class="attr">rel</span>=<span class="string">&#x27;stylesheet&#x27;</span> /&gt;</span>&quot;);</span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"></span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars">    &#125;</span></span></span><br><span class="line"><span class="language-xml"><span class="language-handlebars"></span></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="修改X-UA-Compatible让IE10-兼容filter"><a href="#修改X-UA-Compatible让IE10-兼容filter" class="headerlink" title="修改X-UA-Compatible让IE10+兼容filter"></a>修改X-UA-Compatible让IE10+兼容filter</h3><p>使用<code>grayscale.js</code>会使得网站很卡，若要求取消，可采取将 IE 内核定义为最高<code>IE9</code>，通过<code>meta</code>修改。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=9&quot;</span> /&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>通过限制浏览器x-ua会自动切换回对应低版本模式，就可以使用只css的代码，让filter兼容。</p>
+<h3 id="在动易系统引用的统一说明（siteazure）"><a href="#在动易系统引用的统一说明（siteazure）" class="headerlink" title="在动易系统引用的统一说明（siteazure）"></a>在动易系统引用的统一说明（siteazure）</h3><ul>
+<li>在首页模板中修改<code>section header&#123;&#125;</code>片段、添加<code>section scripts&#123;&#125;</code> 片段，以兼容仅网站首页的变灰，让代码分别在对应位置里展示，如页头、页底。</li>
+<li>注意查看模板中的<code>section header&#123;&#125;</code> 和<code>section scripts&#123;&#125;</code>，请勿重复添加语句。</li>
+<li>grayscale.js，filter + garyscale.js 组合，IE打开因为图片的渲染，页面会很卡很慢，越多图片越慢。</li>
+<li>若担心 js 执行导致页面很慢，可采取去除 js 定义，将 IE 内核定义为最高 IE9：<code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=9&quot; /&gt;</code>，由edge改为IE9。因为在IE10+不支持filter，通过限制浏览器x-ua会自动切换回对应低版本模式，以兼容纯css代码。纯CSS关注检查，兼容较多。<ul>
+<li>方法1：合并基础部局模板、公共布局模板、首页模板，做成一个单独的首页模板；</li>
+<li>方法2：复制：基础部局模板2、公共布局模板2、首页模板，其中基础部局模板2的x-ua改为如上，公共布局模板2引用基础布局模板2，首页模板引用公共布局模板2 </li>
+<li>方法3：网站较为简单或修复容易，不考虑Edge与IE9差异，直接修改基础部局模板的x-ua，站群公用；</li>
+<li>方法4：不在本次考虑范围的：如产品如增加首页布局模板、非首页布局模板，如固定meta信息改为非固定通过<code>render</code>传（应该会这样方式）。</li>
+</ul>
+</li>
+<li>document.write()内为不断行，为一字符串。</li>
+<li>仅首页变灰的代码，原则上CSS要放到 <head> 下，JS放 </body> 到上。如首页代码、背景等复杂，请根据实际情况修改样式文件，调整到合适的状态。</li>
+<li>遇到加载困难、一直加载中的，注意排查是否第三方图片加载缓慢，如企事业单位的编办图标，转为本地图片加载或采用<code>http://dcs.conac.cn/image/red.png</code> 这个官方图片。</li>
+<li>主要查看是否有nginx、有负载均衡、是否同步成功等排查问题根由。</li>
+<li>若有需要，把css片段、js片段，放在单独文件中，如 grayscale.css （新建）存放于 Common&#x2F;base&#x2F;css 或者 js 文件夹中，并把上述修改方法的片段插入改为文件插入，以减少反复清除缓存造成的问题，去掉时候再单独删除片段。</li>
+<li>若需要做国徽红色的做法时候，定义的样式类绕开国徽，CSS类逐条写、JS逐条加，CSS&#x2F;js 不能设置body；</li>
+<li>若遇到国徽LOGO是在body&#x2F;html做背景的，要单独重新做一个LOGO图片到页面里；</li>
+<li>body的<code>filter</code>属性与<code>position:fixed</code>会存在冲突，具体查看：<a target="_blank" rel="noopener" href="https://www.jb51.net/css/719731.html">https://www.jb51.net/css/719731.html</a>，采取折中办法；</li>
+</ul>
+<h4 id="站群子站多站点情况"><a href="#站群子站多站点情况" class="headerlink" title="站群子站多站点情况"></a>站群子站多站点情况</h4><p>站群的多个子站，几十个子站的首页变灰，应该也是用在首页模板处加上css+js。可以考虑把那段js、css片段，放在单独文件中，如<code>grayscale.css</code> 存放于<code>Common/base/css</code> 文件夹中，并把上述修改方法的片段插入改为文件插入。</p>
+<h4 id="手机版变灰"><a href="#手机版变灰" class="headerlink" title="手机版变灰"></a>手机版变灰</h4><ul>
+<li>不需要考虑处理 grayscale.js，不涉及IE兼容；</li>
+<li>手机版做法找到对应布局模板（全手机）或首页模板（只首页），使用 filter: grayscale 这堆CSS即可，不需考虑IE方面因素。</li>
+<li>小程序&#x2F;微信H页例外，单独百度；</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+    
+    
+    
+    
+      
+
+
+
+
+<div class="passage-end-tag">
+
+    <div class="read-over">--------------本文结束 <i class="fa fa-paw"></i> 感谢您的阅读--------------</div>
+
+</div>
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>Zen.Wu
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.zenwu.site/posts/798e.html" title="网页变灰（局部&#x2F;定时&#x2F;政府网站）的兼容方法汇总">https://www.zenwu.site/posts/798e.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%94%BF%E5%BA%9C%E7%BD%91%E7%AB%99/" rel="tag"><i class="fa fa-tag"></i> 政府网站</a>
+              <a href="/tags/%E5%85%BC%E5%AE%B9/" rel="tag"><i class="fa fa-tag"></i> 兼容</a>
+              <a href="/tags/%E5%8A%A8%E6%98%93/" rel="tag"><i class="fa fa-tag"></i> 动易</a>
+              <a href="/tags/%E5%8F%98%E7%81%B0/" rel="tag"><i class="fa fa-tag"></i> 变灰</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/7cfc.html" rel="prev" title="笔记-计算机网络基础-无线局域网标准IEEE802">
+                  <i class="fa fa-angle-left"></i> 笔记-计算机网络基础-无线局域网标准IEEE802
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/f11.html" rel="next" title="笔记-信息系统安全管理-信息安全(混合)">
+                  笔记-信息系统安全管理-信息安全(混合) <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="beian"><a href="https://beian.miit.gov.cn/" rel="noopener" target="_blank">粤ICP备2020117069号 </a>
+  </div>
+  <div class="copyright">
+    &copy; 2002 – 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-book-reader"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Zen.Wu</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/mist/" rel="noopener" target="_blank">NexT.Mist</a> 强力驱动
+     由<a target="_blank" rel="noopener" href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral">又拍云提供CDN加速/图片储存服务</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://unpkg.com/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/comments.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/utils.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/motion.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/schemes/muse.js"></script><script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/next-boot.js"></script>
+
+  <script src="https://unpkg.com/hexo-generator-searchdb@1.4.1/dist/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="https://unpkg.com/hexo-theme-next@8.18.0/source/js/third-party/pace.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>
